@@ -2,7 +2,7 @@
 
 Source for the official website of **Streamline**, a native IPTV player for iPhone, iPad, and Mac.
 
-**Live site:** https://maweis1981.github.io/streamline-site/ (English: `/en/`)
+**Live site:** https://doubo.tv/ (English: https://doubo.tv/en/)
 
 It's a Jekyll site with Simplified Chinese (default) and English pages: home, roadmap, support, and privacy policy. The support and privacy pages serve as the App Store Connect *Support URL* and *Privacy Policy URL*.
 
@@ -63,4 +63,22 @@ bundle exec jekyll serve --baseurl ""
 
 ## Custom domain
 
-Add the domain under Settings → Pages → Custom domain, then in `_config.yml` set `url` to `https://your-domain` and `baseurl` to `""`.
+The site is served at `doubo.tv`. The `CNAME` file in this repo is copied into every build, so the domain survives each deploy to `gh-pages`, and `_config.yml` has `url: "https://doubo.tv"` and `baseurl: ""`.
+
+DNS records at the domain registrar:
+
+| Type | Host | Value |
+|---|---|---|
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+| AAAA | `@` | `2606:50c0:8000::153` |
+| AAAA | `@` | `2606:50c0:8001::153` |
+| AAAA | `@` | `2606:50c0:8002::153` |
+| AAAA | `@` | `2606:50c0:8003::153` |
+| CNAME | `www` | `maweis1981.github.io` |
+
+Once DNS resolves, check **Enforce HTTPS** under Settings → Pages. To prevent domain takeover, verify `doubo.tv` under your GitHub account's Settings → Pages → *Verified domains*.
+
+To move to a different domain, update `CNAME` and `url`. To go back to `maweis1981.github.io/streamline-site/`, delete `CNAME` and set `baseurl: "/streamline-site"`.

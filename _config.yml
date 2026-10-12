@@ -1,6 +1,6 @@
 title: Streamline
-url: "https://maweis1981.github.io"
-baseurl: "/streamline-site"   # Set to "" when using a custom domain or a <user>.github.io repository.
+url: "https://doubo.tv"
+baseurl: ""   # Custom domain (see CNAME). Use "/streamline-site" to serve from maweis1981.github.io instead.
 repository_url: "https://github.com/maweis1981/streamline-site"   # Public repo: issues here collect feedback.
 
 # Store links. Leave empty until the listing is live; the site then shows "Coming soon".
