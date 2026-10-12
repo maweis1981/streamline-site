@@ -1,14 +1,12 @@
 name: Check custom domain
 
 # Diagnostic: DNS records, HTTP(S) responses, and GitHub Pages domain/HTTPS status.
-# The schedule is temporary while doubo.tv is being set up; remove it once HTTPS works.
+# Runs on demand from the Actions tab, or when this file changes.
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths: [".github/workflows/check-domain.yml"]
-  schedule:
-    - cron: "*/15 * * * *"
 
 permissions:
   pages: read
