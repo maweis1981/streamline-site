@@ -398,6 +398,10 @@ web:
   licence_pd: Domain publik
   licence_cc: Berlisensi Creative Commons
   open_on_archive: Lihat di Internet Archive
+  recent_title: Baru ditonton
+  see_all: Lihat semua
+  share: Bagikan
+  link_copied: Tautan disalin
 tools:
   nav: Alat M3U
   page_title: 'Penganalisis & Perapi Playlist M3U: Hitung, Hapus Duplikat, dan Urutkan Online'

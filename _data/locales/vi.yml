@@ -398,6 +398,10 @@ web:
   licence_pd: Phạm vi công cộng
   licence_cc: Giấy phép Creative Commons
   open_on_archive: Xem trên Internet Archive
+  recent_title: Xem gần đây
+  see_all: Xem tất cả
+  share: Chia sẻ
+  link_copied: Đã sao chép liên kết
 tools:
   nav: Công cụ M3U
   page_title: 'Công cụ phân tích & dọn dẹp danh sách M3U: Đếm, lọc trùng và sắp xếp trực tuyến'

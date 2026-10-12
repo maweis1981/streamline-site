@@ -398,6 +398,10 @@ web:
   licence_pd: สาธารณสมบัติ
   licence_cc: สัญญาอนุญาต Creative Commons
   open_on_archive: ดูบน Internet Archive
+  recent_title: ดูล่าสุด
+  see_all: ดูทั้งหมด
+  share: แชร์
+  link_copied: คัดลอกลิงก์แล้ว
 tools:
   nav: เครื่องมือ M3U
   page_title: 'เครื่องมือวิเคราะห์และจัดระเบียบเพลย์ลิสต์ M3U: นับ ลบซ้ำ และเรียงลำดับออนไลน์'

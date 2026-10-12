@@ -118,3 +118,15 @@ body.dw-theater-open{overflow:hidden}
 .dw-attrib{color:var(--text-3);font-size:13px}
 .dw-attrib[hidden]{display:none}
 .dw-attrib a{color:var(--teal);text-underline-offset:3px}
+
+/* Rows view: recently watched, favorites and one row per category */
+.dw-rows{display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
+.dw-row{min-width:0}
+.dw-rows[hidden],.dw-grid[hidden]{display:none}
+.dw-row-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:10px}
+.dw-row-head h2{font-size:18px;line-height:1.3}
+.dw-row-head .dw-n{font-size:13px;font-weight:400}
+.dw-row-head .dw-link{margin-left:0;font-size:14px;color:var(--teal);white-space:nowrap}
+.dw-row-list{list-style:none;margin:0;padding:0 0 6px;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(200px,240px);gap:14px;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:thin}
+.dw-row-list>li{scroll-snap-align:start;min-width:0}
+@media (max-width:639.98px){.dw-row-list{grid-auto-columns:44vw;gap:10px}}

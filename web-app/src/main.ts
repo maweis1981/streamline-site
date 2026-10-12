@@ -14,6 +14,12 @@ const FREE = "free";
 const FAVORITES = "favorites";
 const PAGE_SIZE = 48;
 const DEAD_TTL_MS = 12 * 60 * 60 * 1000;
+const HISTORY_MAX = 30;
+const ROW_SIZE = 20;
+const ROW_COUNT = 12;
+
+// Recently watched, newest first: live channels (playlist + channel key) and on-demand items.
+type HistoryEntry = { k: "live"; p: string; c: string; at: number } | { k: "vod"; id: string; at: number };
 
 interface State {
   free: Playlist | null;
@@ -28,6 +34,7 @@ interface State {
   playing: { playlistId: string; channel: Channel } | null;
   vod: VodSection[];
   vodPlaying: VodItem | null;
+  history: HistoryEntry[];
 }
 
 const state: State = {
@@ -43,6 +50,7 @@ const state: State = {
   playing: null,
   vod: [],
   vodPlaying: null,
+  history: readPref<HistoryEntry[]>("history", []),
 };
 const VOD = "vod:"; // source ids for on-demand sections: "vod:<section id>"
 const isVod = (source: string) => source.startsWith(VOD);
@@ -66,6 +74,7 @@ root.innerHTML = `
       <div class="dw-groups" aria-label="${t("groups")}"></div>
     </div>
     <p class="dw-count" aria-live="polite"></p>
+    <div class="dw-rows" hidden></div>
     <ul class="dw-grid"></ul>
     <div class="dw-more"><button type="button" class="dw-btn" data-action="more" hidden>${t("load_more")}</button></div>
     <div class="dw-empty" hidden>
@@ -82,6 +91,7 @@ root.innerHTML = `
       <div class="dw-now-actions">
         <button type="button" class="dw-btn" data-action="prev" aria-label="${t("prev_channel")}">↑</button>
         <button type="button" class="dw-btn" data-action="next" aria-label="${t("next_channel")}">↓</button>
+        <button type="button" class="dw-btn" data-action="share">↗ ${t("share")}</button>
         <button type="button" class="dw-btn" data-action="favorite"></button>
         <button type="button" class="dw-btn" data-action="pip">${t("pip")}</button>
         <button type="button" class="dw-btn" data-action="fullscreen">${t("fullscreen")}</button>
@@ -125,6 +135,7 @@ const els = {
   groups: $<HTMLDivElement>(".dw-groups"),
   count: $<HTMLParagraphElement>(".dw-count"),
   grid: $<HTMLUListElement>(".dw-grid"),
+  rows: $<HTMLDivElement>(".dw-rows"),
   more: $<HTMLButtonElement>('[data-action="more"]'),
   empty: $<HTMLDivElement>(".dw-empty"),
   theater: $<HTMLDivElement>(".dw-theater"),
@@ -138,6 +149,7 @@ const els = {
   embed: $<HTMLDivElement>(".dw-embed"),
   attrib: $<HTMLParagraphElement>(".dw-attrib"),
   prev: $<HTMLButtonElement>('[data-action="prev"]'),
+  share: $<HTMLButtonElement>('[data-action="share"]'),
   next: $<HTMLButtonElement>('[data-action="next"]'),
   fullscreen: $<HTMLButtonElement>('[data-action="fullscreen"]'),
   dialog: $<HTMLDialogElement>(".dw-dialog"),
@@ -268,6 +280,9 @@ function renderGrid(): void {
     const items = section ? vodItems(section, state.group, state.query) : [];
     els.count.textContent = t("videos_count", { count: items.length });
     els.empty.hidden = true;
+    els.rows.hidden = true;
+    els.rows.innerHTML = "";
+    els.grid.hidden = false;
     els.grid.innerHTML = items.slice(0, state.shown).map((i) => vodTile(i, esc)).join("");
     els.more.hidden = items.length <= state.shown;
     return;
@@ -276,11 +291,79 @@ function renderGrid(): void {
   els.count.textContent = state.free || state.playlists.length ? t("channels_count", { count: items.length }) : t("loading");
   els.empty.hidden = items.length > 0 || (state.source === FREE && !state.free);
   els.grid.innerHTML = "";
+  // The free channels home view (no filter, no search) is laid out as rows; anything narrower is a grid.
+  const rowsView = state.source === FREE && !state.group && !state.country && !state.query.trim() && items.length > 0;
+  els.rows.hidden = !rowsView;
+  els.grid.hidden = rowsView;
+  if (rowsView) {
+    renderRows(items);
+    els.more.hidden = true;
+    return;
+  }
+  els.rows.innerHTML = "";
   appendTiles(items, 0, Math.min(state.shown, items.length));
   els.more.hidden = items.length <= state.shown;
 }
 
-function appendTiles(items: { playlistId: string; channel: Channel }[], from: number, to: number): void {
+/** Rows: recently watched, favorites, then one row per category, largest first. */
+function renderRows(items: { playlistId: string; channel: Channel }[]): void {
+  els.rows.innerHTML = "";
+  const addRow = (title: string, fill: (list: HTMLUListElement) => void, group?: string, count?: number) => {
+    const section = document.createElement("section");
+    section.className = "dw-row";
+    section.innerHTML = `<div class="dw-row-head"><h2>${esc(title)}${count !== undefined ? ` <span class="dw-n">${count}</span>` : ""}</h2>${
+      group !== undefined ? `<button type="button" class="dw-link" data-group="${esc(group)}">${esc(t("see_all"))} →</button>` : ""}</div><ul class="dw-row-list"></ul>`;
+    els.rows.appendChild(section);
+    fill(section.querySelector("ul")!);
+  };
+
+  const recent = resolveHistory();
+  if (recent.length) {
+    addRow(t("recent_title"), (list) => {
+      for (const r of recent) {
+        if ("vod" in r) list.insertAdjacentHTML("beforeend", vodTile(r.vod, esc));
+        else appendTiles([r], 0, 1, list);
+      }
+    });
+  }
+  const favorites = items.filter((x) => state.favorites.has(favoriteId(x.playlistId, x.channel.key)));
+  if (favorites.length) addRow(`★ ${t("favorites")}`, (list) => appendTiles(favorites, 0, ROW_SIZE, list), undefined, favorites.length);
+
+  const byGroup = new Map<string, { playlistId: string; channel: Channel }[]>();
+  for (const x of items) {
+    if (!x.channel.group) continue;
+    const list = byGroup.get(x.channel.group) ?? [];
+    list.push(x);
+    byGroup.set(x.channel.group, list);
+  }
+  [...byGroup.entries()]
+    .sort((a, b) => b[1].length - a[1].length)
+    .slice(0, ROW_COUNT)
+    .forEach(([group, list]) => addRow(categoryName(group), (ul) => appendTiles(list, 0, ROW_SIZE, ul), group, list.length));
+}
+
+function resolveHistory(): ({ playlistId: string; channel: Channel } | { vod: VodItem })[] {
+  const out: ({ playlistId: string; channel: Channel } | { vod: VodItem })[] = [];
+  for (const h of state.history) {
+    if (h.k === "vod") {
+      const vod = state.vod.flatMap((v) => v.items).find((i) => i.id === h.id);
+      if (vod) out.push({ vod });
+    } else {
+      const channel = playlistById(h.p)?.channels.find((c) => c.key === h.c);
+      if (channel && !state.dead[favoriteId(h.p, h.c)] && webRoutes(channel).length) out.push({ playlistId: h.p, channel });
+    }
+    if (out.length >= ROW_SIZE) break;
+  }
+  return out;
+}
+
+function remember(entry: HistoryEntry): void {
+  const same = (h: HistoryEntry) => (h.k === "vod" && entry.k === "vod" ? h.id === entry.id : h.k === "live" && entry.k === "live" && h.p === entry.p && h.c === entry.c);
+  state.history = [entry, ...state.history.filter((h) => !same(h))].slice(0, HISTORY_MAX);
+  writePref("history", state.history);
+}
+
+function appendTiles(items: { playlistId: string; channel: Channel }[], from: number, to: number, target: HTMLElement = els.grid): void {
   const frag = document.createDocumentFragment();
   for (const { playlistId, channel } of items.slice(from, to)) {
     const li = document.createElement("li");
@@ -298,7 +381,7 @@ function appendTiles(items: { playlistId: string; channel: Channel }[], from: nu
     frag.appendChild(li);
     wall.add(li, channel);
   }
-  els.grid.appendChild(frag);
+  target.appendChild(frag);
 }
 
 function render(): void {
@@ -347,6 +430,43 @@ function selectSource(id: string): void {
   render();
 }
 
+/** The link that reopens what is playing: free channels and on-demand items only (a visitor's own
+ *  playlists live in their browser, so their channels cannot be shared). */
+function shareUrl(): string | null {
+  const base = `${location.origin}${location.pathname}`;
+  if (state.vodPlaying) return `${base}?vod=${encodeURIComponent(state.vodPlaying.id)}`;
+  if (state.playing?.playlistId === FREE) return `${base}?channel=${encodeURIComponent(state.playing.channel.key.split("@")[0])}`;
+  return null;
+}
+
+function syncAddress(): void {
+  const url = shareUrl();
+  history.replaceState(null, "", url ?? location.pathname);
+  els.share.hidden = !url;
+}
+
+async function share(): Promise<void> {
+  const url = shareUrl();
+  if (!url) return;
+  const title = state.vodPlaying?.title ?? state.playing?.channel.name ?? document.title;
+  track("web_share", { kind: state.vodPlaying ? "vod" : "live" });
+  if (navigator.share) {
+    try {
+      await navigator.share({ title, url });
+      return;
+    } catch {
+      /* cancelled or unsupported: fall back to copying */
+    }
+  }
+  try {
+    await navigator.clipboard.writeText(url);
+    els.share.textContent = `✓ ${t("link_copied")}`;
+    setTimeout(() => (els.share.textContent = `↗ ${t("share")}`), 1800);
+  } catch {
+    prompt(t("share"), url);
+  }
+}
+
 function setTheaterMode(vod: VodItem | null): void {
   state.vodPlaying = vod;
   const embed = !!vod?.video;
@@ -379,6 +499,8 @@ function openVod(item: VodItem): void {
     els.attrib.innerHTML = `${esc(licence)} · <a href="${esc(item.page ?? "")}" target="_blank" rel="noopener">${esc(t("open_on_archive"))}</a>`;
     player.play({ key: item.id, name: item.title, group: "", routes: [{ url: item.src, label: "" }] });
   }
+  remember({ k: "vod", id: item.id, at: Date.now() });
+  syncAddress();
   track("web_vod_play", { section: item.kind ?? "", source: item.video ? "youtube" : "archive" });
 }
 
@@ -391,15 +513,19 @@ function open(playlistId: string, channel: Channel): void {
   document.body.classList.add("dw-theater-open");
   renderTheater();
   player.play(channel, liveRoute.get(favoriteId(playlistId, channel.key)) ?? webRoutes(channel)[0] ?? 0);
+  remember({ k: "live", p: playlistId, c: channel.key, at: Date.now() });
+  syncAddress();
   track("web_play", { channel_group: channel.group || "(none)", source: playlistId === FREE ? "free" : "own" });
 }
 
 function close(): void {
   player.stop();
+  history.replaceState(null, "", location.pathname);
   if (state.vodPlaying) {
     setTheaterMode(null);
     els.theater.hidden = true;
     document.body.classList.remove("dw-theater-open");
+    if (!els.rows.hidden) renderGrid();
     return;
   }
   if (document.fullscreenElement) document.exitFullscreen().catch(() => undefined);
@@ -407,7 +533,7 @@ function close(): void {
   document.body.classList.remove("dw-theater-open");
   const wasDead = state.playing && state.dead[favoriteId(state.playing.playlistId, state.playing.channel.key)];
   state.playing = null;
-  if (wasDead) renderGrid();
+  if (wasDead || !els.rows.hidden) renderGrid();
   else wall.resume();
 }
 
@@ -512,7 +638,12 @@ async function applyQuery(): Promise<void> {
   const country = params.get("country");
   const url = params.get("add");
   const channelId = params.get("channel");
-  if (country || url || channelId) history.replaceState(null, "", location.pathname);
+  const vodId = params.get("vod");
+  if (country || url || channelId || vodId) history.replaceState(null, "", location.pathname);
+  if (vodId) {
+    const item = state.vod.flatMap((v) => v.items).find((i) => i.id === vodId);
+    if (item) openVod(item);
+  }
   if (channelId && state.free) {
     // Channel pages link here: open that channel (any of its feeds) straight away.
     const match = state.free.channels.find((c) => c.key === channelId || c.key.startsWith(`${channelId}@`));
@@ -548,6 +679,7 @@ root.addEventListener("click", async (e) => {
   else if (action === "prev") step(-1);
   else if (action === "next") step(1);
   else if (action === "favorite") toggleFavorite();
+  else if (action === "share") share();
   else if (action === "pip") {
     if (document.pictureInPictureElement) await document.exitPictureInPicture();
     else await els.video.requestPictureInPicture().catch(() => undefined);
