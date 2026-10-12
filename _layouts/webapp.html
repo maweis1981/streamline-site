@@ -14,6 +14,7 @@ layout: default
     directoryUrl: {{ lang_prefix | append: '/playlists/' | relative_url | jsonify }},
     freePlaylistUrl: {{ free_url | jsonify }},
     playableUrl: {{ '/web/playable.json' | relative_url | jsonify }},
+    vodUrl: {{ '/web/vod.json' | relative_url | jsonify }},
     categories: {{ t.directory.categories | jsonify }},
     strings: {{ w | jsonify }}
   };

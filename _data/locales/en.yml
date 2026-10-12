@@ -386,6 +386,18 @@ web:
   back: Back
   prev_channel: Previous channel
   next_channel: Next channel
+  vod_movies: Classic films
+  vod_open-movies: Open movies
+  vod_cartoons: Classic cartoons
+  vod_anime: Anime
+  vod_documentaries: Documentaries
+  vod_free-movies: Free movies
+  videos_count: '%count% videos'
+  vod_from_youtube: From the official YouTube channel %channel%
+  open_on_youtube: Watch on YouTube
+  licence_pd: Public domain
+  licence_cc: Creative Commons licensed
+  open_on_archive: View on the Internet Archive
 tools:
   nav: M3U tools
   page_title: 'M3U Playlist Analyzer & Cleaner: Count, Deduplicate and Sort Online'

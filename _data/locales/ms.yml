@@ -386,6 +386,18 @@ web:
   back: Kembali
   prev_channel: Saluran sebelumnya
   next_channel: Saluran seterusnya
+  vod_movies: Filem klasik
+  vod_open-movies: Filem terbuka
+  vod_cartoons: Kartun klasik
+  vod_anime: Anime
+  vod_documentaries: Dokumentari
+  vod_free-movies: Filem percuma
+  videos_count: '%count% video'
+  vod_from_youtube: Daripada saluran YouTube rasmi %channel%
+  open_on_youtube: Tonton di YouTube
+  licence_pd: Domain awam
+  licence_cc: Berlesen Creative Commons
+  open_on_archive: Lihat di Internet Archive
 tools:
   nav: Alat M3U
   page_title: 'Penganalisis & Pengemas Senarai Main M3U: Kira, Buang Pendua dan Susun Dalam Talian'

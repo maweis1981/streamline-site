@@ -102,6 +102,7 @@ To move to a different domain, update `CNAME` and `url`. To go back to `maweis19
 - Visitors can add their own playlists (link, file or paste); they are stored in the browser (IndexedDB) and never uploaded.
 - UI strings live in the `web:` and `tools:` blocks of each `_data/locales/<lang>.yml` and reach the scripts as `window.DOUBO_WEB`.
 - Directory country pages link to `/web/?country=<code>`.
+- On-demand sections (classic films, open movies, classic cartoons, anime, documentaries, free movies) come from `_data/vod/sources.yml`. At deploy time `scripts/vod.py` writes `web/vod.json`: Internet Archive items only when their metadata carries a public-domain or Creative Commons licence (adult and exploitation titles filtered out), played in our player; and the latest uploads of official free YouTube channels (Shorts and non-embeddable videos dropped), played in YouTube's own embed so views, ads and regional rules stay with the rights holder.
 
 The deploy workflow runs `npm ci`, `npm test` and `npm run build` in `web-app/` before Jekyll, writing `assets/web/`. Locally:
 

@@ -105,3 +105,16 @@ body.dw-theater-open{overflow:hidden}
   .dw-video-wrap{flex:none;aspect-ratio:16/9;border-radius:0;min-height:0}
   .dw-now-actions .dw-btn{padding:7px 11px;font-size:13px}
 }
+
+/* On-demand tiles and the YouTube embed */
+.dw-vod-thumb{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.dw-vod-play{position:absolute;right:10px;bottom:10px;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:rgba(2,4,10,.7);color:#fff;font-size:13px;opacity:0;transition:opacity var(--dur-1)}
+.dw-tile-btn:hover .dw-vod-play,.dw-tile-btn:focus-visible .dw-vod-play{opacity:1}
+.dw-vod .dw-tile-name{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.dw-embed{position:absolute;inset:0;background:#000}
+.dw-embed[hidden]{display:none}
+.dw-embed iframe{width:100%;height:100%;border:0}
+.dw-video[hidden]{display:none}
+.dw-attrib{color:var(--text-3);font-size:13px}
+.dw-attrib[hidden]{display:none}
+.dw-attrib a{color:var(--teal);text-underline-offset:3px}

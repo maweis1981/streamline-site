@@ -71,6 +71,12 @@ jobs:
             echo "::warning::Channel directory index not available; building without it"
           fi
 
+      # On-demand videos for the web player: public-domain / CC films and official free YouTube channels.
+      - name: Collect on-demand videos
+        run: |
+          pip install -q pyyaml==6.0.2
+          python scripts/vod.py web/vod.json || echo "::warning::on-demand videos were not collected"
+
       # The web player (web-app/) is built into assets/web/ before Jekyll copies it into the site.
       - uses: actions/setup-node@v4
         with:

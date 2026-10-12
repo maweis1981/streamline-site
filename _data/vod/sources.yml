@@ -1,0 +1,39 @@
+# On-demand video in the web player. Only content that may be shown for free:
+#
+# archive  public-domain or Creative Commons films on the Internet Archive. An item is
+#          used only when its own metadata carries a public-domain or CC licence URL.
+# youtube  official channels of rights holders that publish full episodes or films for
+#          free. Played with YouTube's own embedded player, so views, ads and regional
+#          rules stay with the channel.
+#
+# scripts/vod.py turns this into web/vod.json at deploy time.
+sections:
+  - id: movies
+    kind: archive
+    query: 'collection:feature_films AND mediatype:movies AND licenseurl:(*publicdomain* OR *creativecommons*)'
+    rows: 120
+  - id: open-movies
+    kind: archive
+    query: 'mediatype:movies AND licenseurl:*creativecommons* AND title:("Big Buck Bunny" OR Sintel OR "Tears of Steel" OR "Elephants Dream" OR "Cosmos Laundromat" OR Caminandes OR "Agent 327" OR "Sprite Fright" OR "Charge")'
+    rows: 40
+    title_starts: ["Big Buck Bunny", "Sintel", "Tears of Steel", "Elephants Dream", "Cosmos Laundromat", "Caminandes", "Agent 327", "Sprite Fright", "Charge"]
+  - id: cartoons
+    kind: archive
+    query: 'collection:(classic_cartoons OR animationandcartoons) AND mediatype:movies AND licenseurl:*publicdomain*'
+    rows: 80
+  - id: anime
+    kind: youtube
+    channels:
+      - { handle: MuseAsia, name: Muse Asia }
+      - { handle: AniOneAsia, name: Ani-One Asia }
+      - { handle: AniOnePHCollection, name: Ani-One Philippines }
+      - { handle: GUNDAMINFO, name: GUNDAM.INFO }
+  - id: documentaries
+    kind: youtube
+    channels:
+      - { handle: DWDocumentary, name: DW Documentary }
+      - { handle: NHKWORLDJAPAN, name: NHK WORLD-JAPAN }
+  - id: free-movies
+    kind: youtube
+    channels:
+      - { handle: FilmRiseMovies, name: FilmRise Movies }

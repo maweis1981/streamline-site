@@ -386,6 +386,18 @@ web:
   back: กลับ
   prev_channel: ช่องก่อนหน้า
   next_channel: ช่องถัดไป
+  vod_movies: ภาพยนตร์คลาสสิก
+  vod_open-movies: ภาพยนตร์เปิด
+  vod_cartoons: การ์ตูนคลาสสิก
+  vod_anime: อนิเมะ
+  vod_documentaries: สารคดี
+  vod_free-movies: ภาพยนตร์ฟรี
+  videos_count: '%count% วิดีโอ'
+  vod_from_youtube: จากช่อง YouTube ทางการ %channel%
+  open_on_youtube: ดูบน YouTube
+  licence_pd: สาธารณสมบัติ
+  licence_cc: สัญญาอนุญาต Creative Commons
+  open_on_archive: ดูบน Internet Archive
 tools:
   nav: เครื่องมือ M3U
   page_title: 'เครื่องมือวิเคราะห์และจัดระเบียบเพลย์ลิสต์ M3U: นับ ลบซ้ำ และเรียงลำดับออนไลน์'

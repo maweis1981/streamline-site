@@ -386,6 +386,18 @@ web:
   back: 返回
   prev_channel: 上一个频道
   next_channel: 下一个频道
+  vod_movies: 经典电影
+  vod_open-movies: 开放电影
+  vod_cartoons: 经典动画
+  vod_anime: 动漫
+  vod_documentaries: 纪录片
+  vod_free-movies: 免费电影
+  videos_count: '%count% 个视频'
+  vod_from_youtube: 来自官方 YouTube 频道 %channel%
+  open_on_youtube: 在 YouTube 上观看
+  licence_pd: 公有领域作品
+  licence_cc: 知识共享（CC）授权作品
+  open_on_archive: 在 Internet Archive 查看
 tools:
   nav: M3U 工具
   page_title: M3U 播放列表在线分析与整理工具：统计、去重、按分组导出

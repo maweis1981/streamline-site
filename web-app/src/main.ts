@@ -6,6 +6,7 @@ import type { Channel, Playlist, PlaylistSource } from "./model";
 import { favoriteId } from "./model";
 import { Player } from "./player";
 import { PreviewWall, webRoutes } from "./preview";
+import { type VodItem, type VodSection, loadVod, vodItems, vodTile } from "./vod";
 import { deletePlaylist, loadPlaylists, readPref, savePlaylist, writePref } from "./store";
 
 // Sources shown as chips: the free channel directory, favorites across sources, then the visitor's playlists.
@@ -25,6 +26,8 @@ interface State {
   dead: Record<string, number>;   // favoriteId -> time it was found unplayable here
   shown: number;
   playing: { playlistId: string; channel: Channel } | null;
+  vod: VodSection[];
+  vodPlaying: VodItem | null;
 }
 
 const state: State = {
@@ -38,7 +41,11 @@ const state: State = {
   dead: pruneDead(readPref<Record<string, number>>("dead", {})),
   shown: PAGE_SIZE,
   playing: null,
+  vod: [],
+  vodPlaying: null,
 };
+const VOD = "vod:"; // source ids for on-demand sections: "vod:<section id>"
+const isVod = (source: string) => source.startsWith(VOD);
 const liveRoute = new Map<string, number>(); // favoriteId -> route that played in the preview
 
 function pruneDead(dead: Record<string, number>): Record<string, number> {
@@ -82,6 +89,7 @@ root.innerHTML = `
     </div>
     <div class="dw-video-wrap">
       <video class="dw-video" controls playsinline autoplay></video>
+      <div class="dw-embed" hidden></div>
       <div class="dw-overlay dw-app-hint" hidden>
         <h2>${t("app_hint_title")}</h2>
         <p>${t("app_hint_desc")}</p>
@@ -89,6 +97,7 @@ root.innerHTML = `
       </div>
     </div>
     <div class="dw-routes" role="group" aria-label="${t("routes")}"></div>
+    <p class="dw-attrib" hidden></p>
     <p class="dw-hint">${t("shortcuts")}</p>
   </div>
   <dialog class="dw-dialog">
@@ -126,6 +135,11 @@ const els = {
   favorite: $<HTMLButtonElement>('[data-action="favorite"]'),
   pip: $<HTMLButtonElement>('[data-action="pip"]'),
   routes: $<HTMLDivElement>(".dw-routes"),
+  embed: $<HTMLDivElement>(".dw-embed"),
+  attrib: $<HTMLParagraphElement>(".dw-attrib"),
+  prev: $<HTMLButtonElement>('[data-action="prev"]'),
+  next: $<HTMLButtonElement>('[data-action="next"]'),
+  fullscreen: $<HTMLButtonElement>('[data-action="fullscreen"]'),
   dialog: $<HTMLDialogElement>(".dw-dialog"),
   form: $<HTMLFormElement>(".dw-form"),
   formMsg: $<HTMLParagraphElement>(".dw-form-msg"),
@@ -216,10 +230,20 @@ function renderBar(): void {
     `<button type="button" role="tab" data-source="${esc(id)}" aria-selected="${state.source === id}">${esc(label)}</button>`;
   els.sources.innerHTML =
     chip(FREE, t("free_channels")) +
+    state.vod.map((v) => chip(VOD + v.id, t(`vod_${v.id}`))).join("") +
     chip(FAVORITES, `★ ${t("favorites")}`) +
     state.playlists.map((p) => chip(p.id, p.name)).join("") +
     `<button type="button" class="dw-add" data-action="add">+ ${t("add_playlist")}</button>`;
   els.remove.hidden = !state.playlists.some((p) => p.id === state.source);
+  if (isVod(state.source)) {
+    const section = state.vod.find((v) => VOD + v.id === state.source);
+    const channels = [...new Set((section?.items ?? []).map((i) => i.channel).filter(Boolean) as string[])];
+    els.country.hidden = true;
+    els.groups.innerHTML = channels.length < 2 ? "" :
+      `<button type="button" data-group="" aria-pressed="${state.group === ""}">${esc(t("all"))}</button>` +
+      channels.map((g) => `<button type="button" data-group="${esc(g)}" aria-pressed="${state.group === g}">${esc(g)}</button>`).join("");
+    return;
+  }
 
   const pools = state.source === FAVORITES ? sourcePlaylists() : sourcePlaylists().filter((p) => p.id === state.source);
   const channels = pools.flatMap((p) => p.channels.filter((c) => !state.dead[favoriteId(p.id, c.key)] && webRoutes(c).length));
@@ -239,6 +263,15 @@ function renderBar(): void {
 function renderGrid(): void {
   wall.clear();
   renderedOwners = new WeakMap();
+  if (isVod(state.source)) {
+    const section = state.vod.find((v) => VOD + v.id === state.source);
+    const items = section ? vodItems(section, state.group, state.query) : [];
+    els.count.textContent = t("videos_count", { count: items.length });
+    els.empty.hidden = true;
+    els.grid.innerHTML = items.slice(0, state.shown).map((i) => vodTile(i, esc)).join("");
+    els.more.hidden = items.length <= state.shown;
+    return;
+  }
   const items = visible();
   els.count.textContent = state.free || state.playlists.length ? t("channels_count", { count: items.length }) : t("loading");
   els.empty.hidden = items.length > 0 || (state.source === FREE && !state.free);
@@ -314,7 +347,43 @@ function selectSource(id: string): void {
   render();
 }
 
+function setTheaterMode(vod: VodItem | null): void {
+  state.vodPlaying = vod;
+  const embed = !!vod?.video;
+  els.video.hidden = embed;
+  els.embed.hidden = !embed;
+  if (!embed) els.embed.innerHTML = "";
+  for (const b of [els.prev, els.next, els.favorite]) b.hidden = !!vod;
+  els.pip.hidden = embed || !document.pictureInPictureEnabled;
+  els.fullscreen.hidden = embed;
+  els.attrib.hidden = !vod;
+  els.routes.innerHTML = "";
+}
+
+/** On-demand items: Internet Archive films play in our player; YouTube videos in YouTube's embed. */
+function openVod(item: VodItem): void {
+  wall.pause();
+  player.stop();
+  state.playing = null;
+  setTheaterMode(item);
+  els.appHint.hidden = true;
+  els.theater.hidden = false;
+  document.body.classList.add("dw-theater-open");
+  els.nowName.textContent = item.title;
+  els.nowGroup.textContent = item.channel ?? item.year ?? "";
+  if (item.video) {
+    els.embed.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(item.video)}?autoplay=1&rel=0&playsinline=1" title="${esc(item.title)}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+    els.attrib.innerHTML = `${esc(t("vod_from_youtube", { channel: item.channel ?? "" }))} · <a href="https://www.youtube.com/watch?v=${encodeURIComponent(item.video)}" target="_blank" rel="noopener">${esc(t("open_on_youtube"))}</a>`;
+  } else if (item.src) {
+    const licence = /publicdomain/.test(item.licence ?? "") ? t("licence_pd") : t("licence_cc");
+    els.attrib.innerHTML = `${esc(licence)} · <a href="${esc(item.page ?? "")}" target="_blank" rel="noopener">${esc(t("open_on_archive"))}</a>`;
+    player.play({ key: item.id, name: item.title, group: "", routes: [{ url: item.src, label: "" }] });
+  }
+  track("web_vod_play", { section: item.kind ?? "", source: item.video ? "youtube" : "archive" });
+}
+
 function open(playlistId: string, channel: Channel): void {
+  setTheaterMode(null);
   wall.pause();
   state.playing = { playlistId, channel };
   els.appHint.hidden = true;
@@ -327,6 +396,12 @@ function open(playlistId: string, channel: Channel): void {
 
 function close(): void {
   player.stop();
+  if (state.vodPlaying) {
+    setTheaterMode(null);
+    els.theater.hidden = true;
+    document.body.classList.remove("dw-theater-open");
+    return;
+  }
   if (document.fullscreenElement) document.exitFullscreen().catch(() => undefined);
   els.theater.hidden = true;
   document.body.classList.remove("dw-theater-open");
@@ -477,7 +552,10 @@ root.addEventListener("click", async (e) => {
     if (document.pictureInPictureElement) await document.exitPictureInPicture();
     else await els.video.requestPictureInPicture().catch(() => undefined);
   } else if (action === "fullscreen") els.video.requestFullscreen?.().catch(() => undefined);
-  else if (action === "more") {
+  else if (action === "more" && isVod(state.source)) {
+    state.shown += PAGE_SIZE;
+    renderGrid();
+  } else if (action === "more") {
     const items = visible();
     appendTiles(items, state.shown, Math.min(state.shown + PAGE_SIZE, items.length));
     state.shown += PAGE_SIZE;
@@ -499,6 +577,11 @@ root.addEventListener("click", async (e) => {
     state.shown = PAGE_SIZE;
     renderBar();
     renderGrid();
+  }
+  const vodTarget = target.closest<HTMLElement>("[data-vod]");
+  if (vodTarget) {
+    const item = state.vod.flatMap((v) => v.items).find((i) => i.id === vodTarget.dataset.vod);
+    if (item) openVod(item);
   }
   const tile = target.closest<HTMLElement>("[data-key]");
   if (tile) {
@@ -540,6 +623,7 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && theater && !document.fullscreenElement) close();
   else if (e.key === "/" && !theater) { e.preventDefault(); els.search.focus(); }
   else if (!theater) return;
+  else if (state.vodPlaying) return;
   else if (e.key === "ArrowDown") { e.preventDefault(); step(1); }
   else if (e.key === "ArrowUp") { e.preventDefault(); step(-1); }
   else if (e.key.toLowerCase() === "f") els.video.requestFullscreen?.().catch(() => undefined);
@@ -551,10 +635,11 @@ document.addEventListener("keydown", (e) => {
 
 (async () => {
   state.playlists = await loadPlaylists();
-  if (state.source !== FREE && state.source !== FAVORITES && !state.playlists.some((p) => p.id === state.source)) state.source = FREE;
+  if (state.source !== FREE && state.source !== FAVORITES && !isVod(state.source) && !state.playlists.some((p) => p.id === state.source)) state.source = FREE;
   renderBar();
   renderGrid();
-  await loadFree();
+  [, state.vod] = await Promise.all([loadFree(), loadVod(config.vodUrl)]);
+  if (isVod(state.source) && !state.vod.some((v) => VOD + v.id === state.source)) state.source = FREE;
   render();
   await applyQuery();
 })();

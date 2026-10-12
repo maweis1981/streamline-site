@@ -386,6 +386,18 @@ web:
   back: Quay lại
   prev_channel: Kênh trước
   next_channel: Kênh tiếp theo
+  vod_movies: Phim kinh điển
+  vod_open-movies: Phim mở
+  vod_cartoons: Hoạt hình kinh điển
+  vod_anime: Anime
+  vod_documentaries: Phim tài liệu
+  vod_free-movies: Phim miễn phí
+  videos_count: '%count% video'
+  vod_from_youtube: Từ kênh YouTube chính thức %channel%
+  open_on_youtube: Xem trên YouTube
+  licence_pd: Phạm vi công cộng
+  licence_cc: Giấy phép Creative Commons
+  open_on_archive: Xem trên Internet Archive
 tools:
   nav: Công cụ M3U
   page_title: 'Công cụ phân tích & dọn dẹp danh sách M3U: Đếm, lọc trùng và sắp xếp trực tuyến'
