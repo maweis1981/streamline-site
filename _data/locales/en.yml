@@ -17,6 +17,7 @@ nav:
   privacy: Privacy
   download: Download
   tools: M3U tools
+  watch: Free TV by country
 cta:
   app_store: Download on the App Store
   testflight: Join the TestFlight beta
@@ -462,3 +463,44 @@ channel:
   a_tv: Copy the link to the free %country% playlist and open it in a player on your smart TV, Android TV, Fire TV or Apple TV. Doubo’s device guides walk you through each one.
   q_site: What is the official website of %name%?
   a_site: The official website of %name% is %website%.
+watch:
+  nav: Free TV by country
+  hub_title: How to watch TV for free, country by country
+  hub_desc: 'Legal ways to watch television for free in each country: live channels in your browser, official broadcaster apps and free-to-air antenna TV.'
+  hub_lead: Pick a country to see every legal free option, checked and kept up to date.
+  title: How to Watch %country% TV Online for Free (%year%)
+  description: 'Legal ways to watch %country% TV for free in %year%: free live channels in your browser, official apps such as %apps%, and free-to-air antenna TV.'
+  h1: How to watch %country% TV for free
+  intro: 'You don’t need a paid subscription to watch %country% television. These are the legal, free options: live channels in your browser, the broadcasters’ own apps, and free-to-air antenna TV.'
+  quick_title: Quick answer
+  q_web: Watch %count% free %country% channels now in Doubo’s web player. No download, no sign-up.
+  q_apps: 'Use the official free apps: %apps%.'
+  q_dtt: 'With an antenna: free-to-air digital TV (%standard%).'
+  online_title: Watch online now
+  online_desc: These %country% channels are made publicly available by their broadcasters. Pick one to watch in your browser.
+  watch_all: Watch all %country% channels
+  playlist_title: Use the M3U playlist in any player
+  apps_title: Official free streaming apps
+  col_service: Service
+  col_cost: Cost
+  col_platforms: Platforms
+  cost_free: Free
+  cost_ads: Free with ads
+  cost_freemium: Free tier + paid plans
+  live_tv: Live TV
+  dtt_title: Free-to-air antenna TV
+  dtt_standard: Broadcast standard
+  dtt_platform: Network
+  tv_title: Watch on your TV
+  tv_desc: 'Step-by-step guides for putting these channels on a smart TV, Android TV, Fire TV, Apple TV or Chromecast:'
+  notes_title: Good to know
+  faq_title: Questions
+  fq_free: Can I watch %country% TV online for free?
+  fa_free: Yes. Many %country% channels stream free and legally. You can watch them in Doubo’s web player, in the broadcasters’ own apps, or over the air with an antenna.
+  fq_app: What is the best free app to watch %country% TV?
+  fa_app: Official options include %apps%. Doubo puts the free %country% channels from many broadcasters in one place, in the browser or in the app.
+  fq_abroad: Can I watch %country% TV from abroad?
+  fa_abroad: Some streams play anywhere, but broadcasters often limit others to viewers inside %country% because of their rights. Doubo only lists streams that broadcasters make public and does not bypass these limits.
+  updated: Updated %date%
+  sources: Sources
+  more_countries: Other countries

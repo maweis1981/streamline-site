@@ -1,0 +1,90 @@
+---
+layout: default
+---
+{%- assign t = site.data.locales[page.lang] -%}
+{%- assign s = t.watch -%}
+{%- assign f = site.data.watch.facts[page.code] -%}
+{%- assign tr = site.data.watch.i18n[page.lang][page.code] -%}
+{%- assign d = site.data.directory -%}
+{%- assign dc = d.countries | where: "code", page.code | first -%}
+{%- assign name = page.country_name -%}
+{%- assign count = dc.count | default: 0 | append: "" -%}
+{%- if page.lang == site.default_lang -%}{%- assign lang_prefix = "" -%}{%- else -%}{%- assign lang_prefix = "/" | append: page.lang -%}{%- endif -%}
+<section class="page-hero">
+  <div class="container narrow">
+    <p class="eyebrow"><a href="{{ lang_prefix | append: '/watch/' | relative_url }}">{{ s.nav }}</a> · {% if dc %}{{ dc.flag }} {% endif %}{{ name }}</p>
+    <h1>{{ s.h1 | replace: "%country%", name }}</h1>
+    <p class="lead">{{ s.intro | replace: "%country%", name }}</p>
+    <p class="muted"><time datetime="{{ page.updated }}">{{ s.updated | replace: "%date%", page.updated }}</time></p>
+  </div>
+</section>
+<section class="section section-tight">
+  <div class="container narrow">
+    <aside class="card gborder wt-quick">
+      <h2>{{ s.quick_title }}</h2>
+      <ol>
+        {%- if dc %}<li><a href="{{ lang_prefix | append: '/web/' | relative_url }}?country={{ page.code }}" data-track="cta_click" data-track-target="web_player" data-track-location="watch_quick">{{ s.q_web | replace: "%count%", count | replace: "%country%", name }}</a></li>{% endif %}
+        <li>{{ s.q_apps | replace: "%apps%", page.apps }}</li>
+        {%- if f.dtt.standard and f.dtt.standard != "" %}<li>{{ s.q_dtt | replace: "%standard%", f.dtt.standard }}</li>{% endif %}
+      </ol>
+    </aside>
+
+    {%- if dc %}
+    <h2 class="dg-head">{{ s.online_title }}</h2>
+    <p>{{ s.online_desc | replace: "%country%", name }}</p>
+    <ul class="ch-related wt-channels">
+      {%- for ch in dc.channels limit: 18 %}
+      {%- assign ch_key = page.code | append: ":" | append: ch.name %}{% assign ch_slug = site.data.channel_slugs[ch_key] %}
+      <li>{% if ch_slug %}<a href="{{ lang_prefix | append: '/channels/' | append: ch_slug | append: '/' | relative_url }}">{{ ch.name }}</a>{% else %}<span>{{ ch.name }}</span>{% endif %}</li>
+      {%- endfor %}
+    </ul>
+    <p class="cta-row wt-cta">
+      <a class="btn btn-primary btn-sm" href="{{ lang_prefix | append: '/web/' | relative_url }}?country={{ page.code }}" data-track="cta_click" data-track-target="web_player" data-track-location="watch_article">{% include icon.html name="tv" %}<span>{{ s.watch_all | replace: "%country%", name }}</span></a>
+      <a class="btn btn-ghost btn-sm" href="{{ lang_prefix | append: '/playlists/' | append: page.code | append: '/' | relative_url }}">{{ s.playlist_title }}</a>
+    </p>
+    {%- endif %}
+
+    <h2 class="dg-head">{{ s.apps_title }}</h2>
+    <div class="wt-services">
+      {%- for svc in f.services %}
+      <article class="card wt-service">
+        <h3><a href="{{ svc.url }}" rel="nofollow noopener" target="_blank">{{ svc.name }}</a></h3>
+        <p class="wt-meta">{{ svc.owner }} · {% case svc.cost %}{% when "free" %}{{ s.cost_free }}{% when "free with ads" %}{{ s.cost_ads }}{% else %}{{ s.cost_freemium }}{% endcase %}{% if svc.live_tv %} · {{ s.live_tv }}{% endif %}</p>
+        <p>{{ tr.services[forloop.index0] | default: svc.summary }}</p>
+        <p class="wt-platforms">{{ s.col_platforms }}: {{ svc.platforms | join: ", " }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+
+    <h2 class="dg-head">{{ s.dtt_title }}</h2>
+    <div class="card wt-dtt">
+      <dl class="ch-facts-dl">
+        {%- if f.dtt.standard and f.dtt.standard != "" %}<div><dt>{{ s.dtt_standard }}</dt><dd>{{ f.dtt.standard }}</dd></div>{% endif %}
+        {%- if f.dtt.platform and f.dtt.platform != "" %}<div><dt>{{ s.dtt_platform }}</dt><dd>{{ f.dtt.platform }}</dd></div>{% endif %}
+      </dl>
+      <p>{{ tr.dtt | default: f.dtt.summary }}</p>
+    </div>
+
+    <h2 class="dg-head">{{ s.tv_title }}</h2>
+    <p>{{ s.tv_desc }}</p>
+    {% include device-links.html plain=true %}
+
+    {%- assign notes = tr.notes | default: f.notes %}
+    {%- if notes.size > 0 %}
+    <h2 class="dg-head">{{ s.notes_title }}</h2>
+    <ul class="wt-notes">{% for n in notes %}<li>{{ n }}</li>{% endfor %}</ul>
+    {%- endif %}
+
+    <h2 class="dg-head">{{ s.faq_title }}</h2>
+    <div class="faq">
+      <details><summary>{{ s.fq_free | replace: "%country%", name }}</summary><p>{{ s.fa_free | replace: "%country%", name }}</p></details>
+      <details><summary>{{ s.fq_app | replace: "%country%", name }}</summary><p>{{ s.fa_app | replace: "%country%", name | replace: "%apps%", page.apps }}</p></details>
+      <details><summary>{{ s.fq_abroad | replace: "%country%", name }}</summary><p>{{ s.fa_abroad | replace: "%country%", name }}</p></details>
+    </div>
+
+    <h2 class="dg-head">{{ s.more_countries }}</h2>
+    {% include watch-links.html current=page.code %}
+
+    <details class="wt-sources"><summary>{{ s.sources }}</summary><ul>{% for u in f.sources %}<li><a href="{{ u }}" rel="nofollow noopener" target="_blank">{{ u | remove: "https://" | remove: "http://" | truncate: 80 }}</a></li>{% endfor %}</ul></details>
+  </div>
+</section>

@@ -1,0 +1,55 @@
+code: th
+country: Thailand
+dtt:
+  standard: DVB-T2
+  platform: ""
+  summary: Free-to-air digital TV is received with an antenna and a TV with a built-in DVB-T2 tuner or a DVB-T2 set-top box, with no subscription fee. Analogue broadcasting ended in 2020, when Channel 3 became the last analogue channel to go off air on 25 March 2020; commercial digital TV licences run until 2029.
+services:
+  - name: Thai PBS
+    owner: Thai Public Broadcasting Service (Thai PBS)
+    cost: free
+    live_tv: true
+    platforms: [web, iOS, Android]
+    url: https://www.thaipbs.or.th/live
+    summary: The public broadcaster streams its channel live for free on its website and app, with AI-generated live captions and on-demand programmes.
+  - name: VIPA
+    owner: Thai Public Broadcasting Service (Thai PBS)
+    cost: free
+    live_tv: false
+    platforms: [web, iOS, Android]
+    url: https://vipa.me/
+    summary: Thai PBS's on-demand platform offers dramas, documentaries and Thai PBS programmes for free with no ads.
+  - name: CH3 Plus
+    owner: BEC World (Channel 3)
+    cost: freemium
+    live_tv: true
+    platforms: [web, iOS, Android]
+    url: https://ch3plus.com/
+    summary: Channel 3 can be watched live and on catch-up for free with ads; the paid 3Plus Premium tier removes ads and adds extras.
+  - name: TrueID
+    owner: True Digital Group
+    cost: freemium
+    live_tv: true
+    platforms: [web, iOS, Android, Android TV]
+    url: https://trueidtv.trueid.net/en/tv-channels
+    summary: Free-to-air channels such as Thai PBS, Channel 3 and Channel 7 are listed among TrueID's free channels; premium TrueVisions channels need a paid package.
+notes:
+  - Channel 7HD has merged its BUGABOO.TV and CH7HD apps into a new app called CH7ON.
+sources:
+  - https://dvb.org/?p=16669
+  - https://www.brandbuffet.in.th/?p=141275
+  - https://brandinside.asia/?p=76820
+  - https://www.thansettakij.com/technology/640882
+  - https://www.thaipbs.or.th/live
+  - https://play.google.com/store/apps/details?id=th.or.thaipbs.thaipbsnews
+  - https://www.thaipbs.or.th/org/service/digital-tv/thaipbs/
+  - https://brandinside.asia/vipa-streaming-vdo-platform-free-service-by-thaipbs/
+  - https://play.google.com/store/apps/details?id=me.vipa.app
+  - https://apps.apple.com/th/app/vipa/id1472510460
+  - https://ch3plus.com/
+  - https://apps.apple.com/th/app/ch3-plus/id475642354
+  - https://play.google.com/store/apps/details?id=com.beci.thaitv3android
+  - https://trueidtv.trueid.net/en/tv-channels
+  - https://trueidtv.trueid.net/en/tvapp
+  - https://play.google.com/store/apps/details?id=com.tdcm.trueidapp
+  - https://www.bangkokbiznews.com/business/1252565

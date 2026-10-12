@@ -1,0 +1,46 @@
+code: jp
+country: Japan
+dtt:
+  standard: ISDB-T
+  platform: 地デジ (Chideji)
+  summary: Terrestrial digital TV uses ISDB-T on UHF channels 13 to 62; viewers need a TV or tuner for terrestrial digital broadcasting and a UHF antenna. There is no subscription charge, and viewers get NHK General TV, NHK Educational TV and the local commercial stations, with the number of channels varying by region; households with a TV must pay the NHK receiving fee.
+services:
+  - name: TVer
+    owner: TVer Inc. (official service of the commercial broadcasters)
+    cost: free with ads
+    live_tv: true
+    platforms: [web, iOS, Android, smart TV]
+    url: https://tver.jp
+    summary: Free catch-up of selected programmes from the commercial broadcasters for a limited period after airing, plus live streams of the five commercial networks focused on prime time; live streams are not available in the TV app.
+  - name: ABEMA
+    owner: AbemaTV, Inc. (CyberAgent and TV Asahi)
+    cost: freemium
+    live_tv: true
+    platforms: [web, iOS, Android]
+    url: https://abema.tv
+    summary: About 25 to 30 free linear channels, including a 24-hour news channel, with no registration needed; ABEMA Premium (1,080 yen a month, or 580 yen with ads) adds exclusive content and features.
+  - name: NHK WORLD-JAPAN
+    owner: NHK
+    cost: free
+    live_tv: true
+    platforms: [web, iOS, Android]
+    url: https://www3.nhk.or.jp/nhkworld/
+    summary: NHK's international service streams its English-language TV channel live worldwide for free, with 7-day catch-up for selected programmes.
+notes:
+  - NHK's own simulcast and catch-up service, NHK ONE (successor to NHK+ since 1 October 2025), requires an NHK reception contract; households already paying the fee pay nothing extra.
+  - The NHK receiving fee for a terrestrial contract is 1,100 yen a month (965 yen in Okinawa), and an internet-only contract costs the same.
+  - TVer and ABEMA are designed for viewers in Japan; TVer's help pages state that its videos cannot be watched from overseas.
+sources:
+  - https://www.soumu.go.jp/main_sosiki/joho_tsusin/dtv/QA/QA2.html
+  - https://www.soumu.go.jp/soutsu/kyushu/bc/howto.html
+  - https://help.tver.jp/hc/ja/articles/5105308992281--TVer-%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%A7%E3%81%99%E3%81%8B
+  - https://help.tver.jp/hc/ja/articles/5106803908633-%E6%B5%B7%E5%A4%96%E3%81%A7%E3%82%82%E5%8B%95%E7%94%BB%E3%82%92%E8%A6%96%E8%81%B4%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%99%E3%81%8B
+  - https://apps.apple.com/jp/app/id830340223
+  - https://help.abema.tv/hc/ja/articles/360013822011--ABEMA-%E3%81%A8%E3%81%AF
+  - https://www.cyberagent.co.jp/news/detail/id=30889
+  - https://en.wikipedia.org/wiki/Abema
+  - https://apps.apple.com/us/app/nhk-world-japan/id350732480
+  - https://en.wikipedia.org/wiki/NHK_World-Japan
+  - https://www.itmedia.co.jp/news/articles/2509/30/news134.html
+  - https://www.itmedia.co.jp/mobile/spv/2506/19/news054.html
+  - https://ascii.jp/elem/000/004/293/4293091/

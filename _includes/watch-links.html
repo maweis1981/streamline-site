@@ -1,0 +1,7 @@
+{%- if page.lang == site.default_lang -%}{%- assign wl_prefix = "" -%}{%- else -%}{%- assign wl_prefix = "/" | append: page.lang -%}{%- endif -%}
+{%- assign wl_pages = site.pages | where: "layout", "watch" | where: "lang", page.lang | sort: "country_name" -%}
+<ul class="dg-devices">
+  {%- for p in wl_pages %}{% unless p.code == include.current %}
+  <li><a class="card dg-device" href="{{ p.url | relative_url }}"><span>{{ p.country_name }}</span></a></li>
+  {%- endunless %}{% endfor %}
+</ul>

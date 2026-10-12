@@ -1,0 +1,146 @@
+au:
+  dtt: Truyền hình miễn phí của ABC, SBS, Seven, Nine và Ten được phát sóng miễn phí qua DVB-T, cần ăng-ten và TV kỹ thuật số hoặc đầu thu; Freeview liệt kê hơn 30 kênh, bao gồm các kênh phụ kỹ thuật số. TV đạt chứng nhận Freeview có kết nối băng thông rộng còn có thêm hướng dẫn chương trình trực tuyến và ứng dụng xem lại.
+  services:
+  - Các kênh ABC trực tiếp miễn phí và chương trình theo yêu cầu không quảng cáo; cần tài khoản ABC miễn phí để xem chương trình theo yêu cầu.
+  - Phát trực tiếp miễn phí SBS, SBS VICELAND, SBS Food, SBS World Movies và NITV cùng các chương trình theo yêu cầu; cần tài khoản miễn phí đã xác minh.
+  - Phát trực tiếp miễn phí 7, 7TWO, 7mate, 7Bravo và 7flix cùng thể thao, chương trình và phim theo yêu cầu.
+  - Phát trực tiếp miễn phí Channel 9, 9Go!, 9Gem, 9Life và 9Rush cùng nội dung xem lại; cần tài khoản miễn phí.
+  notes:
+  - Các luồng phát trực tiếp trong ứng dụng của các đài truyền hình Úc bị giới hạn địa lý trong lãnh thổ Úc.
+  - Có thể xem các kênh ABC trực tiếp trên trang web iview mà không cần đăng nhập; các luồng trực tiếp của SBS On Demand theo lịch phát sóng của bang NSW.
+cn:
+  dtt: Truyền hình số mặt đất miễn phí sử dụng tiêu chuẩn quốc gia DTMB (GB 20600); người xem cần TV hoặc đầu thu có bộ thu DTMB và ăng-ten mặt đất, và khả năng thu sóng phụ thuộc vào khoảng cách đến trạm phát. Dịch vụ này miễn phí, và tiêu chuẩn dịch vụ công quốc gia yêu cầu tối thiểu 15 kênh phát sóng mặt đất, chủ yếu là CCTV cùng các kênh cấp tỉnh và địa phương.
+  services:
+  - Ứng dụng video chính thức của CMG với luồng trực tiếp miễn phí các kênh CCTV và kênh vệ tinh cấp tỉnh cùng chương trình theo yêu cầu; một số tính năng và nội dung cần tài khoản hoặc mua trong ứng dụng.
+  - Phát trực tiếp miễn phí tất cả các kênh CCTV và nhiều kênh vệ tinh cấp tỉnh và kênh thành phố, có chức năng tua lại và xem lại; một số nội dung theo yêu cầu cần gói thành viên trả phí.
+  - Phát trực tiếp trên trình duyệt các kênh CCTV như CCTV-1 và CCTV-13, kèm lịch phát sóng và các đoạn video theo yêu cầu.
+  - Cung cấp luồng trực tiếp 24 giờ của Hunan TV và các chương trình theo yêu cầu miễn phí, còn gói thành viên VIP mở thêm nội dung.
+  notes:
+  - Tiêu chuẩn dịch vụ công cơ bản quốc gia (phiên bản 2021 và 2023) yêu cầu tối thiểu 15 kênh truyền hình miễn phí qua sóng mặt đất, hoặc tối thiểu 25 kênh qua vệ tinh truyền hình trực tiếp ở những khu vực có dịch vụ vệ tinh.
+  - Năm 2017, cơ quan quản lý cho biết chưa có dịch vụ truyền hình số mặt đất trả tiền có mã hóa nào được phê duyệt.
+hk:
+  dtt: Truyền hình số mặt đất dựa trên tiêu chuẩn quốc gia DTMB (GB 20600) và là phương thức phát sóng duy nhất kể từ khi truyền hình analog bị tắt vào ngày 30 tháng 11 năm 2020. Người xem cần TV kỹ thuật số hoặc đầu thu và ăng-ten, và không phải trả phí thuê bao cho các kênh miễn phí của TVB, ViuTV, HOY và RTHK (khoảng 14 kênh).
+  services:
+  - Ứng dụng miễn phí của đài truyền hình công cộng cung cấp phát trực tiếp trên mạng các kênh RTHK TV 31 đến 35, cùng video theo yêu cầu và tải xuống.
+  - Nền tảng của TVB đánh dấu Jade, TVB Plus và TVB News trong số các kênh trực tiếp miễn phí bên cạnh các gói trả phí; dịch vụ chỉ dành cho người dùng tại Hồng Kông và Ma Cao.
+  - Phát trực tiếp miễn phí ViuTV (kênh 99), còn ViuTVsix (kênh 96) chỉ được phát trực tuyến vào những thời điểm hạn chế do vấn đề bản quyền; chỉ dành cho Hồng Kông.
+  - Phát trực tiếp miễn phí 24 giờ các kênh HOY 76, 77 và 78 cùng chương trình theo yêu cầu; phát trực tuyến miễn phí chỉ hoạt động tại Hồng Kông.
+  notes:
+  - Chính quyền cho biết không cần trả phí thuê bao để thu truyền hình số mặt đất miễn phí.
+  - Phần lớn luồng phát trực tiếp của các đài truyền hình bị giới hạn cho người xem tại Hồng Kông.
+id:
+  dtt: Truyền hình số miễn phí cần ăng-ten và TV có bộ thu DVB-T2, hoặc đầu thu DVB-T2 cho TV analog đời cũ; việc xem là miễn phí. Phát sóng analog đã được tắt theo từng khu vực trong giai đoạn 2022 đến 2023, và chính phủ đã phân phát đầu thu miễn phí cho các hộ gia đình thu nhập thấp.
+  services:
+  - Phát trực tiếp miễn phí các kênh quốc gia của đài truyền hình công cộng (bao gồm TVRI Nasional và TVRI Sport) và các đài khu vực, cùng nội dung phát lại theo yêu cầu.
+  - Phát trực tiếp miễn phí có quảng cáo RCTI, MNCTV, GTV và iNews, kèm xem lại các chương trình gần đây.
+  - Các kênh miễn phí như SCTV và Indosiar có thể được xem trực tiếp miễn phí kèm quảng cáo; các kênh cao cấp, nhiều trận đấu thể thao và xem không quảng cáo cần gói trả phí.
+  notes:
+  - Nhiều ứng dụng "TV online" không chính thức không có giấy phép; ứng dụng và trang web riêng của các đài truyền hình là những lựa chọn hợp pháp.
+in:
+  dtt: Doordarshan vận hành dịch vụ truyền hình số mặt đất DVB-T2 miễn phí, nhưng chỉ ở một số thành phố hạn chế (Prasar Bharati liệt kê 19 thành phố), và cần đầu thu DVB-T2 hoặc TV có bộ thu DVB-T2 cùng ăng-ten. Phần lớn việc xem truyền hình miễn phí ở Ấn Độ là qua DD Free Dish, dịch vụ vệ tinh miễn phí của Prasar Bharati, không thu phí hàng tháng hay hàng năm sau khi mua một lần chảo thu và đầu thu (khoảng Rs 1,500 đến 2,000) và có hơn 160 kênh truyền hình.
+  services:
+  - Ứng dụng của đài truyền hình công cộng với khoảng 140 kênh truyền hình trực tiếp, bao gồm tất cả các kênh vệ tinh của Doordarshan, cùng radio và nội dung theo yêu cầu; gần như toàn bộ nội dung là miễn phí, có một số ít nội dung cao cấp.
+  - Dịch vụ miễn phí có quảng cáo với các loạt phim gốc, phim điện ảnh và chương trình Ấn Độ, cũng có thể truy cập qua ứng dụng mua sắm Amazon và Prime Video.
+  - Các kênh trực tiếp miễn phí có quảng cáo (Samsung cho biết hơn 150 kênh) về tin tức, phim, âm nhạc và giải trí, chỉ có trên thiết bị Samsung.
+  notes:
+  - DD Free Dish miễn phí trọn đời và không cần thuê bao; Prasar Bharati khuyến nghị dùng đầu thu được ủy quyền vì có thể hạn chế các kênh MPEG-4 trên đầu thu không được ủy quyền.
+  - Số lượng kênh của DD Free Dish thay đổi sau mỗi đợt đấu giá vị trí kênh hàng năm; hãy kiểm tra danh sách hiện hành của Prasar Bharati.
+jp:
+  dtt: Truyền hình số mặt đất sử dụng ISDB-T trên các kênh UHF từ 13 đến 62; người xem cần TV hoặc bộ thu dành cho phát sóng số mặt đất và ăng-ten UHF. Không có phí thuê bao, và người xem nhận được NHK General TV, NHK Educational TV cùng các đài thương mại địa phương, với số lượng kênh khác nhau tùy khu vực; các hộ gia đình có TV phải trả phí thu sóng NHK.
+  services:
+  - Xem lại miễn phí một số chương trình chọn lọc của các đài thương mại trong thời gian giới hạn sau khi phát sóng, cùng luồng trực tiếp của năm mạng lưới thương mại tập trung vào khung giờ vàng; luồng trực tiếp không có trên ứng dụng dành cho TV.
+  - Khoảng 25 đến 30 kênh tuyến tính miễn phí, bao gồm một kênh tin tức 24 giờ, không cần đăng ký; ABEMA Premium (1,080 yên mỗi tháng, hoặc 580 yên nếu có quảng cáo) bổ sung nội dung và tính năng độc quyền.
+  - Dịch vụ quốc tế của NHK phát trực tiếp miễn phí kênh truyền hình tiếng Anh trên toàn thế giới, kèm xem lại trong 7 ngày đối với một số chương trình chọn lọc.
+  notes:
+  - Dịch vụ phát song song và xem lại riêng của NHK, NHK ONE (kế nhiệm NHK+ từ ngày 1 tháng 10 năm 2025), yêu cầu hợp đồng thu sóng NHK; các hộ gia đình đã trả phí không phải trả thêm.
+  - Phí thu sóng NHK cho hợp đồng mặt đất là 1,100 yên mỗi tháng (965 yên tại Okinawa), và hợp đồng chỉ qua internet có cùng mức phí.
+  - TVer và ABEMA được thiết kế cho người xem tại Nhật Bản; các trang trợ giúp của TVer nêu rõ không thể xem video của dịch vụ này từ nước ngoài.
+kr:
+  dtt: 'Các kênh mặt đất của KBS, MBC, SBS và EBS được phát miễn phí qua sóng với ăng-ten: HD theo chuẩn ATSC 1.0 và 4K UHD theo chuẩn ATSC 3.0, cần TV UHD có bộ thu ATSC 3.0. Nhiều tòa chung cư phân phối tín hiệu qua hệ thống ăng-ten chung trên mái, và các hệ thống cũ có thể không truyền được tín hiệu ATSC 3.0.'
+  services:
+  - Ứng dụng của đài truyền hình công cộng với các kênh trực tiếp của KBS và nội dung phát lại theo yêu cầu; ứng dụng miễn phí, và một số nội dung phát lại phải trả phí.
+  - Phát trực tiếp miễn phí bảy kênh MBC bao gồm MBC, MBC every1 và MBC DRAMA; nhiều nội dung phát lại cần vé trả phí.
+  - Phát trực tiếp miễn phí SBS, SBS Plus, SBS Sports và SBS Golf cho thành viên đã đăng nhập (người không phải thành viên được xem trước 3 phút), cùng một số nội dung phát lại miễn phí.
+  - Phát trực tiếp miễn phí sáu kênh EBS bao gồm EBS1; quyền truy cập đầy đủ nội dung phát lại phải trả phí.
+  notes:
+  - Bên ngoài Hàn Quốc, KBS+ chỉ hiển thị một số kênh trực tiếp do vấn đề bản quyền phát sóng.
+  - Cần tài khoản miễn phí để xem trực tiếp đầy đủ trên một số ứng dụng của đài truyền hình (ví dụ SBS play).
+my:
+  dtt: Truyền hình số miễn phí được thu bằng ăng-ten UHF và TV có bộ thu DVB-T2 tích hợp hoặc bộ giải mã DVB-T2, không có phí thuê bao; MYTV liệt kê khoảng 17 kênh truyền hình cùng radio kỹ thuật số. Truyền hình analog đã bị tắt trên toàn quốc vào năm 2019, trong đó Sabah và Sarawak là các khu vực cuối cùng vào ngày 31 tháng 10 năm 2019.
+  services:
+  - Phát trực tiếp miễn phí các kênh RTM bao gồm TV1, TV2, TV Okey, Berita RTM, TV Sukan, TV6 và RTM Parlimen, cùng radio trực tiếp và xem lại các chương trình gần đây.
+  - Tài khoản miễn phí có quảng cáo cho phép truy cập các kênh truyền hình trực tiếp trong nước như TV3 và chương trình theo yêu cầu; gói trả phí TontonUp bổ sung nội dung cao cấp.
+  - Sau khi đăng ký tài khoản miễn phí, người xem có thể xem một nhóm kênh có quảng cáo (như Astro Awani, Bernama TV và TV Sarawak) và một số chương trình chọn lọc ở độ phân giải tiêu chuẩn; phần lớn nội dung thể thao và cao cấp cần gói trả phí.
+  notes:
+  - Phát trực tiếp các kênh của RTM trên RTMKlik chỉ khả dụng tại Malaysia.
+  - Tonton và sooka yêu cầu tài khoản miễn phí để xem các kênh miễn phí.
+ph:
+  dtt: Truyền hình số mặt đất vẫn được phát miễn phí và được thu bằng ăng-ten và TV có bộ thu ISDB-T hoặc hộp truyền hình kỹ thuật số cho các TV analog đời cũ. Truyền hình analog tại Mega Manila dự kiến bị tắt vào ngày 22 tháng 11 năm 2026 theo một thông tư của NTC; thời điểm cho phần còn lại của cả nước chưa được ấn định.
+  services:
+  - Đài truyền hình nhà nước phát trực tiếp kênh của mình trên trang web, cũng như trên các kênh YouTube và Dailymotion chính thức.
+  - Ứng dụng miễn phí kết hợp truyền hình GMA trực tiếp với các chương trình Philippines, phim truyền hình châu Á và phim điện ảnh theo yêu cầu.
+  - Phát song song miễn phí các chương trình buổi chiều và khung giờ vàng của GMA trên các trang YouTube và Facebook chính thức của GMA Network; các tập đầy đủ cũng được xem miễn phí trên gmanetwork.com.
+  - Dịch vụ phát trực tuyến của ABS-CBN cung cấp một số chương trình miễn phí khi đăng ký, và vào năm 2026 đã quảng bá việc xem miễn phí một số chương trình Kapamilya chọn lọc; phần lớn danh mục yêu cầu thuê bao.
+  notes:
+  - Sau khi Mega Manila tắt sóng analog, các hộ gia đình chỉ có TV analog cần hộp truyền hình kỹ thuật số; DICT cho biết sẽ triển khai chương trình hỗ trợ cho các hộ gia đình dễ bị tổn thương.
+sg:
+  dtt: Các kênh miễn phí của Mediacorp được phát sóng kỹ thuật số theo chuẩn DVB-T2 kể từ khi truyền hình analog kết thúc vào ngày 1 tháng 1 năm 2019; người xem cần TV có bộ thu DVB-T2 tích hợp hoặc đầu thu DVB-T2, cùng ăng-ten UHF trong nhà hoặc trên mái. Việc thu sóng là miễn phí, và sáu kênh miễn phí gồm Channel 5, Channel 8, Channel U, Suria, Vasantham và CNA.
+  services:
+  - Phát trực tiếp miễn phí Channel 5, Channel 8, Channel U, Suria, Vasantham và CNA cùng các chương trình theo yêu cầu miễn phí của Mediacorp, với gói Prime trả phí để xem không quảng cáo và nội dung đối tác; các kênh trực tiếp chỉ hoạt động tại Singapore.
+  - Ứng dụng CNA miễn phí và kênh YouTube chính thức của CNA cung cấp luồng trực tiếp CNA 24/7 cùng phim tài liệu và chương trình thời sự theo yêu cầu, và có thể sử dụng bên ngoài Singapore.
+  - Ứng dụng tin tức tiếng Trung miễn phí của Mediacorp, với các chương trình thời sự và bản tin theo yêu cầu.
+  notes:
+  - Singapore đã bãi bỏ phí giấy phép radio và truyền hình từ ngày 1 tháng 1 năm 2011, vì vậy không cần trả phí để xem.
+  - Các kênh trực tiếp trên mewatch bị giới hạn địa lý trong lãnh thổ Singapore; chỉ một số chương trình chọn lọc có thể xem từ nước ngoài.
+  - Các thuê bao truyền hình trả tiền (StarHub, Singtel) đã nhận được các kênh miễn phí của Mediacorp dưới dạng kỹ thuật số.
+th:
+  dtt: Truyền hình số miễn phí được thu bằng ăng-ten và TV có bộ thu DVB-T2 tích hợp hoặc đầu thu DVB-T2, không có phí thuê bao. Phát sóng analog kết thúc vào năm 2020, khi Channel 3 trở thành kênh analog cuối cùng ngừng phát sóng vào ngày 25 tháng 3 năm 2020; giấy phép truyền hình số thương mại có hiệu lực đến năm 2029.
+  services:
+  - Đài truyền hình công cộng phát trực tiếp miễn phí kênh của mình trên trang web và ứng dụng, có phụ đề trực tiếp do AI tạo và chương trình theo yêu cầu.
+  - Nền tảng theo yêu cầu của Thai PBS cung cấp phim truyền hình, phim tài liệu và các chương trình của Thai PBS miễn phí, không có quảng cáo.
+  - Channel 3 có thể được xem trực tiếp và xem lại miễn phí kèm quảng cáo; gói trả phí 3Plus Premium loại bỏ quảng cáo và bổ sung thêm tiện ích.
+  - Các kênh miễn phí như Thai PBS, Channel 3 và Channel 7 nằm trong danh sách kênh miễn phí của TrueID; các kênh TrueVisions cao cấp cần gói trả phí.
+  notes:
+  - Channel 7HD đã hợp nhất các ứng dụng BUGABOO.TV và CH7HD thành một ứng dụng mới có tên CH7ON.
+tw:
+  dtt: Truyền hình số mặt đất miễn phí sử dụng DVB-T và đã thay thế hoàn toàn truyền hình analog kể từ ngày 30 tháng 6 năm 2012; người xem cần ăng-ten truyền hình kỹ thuật số và TV hoặc đầu thu có khả năng giải mã HD, vì một số kênh phát ở chuẩn HD. Dịch vụ miễn phí và có khoảng 20 kênh từ năm đài truyền hình mặt đất (TTV, CTV, CTS, FTV và PTS).
+  services:
+  - Nền tảng không quảng cáo của đài truyền hình công cộng có luồng trực tiếp miễn phí PTS, PTS Taigi, PTS XS và PTS News, cùng phim truyền hình và phim tài liệu theo yêu cầu phần lớn miễn phí; cần có tài khoản và một số ít nội dung tính phí theo lượt xem.
+  - Kênh YouTube chính thức của PTS phát trực tiếp PTS News 24 giờ mỗi ngày, và PTS cũng liệt kê các luồng trực tiếp chính thức của kênh chính và PTS Taigi.
+  - Tin tức, phim tài liệu và một kênh trực tiếp bằng tiếng Anh miễn phí từ Đài Loan, không quảng cáo và có thể xem trên toàn thế giới.
+  - Ứng dụng tin tức miễn phí của CTS có luồng tin tức trực tiếp 24 giờ.
+  notes:
+  - Tín hiệu mặt đất cũng được chuyển tiếp qua vệ tinh như một phương án miễn phí cho các khu vực thu sóng mặt đất kém.
+  - Một số kênh tin tức thương mại đã ngừng phát trực tiếp 24 giờ trên YouTube tại Đài Loan, vì vậy tình trạng sẵn có trên YouTube có thể thay đổi.
+uk:
+  dtt: Freeview không cần thuê bao và cần ăng-ten trên mái hoặc trong nhà cùng TV hoặc đầu thu Freeview; dịch vụ cung cấp khoảng 70 kênh truyền hình, hoặc hơn 100 kênh nếu tính cả kênh HD và kênh phát trực tuyến, tùy khu vực. Các kênh HD sử dụng DVB-T2, vì vậy các đầu thu đời cũ chỉ hỗ trợ DVB-T chỉ nhận được các kênh độ phân giải tiêu chuẩn. Freely cung cấp các kênh trực tiếp chính qua băng thông rộng mà không cần ăng-ten.
+  services:
+  - Các kênh BBC trực tiếp và chương trình BBC theo yêu cầu không có quảng cáo; cần có giấy phép TV để sử dụng.
+  - Các kênh ITV trực tiếp miễn phí có quảng cáo, các kênh phát trực tuyến theo chủ đề và chương trình theo yêu cầu; ITVX Premium loại bỏ phần lớn quảng cáo trong nội dung theo yêu cầu và bổ sung BritBox.
+  - Phát trực tiếp miễn phí Channel 4, E4, More4, Film4 và 4seven cùng chương trình theo yêu cầu và kho lưu trữ; cần đăng ký miễn phí.
+  - Dịch vụ phát trực tuyến của Channel 5 (trước đây là My5) với các kênh trực tiếp, kênh phát trực tuyến miễn phí và nội dung xem lại.
+  - Được tích hợp sẵn trong một số TV thông minh và thiết bị, dịch vụ phát hơn 70 kênh trực tiếp từ BBC, ITV, Channel 4, Channel 5 và các đài khác qua băng thông rộng (khuyến nghị 10Mbps), không cần ăng-ten.
+  notes:
+  - Cần có giấy phép TV để xem hoặc ghi truyền hình trực tiếp trên bất kỳ kênh hoặc dịch vụ nào (bao gồm Freeview, Freely và các luồng trực tiếp trong ứng dụng) và để sử dụng BBC iPlayer dưới mọi hình thức; nội dung theo yêu cầu từ các dịch vụ khác không cần giấy phép.
+  - Theo GOV.UK, giấy phép TV có giá £180 mỗi năm; xem truyền hình trực tiếp mà không có giấy phép có thể bị phạt tới £1,000.
+  - BBC iPlayer và các luồng trực tiếp trong ứng dụng của các đài truyền hình Anh dành cho người xem tại Vương quốc Anh; Watch Live của Channel 4 chỉ dành cho cư dân Vương quốc Anh.
+us:
+  dtt: Các đài phát sóng địa phương (như ABC, CBS, NBC, Fox, PBS và các kênh phụ của họ) được phát miễn phí qua sóng với ăng-ten và TV hoặc bộ chuyển đổi có bộ thu ATSC; số lượng kênh phụ thuộc vào vị trí. ATSC 3.0 (NEXTGEN TV) cần bộ thu tương thích, và các đài phải tiếp tục phát sóng theo ATSC 1.0, nên các TV hiện có vẫn hoạt động.
+  services:
+  - Phát trực tiếp miễn phí đài PBS tại địa phương của bạn cùng các chương trình PBS theo yêu cầu.
+  - Hàng trăm kênh trực tiếp miễn phí có quảng cáo cùng phim và chương trình theo yêu cầu; không cần tài khoản.
+  - Kho nội dung theo yêu cầu miễn phí lớn cùng hơn 250 kênh trực tiếp, bao gồm tin tức địa phương từ các đài Fox và các tập đoàn khác.
+  - Các kênh trực tiếp, phim, chương trình và Roku Originals miễn phí có quảng cáo, có thể xem trên web và ứng dụng di động Roku cũng như trên thiết bị Roku.
+  notes:
+  - Luồng trực tiếp PBS chỉ hiển thị các đài thuộc khu vực địa lý của bạn, và cần có tài khoản trên ứng dụng của các thiết bị phát trực tuyến.
+  - Một số đài mã hóa tín hiệu ATSC 3.0, điều này có thể chặn việc thu sóng trên một số thiết bị NEXTGEN TV; FCC đang xem xét vấn đề này.
+vn:
+  dtt: Truyền hình số mặt đất được phát sóng miễn phí và có thể xem bằng ăng-ten và TV có bộ thu DVB-T2 tích hợp hoặc đầu thu DVB-T2; theo VTV, toàn bộ gói kênh VTV được phát trên DVB-T2. Truyền hình analog mặt đất đã bị tắt trên toàn quốc vào ngày 28 tháng 12 năm 2020.
+  services:
+  - Nền tảng quốc gia của đài truyền hình công cộng phát trực tiếp miễn phí các kênh VTV, các kênh thiết yếu quốc gia và các kênh tỉnh, kèm phát lại các chương trình đã phát sóng; gói trả phí VTVgo Plus loại bỏ quảng cáo bật lên và bổ sung thêm tiện ích.
+  - Tài khoản đăng ký miễn phí mở khóa một nhóm kênh trực tiếp cơ bản, bao gồm VTV1; các kênh được đánh dấu VIP yêu cầu gói trả phí.
+  - Ứng dụng miễn phí cho các kênh trực tiếp do HTV và trung tâm truyền hình cáp HTVC sản xuất, cùng phim và chương trình theo yêu cầu.
+  notes:
+  - VTV1 được xác định là kênh thiết yếu quốc gia và được phát sóng miễn phí.
+  - Ứng dụng HTV Online chỉ phục vụ người dùng trong lãnh thổ Việt Nam.
+  - Các kênh của VTC đã ngừng phát sóng vào tháng 1 năm 2025 trong khuôn khổ tái cơ cấu báo chí nhà nước.

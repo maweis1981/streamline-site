@@ -1,0 +1,43 @@
+code: sg
+country: Singapore
+dtt:
+  standard: DVB-T2
+  platform: ""
+  summary: Mediacorp's free-to-air channels have been broadcast digitally in DVB-T2 since analogue TV ended on 1 January 2019; viewers need a TV with a built-in DVB-T2 tuner or a DVB-T2 set-top box, plus an indoor or rooftop UHF antenna. Reception is free, and the six free-to-air channels are Channel 5, Channel 8, Channel U, Suria, Vasantham and CNA.
+services:
+  - name: mewatch
+    owner: Mediacorp
+    cost: freemium
+    live_tv: true
+    platforms: [web, iOS, Android, Apple TV]
+    url: https://www.mewatch.sg
+    summary: Free live streams of Channel 5, Channel 8, Channel U, Suria, Vasantham and CNA plus free on-demand Mediacorp programmes, with a paid Prime tier for ad-free viewing and partner content; live channels work only in Singapore.
+  - name: CNA
+    owner: Mediacorp
+    cost: free
+    live_tv: true
+    platforms: [web, iOS, Android, YouTube]
+    url: https://www.channelnewsasia.com
+    summary: The free CNA app and CNA's official YouTube channel carry the CNA 24/7 livestream and on-demand documentaries and current affairs shows, and are available outside Singapore.
+  - name: 8world
+    owner: Mediacorp
+    cost: free
+    live_tv: false
+    platforms: [iOS, Android]
+    url: https://www.8world.com
+    summary: Mediacorp's free Chinese-language news app, with current affairs programmes and news bulletins on demand.
+notes:
+  - Singapore abolished its radio and TV licence fee from 1 January 2011, so no fee is needed to watch.
+  - Live channels on mewatch are geo-restricted to Singapore; only selected programmes can be watched overseas.
+  - Pay-TV subscribers (StarHub, Singtel) already receive Mediacorp's free-to-air channels digitally.
+sources:
+  - https://www.imda.gov.sg/Content-and-News/Media-Releases-and-Speeches/Media-Releases/2017/analogue-tv-broadcast-to-cease-from-1-january-2019
+  - https://www.imda.gov.sg/assets/57bed8d6-b7ef-405b-b86a-b8ad31ae6215.pdf
+  - https://www.imda.gov.sg/Content-and-News/Press-Releases-and-Speeches/archived/mda/Press-Releases/2011/radio-and-television-licence-abolished
+  - https://apps.apple.com/sg/app/mewatch-video-movies-tv/id566561555
+  - https://play.google.com/store/apps/details?id=sg.mediacorp.android&hl=en
+  - https://en.wikipedia.org/wiki/Mewatch
+  - https://www.ntuc.org.sg/uportal/memberships/deals-for-members/mewatch/
+  - https://apps.apple.com/us/app/cna-channel-newsasia/id520773971
+  - https://www.youtube.com/channelnewsasia/streams
+  - https://apps.apple.com/us/app/8world/id920447931

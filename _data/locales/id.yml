@@ -17,6 +17,7 @@ nav:
   privacy: Privasi
   download: Unduh
   tools: Alat M3U
+  watch: TV gratis per negara
 cta:
   app_store: Unduh di App Store
   testflight: Ikuti beta TestFlight
@@ -462,3 +463,44 @@ channel:
   a_tv: Salin tautan playlist gratis %country% lalu buka di pemutar pada smart TV, Android TV, Fire TV, atau Apple TV Anda. Panduan perangkat Doubo menjelaskan langkah-langkahnya.
   q_site: Apa situs resmi %name%?
   a_site: Situs resmi %name% adalah %website%.
+watch:
+  nav: TV gratis per negara
+  hub_title: Cara nonton TV gratis, per negara
+  hub_desc: 'Cara legal menonton televisi gratis di setiap negara: saluran live di browser, aplikasi resmi penyiar, dan TV antena gratis.'
+  hub_lead: Pilih negara untuk melihat semua pilihan gratis yang legal, sudah diperiksa dan terus diperbarui.
+  title: Cara Nonton TV %country% Online Gratis (%year%)
+  description: 'Cara legal menonton TV %country% gratis di %year%: saluran live gratis di browser, aplikasi resmi seperti %apps%, dan TV antena gratis.'
+  h1: Cara nonton TV %country% gratis
+  intro: 'Anda tidak perlu berlangganan berbayar untuk menonton televisi %country%. Inilah pilihan gratis yang legal: saluran live di browser, aplikasi milik penyiar, dan TV digital gratis lewat antena.'
+  quick_title: Jawaban singkat
+  q_web: Tonton %count% saluran %country% gratis sekarang di pemutar web Doubo. Tanpa unduhan, tanpa daftar.
+  q_apps: 'Gunakan aplikasi resmi gratis: %apps%.'
+  q_dtt: 'Dengan antena: TV digital gratis (%standard%).'
+  online_title: Tonton online sekarang
+  online_desc: Saluran %country% ini disiarkan secara terbuka oleh penyiarnya. Pilih salah satu untuk menonton di browser.
+  watch_all: Tonton semua saluran %country%
+  playlist_title: Gunakan playlist M3U di pemutar apa pun
+  apps_title: Aplikasi streaming resmi gratis
+  col_service: Layanan
+  col_cost: Biaya
+  col_platforms: Platform
+  cost_free: Gratis
+  cost_ads: Gratis dengan iklan
+  cost_freemium: Gratis + paket berbayar
+  live_tv: TV live
+  dtt_title: TV antena gratis
+  dtt_standard: Standar siaran
+  dtt_platform: Jaringan
+  tv_title: Tonton di TV Anda
+  tv_desc: 'Panduan langkah demi langkah untuk menonton saluran ini di smart TV, Android TV, Fire TV, Apple TV, atau Chromecast:'
+  notes_title: Perlu diketahui
+  faq_title: Pertanyaan umum
+  fq_free: Bisakah saya nonton TV %country% online gratis?
+  fa_free: Bisa. Banyak saluran %country% bisa ditonton gratis secara legal, di pemutar web Doubo, di aplikasi milik penyiar, atau lewat antena.
+  fq_app: Apa aplikasi gratis terbaik untuk nonton TV %country%?
+  fa_app: Pilihan resmi antara lain %apps%. Doubo mengumpulkan saluran %country% gratis dari banyak penyiar di satu tempat, di browser maupun aplikasi.
+  fq_abroad: Bisakah saya nonton TV %country% dari luar negeri?
+  fa_abroad: Sebagian siaran bisa ditonton di mana saja, tetapi penyiar sering membatasi yang lain hanya untuk penonton di %country% karena hak siar. Doubo hanya mencantumkan siaran yang dibuka penyiar dan tidak menembus pembatasan ini.
+  updated: Diperbarui %date%
+  sources: Sumber
+  more_countries: Negara lain

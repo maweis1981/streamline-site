@@ -17,6 +17,7 @@ nav:
   privacy: Quyền riêng tư
   download: Tải về
   tools: Công cụ M3U
+  watch: Xem TV miễn phí theo quốc gia
 cta:
   app_store: Tải về trên App Store
   testflight: Tham gia thử nghiệm TestFlight
@@ -462,3 +463,44 @@ channel:
   a_tv: Sao chép liên kết danh sách phát miễn phí của %country% và mở bằng trình phát trên smart TV, Android TV, Fire TV hoặc Apple TV. Hướng dẫn thiết bị của Doubo có các bước chi tiết.
   q_site: Trang web chính thức của %name% là gì?
   a_site: Trang web chính thức của %name% là %website%.
+watch:
+  nav: Xem TV miễn phí theo quốc gia
+  hub_title: Cách xem TV miễn phí theo từng quốc gia
+  hub_desc: 'Các cách hợp pháp để xem truyền hình miễn phí ở từng quốc gia: kênh trực tiếp trên trình duyệt, ứng dụng chính thức của đài và truyền hình số miễn phí qua ăng-ten.'
+  hub_lead: Chọn một quốc gia để xem mọi cách xem miễn phí hợp pháp, đã được kiểm tra và cập nhật.
+  title: Cách xem TV %country% trực tuyến miễn phí (%year%)
+  description: 'Các cách hợp pháp để xem TV %country% miễn phí năm %year%: kênh trực tiếp miễn phí trên trình duyệt, ứng dụng chính thức như %apps%, và truyền hình số miễn phí qua ăng-ten.'
+  h1: Cách xem TV %country% miễn phí
+  intro: 'Bạn không cần thuê bao trả phí để xem truyền hình %country%. Đây là các cách miễn phí, hợp pháp: kênh trực tiếp trên trình duyệt, ứng dụng của chính các đài, và truyền hình số miễn phí qua ăng-ten.'
+  quick_title: Trả lời nhanh
+  q_web: Xem ngay %count% kênh %country% miễn phí trên trình phát web Doubo. Không cần tải về, không cần đăng ký.
+  q_apps: 'Dùng các ứng dụng chính thức miễn phí: %apps%.'
+  q_dtt: 'Dùng ăng-ten: truyền hình số miễn phí (%standard%).'
+  online_title: Xem trực tuyến ngay
+  online_desc: Các kênh %country% này được đài phát sóng công khai. Chọn một kênh để xem trên trình duyệt.
+  watch_all: Xem tất cả kênh %country%
+  playlist_title: Dùng danh sách M3U trong trình phát bất kỳ
+  apps_title: Ứng dụng xem miễn phí chính thức
+  col_service: Dịch vụ
+  col_cost: Chi phí
+  col_platforms: Nền tảng
+  cost_free: Miễn phí
+  cost_ads: Miễn phí, có quảng cáo
+  cost_freemium: Gói miễn phí + gói trả phí
+  live_tv: Xem trực tiếp
+  dtt_title: Truyền hình số miễn phí qua ăng-ten
+  dtt_standard: Chuẩn phát sóng
+  dtt_platform: Mạng phát
+  tv_title: Xem trên TV
+  tv_desc: 'Hướng dẫn từng bước để xem các kênh này trên smart TV, Android TV, Fire TV, Apple TV hoặc Chromecast:'
+  notes_title: Cần biết
+  faq_title: Câu hỏi thường gặp
+  fq_free: Có thể xem TV %country% trực tuyến miễn phí không?
+  fa_free: Có. Nhiều kênh %country% phát trực tuyến miễn phí và hợp pháp. Bạn có thể xem trên trình phát web Doubo, ứng dụng của các đài, hoặc qua ăng-ten.
+  fq_app: Ứng dụng miễn phí nào tốt nhất để xem TV %country%?
+  fa_app: Các lựa chọn chính thức gồm %apps%. Doubo gom các kênh %country% miễn phí của nhiều đài vào một chỗ, xem được trên trình duyệt hoặc ứng dụng.
+  fq_abroad: Ở nước ngoài có xem được TV %country% không?
+  fa_abroad: Một số luồng xem được ở mọi nơi, nhưng các đài thường chỉ cho khán giả trong %country% xem các luồng khác vì bản quyền. Doubo chỉ liệt kê luồng các đài công khai và không vượt qua các giới hạn này.
+  updated: Cập nhật %date%
+  sources: Nguồn
+  more_countries: Quốc gia khác

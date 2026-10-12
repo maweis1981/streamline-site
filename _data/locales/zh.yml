@@ -17,6 +17,7 @@ nav:
   privacy: 隐私
   download: 下载
   tools: M3U 工具
+  watch: 各国免费看电视
 cta:
   app_store: App Store 下载
   testflight: 加入 TestFlight 测试
@@ -462,3 +463,44 @@ channel:
   a_tv: 复制%country%免费播放列表的链接，在智能电视、Android TV、Fire TV 或 Apple TV 上的播放器中打开即可。具体步骤可以参考都播的设备教程。
   q_site: '%name%的官方网站是什么？'
   a_site: '%name%的官方网站是 %website%。'
+watch:
+  nav: 各国免费看电视
+  hub_title: 各国免费看电视指南
+  hub_desc: 各个国家和地区合法免费看电视的方法：浏览器在线直播、电视台官方 App 和免费数字电视天线。
+  hub_lead: 选择一个国家或地区，查看所有经过核实的合法免费收看方式。
+  title: '%country%电视免费在线看：%year% 年合法观看方式汇总'
+  description: '%year% 年合法免费收看%country%电视的方法：浏览器里直接看免费直播频道，%apps% 等官方 App，以及免费的数字电视天线。'
+  h1: 怎样免费看%country%电视
+  intro: 看%country%电视不一定要付费订阅。下面是合法、免费的几种方式：在浏览器里看直播频道、使用电视台官方 App，以及用天线收看免费数字电视。
+  quick_title: 一句话答案
+  q_web: 在都播网页版免费观看 %count% 个%country%频道，无需下载、无需注册。
+  q_apps: 使用官方免费 App：%apps%。
+  q_dtt: 用天线收看：免费数字电视（%standard%）。
+  online_title: 现在就在线看
+  online_desc: 以下%country%频道由电视台公开免费播出，点击即可在浏览器中观看。
+  watch_all: 观看全部%country%频道
+  playlist_title: 在任意播放器中使用 M3U 播放列表
+  apps_title: 官方免费直播 / 点播 App
+  col_service: 服务
+  col_cost: 费用
+  col_platforms: 平台
+  cost_free: 免费
+  cost_ads: 免费（含广告）
+  cost_freemium: 免费版 + 付费方案
+  live_tv: 可看直播
+  dtt_title: 免费数字电视（天线）
+  dtt_standard: 广播标准
+  dtt_platform: 网络
+  tv_title: 在电视上看
+  tv_desc: 把这些频道放到智能电视、Android TV、Fire TV、Apple TV 或 Chromecast 上的分步教程：
+  notes_title: 注意事项
+  faq_title: 常见问题
+  fq_free: 可以免费在线看%country%电视吗？
+  fa_free: 可以。很多%country%频道都提供合法的免费直播，可以在都播网页版、电视台官方 App 里观看，也可以用天线收看。
+  fq_app: 看%country%电视用什么免费 App 最好？
+  fa_app: 官方选择包括 %apps%。都播把多家电视台的%country%免费频道集中在一起，浏览器和 App 都能看。
+  fq_abroad: 在国外能看%country%电视吗？
+  fa_abroad: 部分直播在海外也能看，但很多电视台出于版权原因只向%country%境内观众开放。都播只收录电视台公开的直播流，不会绕过这些限制。
+  updated: 更新于 %date%
+  sources: 资料来源
+  more_countries: 其他国家和地区

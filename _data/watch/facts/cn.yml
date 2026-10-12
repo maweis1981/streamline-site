@@ -1,0 +1,49 @@
+code: cn
+country: Mainland China
+dtt:
+  standard: DTMB
+  platform: ""
+  summary: Free-to-air digital terrestrial TV uses the national DTMB standard (GB 20600); viewers need a TV or set-top box with a DTMB tuner and a terrestrial antenna, and reception depends on distance to a transmitter. It is free, and the national public service standard requires at least 15 channels over the air, mainly CCTV plus provincial and local channels.
+services:
+  - name: 央视频 (Yangshipin)
+    owner: China Media Group (CMG)
+    cost: freemium
+    live_tv: true
+    platforms: [web, iOS, Android, smart TV]
+    url: https://www.yangshipin.cn
+    summary: CMG's official video app with free live streams of CCTV channels and provincial satellite channels plus on-demand programmes; some features and content need an account or in-app purchase.
+  - name: 央视影音 (CCTV Video / CBox)
+    owner: CCTV.com (央视网)
+    cost: freemium
+    live_tv: true
+    platforms: [Windows, macOS, iOS, Android]
+    url: https://app.cctv.com
+    summary: Free live streams of all CCTV channels and many provincial satellite and city channels, with time-shift and catch-up; some on-demand content needs a paid membership.
+  - name: 央视网直播 (CCTV.com live)
+    owner: CCTV.com (央视网)
+    cost: free
+    live_tv: true
+    platforms: [web]
+    url: https://tv.cctv.com/live/
+    summary: Browser-based live streams of CCTV channels such as CCTV-1 and CCTV-13, with programme schedules and on-demand clips.
+  - name: 芒果TV (Mango TV)
+    owner: Hunan Broadcasting System (湖南广电)
+    cost: freemium
+    live_tv: true
+    platforms: [web, iOS, Android]
+    url: https://www.mgtv.com
+    summary: Offers a 24-hour live stream of Hunan TV and free on-demand shows, while VIP membership unlocks more content.
+notes:
+  - The national basic public service standard (2021 and 2023 editions) requires at least 15 TV channels free over the air, or at least 25 by direct-broadcast satellite in areas covered by the satellite service.
+  - Regulators said in 2017 that no encrypted pay digital terrestrial TV service had been approved.
+sources:
+  - https://www.ouhai.gov.cn/art/2022/1/10/art_1229732300_59142322.html
+  - https://www.fangcheng.gov.cn/2024/01-13/631276.html
+  - http://gbdsj.hunan.gov.cn/gbdsj/hdjl/zxts/cjwt/201712/t20171225_4908297.html
+  - https://zh.wikipedia.org/zh-hans/%E4%B8%AD%E5%9B%BD%E6%95%B0%E5%AD%97%E5%9C%B0%E9%9D%A2%E7%94%B5%E8%A7%86
+  - https://apps.apple.com/us/app/%E5%A4%AE%E8%A7%86%E9%A2%91/id1479814602
+  - https://w.yangshipin.cn/user
+  - https://app.cctv.com/
+  - http://app.cctv.com/appkhdxz/pc/index.shtml
+  - https://tv.cctv.com/live/
+  - https://www.mgtv.com/z/1000562.html

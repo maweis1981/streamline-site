@@ -1,0 +1,52 @@
+code: kr
+country: South Korea
+dtt:
+  standard: ATSC 1.0 / ATSC 3.0
+  platform: ""
+  summary: >-
+    The terrestrial channels of KBS, MBC, SBS and EBS are free over the air with an
+    antenna: HD in ATSC 1.0 and 4K UHD in ATSC 3.0, which needs a UHD TV with an ATSC 3.0
+    tuner. Many apartment buildings distribute signals through a shared rooftop antenna
+    system, and older systems may not pass ATSC 3.0 signals.
+services:
+  - name: KBS+
+    owner: KBS
+    cost: freemium
+    live_tv: true
+    platforms: [iOS, Android]
+    url: https://apps.apple.com/kr/app/kbs/id462725252
+    summary: Public broadcaster app with KBS live channels and on-demand replays; the app is free, and some replays are paid.
+  - name: MBC
+    owner: MBC
+    cost: freemium
+    live_tv: true
+    platforms: [web, iOS]
+    url: https://onair.imbc.com
+    summary: Free live streams of seven MBC channels including MBC, MBC every1 and MBC DRAMA; many replays need a paid pass.
+  - name: SBS play
+    owner: SBS
+    cost: freemium
+    live_tv: true
+    platforms: [iOS]
+    url: https://www.sbs.co.kr/sbsplay
+    summary: Free live SBS, SBS Plus, SBS Sports and SBS Golf for logged-in members (non-members get a 3-minute preview), plus some free replays.
+  - name: EBS play
+    owner: EBS
+    cost: freemium
+    live_tv: true
+    platforms: [iOS]
+    url: https://apps.apple.com/kr/app/ebs-play/id429375686
+    summary: Free live streams of six EBS channels including EBS1; full replay access is paid.
+notes:
+  - Outside Korea, KBS+ shows only some live channels because of broadcast rights.
+  - Free accounts are needed for full live viewing on some broadcaster apps (for example SBS play).
+sources:
+  - https://www.atsc.org/news/going-global-atsc-3-0-4k-broadcasting-launched-korea/
+  - https://atsc.org/news/road-to-atsc-3-0-broadcaster-headway-in-south-korea
+  - https://www.abu.org.my/2022/03/07/3-korean-broadcasters-to-step-up-cooperation-on-uhd-tv/
+  - https://apps.apple.com/kr/app/kbs/id462725252
+  - https://apps.apple.com/kr/app/mbc-live-vod-%EC%8A%A4%ED%8A%B8%EB%A6%AC%EB%B0%8D-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C/id600780511
+  - https://onair.imbc.com/
+  - https://www.imbc.com/help/vodnotice/
+  - https://apps.apple.com/kr/app/sbs-play/id1020136055
+  - https://apps.apple.com/kr/app/ebs-play/id429375686

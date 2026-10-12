@@ -1,0 +1,146 @@
+au:
+  dtt: Siaran TV gratis dari ABC, SBS, Seven, Nine dan Ten dipancarkan secara gratis melalui DVB-T dan memerlukan antena serta TV digital atau set-top box; Freeview mencantumkan lebih dari 30 saluran, termasuk subsaluran digital. TV bersertifikat Freeview yang terhubung ke broadband juga menambahkan panduan program daring dan aplikasi tayangan ulang.
+  services:
+  - Saluran ABC langsung gratis dan program sesuai permintaan tanpa iklan; akun ABC gratis diperlukan untuk program sesuai permintaan.
+  - Siaran langsung gratis SBS, SBS VICELAND, SBS Food, SBS World Movies dan NITV serta program sesuai permintaan; akun gratis yang terverifikasi diperlukan.
+  - Siaran langsung gratis 7, 7TWO, 7mate, 7Bravo dan 7flix serta olahraga, acara dan film sesuai permintaan.
+  - Siaran langsung gratis Channel 9, 9Go!, 9Gem, 9Life dan 9Rush serta tayangan ulang; akun gratis diperlukan.
+  notes:
+  - Siaran langsung di aplikasi lembaga penyiaran Australia dibatasi secara geografis untuk Australia.
+  - Saluran langsung ABC dapat ditonton di situs web iview tanpa login; siaran langsung SBS On Demand mengikuti jadwal NSW.
+cn:
+  dtt: TV digital terestrial gratis menggunakan standar nasional DTMB (GB 20600); penonton memerlukan TV atau set-top box dengan tuner DTMB dan antena terestrial, dan penerimaan sinyal bergantung pada jarak ke pemancar. Layanan ini gratis, dan standar layanan publik nasional mewajibkan sedikitnya 15 saluran yang dipancarkan melalui udara, terutama CCTV serta saluran provinsi dan lokal.
+  services:
+  - Aplikasi video resmi CMG dengan siaran langsung gratis saluran CCTV dan saluran satelit provinsi serta program sesuai permintaan; beberapa fitur dan konten memerlukan akun atau pembelian dalam aplikasi.
+  - Siaran langsung gratis semua saluran CCTV serta banyak saluran satelit provinsi dan saluran kota, dengan fitur time-shift dan tayangan ulang; sebagian konten sesuai permintaan memerlukan keanggotaan berbayar.
+  - Siaran langsung berbasis peramban untuk saluran CCTV seperti CCTV-1 dan CCTV-13, dengan jadwal program dan klip sesuai permintaan.
+  - Menyediakan siaran langsung 24 jam Hunan TV dan acara sesuai permintaan gratis, sedangkan keanggotaan VIP membuka lebih banyak konten.
+  notes:
+  - Standar layanan publik dasar nasional (edisi 2021 dan 2023) mewajibkan sedikitnya 15 saluran TV gratis melalui udara, atau sedikitnya 25 melalui satelit siaran langsung di wilayah yang dijangkau layanan satelit.
+  - Regulator menyatakan pada 2017 bahwa belum ada layanan TV digital terestrial berbayar terenkripsi yang disetujui.
+hk:
+  dtt: TV digital terestrial berbasis standar nasional DTMB (GB 20600) dan menjadi satu-satunya metode siaran sejak TV analog dihentikan pada 30 November 2020. Penonton memerlukan TV digital atau set-top box dan antena, serta tidak membayar biaya langganan untuk saluran gratis dari TVB, ViuTV, HOY dan RTHK (sekitar 14 saluran).
+  services:
+  - Aplikasi gratis lembaga penyiaran publik ini menyediakan siaran web langsung RTHK TV 31 hingga 35, dengan video sesuai permintaan dan unduhan.
+  - Platform TVB menandai Jade, TVB Plus dan TVB News sebagai bagian dari saluran langsung gratisnya di samping paket berbayar; layanan ini hanya untuk digunakan di Hong Kong dan Makau.
+  - Siaran langsung gratis ViuTV (ch.99), sedangkan ViuTVsix (ch.96) hanya disiarkan pada waktu tertentu karena hak siar; hanya di Hong Kong.
+  - Siaran langsung gratis 24 jam saluran HOY 76, 77 dan 78 serta program sesuai permintaan; streaming gratis hanya berfungsi di Hong Kong.
+  notes:
+  - Pemerintah menyatakan bahwa tidak diperlukan biaya langganan untuk menerima TV digital terestrial gratis.
+  - Sebagian besar siaran langsung lembaga penyiaran dibatasi untuk penonton di Hong Kong.
+id:
+  dtt: TV digital gratis memerlukan antena dan TV dengan tuner DVB-T2, atau set-top box DVB-T2 untuk TV analog lama; menonton tidak dipungut biaya. Siaran analog dihentikan secara bertahap per wilayah antara 2022 dan 2023, dan pemerintah membagikan set-top box gratis kepada rumah tangga berpenghasilan rendah.
+  services:
+  - Siaran langsung gratis saluran nasional lembaga penyiaran publik (termasuk TVRI Nasional dan TVRI Sport) dan stasiun daerah, serta tayangan ulang sesuai permintaan.
+  - Siaran langsung gratis berbasis iklan RCTI, MNCTV, GTV dan iNews, dengan tayangan ulang program terbaru.
+  - Saluran gratis seperti SCTV dan Indosiar dapat ditonton secara langsung tanpa biaya dengan iklan; saluran premium, banyak pertandingan olahraga, dan tayangan tanpa iklan memerlukan paket berbayar.
+  notes:
+  - Banyak aplikasi "TV online" tidak resmi yang tidak berlisensi; aplikasi dan situs web milik lembaga penyiaran sendiri adalah pilihan yang legal.
+in:
+  dtt: Doordarshan mengoperasikan layanan TV digital terestrial DVB-T2 gratis, tetapi hanya di sejumlah kota terbatas (Prasar Bharati mencantumkan 19), dan memerlukan set-top box DVB-T2 atau TV dengan tuner DVB-T2 serta antena. Sebagian besar tontonan TV gratis di India melalui DD Free Dish, layanan satelit gratis Prasar Bharati, yang tidak memungut biaya bulanan atau tahunan setelah pembelian satu kali parabola dan set-top box (sekitar Rs 1,500 hingga 2,000) dan menyiarkan lebih dari 160 saluran TV.
+  services:
+  - Aplikasi lembaga penyiaran publik dengan sekitar 140 saluran TV langsung, termasuk semua saluran satelit Doordarshan, serta radio dan judul sesuai permintaan; hampir semua konten gratis, dengan beberapa item premium.
+  - Layanan gratis berbasis iklan dengan serial orisinal, film dan acara India, yang juga dapat diakses melalui aplikasi belanja Amazon dan Prime Video.
+  - Saluran langsung gratis berbasis iklan (Samsung menyebut lebih dari 150) untuk berita, film, musik dan hiburan, hanya tersedia di perangkat Samsung.
+  notes:
+  - DD Free Dish gratis seumur hidup tanpa langganan; Prasar Bharati menyarankan set-top box resmi karena dapat membatasi saluran MPEG-4 pada perangkat yang tidak resmi.
+  - Jumlah saluran DD Free Dish berubah setelah setiap lelang slot tahunan; periksa daftar terbaru Prasar Bharati.
+jp:
+  dtt: TV digital terestrial menggunakan ISDB-T pada saluran UHF 13 hingga 62; penonton memerlukan TV atau tuner untuk siaran digital terestrial dan antena UHF. Tidak ada biaya langganan, dan penonton mendapatkan NHK General TV, NHK Educational TV serta stasiun komersial lokal, dengan jumlah saluran berbeda-beda menurut wilayah; rumah tangga yang memiliki TV wajib membayar biaya penerimaan NHK.
+  services:
+  - Tayangan ulang gratis program pilihan dari lembaga penyiaran komersial selama periode terbatas setelah tayang, serta siaran langsung lima jaringan komersial yang berfokus pada jam tayang utama; siaran langsung tidak tersedia di aplikasi TV.
+  - Sekitar 25 hingga 30 saluran linear gratis, termasuk saluran berita 24 jam, tanpa perlu registrasi; ABEMA Premium (1,080 yen per bulan, atau 580 yen dengan iklan) menambahkan konten dan fitur eksklusif.
+  - Layanan internasional NHK menyiarkan saluran TV berbahasa Inggris secara langsung ke seluruh dunia secara gratis, dengan tayangan ulang 7 hari untuk program pilihan.
+  notes:
+  - Layanan simulcast dan tayangan ulang milik NHK, NHK ONE (pengganti NHK+ sejak 1 Oktober 2025), memerlukan kontrak penerimaan NHK; rumah tangga yang sudah membayar biaya tersebut tidak dikenakan biaya tambahan.
+  - Biaya penerimaan NHK untuk kontrak terestrial adalah 1,100 yen per bulan (965 yen di Okinawa), dan kontrak khusus internet dikenakan biaya yang sama.
+  - TVer dan ABEMA dirancang untuk penonton di Jepang; halaman bantuan TVer menyatakan bahwa videonya tidak dapat ditonton dari luar negeri.
+kr:
+  dtt: 'Saluran terestrial KBS, MBC, SBS dan EBS gratis melalui udara dengan antena, yaitu HD dalam ATSC 1.0 dan 4K UHD dalam ATSC 3.0, yang memerlukan TV UHD dengan tuner ATSC 3.0. Banyak gedung apartemen mendistribusikan sinyal melalui sistem antena atap bersama, dan sistem yang lebih lama mungkin tidak meneruskan sinyal ATSC 3.0.'
+  services:
+  - Aplikasi lembaga penyiaran publik dengan saluran langsung KBS dan tayangan ulang sesuai permintaan; aplikasinya gratis, dan sebagian tayangan ulang berbayar.
+  - Siaran langsung gratis tujuh saluran MBC termasuk MBC, MBC every1 dan MBC DRAMA; banyak tayangan ulang memerlukan pass berbayar.
+  - Siaran langsung gratis SBS, SBS Plus, SBS Sports dan SBS Golf untuk anggota yang login (non-anggota mendapat pratinjau 3 menit), serta beberapa tayangan ulang gratis.
+  - Siaran langsung gratis enam saluran EBS termasuk EBS1; akses penuh ke tayangan ulang berbayar.
+  notes:
+  - Di luar Korea, KBS+ hanya menampilkan sebagian saluran langsung karena hak siar.
+  - Akun gratis diperlukan untuk menonton siaran langsung secara penuh di beberapa aplikasi lembaga penyiaran (misalnya SBS play).
+my:
+  dtt: TV digital gratis diterima dengan antena UHF dan TV dengan tuner DVB-T2 bawaan atau dekoder DVB-T2, tanpa biaya langganan; MYTV mencantumkan sekitar 17 saluran TV serta radio digital. TV analog dihentikan secara nasional pada 2019, dengan Sabah dan Sarawak sebagai wilayah terakhir pada 31 Oktober 2019.
+  services:
+  - Siaran langsung gratis saluran RTM termasuk TV1, TV2, TV Okey, Berita RTM, TV Sukan, TV6 dan RTM Parlimen, serta radio langsung dan tayangan ulang program terbaru.
+  - Akun gratis berbasis iklan memberikan akses ke saluran TV lokal langsung seperti TV3 dan acara sesuai permintaan; paket berbayar TontonUp menambahkan konten premium.
+  - Setelah mendaftar akun gratis, penonton dapat menonton sejumlah saluran berbasis iklan (seperti Astro Awani, Bernama TV dan TV Sarawak) serta acara pilihan dalam definisi standar; sebagian besar olahraga dan konten premium memerlukan paket berbayar.
+  notes:
+  - Siaran langsung saluran RTM di RTMKlik hanya tersedia di Malaysia.
+  - Tonton dan sooka memerlukan akun gratis untuk menonton saluran gratisnya.
+ph:
+  dtt: TV digital terestrial tetap gratis dan diterima dengan antena dan TV dengan tuner ISDB-T atau kotak TV digital untuk perangkat analog lama. TV analog di Mega Manila dijadwalkan dihentikan pada 22 November 2026 berdasarkan surat edaran NTC; tanggal untuk wilayah lain di negara ini belum ditetapkan.
+  services:
+  - Lembaga penyiaran milik negara menyiarkan salurannya secara langsung di situs webnya, serta di saluran YouTube dan Dailymotion resminya.
+  - Aplikasi gratis yang menggabungkan siaran langsung televisi GMA dengan acara Filipina, drama Asia dan film sesuai permintaan.
+  - Simulcast gratis program siang dan jam tayang utama GMA di halaman YouTube dan Facebook resmi GMA Network; episode lengkap juga tersedia gratis di gmanetwork.com.
+  - Layanan streaming ABS-CBN menawarkan beberapa acara secara gratis dengan pendaftaran, dan pada 2026 mempromosikan tontonan gratis program Kapamilya pilihan; sebagian besar katalog memerlukan langganan.
+  notes:
+  - Setelah penghentian siaran analog di Mega Manila, rumah tangga dengan TV yang hanya mendukung analog memerlukan kotak TV digital; DICT menyatakan akan menjalankan program bantuan bagi rumah tangga rentan.
+sg:
+  dtt: Saluran gratis Mediacorp disiarkan secara digital dalam DVB-T2 sejak TV analog berakhir pada 1 Januari 2019; penonton memerlukan TV dengan tuner DVB-T2 bawaan atau set-top box DVB-T2, serta antena UHF dalam ruangan atau di atap. Penerimaan siaran gratis, dan enam saluran gratisnya adalah Channel 5, Channel 8, Channel U, Suria, Vasantham dan CNA.
+  services:
+  - Siaran langsung gratis Channel 5, Channel 8, Channel U, Suria, Vasantham dan CNA serta program Mediacorp sesuai permintaan secara gratis, dengan paket berbayar Prime untuk tayangan tanpa iklan dan konten mitra; saluran langsung hanya berfungsi di Singapura.
+  - Aplikasi CNA gratis dan saluran YouTube resmi CNA menyiarkan livestream CNA 24/7 serta dokumenter dan acara berita terkini sesuai permintaan, dan tersedia di luar Singapura.
+  - Aplikasi berita berbahasa Mandarin gratis dari Mediacorp, dengan program berita terkini dan buletin berita sesuai permintaan.
+  notes:
+  - Singapura menghapus biaya lisensi radio dan TV sejak 1 Januari 2011, sehingga tidak diperlukan biaya untuk menonton.
+  - Saluran langsung di mewatch dibatasi secara geografis untuk Singapura; hanya program pilihan yang dapat ditonton di luar negeri.
+  - Pelanggan TV berbayar (StarHub, Singtel) sudah menerima saluran gratis Mediacorp secara digital.
+th:
+  dtt: TV digital gratis diterima dengan antena dan TV dengan tuner DVB-T2 bawaan atau set-top box DVB-T2, tanpa biaya langganan. Siaran analog berakhir pada 2020, ketika Channel 3 menjadi saluran analog terakhir yang berhenti mengudara pada 25 Maret 2020; lisensi TV digital komersial berlaku hingga 2029.
+  services:
+  - Lembaga penyiaran publik menyiarkan salurannya secara langsung dan gratis di situs web dan aplikasinya, dengan teks langsung yang dihasilkan AI serta program sesuai permintaan.
+  - Platform sesuai permintaan Thai PBS menawarkan drama, dokumenter dan program Thai PBS secara gratis tanpa iklan.
+  - Channel 3 dapat ditonton secara langsung dan tayangan ulang secara gratis dengan iklan; paket berbayar 3Plus Premium menghilangkan iklan dan menambahkan fitur tambahan.
+  - Saluran gratis seperti Thai PBS, Channel 3 dan Channel 7 tercantum di antara saluran gratis TrueID; saluran premium TrueVisions memerlukan paket berbayar.
+  notes:
+  - Channel 7HD telah menggabungkan aplikasi BUGABOO.TV dan CH7HD ke dalam aplikasi baru bernama CH7ON.
+tw:
+  dtt: TV digital terestrial gratis menggunakan DVB-T dan telah sepenuhnya menggantikan siaran analog sejak 30 Juni 2012; penonton memerlukan antena TV digital dan TV atau set-top box dengan dekode HD, karena beberapa saluran disiarkan dalam HD. Layanan ini gratis dan menyiarkan sekitar 20 saluran dari lima lembaga penyiaran terestrial (TTV, CTV, CTS, FTV dan PTS).
+  services:
+  - Platform tanpa iklan milik lembaga penyiaran publik ini menyediakan siaran langsung gratis PTS, PTS Taigi, PTS XS dan PTS News, serta drama dan dokumenter sesuai permintaan yang sebagian besar gratis; akun diperlukan dan beberapa judul menggunakan sistem bayar per tayang.
+  - Saluran YouTube resmi PTS menyiarkan PTS News 24 jam sehari, dan PTS juga mencantumkan siaran langsung resmi saluran utamanya dan PTS Taigi.
+  - Berita, dokumenter dan saluran langsung berbahasa Inggris gratis dari Taiwan, tanpa iklan dan tersedia di seluruh dunia.
+  - Aplikasi berita gratis CTS mencakup siaran berita langsung 24 jam.
+  notes:
+  - Sinyal terestrial juga dipancarkan ulang melalui satelit sebagai alternatif gratis untuk wilayah dengan penerimaan terestrial yang buruk.
+  - Beberapa saluran berita komersial telah menghentikan siaran langsung 24 jam di YouTube di Taiwan, sehingga ketersediaan di YouTube dapat berubah.
+uk:
+  dtt: Freeview bebas langganan dan memerlukan antena atap atau dalam ruangan serta TV atau kotak Freeview; layanan ini menawarkan sekitar 70 saluran TV, atau lebih dari 100 termasuk saluran HD dan streaming, tergantung wilayah Anda. Saluran HD menggunakan DVB-T2, sehingga penerima lama yang hanya mendukung DVB-T hanya mendapatkan saluran definisi standar. Freely menyalurkan saluran langsung utama melalui broadband tanpa antena.
+  services:
+  - Saluran BBC langsung dan program BBC sesuai permintaan tanpa iklan; lisensi TV diperlukan untuk menggunakannya.
+  - Saluran ITV langsung gratis berbasis iklan, saluran streaming bertema dan acara sesuai permintaan; ITVX Premium menghilangkan sebagian besar iklan pada konten sesuai permintaan dan menambahkan BritBox.
+  - Siaran langsung gratis Channel 4, E4, More4, Film4 dan 4seven serta program sesuai permintaan dan arsip; pendaftaran gratis diperlukan.
+  - Layanan streaming Channel 5 (sebelumnya My5) dengan saluran langsungnya, saluran streaming gratis dan tayangan ulang.
+  - Tertanam di beberapa smart TV dan perangkat, layanan ini menyiarkan lebih dari 70 saluran langsung dari BBC, ITV, Channel 4, Channel 5 dan lainnya melalui broadband (disarankan 10Mbps), tanpa antena.
+  notes:
+  - Lisensi TV diperlukan untuk menonton atau merekam TV langsung di saluran atau layanan apa pun (termasuk Freeview, Freely dan siaran langsung di aplikasi) dan untuk menggunakan BBC iPlayer sama sekali; konten sesuai permintaan dari layanan lain tidak memerlukannya.
+  - Biaya lisensi TV adalah £180 per tahun menurut GOV.UK; menonton TV langsung tanpa lisensi dapat dikenai denda hingga £1,000.
+  - BBC iPlayer dan siaran langsung di aplikasi lembaga penyiaran Inggris ditujukan untuk penonton di Inggris; Watch Live dari Channel 4 terbatas bagi penduduk Inggris.
+us:
+  dtt: Stasiun siaran lokal (seperti ABC, CBS, NBC, Fox, PBS dan subsalurannya) gratis melalui udara dengan antena dan TV atau konverter dengan tuner ATSC; jumlah saluran bergantung pada lokasi. ATSC 3.0 (NEXTGEN TV) memerlukan tuner yang kompatibel, dan stasiun wajib tetap menyiarkan dalam ATSC 1.0, sehingga TV yang ada tetap berfungsi.
+  services:
+  - Livestream gratis stasiun PBS lokal Anda serta program PBS sesuai permintaan.
+  - Ratusan saluran langsung gratis berbasis iklan serta film dan acara sesuai permintaan; tidak memerlukan akun.
+  - Perpustakaan konten sesuai permintaan gratis yang besar serta lebih dari 250 saluran langsung, termasuk berita lokal dari stasiun Fox dan grup lainnya.
+  - Saluran langsung, film, acara dan Roku Originals gratis berbasis iklan, yang dapat ditonton di web dan aplikasi seluler Roku serta perangkat Roku.
+  notes:
+  - Livestream PBS hanya menampilkan stasiun untuk wilayah geografis Anda, dan akun diperlukan di aplikasi perangkat streaming.
+  - Beberapa stasiun mengenkripsi sinyal ATSC 3.0 mereka, yang dapat menghalangi penerimaan pada beberapa perangkat NEXTGEN TV; FCC sedang meninjau hal ini.
+vn:
+  dtt: TV digital terestrial disiarkan secara gratis dan dapat ditonton dengan antena dan TV dengan tuner DVB-T2 bawaan atau set-top box DVB-T2; menurut VTV, paket lengkap saluran VTV disiarkan melalui DVB-T2. TV terestrial analog dihentikan secara nasional pada 28 Desember 2020.
+  services:
+  - Platform nasional lembaga penyiaran publik ini menyiarkan saluran VTV, saluran esensial nasional dan saluran provinsi secara langsung dan gratis, dengan tayangan ulang program sebelumnya; paket berbayar VTVgo Plus menghilangkan iklan pop-up dan menambahkan fitur tambahan.
+  - Akun terdaftar gratis membuka sejumlah saluran langsung dasar, termasuk VTV1; saluran bertanda VIP memerlukan paket berbayar.
+  - Aplikasi gratis untuk saluran langsung yang diproduksi oleh HTV dan pusat kabelnya HTVC, serta film dan program sesuai permintaan.
+  notes:
+  - VTV1 ditetapkan sebagai saluran esensial nasional dan disiarkan secara gratis.
+  - Aplikasi HTV Online hanya melayani pengguna di dalam Vietnam.
+  - Saluran VTC berhenti bersiaran pada Januari 2025 sebagai bagian dari restrukturisasi media negara.

@@ -1,0 +1,46 @@
+code: in
+country: India
+dtt:
+  standard: DVB-T2
+  platform: ""
+  summary: >-
+    Doordarshan runs a free-to-air DVB-T2 digital terrestrial service, but only in a
+    limited number of cities (Prasar Bharati lists 19), and it needs a DVB-T2 set-top box
+    or a TV with a DVB-T2 tuner plus an antenna. Most free TV viewing in India is via
+    DD Free Dish, Prasar Bharati's free satellite service, which has no monthly or annual
+    fee after a one-time purchase of a dish and set-top box (about Rs 1,500 to 2,000) and
+    carries 160+ TV channels.
+services:
+  - name: WAVES
+    owner: Prasar Bharati
+    cost: free
+    live_tv: true
+    platforms: [web, iOS, Android, smart TVs, Fire TV, Chromecast]
+    url: https://prasarbharati.gov.in/waves/
+    summary: Public broadcaster app with about 140 live TV channels, including all Doordarshan satellite channels, plus radio and on-demand titles; almost all content is free, with a few premium items.
+  - name: Amazon MX Player
+    owner: Amazon
+    cost: free with ads
+    live_tv: false
+    platforms: [iOS, Android, smart TVs, Fire TV]
+    url: https://www.mxplayer.in
+    summary: Free ad-supported service with Indian original series, films and shows, also reachable through the Amazon shopping app and Prime Video.
+  - name: Samsung TV Plus
+    owner: Samsung
+    cost: free with ads
+    live_tv: true
+    platforms: [Samsung smart TVs, select Galaxy phones and tablets]
+    url: https://www.samsung.com/in/tvs/smart-tv/samsung-tv-plus/
+    summary: Free ad-supported live channels (Samsung cites 150+) in news, movies, music and entertainment, available only on Samsung devices.
+notes:
+  - DD Free Dish is free for life with no subscription; Prasar Bharati recommends authorised set-top boxes because it may restrict MPEG-4 channels on unauthorised ones.
+  - DD Free Dish channel counts change after each annual slot auction; check Prasar Bharati's current list.
+sources:
+  - https://prasarbharati.gov.in/free-dish/
+  - https://prasarbharati.gov.in/digital-terrestrial-tv/
+  - https://prasarbharati.gov.in/wp-content/uploads/2025/03/dttfaq.pdf
+  - https://prasarbharati.gov.in/waves/
+  - https://www.pib.gov.in/PressReleasePage.aspx?PRID=2268091&reg=3&lang=1
+  - https://pib.gov.in/PressReleseDetailm.aspx?PRID=2075631
+  - https://www.mediainfoline.com/brand/amazon-mx-player-unveils-its-biggest-content-slate-yet-with-150-new-shows-for-2026
+  - https://www.samsung.com/in/tvs/smart-tv/samsung-tv-plus/

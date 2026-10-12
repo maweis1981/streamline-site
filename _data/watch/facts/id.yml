@@ -1,0 +1,46 @@
+code: id
+country: Indonesia
+dtt:
+  standard: DVB-T2
+  platform: ""
+  summary: Free-to-air digital TV needs an antenna and a TV with a DVB-T2 tuner, or a DVB-T2 set-top box for an older analogue TV; watching is free. Analogue broadcasts were switched off region by region between 2022 and 2023, and the government distributed free set-top boxes to low-income households.
+services:
+  - name: TVRI Klik
+    owner: Televisi Republik Indonesia (TVRI)
+    cost: free
+    live_tv: true
+    platforms: [web, iOS, Android]
+    url: https://tvri.go.id/live
+    summary: Free live streams of the public broadcaster's national channels (including TVRI Nasional and TVRI Sport) and regional stations, plus on-demand replays.
+  - name: RCTI+
+    owner: MNC Group
+    cost: free with ads
+    live_tv: true
+    platforms: [web, iOS, Android, Android TV]
+    url: https://www.rctiplus.com/
+    summary: Free ad-supported live streams of RCTI, MNCTV, GTV and iNews, with catch-up of recent programmes.
+  - name: Vidio
+    owner: Emtek (Elang Mahkota Teknologi)
+    cost: freemium
+    live_tv: true
+    platforms: [web, Android, Android TV]
+    url: https://www.vidio.com/
+    summary: Free-to-air channels such as SCTV and Indosiar can be streamed live for free with ads; premium channels, many sports matches and ad-free viewing need a paid plan.
+notes:
+  - Many unofficial "TV online" apps are unlicensed; the broadcasters' own apps and websites are the legal options.
+sources:
+  - https://www.komdigi.go.id/berita/artikel/detail/masyarakat-kurang-mampu-pun-bisa-nonton-tv-digital
+  - https://www.komdigi.go.id/berita/pengumuman/detail/indonesia-mulai-masuki-era-tv-digital
+  - https://www.kominfo.go.id/content/detail/34888/beralih-ke-teknologi-tv-digital-apakah-tv-di-rumah-perlu-diganti/0/tv_digital
+  - https://www.metrotvnews.com/read/KXyC95JX-peralihan-siaran-ke-tv-digital-bakal-rampung-16-agustus-2023
+  - https://www.detik.com/jabar/berita/d-6870993/siaran-tv-analog-disetop-di-seluruh-ri-12-agustus-2023
+  - https://tvri.go.id/live
+  - https://tvri.go.id/berita/tvri-klik-50
+  - https://play.google.com/store/apps/details?id=com.tvriklikv2
+  - https://apps.apple.com/id/app/tvri-klik/id1157677528
+  - https://play.google.com/store/apps/details?id=com.rctiplus.atv
+  - https://apps.apple.com/om/app/rcti/id1505457514
+  - https://www.rctiplus.com/tv/gtv
+  - https://www.idntimes.com/tech/trend/7-aplikasi-terbaik-untuk-nonton-tv-legal-ada-yang-gratis-01-w8826-6yxt18
+  - https://www.idntimes.com/tech/trend/aplikasi-nonton-tv-di-hp-gratis-go25q3-00-z1xfw-6y3dpt
+  - https://play.google.com/store/apps/details?id=com.vidio.android

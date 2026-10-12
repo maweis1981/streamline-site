@@ -1,0 +1,52 @@
+code: hk
+country: Hong Kong
+dtt:
+  standard: DTMB
+  platform: ""
+  summary: Digital terrestrial TV is based on the national DTMB standard (GB 20600) and has been the only broadcast method since analogue TV was switched off on 30 November 2020. Viewers need a digital TV or set-top box and an antenna, and pay no subscription fee for the free channels from TVB, ViuTV, HOY and RTHK (around 14 channels).
+services:
+  - name: RTHK TV
+    owner: Radio Television Hong Kong
+    cost: free
+    live_tv: true
+    platforms: [web, iOS, Android]
+    url: https://www.rthk.hk/tv
+    summary: The public broadcaster's free app provides live webcasts of RTHK TV 31 to 35, with video on demand and downloads.
+  - name: myTV SUPER
+    owner: TVB
+    cost: freemium
+    live_tv: true
+    platforms: [web, iOS, Android]
+    url: https://www.mytvsuper.com
+    summary: TVB's platform marks Jade, TVB Plus and TVB News among its free live channels alongside paid packs; the service is only for use in Hong Kong and Macau.
+  - name: ViuTV
+    owner: HK Television Entertainment (PCCW)
+    cost: free with ads
+    live_tv: true
+    platforms: [web, Android]
+    url: https://viu.tv
+    summary: Free live stream of ViuTV (ch.99), with ViuTVsix (ch.96) streamed only at limited times because of rights; Hong Kong only.
+  - name: HOY
+    owner: i-CABLE HOY
+    cost: free with ads
+    live_tv: true
+    platforms: [web, iOS, Android, Android TV]
+    url: https://hoy.tv
+    summary: Free 24-hour live streams of HOY channels 76, 77 and 78 plus on-demand programmes; free streaming works only in Hong Kong.
+notes:
+  - The government states that no subscription fee is needed to receive free digital terrestrial TV.
+  - Most broadcaster live streams are restricted to viewers in Hong Kong.
+sources:
+  - https://www.ofca.gov.hk/filemanager/ofca/en/content_1087/tv_frequency_digital_en.pdf
+  - https://www.ofca.gov.hk/en/consumer_focus/guide/help_for_consumers/digital_terrestrial_tv/reception_of_dtt/index.html
+  - https://www.ofca.gov.hk/en/consumer_focus/operators_information/broadcasting_services_providers/index.html
+  - https://www.ofca.gov.hk/filemanager/ofca/common/reports/tr201202_02.pdf
+  - https://www.info.gov.hk/gia/general/201902/11/P2019021100515.htm
+  - https://www.rthk.hk/tools/appstore/2023/index_tv_e.html
+  - https://promo.mytvsuper.com/en/service-fee/price
+  - https://apps.apple.com/hk/app/mytv-super/id1080187984?l=en-GB
+  - https://play.google.com/store/apps/details?id=com.hktve.viutv&hl=en
+  - https://en.wikipedia.org/wiki/ViuTV
+  - https://apps.apple.com/us/app/hoy/id1626938576
+  - https://csweb.cabletv.com.hk/platform-info/hoy
+  - https://en.wikipedia.org/wiki/HOY_TV

@@ -1,0 +1,52 @@
+code: us
+country: United States
+dtt:
+  standard: ATSC 1.0 / ATSC 3.0
+  platform: ""
+  summary: >-
+    Local broadcast stations (such as ABC, CBS, NBC, Fox, PBS and their subchannels) are
+    free over the air with an antenna and a TV or converter with an ATSC tuner; the number
+    of channels depends on location. ATSC 3.0 (NEXTGEN TV) needs a compatible tuner, and
+    stations must keep broadcasting in ATSC 1.0, so existing TVs still work.
+services:
+  - name: PBS App
+    owner: PBS
+    cost: free
+    live_tv: true
+    platforms: [web, iOS, Android, Roku, Apple TV, Fire TV, Android TV, smart TVs]
+    url: https://www.pbs.org/pbs-app/
+    summary: Free livestream of your local PBS station plus on-demand PBS programmes.
+  - name: Pluto TV
+    owner: Paramount
+    cost: free with ads
+    live_tv: true
+    platforms: [web, iOS, Android, smart TVs, Roku, Fire TV, Apple TV, game consoles]
+    url: https://pluto.tv
+    summary: Hundreds of free ad-supported live channels plus on-demand movies and shows; no account required.
+  - name: Tubi
+    owner: Fox Corporation
+    cost: free with ads
+    live_tv: true
+    platforms: [web, iOS, Android, Roku, Fire TV, smart TVs, Xbox]
+    url: https://tubitv.com
+    summary: Large free on-demand library plus 250+ live channels, including local news from Fox stations and other groups.
+  - name: The Roku Channel
+    owner: Roku
+    cost: free with ads
+    live_tv: true
+    platforms: [web, iOS, Android, Roku devices]
+    url: https://therokuchannel.roku.com
+    summary: Free ad-supported live channels, movies, shows and Roku Originals, watchable on the web and Roku mobile app as well as Roku devices.
+notes:
+  - The PBS livestream shows only stations for your geographic area, and an account is required on streaming-device apps.
+  - Some stations encrypt their ATSC 3.0 signals, which can block reception on some NEXTGEN TV devices; the FCC is reviewing this.
+sources:
+  - https://www.fcc.gov/TVrescan
+  - https://docs.fcc.gov/public/attachments/DOC-415053A1.pdf
+  - https://docs.fcc.gov/public/attachments/FCC-25-72A1.pdf
+  - https://www.pbs.org/pbs-app/
+  - https://help.pbs.org/support/solutions/articles/12000069454-pbs-live-streaming-faq-and-troubleshooting
+  - https://pluto.tv/
+  - https://tubitv.com/help-center/Content/articles/24898743777435
+  - https://www.foxcorporation.com/businesses/tubi/
+  - https://support.roku.com/article/get-the-roku-channel

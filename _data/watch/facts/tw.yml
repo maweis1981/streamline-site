@@ -1,0 +1,54 @@
+code: tw
+country: Taiwan
+dtt:
+  standard: DVB-T
+  platform: ""
+  summary: Free digital terrestrial TV uses DVB-T and has fully replaced analogue since 30 June 2012; viewers need a digital TV antenna and a TV or set-top box with HD decoding, since several channels are in HD. It is free and carries about 20 channels from the five terrestrial broadcasters (TTV, CTV, CTS, FTV and PTS).
+services:
+  - name: 公視+ (PTS+)
+    owner: Public Television Service (PTS)
+    cost: freemium
+    live_tv: true
+    platforms: [web, iOS, Android]
+    url: https://www.ptsplus.tv
+    summary: The public broadcaster's ad-free platform has free live streams of PTS, PTS Taigi, PTS XS and PTS News, and mostly free on-demand dramas and documentaries; an account is required and a few titles are pay-per-view.
+  - name: 公視新聞網 PNN (YouTube)
+    owner: Public Television Service (PTS)
+    cost: free
+    live_tv: true
+    platforms: [YouTube]
+    url: https://www.youtube.com/@PNNPTS
+    summary: PTS's official YouTube channel streams PTS News 24 hours a day, and PTS also lists official live streams of its main channel and PTS Taigi.
+  - name: TaiwanPlus
+    owner: Public Television Service (PTS), funded by the Ministry of Culture
+    cost: free
+    live_tv: true
+    platforms: [web, iOS, Android, Apple TV, Android TV]
+    url: https://www.taiwanplus.com
+    summary: Free English-language news, documentaries and a live channel from Taiwan, ad-free and available worldwide.
+  - name: 華視新聞 (CTS News)
+    owner: Chinese Television System (CTS)
+    cost: free
+    live_tv: true
+    platforms: [iOS]
+    url: https://news.cts.com.tw
+    summary: CTS's free news app includes a 24-hour live news stream.
+notes:
+  - Terrestrial signals are also relayed by satellite as a free alternative for areas with poor terrestrial reception.
+  - Some commercial news channels have stopped their 24-hour YouTube live streams in Taiwan, so availability on YouTube can change.
+sources:
+  - https://newsweb.ncc.gov.tw/202106/ch3b.html
+  - https://info.pts.org.tw/%E5%B9%B4%E5%A0%B1%E5%8F%8A%E8%A8%8A%E6%81%AF%E5%B0%88%E5%8D%80/%E5%A6%82%E4%BD%95%E6%94%B6%E7%9C%8B
+  - https://info.pts.org.tw/%E5%B9%B4%E5%A0%B1%E5%8F%8A%E8%A8%8A%E6%81%AF%E5%B0%88%E5%8D%80/%E5%85%B6%E4%BB%96%E6%94%B6%E7%9C%8B%E6%96%B9%E5%BC%8F
+  - https://about.pts.org.tw/channel/
+  - https://zh.wikipedia.org/zh-tw/%E8%87%BA%E7%81%A3%E6%95%B8%E4%BD%8D%E7%84%A1%E7%B7%9A%E9%9B%BB%E8%A6%96
+  - https://www.ptsplus.tv/zh/streaming
+  - https://apps.apple.com/tw/app/%E5%85%AC%E8%A6%96/id1419926332
+  - https://play.google.com/store/apps/details?id=com.pts.ptsplus&hl=en_US
+  - https://www.techbang.com/posts/75180-how-to-choose-6-streaming-audio-and-video-platforms-public-vision-and-essays-high-quality-taiwan-drama-and-documentary
+  - https://www.youtube.com/c/PNNPTS/streams
+  - https://apps.apple.com/app/id1561888712
+  - https://www.taiwanplus.com/press/latest-updates/taiwanplus-latest/130/taiwanplus-expands-global-access-with-new-app-for-apple-tv-and-android-tv
+  - https://www.moc.gov.tw/en/News_Content2.aspx?n=467&s=95856
+  - https://apps.apple.com/app/id911358722
+  - https://www.techbang.com/posts/95303

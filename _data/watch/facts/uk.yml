@@ -1,0 +1,67 @@
+code: uk
+country: United Kingdom
+dtt:
+  standard: DVB-T / DVB-T2
+  platform: Freeview
+  summary: >-
+    Freeview is subscription-free and needs a rooftop or indoor aerial and a Freeview TV
+    or box; it offers around 70 TV channels, or over 100 including HD and streamed
+    channels, depending on your area. HD channels use DVB-T2, so older DVB-T-only
+    receivers get standard-definition channels only. Freely delivers the main live
+    channels over broadband with no aerial.
+services:
+  - name: BBC iPlayer
+    owner: BBC
+    cost: free
+    live_tv: true
+    platforms: [web, iOS, Android, Apple TV, smart TVs]
+    url: https://www.bbc.co.uk/iplayer
+    summary: Live BBC channels and on-demand BBC programmes with no adverts; a TV licence is required to use it.
+  - name: ITVX
+    owner: ITV
+    cost: freemium
+    live_tv: true
+    platforms: [web, iOS, Android, smart TVs]
+    url: https://www.itv.com/watch
+    summary: Free ad-supported live ITV channels, themed streaming channels and on-demand shows; ITVX Premium removes most on-demand adverts and adds BritBox.
+  - name: Channel 4
+    owner: Channel 4
+    cost: free with ads
+    live_tv: true
+    platforms: [web, iOS, Android, Amazon, Roku, Samsung TVs, PlayStation]
+    url: https://www.channel4.com
+    summary: Free live Channel 4, E4, More4, Film4 and 4seven plus on-demand programmes and an archive; free registration required.
+  - name: "5"
+    owner: Channel 5 (Paramount)
+    cost: free with ads
+    live_tv: true
+    platforms: [web]
+    url: https://www.channel5.com
+    summary: Channel 5's streaming service (formerly My5) with its live channels, free streaming channels and catch-up.
+  - name: Freely
+    owner: Everyone TV
+    cost: free
+    live_tv: true
+    platforms: [smart TVs, streaming devices]
+    url: https://www.freely.co.uk
+    summary: Built into some smart TVs and devices, it streams 70+ live channels from BBC, ITV, Channel 4, Channel 5 and others over broadband (10Mbps recommended), with no aerial.
+notes:
+  - A TV licence is needed to watch or record live TV on any channel or service (including Freeview, Freely and live streams in apps) and to use BBC iPlayer at all; on-demand content from other services does not need one.
+  - The TV licence costs £180 a year according to GOV.UK; watching live TV without one can lead to a fine of up to £1,000.
+  - BBC iPlayer and the live streams in UK broadcaster apps are for UK viewers; Channel 4's Watch Live is limited to UK residents.
+sources:
+  - https://www.freeview.co.uk/help/what-is-freeview
+  - https://www.freeview.co.uk/help/channels-live-on-demand
+  - https://www.ofcom.org.uk/tv-radio-and-on-demand/advice-for-consumers/television/dvb-t2-and-freeview-hd
+  - https://www.tvlicensing.co.uk/check-if-you-need-one/topics/bbc-iplayer-and-the-tv-licence
+  - https://www.tvlicensing.co.uk/faqs/FAQ33
+  - https://www.gov.uk/find-licences/tv-licence
+  - https://apps.apple.com/gb/app/bbc-iplayer/id416580485
+  - https://www.freeview.co.uk/get-freeview-play/channels/bbc-iplayer
+  - https://help.itv.com/support/solutions/articles/204000073712-what-is-itvx-premium-
+  - https://www.itv.com/terms/articles/itvhubonlineterms
+  - https://www.channel4.com/4viewers/faqs?faqs=why+do+I+need+to+sign+in
+  - https://en.wikipedia.org/wiki/5_(streaming_service)
+  - https://www.freely.co.uk/get-freely
+  - https://www.freely.co.uk/products/buying-advice/freely-vs-freeview-difference-comparison
+  - https://www.everyonetv.co.uk/news/press-release/freely-new-partners-warner-bros-discovery-cnn

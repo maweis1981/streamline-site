@@ -427,3 +427,25 @@ html.js.nav-open .site-header{background:rgba(5,7,15,.96);border-bottom-color:va
 .ch-related a:hover{color:var(--teal);border-color:var(--teal)}
 @media (max-width:559.98px){.ch-hero{grid-template-columns:1fr}.ch-logo{width:96px;height:64px}}
 .dir-channels a.dir-name{color:var(--text);text-decoration:none}.dir-channels a.dir-name:hover{color:var(--teal)}
+/* Free TV by country articles */
+.wt-quick h2{font-size:18px;margin-bottom:10px}
+.wt-quick ol{padding-left:1.3em;display:grid;gap:8px;color:var(--text-2)}
+.wt-quick a{color:var(--teal);text-underline-offset:3px}
+.wt-channels{margin:16px 0}
+.wt-channels span{display:inline-block;padding:7px 14px;border-radius:var(--r-pill);border:1px solid var(--line);color:var(--text-3);font-size:14px}
+.wt-cta .icon{width:16px;height:16px}
+.wt-services{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.wt-service h3{font-size:18px;margin-bottom:4px}
+.wt-service h3 a{color:var(--text);text-decoration:none}
+.wt-service h3 a:hover{color:var(--teal)}
+.wt-meta,.wt-platforms{color:var(--text-3);font-size:13px}
+.wt-service p:not(.wt-meta):not(.wt-platforms){color:var(--text-2);font-size:15px;margin:8px 0}
+.wt-dtt p{color:var(--text-2)}
+.ch-facts-dl{display:flex;flex-wrap:wrap;gap:12px 32px;margin:0 0 10px}
+.ch-facts-dl dt{color:var(--text-3);font-size:13px}
+.ch-facts-dl dd{margin:2px 0 0}
+.wt-notes{padding-left:1.2em;display:grid;gap:6px;color:var(--text-2)}
+.wt-sources{margin-top:40px;color:var(--text-3);font-size:13px}
+.wt-sources summary{cursor:pointer}
+.wt-sources ul{padding-left:1.2em;margin-top:8px;display:grid;gap:4px}
+.wt-sources a{color:var(--text-3);overflow-wrap:anywhere}

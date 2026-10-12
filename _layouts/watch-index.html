@@ -1,0 +1,15 @@
+---
+layout: default
+---
+{%- assign s = site.data.locales[page.lang].watch -%}
+<section class="page-hero">
+  <div class="container narrow">
+    <h1>{{ s.hub_title }}</h1>
+    <p class="lead">{{ s.hub_lead }}</p>
+  </div>
+</section>
+<section class="section section-tight">
+  <div class="container narrow">
+    {% include watch-links.html %}
+  </div>
+</section>

@@ -1,0 +1,54 @@
+code: au
+country: Australia
+dtt:
+  standard: DVB-T
+  platform: Freeview
+  summary: >-
+    Free-to-air TV from ABC, SBS, Seven, Nine and Ten is broadcast free over DVB-T and
+    needs an antenna and a digital TV or set-top box; Freeview lists 30+ channels,
+    including digital sub-channels. A Freeview-certified TV with broadband also adds an
+    online guide and catch-up apps.
+services:
+  - name: ABC iview
+    owner: ABC
+    cost: free
+    live_tv: true
+    platforms: [web, iOS, Android, smart TVs, Apple TV, Fire TV, game consoles]
+    url: https://iview.abc.net.au
+    summary: Free live ABC channels and on-demand programmes with no ads; a free ABC Account is required for on-demand programmes.
+  - name: SBS On Demand
+    owner: SBS
+    cost: free with ads
+    live_tv: true
+    platforms: [web, iOS, Android, smart TVs, Apple TV, Chromecast with Google TV]
+    url: https://www.sbs.com.au/ondemand
+    summary: Free live streams of SBS, SBS VICELAND, SBS Food, SBS World Movies and NITV plus on-demand programmes; a free verified account is required.
+  - name: 7plus
+    owner: Seven West Media
+    cost: free with ads
+    live_tv: true
+    platforms: [iOS, Android, smart TVs]
+    url: https://7plus.com.au
+    summary: Free live streams of 7, 7TWO, 7mate, 7Bravo and 7flix plus on-demand sport, shows and movies.
+  - name: 9Now
+    owner: Nine
+    cost: free with ads
+    live_tv: true
+    platforms: [iOS, Android TV]
+    url: https://www.9now.com.au
+    summary: Free live streams of Channel 9, 9Go!, 9Gem, 9Life and 9Rush plus catch-up; a free account is required.
+notes:
+  - Live streams in Australian broadcaster apps are geo-restricted to Australia.
+  - ABC live channels can be watched on the iview website without logging in; SBS On Demand live streams follow the NSW schedule.
+sources:
+  - https://freeview.com.au/
+  - https://freeview.com.au/get-freeview
+  - https://www.acma.gov.au/sites/default/files/2023-12/Final%20report%20-%20TV%20receiver%20performance%20testing%20%20December%202023%20REDACTED.pdf
+  - https://help.abc.net.au/hc/en-us/articles/8551304941583-Why-do-I-need-to-log-in-to-watch-programs-on-ABC-iview
+  - https://help.abc.net.au/hc/en-us/articles/8552173461519-How-do-I-watch-live-streams-on-ABC-iview
+  - https://help.abc.net.au/hc/en-us/articles/8551325377423-Where-can-I-get-ABC-iview
+  - https://help.sbs.com.au/hc/en-au/articles/5698114022543-How-do-I-create-and-verify-my-SBS-On-Demand-account
+  - https://help.sbs.com.au/hc/en-au/articles/360002023135-Information-on-Live-Streaming-SBS-and-the-SBS-On-Demand-Guide
+  - https://www.sbs.com.au/ondemand/live
+  - https://apps.apple.com/au/app/7plus/id1119404646
+  - https://apps.apple.com/au/app/id542088539

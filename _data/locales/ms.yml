@@ -17,6 +17,7 @@ nav:
   privacy: Privasi
   download: Muat turun
   tools: Alat M3U
+  watch: TV percuma ikut negara
 cta:
   app_store: Muat turun di App Store
   testflight: Sertai beta TestFlight
@@ -462,3 +463,44 @@ channel:
   a_tv: Salin pautan senarai main percuma %country% dan bukanya dalam pemain pada smart TV, Android TV, Fire TV atau Apple TV anda. Panduan peranti Doubo menerangkan setiap langkah.
   q_site: Apakah laman web rasmi %name%?
   a_site: Laman web rasmi %name% ialah %website%.
+watch:
+  nav: TV percuma ikut negara
+  hub_title: Cara menonton TV secara percuma, ikut negara
+  hub_desc: 'Cara sah menonton televisyen secara percuma di setiap negara: saluran langsung dalam pelayar, aplikasi rasmi penyiar dan TV antena percuma.'
+  hub_lead: Pilih negara untuk melihat semua pilihan percuma yang sah, disemak dan dikemas kini.
+  title: Cara Tonton TV %country% Dalam Talian Secara Percuma (%year%)
+  description: 'Cara sah menonton TV %country% secara percuma pada %year%: saluran langsung percuma dalam pelayar, aplikasi rasmi seperti %apps%, dan TV antena percuma.'
+  h1: Cara menonton TV %country% secara percuma
+  intro: 'Anda tidak perlu langganan berbayar untuk menonton televisyen %country%. Ini pilihan percuma yang sah: saluran langsung dalam pelayar, aplikasi penyiar sendiri, dan TV digital percuma melalui antena.'
+  quick_title: Jawapan ringkas
+  q_web: Tonton %count% saluran %country% percuma sekarang dalam pemain web Doubo. Tanpa muat turun, tanpa daftar.
+  q_apps: 'Gunakan aplikasi rasmi percuma: %apps%.'
+  q_dtt: 'Dengan antena: TV digital percuma (%standard%).'
+  online_title: Tonton dalam talian sekarang
+  online_desc: Saluran %country% ini disiarkan secara terbuka oleh penyiarnya. Pilih satu untuk menonton dalam pelayar.
+  watch_all: Tonton semua saluran %country%
+  playlist_title: Guna senarai main M3U dalam mana-mana pemain
+  apps_title: Aplikasi penstriman rasmi percuma
+  col_service: Perkhidmatan
+  col_cost: Kos
+  col_platforms: Platform
+  cost_free: Percuma
+  cost_ads: Percuma dengan iklan
+  cost_freemium: Percuma + pelan berbayar
+  live_tv: TV langsung
+  dtt_title: TV antena percuma
+  dtt_standard: Piawaian siaran
+  dtt_platform: Rangkaian
+  tv_title: Tonton di TV anda
+  tv_desc: 'Panduan langkah demi langkah untuk menonton saluran ini di smart TV, Android TV, Fire TV, Apple TV atau Chromecast:'
+  notes_title: Perlu diketahui
+  faq_title: Soalan lazim
+  fq_free: Bolehkah saya menonton TV %country% dalam talian secara percuma?
+  fa_free: Boleh. Banyak saluran %country% disiarkan secara percuma dan sah. Anda boleh menontonnya dalam pemain web Doubo, aplikasi penyiar sendiri, atau melalui antena.
+  fq_app: Apakah aplikasi percuma terbaik untuk menonton TV %country%?
+  fa_app: Pilihan rasmi termasuk %apps%. Doubo menghimpunkan saluran %country% percuma daripada banyak penyiar di satu tempat, dalam pelayar atau aplikasi.
+  fq_abroad: Bolehkah saya menonton TV %country% dari luar negara?
+  fa_abroad: Sesetengah strim boleh ditonton di mana-mana, tetapi penyiar sering mengehadkan yang lain kepada penonton di %country% atas sebab hak siaran. Doubo hanya menyenaraikan strim yang dibuka oleh penyiar dan tidak memintas had ini.
+  updated: Dikemas kini %date%
+  sources: Sumber
+  more_countries: Negara lain

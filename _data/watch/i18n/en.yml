@@ -1,0 +1,146 @@
+au:
+  dtt: Free-to-air TV from ABC, SBS, Seven, Nine and Ten is broadcast free over DVB-T and needs an antenna and a digital TV or set-top box; Freeview lists 30+ channels, including digital sub-channels. A Freeview-certified TV with broadband also adds an online guide and catch-up apps.
+  services:
+  - Free live ABC channels and on-demand programmes with no ads; a free ABC Account is required for on-demand programmes.
+  - Free live streams of SBS, SBS VICELAND, SBS Food, SBS World Movies and NITV plus on-demand programmes; a free verified account is required.
+  - Free live streams of 7, 7TWO, 7mate, 7Bravo and 7flix plus on-demand sport, shows and movies.
+  - Free live streams of Channel 9, 9Go!, 9Gem, 9Life and 9Rush plus catch-up; a free account is required.
+  notes:
+  - Live streams in Australian broadcaster apps are geo-restricted to Australia.
+  - ABC live channels can be watched on the iview website without logging in; SBS On Demand live streams follow the NSW schedule.
+cn:
+  dtt: Free-to-air digital terrestrial TV uses the national DTMB standard (GB 20600); viewers need a TV or set-top box with a DTMB tuner and a terrestrial antenna, and reception depends on distance to a transmitter. It is free, and the national public service standard requires at least 15 channels over the air, mainly CCTV plus provincial and local channels.
+  services:
+  - CMG's official video app with free live streams of CCTV channels and provincial satellite channels plus on-demand programmes; some features and content need an account or in-app purchase.
+  - Free live streams of all CCTV channels and many provincial satellite and city channels, with time-shift and catch-up; some on-demand content needs a paid membership.
+  - Browser-based live streams of CCTV channels such as CCTV-1 and CCTV-13, with programme schedules and on-demand clips.
+  - Offers a 24-hour live stream of Hunan TV and free on-demand shows, while VIP membership unlocks more content.
+  notes:
+  - The national basic public service standard (2021 and 2023 editions) requires at least 15 TV channels free over the air, or at least 25 by direct-broadcast satellite in areas covered by the satellite service.
+  - Regulators said in 2017 that no encrypted pay digital terrestrial TV service had been approved.
+hk:
+  dtt: Digital terrestrial TV is based on the national DTMB standard (GB 20600) and has been the only broadcast method since analogue TV was switched off on 30 November 2020. Viewers need a digital TV or set-top box and an antenna, and pay no subscription fee for the free channels from TVB, ViuTV, HOY and RTHK (around 14 channels).
+  services:
+  - The public broadcaster's free app provides live webcasts of RTHK TV 31 to 35, with video on demand and downloads.
+  - TVB's platform marks Jade, TVB Plus and TVB News among its free live channels alongside paid packs; the service is only for use in Hong Kong and Macau.
+  - Free live stream of ViuTV (ch.99), with ViuTVsix (ch.96) streamed only at limited times because of rights; Hong Kong only.
+  - Free 24-hour live streams of HOY channels 76, 77 and 78 plus on-demand programmes; free streaming works only in Hong Kong.
+  notes:
+  - The government states that no subscription fee is needed to receive free digital terrestrial TV.
+  - Most broadcaster live streams are restricted to viewers in Hong Kong.
+id:
+  dtt: Free-to-air digital TV needs an antenna and a TV with a DVB-T2 tuner, or a DVB-T2 set-top box for an older analogue TV; watching is free. Analogue broadcasts were switched off region by region between 2022 and 2023, and the government distributed free set-top boxes to low-income households.
+  services:
+  - Free live streams of the public broadcaster's national channels (including TVRI Nasional and TVRI Sport) and regional stations, plus on-demand replays.
+  - Free ad-supported live streams of RCTI, MNCTV, GTV and iNews, with catch-up of recent programmes.
+  - Free-to-air channels such as SCTV and Indosiar can be streamed live for free with ads; premium channels, many sports matches and ad-free viewing need a paid plan.
+  notes:
+  - Many unofficial "TV online" apps are unlicensed; the broadcasters' own apps and websites are the legal options.
+in:
+  dtt: Doordarshan runs a free-to-air DVB-T2 digital terrestrial service, but only in a limited number of cities (Prasar Bharati lists 19), and it needs a DVB-T2 set-top box or a TV with a DVB-T2 tuner plus an antenna. Most free TV viewing in India is via DD Free Dish, Prasar Bharati's free satellite service, which has no monthly or annual fee after a one-time purchase of a dish and set-top box (about Rs 1,500 to 2,000) and carries 160+ TV channels.
+  services:
+  - Public broadcaster app with about 140 live TV channels, including all Doordarshan satellite channels, plus radio and on-demand titles; almost all content is free, with a few premium items.
+  - Free ad-supported service with Indian original series, films and shows, also reachable through the Amazon shopping app and Prime Video.
+  - Free ad-supported live channels (Samsung cites 150+) in news, movies, music and entertainment, available only on Samsung devices.
+  notes:
+  - DD Free Dish is free for life with no subscription; Prasar Bharati recommends authorised set-top boxes because it may restrict MPEG-4 channels on unauthorised ones.
+  - DD Free Dish channel counts change after each annual slot auction; check Prasar Bharati's current list.
+jp:
+  dtt: Terrestrial digital TV uses ISDB-T on UHF channels 13 to 62; viewers need a TV or tuner for terrestrial digital broadcasting and a UHF antenna. There is no subscription charge, and viewers get NHK General TV, NHK Educational TV and the local commercial stations, with the number of channels varying by region; households with a TV must pay the NHK receiving fee.
+  services:
+  - Free catch-up of selected programmes from the commercial broadcasters for a limited period after airing, plus live streams of the five commercial networks focused on prime time; live streams are not available in the TV app.
+  - About 25 to 30 free linear channels, including a 24-hour news channel, with no registration needed; ABEMA Premium (1,080 yen a month, or 580 yen with ads) adds exclusive content and features.
+  - NHK's international service streams its English-language TV channel live worldwide for free, with 7-day catch-up for selected programmes.
+  notes:
+  - NHK's own simulcast and catch-up service, NHK ONE (successor to NHK+ since 1 October 2025), requires an NHK reception contract; households already paying the fee pay nothing extra.
+  - The NHK receiving fee for a terrestrial contract is 1,100 yen a month (965 yen in Okinawa), and an internet-only contract costs the same.
+  - TVer and ABEMA are designed for viewers in Japan; TVer's help pages state that its videos cannot be watched from overseas.
+kr:
+  dtt: 'The terrestrial channels of KBS, MBC, SBS and EBS are free over the air with an antenna: HD in ATSC 1.0 and 4K UHD in ATSC 3.0, which needs a UHD TV with an ATSC 3.0 tuner. Many apartment buildings distribute signals through a shared rooftop antenna system, and older systems may not pass ATSC 3.0 signals.'
+  services:
+  - Public broadcaster app with KBS live channels and on-demand replays; the app is free, and some replays are paid.
+  - Free live streams of seven MBC channels including MBC, MBC every1 and MBC DRAMA; many replays need a paid pass.
+  - Free live SBS, SBS Plus, SBS Sports and SBS Golf for logged-in members (non-members get a 3-minute preview), plus some free replays.
+  - Free live streams of six EBS channels including EBS1; full replay access is paid.
+  notes:
+  - Outside Korea, KBS+ shows only some live channels because of broadcast rights.
+  - Free accounts are needed for full live viewing on some broadcaster apps (for example SBS play).
+my:
+  dtt: Free-to-air digital TV is received with a UHF antenna and a TV with a built-in DVB-T2 tuner or a DVB-T2 decoder, with no subscription fee; MYTV lists about 17 TV channels plus digital radio. Analogue TV was switched off nationwide in 2019, with Sabah and Sarawak the last regions on 31 October 2019.
+  services:
+  - Free live streams of RTM channels including TV1, TV2, TV Okey, Berita RTM, TV Sukan, TV6 and RTM Parlimen, plus live radio and catch-up of recent programmes.
+  - A free ad-supported account gives access to local live TV channels such as TV3 and on-demand shows; the paid TontonUp plan adds premium content.
+  - After registering a free account, viewers can watch a set of ad-supported channels (such as Astro Awani, Bernama TV and TV Sarawak) and selected shows in standard definition; most sports and premium content need a paid plan.
+  notes:
+  - Live streaming of RTM's channels on RTMKlik is available only in Malaysia.
+  - Tonton and sooka require a free account to watch their free channels.
+ph:
+  dtt: Digital terrestrial TV stays free-to-air and is received with an antenna and a TV with an ISDB-T tuner or a digital TV box for older analogue sets. Analogue TV in Mega Manila is scheduled to be switched off on 22 November 2026 under an NTC circular; dates for the rest of the country have not been set.
+  services:
+  - The state broadcaster streams its channel live on its website, and also on its official YouTube and Dailymotion channels.
+  - Free app combining live GMA television with on-demand Filipino shows, Asian dramas and movies.
+  - Free simulcast of GMA's afternoon and prime-time programmes on GMA Network's official YouTube and Facebook pages; full episodes are also free on gmanetwork.com.
+  - ABS-CBN's streaming service offers some shows free with a sign-up, and in 2026 promoted free viewing of selected Kapamilya programmes; most of the catalogue requires a subscription.
+  notes:
+  - After the Mega Manila switch-off, households with analogue-only TVs need a digital TV box; the DICT has said it will run an assistance programme for vulnerable households.
+sg:
+  dtt: Mediacorp's free-to-air channels have been broadcast digitally in DVB-T2 since analogue TV ended on 1 January 2019; viewers need a TV with a built-in DVB-T2 tuner or a DVB-T2 set-top box, plus an indoor or rooftop UHF antenna. Reception is free, and the six free-to-air channels are Channel 5, Channel 8, Channel U, Suria, Vasantham and CNA.
+  services:
+  - Free live streams of Channel 5, Channel 8, Channel U, Suria, Vasantham and CNA plus free on-demand Mediacorp programmes, with a paid Prime tier for ad-free viewing and partner content; live channels work only in Singapore.
+  - The free CNA app and CNA's official YouTube channel carry the CNA 24/7 livestream and on-demand documentaries and current affairs shows, and are available outside Singapore.
+  - Mediacorp's free Chinese-language news app, with current affairs programmes and news bulletins on demand.
+  notes:
+  - Singapore abolished its radio and TV licence fee from 1 January 2011, so no fee is needed to watch.
+  - Live channels on mewatch are geo-restricted to Singapore; only selected programmes can be watched overseas.
+  - Pay-TV subscribers (StarHub, Singtel) already receive Mediacorp's free-to-air channels digitally.
+th:
+  dtt: Free-to-air digital TV is received with an antenna and a TV with a built-in DVB-T2 tuner or a DVB-T2 set-top box, with no subscription fee. Analogue broadcasting ended in 2020, when Channel 3 became the last analogue channel to go off air on 25 March 2020; commercial digital TV licences run until 2029.
+  services:
+  - The public broadcaster streams its channel live for free on its website and app, with AI-generated live captions and on-demand programmes.
+  - Thai PBS's on-demand platform offers dramas, documentaries and Thai PBS programmes for free with no ads.
+  - Channel 3 can be watched live and on catch-up for free with ads; the paid 3Plus Premium tier removes ads and adds extras.
+  - Free-to-air channels such as Thai PBS, Channel 3 and Channel 7 are listed among TrueID's free channels; premium TrueVisions channels need a paid package.
+  notes:
+  - Channel 7HD has merged its BUGABOO.TV and CH7HD apps into a new app called CH7ON.
+tw:
+  dtt: Free digital terrestrial TV uses DVB-T and has fully replaced analogue since 30 June 2012; viewers need a digital TV antenna and a TV or set-top box with HD decoding, since several channels are in HD. It is free and carries about 20 channels from the five terrestrial broadcasters (TTV, CTV, CTS, FTV and PTS).
+  services:
+  - The public broadcaster's ad-free platform has free live streams of PTS, PTS Taigi, PTS XS and PTS News, and mostly free on-demand dramas and documentaries; an account is required and a few titles are pay-per-view.
+  - PTS's official YouTube channel streams PTS News 24 hours a day, and PTS also lists official live streams of its main channel and PTS Taigi.
+  - Free English-language news, documentaries and a live channel from Taiwan, ad-free and available worldwide.
+  - CTS's free news app includes a 24-hour live news stream.
+  notes:
+  - Terrestrial signals are also relayed by satellite as a free alternative for areas with poor terrestrial reception.
+  - Some commercial news channels have stopped their 24-hour YouTube live streams in Taiwan, so availability on YouTube can change.
+uk:
+  dtt: Freeview is subscription-free and needs a rooftop or indoor aerial and a Freeview TV or box; it offers around 70 TV channels, or over 100 including HD and streamed channels, depending on your area. HD channels use DVB-T2, so older DVB-T-only receivers get standard-definition channels only. Freely delivers the main live channels over broadband with no aerial.
+  services:
+  - Live BBC channels and on-demand BBC programmes with no adverts; a TV licence is required to use it.
+  - Free ad-supported live ITV channels, themed streaming channels and on-demand shows; ITVX Premium removes most on-demand adverts and adds BritBox.
+  - Free live Channel 4, E4, More4, Film4 and 4seven plus on-demand programmes and an archive; free registration required.
+  - Channel 5's streaming service (formerly My5) with its live channels, free streaming channels and catch-up.
+  - Built into some smart TVs and devices, it streams 70+ live channels from BBC, ITV, Channel 4, Channel 5 and others over broadband (10Mbps recommended), with no aerial.
+  notes:
+  - A TV licence is needed to watch or record live TV on any channel or service (including Freeview, Freely and live streams in apps) and to use BBC iPlayer at all; on-demand content from other services does not need one.
+  - The TV licence costs £180 a year according to GOV.UK; watching live TV without one can lead to a fine of up to £1,000.
+  - BBC iPlayer and the live streams in UK broadcaster apps are for UK viewers; Channel 4's Watch Live is limited to UK residents.
+us:
+  dtt: Local broadcast stations (such as ABC, CBS, NBC, Fox, PBS and their subchannels) are free over the air with an antenna and a TV or converter with an ATSC tuner; the number of channels depends on location. ATSC 3.0 (NEXTGEN TV) needs a compatible tuner, and stations must keep broadcasting in ATSC 1.0, so existing TVs still work.
+  services:
+  - Free livestream of your local PBS station plus on-demand PBS programmes.
+  - Hundreds of free ad-supported live channels plus on-demand movies and shows; no account required.
+  - Large free on-demand library plus 250+ live channels, including local news from Fox stations and other groups.
+  - Free ad-supported live channels, movies, shows and Roku Originals, watchable on the web and Roku mobile app as well as Roku devices.
+  notes:
+  - The PBS livestream shows only stations for your geographic area, and an account is required on streaming-device apps.
+  - Some stations encrypt their ATSC 3.0 signals, which can block reception on some NEXTGEN TV devices; the FCC is reviewing this.
+vn:
+  dtt: Digital terrestrial TV is broadcast free of charge and can be watched with an antenna and a TV with a built-in DVB-T2 tuner or a DVB-T2 set-top box; according to VTV, the full VTV channel package is carried on DVB-T2. Analogue terrestrial TV was switched off nationwide on 28 December 2020.
+  services:
+  - The public broadcaster's national platform streams VTV channels, the national essential channels and provincial channels live for free, with replays of past programmes; the paid VTVgo Plus tier removes pop-up ads and adds extras.
+  - A free registered account unlocks a set of basic live channels, including VTV1; channels marked VIP require a paid plan.
+  - Free app for live channels produced by HTV and its HTVC cable centre, plus films and programmes on demand.
+  notes:
+  - VTV1 is designated a national essential channel and is broadcast free of charge.
+  - The HTV Online app only serves users inside Vietnam.
+  - VTC's channels stopped broadcasting in January 2025 as part of a state media restructuring.

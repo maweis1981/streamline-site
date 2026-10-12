@@ -1,0 +1,47 @@
+code: vn
+country: Vietnam
+dtt:
+  standard: DVB-T2
+  platform: ""
+  summary: Digital terrestrial TV is broadcast free of charge and can be watched with an antenna and a TV with a built-in DVB-T2 tuner or a DVB-T2 set-top box; according to VTV, the full VTV channel package is carried on DVB-T2. Analogue terrestrial TV was switched off nationwide on 28 December 2020.
+services:
+  - name: VTVgo
+    owner: Vietnam Television (VTV)
+    cost: freemium
+    live_tv: true
+    platforms: [web, iOS, Android, Android TV, Samsung Tizen, LG webOS]
+    url: https://vtvgo.vn/
+    summary: The public broadcaster's national platform streams VTV channels, the national essential channels and provincial channels live for free, with replays of past programmes; the paid VTVgo Plus tier removes pop-up ads and adds extras.
+  - name: VieON
+    owner: DatVietVAC
+    cost: freemium
+    live_tv: true
+    platforms: [web, iOS, Android]
+    url: https://vieon.vn/truyen-hinh-truc-tuyen/
+    summary: A free registered account unlocks a set of basic live channels, including VTV1; channels marked VIP require a paid plan.
+  - name: HTV Online
+    owner: Ho Chi Minh City Television (HTV)
+    cost: free
+    live_tv: true
+    platforms: [iOS, Android]
+    url: https://htv.com.vn/truyen-hinh-internet-ott-222174.htm
+    summary: Free app for live channels produced by HTV and its HTVC cable centre, plus films and programmes on demand.
+notes:
+  - VTV1 is designated a national essential channel and is broadcast free of charge.
+  - The HTV Online app only serves users inside Vietnam.
+  - VTC's channels stopped broadcasting in January 2025 as part of a state media restructuring.
+sources:
+  - https://www.vietnamplus.vn/viet-nam-chinh-thuc-hoan-thanh-so-hoa-truyen-hinh-mat-dat-post688997.vnp
+  - https://baochinhphu.vn/viet-nam-hoan-thanh-de-an-so-hoa-truyen-hinh-102285793.htm
+  - https://vnexpress.net/vtv-neu-ly-do-kenh-bien-mat-tren-mot-so-nen-tang-truyen-hinh-4840865.html
+  - https://vtv.vn/truyen-hinh/dai-thvn-dam-phan-ban-quyen-goi-kenh-vtv-dam-bao-cong-bang-va-loi-ich-chung-20250119185121911.htm
+  - https://vtvgo.vn/
+  - https://play.google.com/store/apps/details?id=vn.vtv.vtvgo
+  - https://play.google.com/store/apps/details?id=vn.vtv.vtvgotv
+  - https://apps.apple.com/vn/app/vtv-go-truy%E1%BB%81n-h%C3%ACnh-s%E1%BB%91-qu%E1%BB%91c-gia/id1072038396
+  - https://vieon.vn/truyen-hinh-truc-tuyen/
+  - https://vieon.vn/truyen-hinh-truc-tuyen/vtv1-hd/
+  - https://apps.apple.com/vn/app/vieon-phim-show-truy%E1%BB%81n-h%C3%ACnh/id1357819721
+  - https://htv.com.vn/truyen-hinh-internet-ott-222174.htm
+  - https://apps.apple.com/vn/app/htv-online/id1157243470
+  - https://tuoitrenews.vn/news/society/20250116/many-vietnamese-tv-networks-go-off-air/83962.html

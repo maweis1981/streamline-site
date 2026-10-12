@@ -1,0 +1,46 @@
+code: my
+country: Malaysia
+dtt:
+  standard: DVB-T2
+  platform: MYTV Broadcasting (myFreeview)
+  summary: Free-to-air digital TV is received with a UHF antenna and a TV with a built-in DVB-T2 tuner or a DVB-T2 decoder, with no subscription fee; MYTV lists about 17 TV channels plus digital radio. Analogue TV was switched off nationwide in 2019, with Sabah and Sarawak the last regions on 31 October 2019.
+services:
+  - name: RTMKlik
+    owner: Radio Televisyen Malaysia (RTM)
+    cost: free
+    live_tv: true
+    platforms: [web, iOS, Android]
+    url: https://rtmklik.rtm.gov.my/
+    summary: Free live streams of RTM channels including TV1, TV2, TV Okey, Berita RTM, TV Sukan, TV6 and RTM Parlimen, plus live radio and catch-up of recent programmes.
+  - name: Tonton
+    owner: Media Prima
+    cost: freemium
+    live_tv: true
+    platforms: [web, iOS, Android]
+    url: https://www.tonton.com.my/
+    summary: A free ad-supported account gives access to local live TV channels such as TV3 and on-demand shows; the paid TontonUp plan adds premium content.
+  - name: sooka
+    owner: Astro
+    cost: freemium
+    live_tv: true
+    platforms: [web, iOS, Android, Android TV]
+    url: https://sooka.my/
+    summary: After registering a free account, viewers can watch a set of ad-supported channels (such as Astro Awani, Bernama TV and TV Sarawak) and selected shows in standard definition; most sports and premium content need a paid plan.
+notes:
+  - Live streaming of RTM's channels on RTMKlik is available only in Malaysia.
+  - Tonton and sooka require a free account to watch their free channels.
+sources:
+  - https://mytvbroadcasting.my/
+  - https://mytvbroadcasting.my/faq/
+  - https://www.bernama.com/en/news.php?id=1783200
+  - https://www.thestar.com.my/metro/metro-news/2019/10/31/sabah-and-sarawak-switch-to-digital-tv
+  - https://rtmklik.rtm.gov.my/
+  - https://play.google.com/store/apps/details?id=my.gov.rtm.mobile
+  - https://apps.apple.com/app/id777391399
+  - https://en.wikipedia.org/wiki/RTMKlik
+  - https://www.tonton.com.my/pages/howitworks.html
+  - https://www.tonton.com.my/tontonup/v2/index.html
+  - https://play.google.com/store/apps/details?id=my.com.tonton.mobile
+  - https://support.sooka.my/hc/en-us/articles/10409454977167-Plans-Pricing
+  - https://support.sooka.my/hc/en-us/articles/11949985873551-sooka-TV-Channels-Subscription-Plans-Full-Availability-Guide
+  - https://play.google.com/store/apps/details?id=com.astro.sott

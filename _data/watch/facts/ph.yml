@@ -1,0 +1,51 @@
+code: ph
+country: Philippines
+dtt:
+  standard: ISDB-T
+  platform: ""
+  summary: Digital terrestrial TV stays free-to-air and is received with an antenna and a TV with an ISDB-T tuner or a digital TV box for older analogue sets. Analogue TV in Mega Manila is scheduled to be switched off on 22 November 2026 under an NTC circular; dates for the rest of the country have not been set.
+services:
+  - name: PTV Livestream
+    owner: People's Television Network (PTV)
+    cost: free
+    live_tv: true
+    platforms: [web]
+    url: https://ptvnews.ph/live/
+    summary: The state broadcaster streams its channel live on its website, and also on its official YouTube and Dailymotion channels.
+  - name: GMA Play
+    owner: GMA Network
+    cost: free with ads
+    live_tv: true
+    platforms: [web, iOS, Android, Android TV]
+    url: https://www.gmanetwork.com/GMAPlay
+    summary: Free app combining live GMA television with on-demand Filipino shows, Asian dramas and movies.
+  - name: Kapuso Stream
+    owner: GMA Network
+    cost: free
+    live_tv: true
+    platforms: [web]
+    url: https://www.gmanetwork.com/entertainment/kapusostream/
+    summary: Free simulcast of GMA's afternoon and prime-time programmes on GMA Network's official YouTube and Facebook pages; full episodes are also free on gmanetwork.com.
+  - name: iWantTFC
+    owner: ABS-CBN
+    cost: freemium
+    live_tv: false
+    platforms: [web, iOS, Android]
+    url: https://www.iwanttfc.com/
+    summary: ABS-CBN's streaming service offers some shows free with a sign-up, and in 2026 promoted free viewing of selected Kapamilya programmes; most of the catalogue requires a subscription.
+notes:
+  - After the Mega Manila switch-off, households with analogue-only TVs need a digital TV box; the DICT has said it will run an assistance programme for vulnerable households.
+sources:
+  - https://business.inquirer.net/560672/ntc-eyes-analog-tv-switch-off-by-november-2026
+  - https://business.inquirer.net/600912/gma-cues-analog-tv-switch-off-in-mega-manila
+  - https://www.philstar.com/business/2026/07/18/2542821/gma-network-ready-analog-exit
+  - https://alpha.pna.gov.ph/articles/1216971
+  - https://www.philstar.com/business/2011/09/07/724099/phl-adopt-japanese-standard-digital-tv
+  - https://ptvnews.ph/live/
+  - https://www.pna.gov.ph/videos/2808
+  - https://play.google.com/store/apps/details?id=com.gmanmi.entertainment.mobile
+  - https://apps.apple.com/us/app/gma-play/id979827127
+  - https://www.gmanetwork.com/entertainment/kapusostream/
+  - https://apps.apple.com/us/app/iwanttfc/id549386004
+  - https://play.google.com/store/apps/details?id=com.absi.tfctv
+  - https://www.philstar.com/pilipino-star-ngayon/showbiz/2026/09/24/2558507/pinoy-classics-kapamilya-shows-libre-sa-iwant
