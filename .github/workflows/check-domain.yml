@@ -1,0 +1,35 @@
+name: Check custom domain
+
+# Manual diagnostic: DNS records, HTTP(S) responses, and GitHub Pages domain/HTTPS status.
+on:
+  workflow_dispatch:
+
+permissions:
+  pages: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: DNS
+        run: |
+          for name in doubo.tv www.doubo.tv; do
+            for type in A AAAA CNAME; do
+              echo "$name $type: $(dig +short "$name" "$type" @1.1.1.1 | tr '\n' ' ')"
+            done
+          done
+
+      - name: HTTP and HTTPS
+        run: |
+          for url in http://doubo.tv/ https://doubo.tv/ https://www.doubo.tv/ https://doubo.tv/en/; do
+            echo "$url -> $(curl -s -o /dev/null -m 15 -w '%{http_code} %{redirect_url}' "$url" || echo unreachable)"
+          done
+          echo "GTM on homepage: $(curl -s -m 15 https://doubo.tv/ | grep -c GTM-MJDCLXML || true)"
+
+      - name: GitHub Pages status
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/${GITHUB_REPOSITORY}/pages" \
+            --jq '{cname, status, https_enforced, html_url, protected_domain_state, https_certificate}' || true
+          gh api "repos/${GITHUB_REPOSITORY}/pages/health" || true
