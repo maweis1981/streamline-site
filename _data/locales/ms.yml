@@ -402,6 +402,10 @@ web:
   see_all: Lihat semua
   share: Kongsi
   link_copied: Pautan disalin
+  cast: Pancar
+  casting_to: Sedang memancar ke %device%
+  stop_casting: Henti pancar
+  install_app: Pasang aplikasi
 tools:
   nav: Alat M3U
   page_title: 'Penganalisis & Pengemas Senarai Main M3U: Kira, Buang Pendua dan Susun Dalam Talian'

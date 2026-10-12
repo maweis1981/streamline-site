@@ -402,6 +402,10 @@ web:
   see_all: ดูทั้งหมด
   share: แชร์
   link_copied: คัดลอกลิงก์แล้ว
+  cast: แคสต์
+  casting_to: กำลังแคสต์ไปที่ %device%
+  stop_casting: หยุดแคสต์
+  install_app: ติดตั้งแอป
 tools:
   nav: เครื่องมือ M3U
   page_title: 'เครื่องมือวิเคราะห์และจัดระเบียบเพลย์ลิสต์ M3U: นับ ลบซ้ำ และเรียงลำดับออนไลน์'

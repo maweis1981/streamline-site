@@ -402,6 +402,10 @@ web:
   see_all: Lihat semua
   share: Bagikan
   link_copied: Tautan disalin
+  cast: Transmisi
+  casting_to: Mentransmisikan ke %device%
+  stop_casting: Hentikan transmisi
+  install_app: Pasang aplikasi
 tools:
   nav: Alat M3U
   page_title: 'Penganalisis & Perapi Playlist M3U: Hitung, Hapus Duplikat, dan Urutkan Online'

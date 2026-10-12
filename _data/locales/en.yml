@@ -402,6 +402,10 @@ web:
   see_all: See all
   share: Share
   link_copied: Link copied
+  cast: Cast
+  casting_to: Casting to %device%
+  stop_casting: Stop casting
+  install_app: Install app
 tools:
   nav: M3U tools
   page_title: 'M3U Playlist Analyzer & Cleaner: Count, Deduplicate and Sort Online'

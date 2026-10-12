@@ -402,6 +402,10 @@ web:
   see_all: Xem tất cả
   share: Chia sẻ
   link_copied: Đã sao chép liên kết
+  cast: Truyền
+  casting_to: Đang truyền tới %device%
+  stop_casting: Dừng truyền
+  install_app: Cài ứng dụng
 tools:
   nav: Công cụ M3U
   page_title: 'Công cụ phân tích & dọn dẹp danh sách M3U: Đếm, lọc trùng và sắp xếp trực tuyến'

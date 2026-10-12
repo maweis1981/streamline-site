@@ -7,6 +7,7 @@ import { favoriteId } from "./model";
 import { Player } from "./player";
 import { PreviewWall, webRoutes } from "./preview";
 import { type VodItem, type VodSection, loadVod, vodItems, vodTile } from "./vod";
+import { castKind, castTo, showAirPlayPicker, stopCasting } from "./cast";
 import { deletePlaylist, loadPlaylists, readPref, savePlaylist, writePref } from "./store";
 
 // Sources shown as chips: the free channel directory, favorites across sources, then the visitor's playlists.
@@ -91,6 +92,7 @@ root.innerHTML = `
       <div class="dw-now-actions">
         <button type="button" class="dw-btn" data-action="prev" aria-label="${t("prev_channel")}">↑</button>
         <button type="button" class="dw-btn" data-action="next" aria-label="${t("next_channel")}">↓</button>
+        <button type="button" class="dw-btn" data-action="cast" hidden>📺 ${t("cast")}</button>
         <button type="button" class="dw-btn" data-action="share">↗ ${t("share")}</button>
         <button type="button" class="dw-btn" data-action="favorite"></button>
         <button type="button" class="dw-btn" data-action="pip">${t("pip")}</button>
@@ -100,6 +102,10 @@ root.innerHTML = `
     <div class="dw-video-wrap">
       <video class="dw-video" controls playsinline autoplay></video>
       <div class="dw-embed" hidden></div>
+      <div class="dw-overlay dw-casting" hidden>
+        <p class="dw-casting-label"></p>
+        <button type="button" class="dw-btn" data-action="stop-cast">${t("stop_casting")}</button>
+      </div>
       <div class="dw-overlay dw-app-hint" hidden>
         <h2>${t("app_hint_title")}</h2>
         <p>${t("app_hint_desc")}</p>
@@ -150,6 +156,9 @@ const els = {
   attrib: $<HTMLParagraphElement>(".dw-attrib"),
   prev: $<HTMLButtonElement>('[data-action="prev"]'),
   share: $<HTMLButtonElement>('[data-action="share"]'),
+  cast: $<HTMLButtonElement>('[data-action="cast"]'),
+  casting: $<HTMLDivElement>(".dw-casting"),
+  castingLabel: $<HTMLParagraphElement>(".dw-casting-label"),
   next: $<HTMLButtonElement>('[data-action="next"]'),
   fullscreen: $<HTMLButtonElement>('[data-action="fullscreen"]'),
   dialog: $<HTMLDialogElement>(".dw-dialog"),
@@ -245,7 +254,8 @@ function renderBar(): void {
     state.vod.map((v) => chip(VOD + v.id, t(`vod_${v.id}`))).join("") +
     chip(FAVORITES, `★ ${t("favorites")}`) +
     state.playlists.map((p) => chip(p.id, p.name)).join("") +
-    `<button type="button" class="dw-add" data-action="add">+ ${t("add_playlist")}</button>`;
+    `<button type="button" class="dw-add" data-action="add">+ ${t("add_playlist")}</button>` +
+    (installPrompt ? `<button type="button" class="dw-add" data-action="install">⤓ ${t("install_app")}</button>` : "");
   els.remove.hidden = !state.playlists.some((p) => p.id === state.source);
   if (isVod(state.source)) {
     const section = state.vod.find((v) => VOD + v.id === state.source);
@@ -467,6 +477,59 @@ async function share(): Promise<void> {
   }
 }
 
+// ---------------------------------------------------------------- casting and install
+
+const castMode = castKind(els.video);
+let casting = false;
+
+/** What the TV should play: the route playing here, or the on-demand film. */
+function castMedia(): { url: string; title: string; image?: string; live: boolean } | null {
+  if (state.vodPlaying?.src) return { url: state.vodPlaying.src, title: state.vodPlaying.title, image: state.vodPlaying.thumb, live: false };
+  const p = state.playing;
+  if (!p) return null;
+  const route = p.channel.routes[player.current.routeIndex];
+  return route ? { url: route.url, title: p.channel.name, image: p.channel.logo, live: true } : null;
+}
+
+function updateCastButton(): void {
+  els.cast.hidden = !castMode || casting || !castMedia();
+}
+
+async function startCast(): Promise<void> {
+  if (castMode === "airplay") return showAirPlayPicker(els.video);
+  const media = castMedia();
+  if (!media) return;
+  const device = await castTo(media, endCast);
+  if (!device) return;
+  casting = true;
+  els.video.pause();
+  els.castingLabel.textContent = t("casting_to", { device });
+  els.casting.hidden = false;
+  updateCastButton();
+  track("web_cast", { kind: state.vodPlaying ? "vod" : "live" });
+}
+
+function endCast(): void {
+  if (!casting) return;
+  casting = false;
+  els.casting.hidden = true;
+  if (!els.theater.hidden) els.video.play().catch(() => undefined);
+  updateCastButton();
+}
+
+let installPrompt: (Event & { prompt: () => Promise<void> }) | null = null;
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  installPrompt = e as Event & { prompt: () => Promise<void> };
+  renderBar();
+});
+window.addEventListener("appinstalled", () => {
+  installPrompt = null;
+  track("web_install");
+  renderBar();
+});
+if ("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js", { scope: "/" }).catch(() => undefined);
+
 function setTheaterMode(vod: VodItem | null): void {
   state.vodPlaying = vod;
   const embed = !!vod?.video;
@@ -478,6 +541,7 @@ function setTheaterMode(vod: VodItem | null): void {
   els.fullscreen.hidden = embed;
   els.attrib.hidden = !vod;
   els.routes.innerHTML = "";
+  setTimeout(updateCastButton);
 }
 
 /** On-demand items: Internet Archive films play in our player; YouTube videos in YouTube's embed. */
@@ -519,6 +583,7 @@ function open(playlistId: string, channel: Channel): void {
 }
 
 function close(): void {
+  if (casting) stopCasting();
   player.stop();
   history.replaceState(null, "", location.pathname);
   if (state.vodPlaying) {
@@ -692,6 +757,13 @@ root.addEventListener("click", async (e) => {
   else if (action === "next") step(1);
   else if (action === "favorite") toggleFavorite();
   else if (action === "share") share();
+  else if (action === "cast") startCast();
+  else if (action === "stop-cast") stopCasting();
+  else if (action === "install" && installPrompt) {
+    await installPrompt.prompt();
+    installPrompt = null;
+    renderBar();
+  }
   else if (action === "pip") {
     if (document.pictureInPictureElement) await document.exitPictureInPicture();
     else await els.video.requestPictureInPicture().catch(() => undefined);

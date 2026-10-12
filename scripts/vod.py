@@ -135,10 +135,12 @@ def main(out_path: str) -> None:
             items = _safe(archive_section, sec["query"], sec.get("rows", 50), sec.get("title_starts")) or []
         else:
             items = [i for ch in sec["channels"] for i in (_safe(youtube_channel, ch) or [])]
+        # The same film is often uploaded several times; keep the first (most downloaded) copy.
         seen, unique = set(), []
         for i in items:
-            if i["id"] not in seen:
-                seen.add(i["id"])
+            key = i["id"] if sec["kind"] == "youtube" else re.sub(r"\W+|full ?hd|60 ?fps|\d{3,4}p", "", i["title"].lower())
+            if key not in seen:
+                seen.add(key)
                 unique.append(i)
         print(f"  {len(unique)} items")
         if unique:

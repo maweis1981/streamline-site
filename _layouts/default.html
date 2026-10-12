@@ -41,6 +41,12 @@
   <link rel="icon" href="{{ '/assets/img/logo.svg' | relative_url }}" type="image/svg+xml">
   <link rel="icon" href="{{ '/assets/img/favicon-32.png' | relative_url }}" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="{{ '/assets/img/icon-256.png' | relative_url }}">
+  {%- if page.ref == "web" %}
+  <link rel="manifest" href="{{ lang_prefix | append: '/web/manifest.webmanifest' | relative_url }}">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Doubo">
+  {%- endif %}
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   {%- include structured-data.html %}
   <script defer src="{{ '/assets/js/main.js' | relative_url }}"></script>
