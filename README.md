@@ -26,6 +26,8 @@ After changing a variable, re-run the workflow from the Actions tab.
 
 ## Analytics
 
+The GTM container `GTM-MJDCLXML` is set in `_config.yml`. GA4 should be configured inside that container. A `GTM_ID` repository variable, if set, overrides it.
+
 Analytics tags only render in production builds when an ID is set, so local previews never send data.
 
 **Avoid double counting:** use GTM only (set `GTM_ID`, and add a GA4 *Google tag* inside GTM), *or* set `GA_MEASUREMENT_ID` and don't add a GA4 tag for the same ID in GTM.

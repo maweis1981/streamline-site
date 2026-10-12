@@ -10,10 +10,10 @@ links:
   support_email: ""
 
 # Analytics. Only rendered when JEKYLL_ENV=production, so local previews never send data.
-# The deploy workflow fills these from the repository variables GTM_ID and GA_MEASUREMENT_ID.
+# Repository variables GTM_ID and GA_MEASUREMENT_ID override these at deploy time.
 # If GA4 is set up *inside* GTM, leave ga_measurement_id empty to avoid double counting.
 analytics:
-  gtm_id: ""             # GTM-XXXXXXX
+  gtm_id: "GTM-MJDCLXML" # Public container ID; the GTM_ID repository variable overrides it.
   ga_measurement_id: ""  # G-XXXXXXXXXX
   consent: eea           # "eea": opt-in in EEA/UK/CH, opt-out elsewhere; "strict": opt-in everywhere
 
