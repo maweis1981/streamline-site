@@ -116,3 +116,32 @@
     btn.addEventListener('click', function () { banner.hidden = false; });
   });
 })();
+
+// Channel directory: copy playlist links and filter countries.
+(function () {
+  'use strict';
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-copy]');
+    if (!btn || !navigator.clipboard) return;
+    var label = btn.querySelector('span');
+    navigator.clipboard.writeText(btn.dataset.copy).then(function () {
+      if (!label) return;
+      var original = label.dataset.label || label.textContent;
+      label.dataset.label = original;
+      label.textContent = btn.dataset.copied;
+      btn.classList.add('is-copied');
+      setTimeout(function () { label.textContent = original; btn.classList.remove('is-copied'); }, 1800);
+    });
+  });
+
+  var dirSearch = document.querySelector('[data-dir-search]');
+  if (dirSearch) {
+    var dirItems = document.querySelectorAll('[data-dir-list] > li');
+    dirSearch.addEventListener('input', function () {
+      var q = dirSearch.value.trim().toLowerCase();
+      dirItems.forEach(function (li) {
+        li.hidden = q !== '' && li.dataset.dirNames.toLowerCase().indexOf(q) === -1;
+      });
+    });
+  }
+})();

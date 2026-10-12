@@ -7,6 +7,7 @@ meta:
   title: 都播 Doubo — 跨平台 IPTV / M3U 播放器
   description: 都播是一款原生 IPTV / M3U 播放器，现已支持 iPhone、iPad 与 Mac，Android 手机、平板与电视盒子版即将推出。导入你自己的播放列表，分组浏览、画中画观看、投屏到电视。不内置任何频道，不收集个人数据。
 nav:
+  directory: 频道目录
   guide: 使用指南
   features: 功能
   platforms: 平台
@@ -242,3 +243,67 @@ guide:
   - 同名频道有多个来源时，可以在「线路」中一键切换。
   - 播放列表、收藏和历史只保存在你的设备上，可在设置中随时清除。
   cta: 还有问题？查看常见问题或联系我们
+directory:
+  nav: 频道目录
+  title: 全球公开频道目录
+  subtitle: 汇集全球电视台官方公开、免费播出的直播频道，按国家和地区、分类、语言整理成 M3U 播放列表，每天自动更新。
+  stats: '%channels% 个频道 · %countries% 个国家和地区 · 更新于 %date%'
+  how: 复制任一链接，在都播中选择「添加播放列表」并粘贴即可。也适用于其他支持 M3U 的播放器。
+  all_title: 全部频道
+  all_desc: 一个链接收看目录中的所有频道。
+  countries_title: 按国家和地区
+  categories_title: 按分类
+  languages_title: 按语言
+  search: 搜索国家或地区
+  channels_unit: 个频道
+  copy: 复制链接
+  copied: 已复制
+  mirror: 备用地址
+  policy_title: 收录原则
+  policy:
+  - 只收录频道官方网站，或正规广播 CDN、官方免费频道平台提供的直播流。
+  - 不存储、不转码、不转发任何视频，也不提供付费频道。
+  - 排除成人内容，以及被权利人投诉过的频道。
+  - 生成脚本与收录规则全部公开在 GitHub，接受社区监督。
+  takedown: 权利人如需移除某个频道，请提交下架申请，我们会在 72 小时内处理。
+  takedown_link: 提交下架申请
+  source: 频道资料来自社区开源项目 iptv-org，并经过更严格的筛选。
+  repo_link: 查看 GitHub 仓库
+  country_title: '%country%电视直播源：%count% 个免费频道 M3U 播放列表'
+  country_desc: '%country% %count% 个官方公开、免费播出的电视频道，整理成 M3U 播放列表，每日更新，可直接在都播或其他 IPTV 播放器中播放。'
+  country_h1: '%country%电视频道'
+  country_lead: '%count% 个官方公开、免费播出的频道，复制下方链接即可收看。'
+  channel_list: 频道列表
+  back: 全部国家和地区
+  index_title: 全球 IPTV 直播源目录：免费、合法的 M3U 播放列表
+  index_desc: 都播全球公开频道目录：按国家和地区、分类、语言整理的免费 M3U 直播源，只收录电视台官方公开播出的频道，每日更新。
+  categories:
+    animation: 动画
+    auto: 汽车
+    business: 财经
+    classic: 经典
+    comedy: 喜剧
+    cooking: 美食
+    culture: 文化
+    documentary: 纪录片
+    education: 教育
+    entertainment: 综艺娱乐
+    family: 家庭
+    general: 综合
+    interactive: 互动
+    kids: 少儿
+    legislative: 议会
+    lifestyle: 生活
+    movies: 电影
+    music: 音乐
+    news: 新闻
+    outdoor: 户外
+    public: 公共
+    relax: 休闲
+    religious: 宗教
+    series: 电视剧
+    science: 科学
+    shop: 购物
+    sports: 体育
+    travel: 旅游
+    weather: 天气

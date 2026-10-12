@@ -1,0 +1,67 @@
+---
+layout: default
+---
+{%- assign t = site.data.locales[page.lang] -%}
+{%- assign s = t.directory -%}
+{%- assign d = site.data.directory -%}
+{%- if page.lang == site.default_lang -%}{%- assign lang_prefix = "" -%}{%- else -%}{%- assign lang_prefix = "/" | append: page.lang -%}{%- endif -%}
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">{{ s.stats | replace: "%channels%", d.channels | replace: "%countries%", d.countries.size | replace: "%date%", d.date }}</p>
+    <h1>{{ s.title }}</h1>
+    <p class="lead">{{ s.subtitle }}</p>
+  </div>
+</section>
+<section class="section section-tight">
+  <div class="container">
+    <div class="card gborder dir-all reveal">
+      <div>
+        <h2>{{ s.all_title }}</h2>
+        <p class="muted">{{ s.all_desc }} {{ s.how }}</p>
+      </div>
+      {% include playlist-link.html path="index.m3u" scope="all" %}
+    </div>
+
+    <div class="dir-head">
+      <h2 class="dir-subhead">{{ s.countries_title }}</h2>
+      <input class="dir-search" type="search" placeholder="{{ s.search }}" aria-label="{{ s.search }}" data-dir-search>
+    </div>
+    <ul class="dir-grid" data-dir-list>
+      {%- for c in d.countries %}
+      <li data-dir-names="{% for n in c.names %}{{ n[1] }} {% endfor %}{{ c.code }}">
+        <a class="card dir-country" href="{{ lang_prefix | append: '/playlists/' | append: c.code | append: '/' | relative_url }}">
+          <span class="dir-flag" aria-hidden="true">{{ c.flag }}</span>
+          <span class="dir-name">{{ c.names[page.lang] }}</span>
+          <span class="dir-count">{{ c.count }} {{ s.channels_unit }}</span>
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+
+    <h2 class="dir-subhead">{{ s.categories_title }}</h2>
+    <ul class="dir-rows">
+      {%- for c in d.categories %}
+      <li class="card dir-row">
+        <span class="dir-name">{{ s.categories[c.id] | default: c.id }}</span>
+        <span class="dir-count">{{ c.channels }} {{ s.channels_unit }}</span>
+        {%- assign pl_path = "categories/" | append: c.id | append: ".m3u" %}
+        {% include playlist-link.html path=pl_path scope="category" %}
+      </li>
+      {%- endfor %}
+    </ul>
+
+    <h2 class="dir-subhead">{{ s.languages_title }}</h2>
+    <ul class="dir-rows">
+      {%- for l in d.languages %}
+      <li class="card dir-row">
+        <span class="dir-name">{{ l.names[page.lang] }}</span>
+        <span class="dir-count">{{ l.channels }} {{ s.channels_unit }}</span>
+        {%- assign pl_path = "languages/" | append: l.code | append: ".m3u" %}
+        {% include playlist-link.html path=pl_path scope="language" %}
+      </li>
+      {%- endfor %}
+    </ul>
+
+    {% include directory-policy.html %}
+  </div>
+</section>

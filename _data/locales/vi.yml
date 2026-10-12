@@ -7,6 +7,7 @@ meta:
   title: Doubo — Ứng dụng xem IPTV & trình phát M3U đa nền tảng
   description: Doubo là trình phát IPTV & M3U gốc, hiện có trên iPhone, iPad và Mac; phiên bản cho điện thoại, máy tính bảng và TV box Android sắp ra mắt. Nhập danh sách phát của riêng bạn, duyệt theo nhóm, xem bằng Hình trong hình và truyền lên TV. Không kèm sẵn kênh, không thu thập dữ liệu cá nhân.
 nav:
+  directory: Kênh
   guide: Hướng dẫn
   features: Tính năng
   platforms: Nền tảng
@@ -242,3 +243,67 @@ guide:
   - Khi một kênh có nhiều nguồn, hãy chuyển đổi ở mục Đường truyền.
   - Danh sách phát, mục yêu thích và lịch sử luôn nằm trên thiết bị của bạn, có thể xóa bất cứ lúc nào trong Cài đặt.
   cta: Còn thắc mắc? Xem câu hỏi thường gặp hoặc liên hệ chúng tôi
+directory:
+  nav: Kênh
+  title: Danh bạ kênh miễn phí
+  subtitle: Các kênh truyền hình trực tiếp được đài phát sóng công khai, miễn phí trên toàn thế giới, sắp xếp thành danh sách phát M3U theo quốc gia, thể loại và ngôn ngữ. Cập nhật hằng ngày.
+  stats: '%channels% kênh · %countries% quốc gia và vùng lãnh thổ · cập nhật %date%'
+  how: Sao chép bất kỳ liên kết nào, chọn “Thêm danh sách phát” trong Doubo rồi dán vào. Cũng dùng được với trình phát khác hỗ trợ M3U.
+  all_title: Tất cả kênh
+  all_desc: Toàn bộ kênh trong danh bạ, chỉ với một liên kết.
+  countries_title: Theo quốc gia hoặc vùng
+  categories_title: Theo thể loại
+  languages_title: Theo ngôn ngữ
+  search: Tìm quốc gia hoặc vùng
+  channels_unit: kênh
+  copy: Sao chép liên kết
+  copied: Đã sao chép
+  mirror: Liên kết dự phòng
+  policy_title: Nguyên tắc chọn kênh
+  policy:
+  - Chỉ đưa vào luồng phát từ trang web chính thức của kênh, CDN phát sóng hoặc nền tảng xem miễn phí chính thức.
+  - Không lưu trữ, chuyển mã hay chuyển tiếp video, và không có kênh trả phí.
+  - Loại bỏ nội dung người lớn và các kênh bị chủ sở hữu bản quyền khiếu nại.
+  - Mã nguồn và quy tắc được công khai trên GitHub.
+  takedown: Chủ sở hữu bản quyền có thể yêu cầu gỡ kênh; yêu cầu được xử lý trong vòng 72 giờ.
+  takedown_link: Gửi yêu cầu gỡ
+  source: Dữ liệu kênh lấy từ dự án mã nguồn mở iptv-org, được lọc theo quy tắc chặt chẽ hơn.
+  repo_link: Xem trên GitHub
+  country_title: 'Danh sách phát IPTV M3U %country%: %count% kênh truyền hình miễn phí'
+  country_desc: '%count% kênh truyền hình miễn phí của %country% do chính các đài phát sóng công khai, trong danh sách phát M3U cập nhật hằng ngày. Xem bằng Doubo hoặc trình phát IPTV khác.'
+  country_h1: Kênh truyền hình %country%
+  country_lead: '%count% kênh phát sóng công khai, miễn phí. Sao chép liên kết bên dưới để bắt đầu xem.'
+  channel_list: Danh sách kênh
+  back: Tất cả quốc gia và vùng
+  index_title: Danh sách phát IPTV M3U miễn phí từ khắp thế giới
+  index_desc: 'Danh bạ kênh miễn phí của Doubo: danh sách phát M3U theo quốc gia, thể loại và ngôn ngữ, chỉ gồm các kênh được đài phát sóng công khai. Cập nhật hằng ngày.'
+  categories:
+    animation: Hoạt hình
+    auto: Ô tô
+    business: Kinh doanh
+    classic: Kinh điển
+    comedy: Hài
+    cooking: Ẩm thực
+    culture: Văn hóa
+    documentary: Tài liệu
+    education: Giáo dục
+    entertainment: Giải trí
+    family: Gia đình
+    general: Tổng hợp
+    interactive: Tương tác
+    kids: Thiếu nhi
+    legislative: Quốc hội
+    lifestyle: Phong cách sống
+    movies: Phim
+    music: Âm nhạc
+    news: Tin tức
+    outdoor: Ngoài trời
+    public: Công cộng
+    relax: Thư giãn
+    religious: Tôn giáo
+    series: Phim bộ
+    science: Khoa học
+    shop: Mua sắm
+    sports: Thể thao
+    travel: Du lịch
+    weather: Thời tiết

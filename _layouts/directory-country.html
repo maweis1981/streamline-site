@@ -1,0 +1,36 @@
+---
+layout: default
+---
+{%- assign t = site.data.locales[page.lang] -%}
+{%- assign s = t.directory -%}
+{%- assign d = site.data.directory -%}
+{%- assign c = d.countries | where: "code", page.country | first -%}
+{%- assign name = c.names[page.lang] -%}
+{%- assign count = c.count | append: "" -%}
+{%- if page.lang == site.default_lang -%}{%- assign lang_prefix = "" -%}{%- else -%}{%- assign lang_prefix = "/" | append: page.lang -%}{%- endif -%}
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow"><a href="{{ lang_prefix | append: '/playlists/' | relative_url }}">{{ s.title }}</a></p>
+    <h1><span aria-hidden="true">{{ c.flag }}</span> {{ s.country_h1 | replace: "%country%", name }}</h1>
+    <p class="lead">{{ s.country_lead | replace: "%count%", count }}</p>
+  </div>
+</section>
+<section class="section section-tight">
+  <div class="container narrow">
+    <div class="card gborder dir-all reveal">
+      <p class="muted">{{ s.how }}</p>
+      {%- assign pl_path = "countries/" | append: c.code | append: ".m3u" %}
+      {% include playlist-link.html path=pl_path scope="country" %}
+    </div>
+
+    <h2 class="dir-subhead">{{ s.channel_list }}</h2>
+    <ul class="dir-channels">
+      {%- for ch in c.channels %}
+      <li><span class="dir-name">{{ ch.name }}</span>{% for cat in ch.categories %} <span class="badge">{{ s.categories[cat] | default: cat }}</span>{% endfor %}</li>
+      {%- endfor %}
+    </ul>
+
+    {% include directory-policy.html %}
+    <p><a class="text-link" href="{{ lang_prefix | append: '/playlists/' | relative_url }}">{{ s.back }} {% include icon.html name="arrow" %}</a></p>
+  </div>
+</section>

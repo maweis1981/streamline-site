@@ -56,6 +56,9 @@
         <a href="{{ home_url }}#features">{{ t.nav.features }}</a>
         <a href="{{ home_url }}#platforms">{{ t.nav.platforms }}</a>
         <a href="{{ lang_prefix | append: '/guide/' | relative_url }}"{% if page.ref == "guide" %} aria-current="page"{% endif %}>{{ t.nav.guide }}</a>
+        {%- if site.data.directory %}
+        <a href="{{ lang_prefix | append: '/playlists/' | relative_url }}"{% if page.layout contains "directory" %} aria-current="page"{% endif %}>{{ t.nav.directory }}</a>
+        {%- endif %}
         <a href="{{ lang_prefix | append: '/roadmap/' | relative_url }}"{% if page.ref == "roadmap" %} aria-current="page"{% endif %}>{{ t.nav.roadmap }}</a>
         <a href="{{ lang_prefix | append: '/support/' | relative_url }}"{% if page.ref == "support" %} aria-current="page"{% endif %}>{{ t.nav.support }}</a>
         {% include language-menu.html %}
@@ -86,6 +89,9 @@
       <div>
         <h2>{{ t.footer.resources }}</h2>
         <a href="{{ lang_prefix | append: '/guide/' | relative_url }}">{{ t.nav.guide }}</a>
+        {%- if site.data.directory %}
+        <a href="{{ lang_prefix | append: '/playlists/' | relative_url }}">{{ t.nav.directory }}</a>
+        {%- endif %}
         <a href="{{ lang_prefix | append: '/support/' | relative_url }}">{{ t.nav.support }}</a>
         <a href="{{ lang_prefix | append: '/privacy/' | relative_url }}">{{ t.privacy_label }}</a>
         <a href="{{ site.repository_url }}/issues" data-track="cta_click" data-track-target="github_issues" data-track-location="footer">{{ t.footer.feedback }}</a>

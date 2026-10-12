@@ -1,0 +1,13 @@
+{%- assign t = site.data.locales[page.lang] -%}
+{%- assign d = site.data.directory -%}
+<aside class="card gborder dir-policy reveal">
+  <h2>{{ t.directory.policy_title }}</h2>
+  <ul>
+    {%- for p in t.directory.policy %}<li>{{ p }}</li>{% endfor -%}
+  </ul>
+  <p class="muted">{{ t.directory.source }} {{ t.directory.takedown }}</p>
+  <p class="dir-policy-links">
+    <a class="text-link" href="{{ d.repo_url }}/issues/new?template=takedown.yml" data-track="cta_click" data-track-target="takedown" data-track-location="directory">{{ t.directory.takedown_link }} {% include icon.html name="arrow" %}</a>
+    <a class="text-link" href="{{ d.repo_url }}" data-track="cta_click" data-track-target="playlists_repo" data-track-location="directory">{{ t.directory.repo_link }} {% include icon.html name="arrow" %}</a>
+  </p>
+</aside>

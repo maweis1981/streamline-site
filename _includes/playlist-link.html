@@ -1,0 +1,8 @@
+{%- assign t = site.data.locales[page.lang] -%}
+{%- assign d = site.data.directory -%}
+{%- assign url = d.base_url | append: "/" | append: include.path -%}
+<div class="pl-link">
+  <code class="pl-url" title="{{ url }}">{{ url }}</code>
+  <button type="button" class="btn btn-primary btn-sm pl-copy" data-copy="{{ url }}" data-copied="{{ t.directory.copied }}" data-track="playlist_copy" data-track-scope="{{ include.scope }}">{% include icon.html name="copy" %}<span>{{ t.directory.copy }}</span></button>
+  <a class="pl-mirror" href="{{ d.mirror_url | append: '/' | append: include.path }}" rel="nofollow">{{ t.directory.mirror }}</a>
+</div>

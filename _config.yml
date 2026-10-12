@@ -33,3 +33,4 @@ exclude:
   - .bundle
   - README.md
   - analytics
+  - scripts

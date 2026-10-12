@@ -7,6 +7,7 @@ meta:
   title: Doubo — Cross-Platform IPTV & M3U Player
   description: Doubo is a native IPTV & M3U player, available for iPhone, iPad, and Mac, with Android phones, tablets, and TV boxes coming soon. Import your own playlists, browse by group, watch in Picture in Picture, and cast to your TV. No bundled channels, no personal data collected.
 nav:
+  directory: Channels
   guide: Guide
   features: Features
   platforms: Platforms
@@ -242,3 +243,67 @@ guide:
   - When a channel has several sources, switch between them under Lines.
   - Playlists, favorites, and history stay on your device, and you can clear them anytime in Settings.
   cta: More questions? See the FAQ or contact us
+directory:
+  nav: Channels
+  title: Free Channel Directory
+  subtitle: Live TV channels that broadcasters make freely and publicly available worldwide, organized into M3U playlists by country, category and language. Updated daily.
+  stats: '%channels% channels · %countries% countries and regions · updated %date%'
+  how: Copy any link, choose “Add playlist” in Doubo and paste it. Works in any player that supports M3U.
+  all_title: All channels
+  all_desc: Every channel in the directory, in one link.
+  countries_title: By country or region
+  categories_title: By category
+  languages_title: By language
+  search: Search countries and regions
+  channels_unit: channels
+  copy: Copy link
+  copied: Copied
+  mirror: Mirror
+  policy_title: What we list
+  policy:
+  - Only streams served from the channel’s own website, a broadcast-grade CDN or an official free streaming platform.
+  - No video is stored, transcoded or relayed, and no paid channels are listed.
+  - Adult content and channels that rights holders have objected to are left out.
+  - The generator and the rules are public on GitHub.
+  takedown: Rights holders can ask for a channel to be removed; requests are handled within 72 hours.
+  takedown_link: Request removal
+  source: Channel data comes from the open-source iptv-org project, filtered by stricter rules.
+  repo_link: View on GitHub
+  country_title: '%country% IPTV M3U Playlist: %count% Free TV Channels'
+  country_desc: '%count% free-to-air TV channels from %country%, published by the broadcasters themselves, in an M3U playlist updated daily. Play it in Doubo or any IPTV player.'
+  country_h1: TV channels in %country%
+  country_lead: '%count% channels broadcast freely and publicly. Copy the link below to start watching.'
+  channel_list: Channels
+  back: All countries and regions
+  index_title: Free IPTV M3U Playlists from Around the World
+  index_desc: 'Doubo’s free channel directory: M3U playlists by country, category and language, listing only channels that broadcasters make publicly available. Updated daily.'
+  categories:
+    animation: Animation
+    auto: Auto
+    business: Business
+    classic: Classic
+    comedy: Comedy
+    cooking: Cooking
+    culture: Culture
+    documentary: Documentary
+    education: Education
+    entertainment: Entertainment
+    family: Family
+    general: General
+    interactive: Interactive
+    kids: Kids
+    legislative: Legislative
+    lifestyle: Lifestyle
+    movies: Movies
+    music: Music
+    news: News
+    outdoor: Outdoor
+    public: Public
+    relax: Relax
+    religious: Religious
+    series: Series
+    science: Science
+    shop: Shopping
+    sports: Sports
+    travel: Travel
+    weather: Weather

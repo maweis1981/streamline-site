@@ -7,6 +7,7 @@ meta:
   title: Doubo — Aplikasi Pemutar IPTV & M3U Lintas Platform
   description: Doubo adalah pemutar IPTV & M3U native, kini tersedia untuk iPhone, iPad, dan Mac, dengan versi ponsel, tablet, dan TV box Android segera hadir. Impor playlist Anda sendiri, jelajahi per grup, tonton dengan Picture in Picture, dan kirim ke TV. Tanpa saluran bawaan, tanpa pengumpulan data pribadi.
 nav:
+  directory: Saluran
   guide: Panduan
   features: Fitur
   platforms: Platform
@@ -242,3 +243,67 @@ guide:
   - Jika satu saluran punya beberapa sumber, ganti di antaranya pada bagian Jalur.
   - Playlist, favorit, dan riwayat tetap di perangkat Anda, dan bisa dihapus kapan saja di Pengaturan.
   cta: Masih ada pertanyaan? Lihat pertanyaan umum atau hubungi kami
+directory:
+  nav: Saluran
+  title: Direktori Saluran Gratis
+  subtitle: Saluran TV live yang disiarkan secara gratis dan terbuka oleh penyiar di seluruh dunia, disusun menjadi playlist M3U berdasarkan negara, kategori, dan bahasa. Diperbarui setiap hari.
+  stats: '%channels% saluran · %countries% negara dan wilayah · diperbarui %date%'
+  how: Salin tautan mana pun, pilih “Tambah playlist” di Doubo lalu tempel. Juga bisa dipakai di pemutar lain yang mendukung M3U.
+  all_title: Semua saluran
+  all_desc: Semua saluran di direktori, dalam satu tautan.
+  countries_title: Berdasarkan negara atau wilayah
+  categories_title: Berdasarkan kategori
+  languages_title: Berdasarkan bahasa
+  search: Cari negara atau wilayah
+  channels_unit: saluran
+  copy: Salin tautan
+  copied: Disalin
+  mirror: Tautan cadangan
+  policy_title: Apa yang kami cantumkan
+  policy:
+  - Hanya stream dari situs resmi saluran, CDN penyiaran, atau platform streaming gratis resmi.
+  - Tidak ada video yang disimpan, ditranskode, atau diteruskan, dan tidak ada saluran berbayar.
+  - Konten dewasa dan saluran yang diprotes pemegang hak tidak dicantumkan.
+  - Skrip pembuat dan aturannya terbuka di GitHub.
+  takedown: Pemegang hak dapat meminta saluran dihapus; permintaan diproses dalam 72 jam.
+  takedown_link: Ajukan penghapusan
+  source: Data saluran berasal dari proyek open source iptv-org, disaring dengan aturan yang lebih ketat.
+  repo_link: Lihat di GitHub
+  country_title: 'Playlist IPTV M3U %country%: %count% Saluran TV Gratis'
+  country_desc: '%count% saluran TV gratis dari %country% yang disiarkan resmi oleh penyiarnya, dalam playlist M3U yang diperbarui setiap hari. Putar di Doubo atau pemutar IPTV lainnya.'
+  country_h1: Saluran TV %country%
+  country_lead: '%count% saluran yang disiarkan secara gratis dan terbuka. Salin tautan di bawah untuk mulai menonton.'
+  channel_list: Daftar saluran
+  back: Semua negara dan wilayah
+  index_title: Playlist IPTV M3U Gratis dari Seluruh Dunia
+  index_desc: 'Direktori saluran gratis Doubo: playlist M3U berdasarkan negara, kategori, dan bahasa, hanya berisi saluran yang disiarkan terbuka oleh penyiarnya. Diperbarui setiap hari.'
+  categories:
+    animation: Animasi
+    auto: Otomotif
+    business: Bisnis
+    classic: Klasik
+    comedy: Komedi
+    cooking: Kuliner
+    culture: Budaya
+    documentary: Dokumenter
+    education: Edukasi
+    entertainment: Hiburan
+    family: Keluarga
+    general: Umum
+    interactive: Interaktif
+    kids: Anak-anak
+    legislative: Parlemen
+    lifestyle: Gaya hidup
+    movies: Film
+    music: Musik
+    news: Berita
+    outdoor: Alam terbuka
+    public: Publik
+    relax: Santai
+    religious: Religi
+    series: Serial
+    science: Sains
+    shop: Belanja
+    sports: Olahraga
+    travel: Wisata
+    weather: Cuaca

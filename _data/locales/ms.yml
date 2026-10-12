@@ -7,6 +7,7 @@ meta:
   title: Doubo — Pemain IPTV & M3U Merentas Platform
   description: Doubo ialah pemain IPTV & M3U asli, kini untuk iPhone, iPad dan Mac, dengan versi telefon, tablet dan kotak TV Android akan datang. Import senarai main anda sendiri, layari mengikut kumpulan, tonton dalam Gambar dalam Gambar dan hantar ke TV. Tiada saluran terbina, tiada data peribadi dikumpul.
 nav:
+  directory: Saluran
   guide: Panduan
   features: Ciri
   platforms: Platform
@@ -242,3 +243,67 @@ guide:
   - Jika satu saluran mempunyai beberapa sumber, tukar antaranya di bahagian Talian.
   - Senarai main, kegemaran dan sejarah kekal pada peranti anda, dan boleh dipadam bila-bila masa dalam Tetapan.
   cta: Ada soalan lagi? Lihat soalan lazim atau hubungi kami
+directory:
+  nav: Saluran
+  title: Direktori Saluran Percuma
+  subtitle: Saluran TV langsung yang disiarkan secara percuma dan terbuka oleh penyiar di seluruh dunia, disusun dalam senarai main M3U mengikut negara, kategori dan bahasa. Dikemas kini setiap hari.
+  stats: '%channels% saluran · %countries% negara dan wilayah · dikemas kini %date%'
+  how: Salin mana-mana pautan, pilih “Tambah senarai main” dalam Doubo dan tampal. Juga berfungsi dalam pemain lain yang menyokong M3U.
+  all_title: Semua saluran
+  all_desc: Semua saluran dalam direktori, dalam satu pautan.
+  countries_title: Mengikut negara atau wilayah
+  categories_title: Mengikut kategori
+  languages_title: Mengikut bahasa
+  search: Cari negara atau wilayah
+  channels_unit: saluran
+  copy: Salin pautan
+  copied: Disalin
+  mirror: Pautan alternatif
+  policy_title: Apa yang kami senaraikan
+  policy:
+  - Hanya strim daripada laman web rasmi saluran, CDN penyiaran atau platform penstriman percuma yang rasmi.
+  - Tiada video disimpan, ditranskod atau disalurkan semula, dan tiada saluran berbayar disenaraikan.
+  - Kandungan dewasa dan saluran yang dibantah oleh pemegang hak tidak disenaraikan.
+  - Skrip penjana dan peraturan terbuka di GitHub.
+  takedown: Pemegang hak boleh meminta saluran dikeluarkan; permintaan diproses dalam 72 jam.
+  takedown_link: Mohon pengeluaran
+  source: Data saluran daripada projek sumber terbuka iptv-org, ditapis dengan peraturan yang lebih ketat.
+  repo_link: Lihat di GitHub
+  country_title: 'Senarai Main IPTV M3U %country%: %count% Saluran TV Percuma'
+  country_desc: '%count% saluran TV percuma dari %country% yang disiarkan secara rasmi oleh penyiar, dalam senarai main M3U yang dikemas kini setiap hari. Tonton dalam Doubo atau pemain IPTV lain.'
+  country_h1: Saluran TV %country%
+  country_lead: '%count% saluran yang disiarkan secara percuma dan terbuka. Salin pautan di bawah untuk mula menonton.'
+  channel_list: Senarai saluran
+  back: Semua negara dan wilayah
+  index_title: Senarai Main IPTV M3U Percuma dari Seluruh Dunia
+  index_desc: 'Direktori saluran percuma Doubo: senarai main M3U mengikut negara, kategori dan bahasa, hanya saluran yang disiarkan secara terbuka oleh penyiar. Dikemas kini setiap hari.'
+  categories:
+    animation: Animasi
+    auto: Automotif
+    business: Perniagaan
+    classic: Klasik
+    comedy: Komedi
+    cooking: Masakan
+    culture: Budaya
+    documentary: Dokumentari
+    education: Pendidikan
+    entertainment: Hiburan
+    family: Keluarga
+    general: Umum
+    interactive: Interaktif
+    kids: Kanak-kanak
+    legislative: Parlimen
+    lifestyle: Gaya hidup
+    movies: Filem
+    music: Muzik
+    news: Berita
+    outdoor: Luar
+    public: Awam
+    relax: Santai
+    religious: Agama
+    series: Drama
+    science: Sains
+    shop: Beli-belah
+    sports: Sukan
+    travel: Pelancongan
+    weather: Cuaca
