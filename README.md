@@ -2,9 +2,9 @@
 
 Source for the official website of **Streamline**, a native IPTV player for iPhone, iPad, and Mac.
 
-**Live site:** https://doubo.tv/ (English: https://doubo.tv/en/)
+**Live site:** https://doubo.tv/ — 简体中文 (`/`), English (`/en/`), Bahasa Melayu (`/ms/`), Bahasa Indonesia (`/id/`), Tiếng Việt (`/vi/`), ไทย (`/th/`)
 
-It's a Jekyll site with Simplified Chinese (default) and English pages: home, roadmap, support, and privacy policy. The support and privacy pages serve as the App Store Connect *Support URL* and *Privacy Policy URL*.
+It's a Jekyll site in six languages (Simplified Chinese by default, plus English, Malay, Indonesian, Vietnamese, and Thai) with: home, roadmap, support, and privacy policy. The support and privacy pages serve as the App Store Connect *Support URL* and *Privacy Policy URL*.
 
 ## Deployment
 
@@ -49,8 +49,9 @@ To track another element, add `data-track="event_name"` plus `data-track-<param>
 
 ## Editing content
 
-- Copy for both languages: `_data/locales/zh.yml` and `en.yml` (features, roadmap, FAQ, buttons). Keep the two files structurally identical, and update `roadmap.updated_date` when the roadmap changes.
-- Privacy policy: `privacy/index.md` and `en/privacy/index.md`.
+- Copy: one file per language in `_data/locales/` (features, roadmap, FAQ, buttons). Keep them structurally identical, and update `roadmap.updated_date` in each when the roadmap changes.
+- Privacy policy: `privacy/index.md` (zh) and `<lang>/privacy/index.md`. Translations state that the English version prevails.
+- Adding a language: add its code to `languages` in `_config.yml`, create `_data/locales/<code>.yml`, and copy the page stubs from an existing language folder (`index.html`, `roadmap/`, `support/`, `privacy/`), changing `lang`.
 - Styles: `assets/css/main.css`. Tracking, consent, and mobile nav: `assets/js/main.js`.
 
 ## Local preview

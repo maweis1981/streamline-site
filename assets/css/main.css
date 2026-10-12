@@ -88,8 +88,19 @@ p { margin: 0; }
 .site-nav a { text-decoration: none; color: var(--text-2); }
 .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--text); }
 .site-nav .nav-cta { color: #04131a; }
-.lang-switch { display: inline-flex; align-items: center; gap: 6px; }
-.lang-switch .icon { width: 17px; height: 17px; }
+.lang-menu { position: relative; }
+.lang-menu summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; color: var(--text-2); }
+.lang-menu summary::-webkit-details-marker { display: none; }
+.lang-menu summary:hover, .lang-menu[open] summary { color: var(--text); }
+.lang-menu summary .icon { width: 17px; height: 17px; }
+.lang-menu ul {
+  position: absolute; right: 0; top: calc(100% + 12px); z-index: 60; min-width: 180px;
+  list-style: none; margin: 0; padding: 6px;
+  background: var(--surface); border: 1px solid var(--border-strong); border-radius: var(--radius-sm); box-shadow: var(--shadow);
+}
+.site-nav .lang-menu a { display: block; padding: 9px 12px; border-radius: 8px; color: var(--text-2); }
+.site-nav .lang-menu a:hover { background: var(--surface-2); color: var(--text); }
+.site-nav .lang-menu a[aria-current] { color: var(--teal); }
 .nav-toggle { display: none; background: none; border: 0; color: var(--text); padding: 8px; margin-right: -8px; cursor: pointer; }
 
 /* Sections */
@@ -304,6 +315,10 @@ p { margin: 0; }
   .site-nav.is-open { display: flex; }
   .site-nav a { padding: 14px 4px; border-bottom: 1px solid var(--border); }
   .site-nav .nav-cta { margin-top: 14px; border-bottom: 0; }
+  .lang-menu { border-bottom: 1px solid var(--border); }
+  .lang-menu summary { padding: 14px 4px; width: 100%; }
+  .lang-menu ul { position: static; box-shadow: none; border: 0; background: transparent; padding: 0 0 10px; display: grid; grid-template-columns: repeat(2, 1fr); }
+  .site-nav .lang-menu a { border-bottom: 0; padding: 10px 12px; }
   .hero { padding: 56px 0 72px; }
   .hero-grid { grid-template-columns: 1fr; gap: 56px; }
   .hero-copy { text-align: center; }

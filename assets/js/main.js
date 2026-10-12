@@ -38,6 +38,13 @@
     });
   });
 
+  // Close the language menu when clicking elsewhere
+  document.addEventListener('click', function (e) {
+    document.querySelectorAll('details.lang-menu[open]').forEach(function (menu) {
+      if (!menu.contains(e.target)) menu.removeAttribute('open');
+    });
+  });
+
   // Mobile navigation
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.getElementById('site-nav');

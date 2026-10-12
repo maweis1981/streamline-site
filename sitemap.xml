@@ -8,8 +8,10 @@ permalink: /sitemap.xml
 {%- for p in pages %}
   <url>
     <loc>{{ p.url | absolute_url }}</loc>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="{{ '/' | append: p.path_key | absolute_url }}"/>
-    <xhtml:link rel="alternate" hreflang="en" href="{{ '/en/' | append: p.path_key | absolute_url }}"/>
+    {%- for l in site.languages %}
+    {%- if l == site.default_lang %}{% assign l_path = "/" | append: p.path_key %}{% else %}{% assign l_path = "/" | append: l | append: "/" | append: p.path_key %}{% endif %}
+    <xhtml:link rel="alternate" hreflang="{{ site.data.locales[l].html_lang }}" href="{{ l_path | absolute_url }}"/>
+    {%- endfor %}
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   </url>
 {%- endfor %}

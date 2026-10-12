@@ -1,0 +1,9 @@
+<details class="lang-menu">
+  <summary data-track="language_menu_open">{% include icon.html name="globe" %}<span>{{ t.lang_name }}</span></summary>
+  <ul>
+    {%- for l in site.languages %}
+    {%- if l == site.default_lang %}{% assign l_path = "/" | append: page.path_key %}{% else %}{% assign l_path = "/" | append: l | append: "/" | append: page.path_key %}{% endif %}
+    <li><a href="{{ l_path | relative_url }}" hreflang="{{ site.data.locales[l].html_lang }}" lang="{{ site.data.locales[l].html_lang }}"{% if l == page.lang %} aria-current="true"{% else %} data-track="language_switch" data-track-to="{{ l }}"{% endif %}>{{ site.data.locales[l].lang_name }}</a></li>
+    {%- endfor %}
+  </ul>
+</details>

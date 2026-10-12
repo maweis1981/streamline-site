@@ -1,9 +1,6 @@
 {%- assign t = site.data.locales[page.lang] -%}
-{%- if page.lang == "en" -%}{%- assign lang_prefix = "/en" -%}{%- else -%}{%- assign lang_prefix = "" -%}{%- endif -%}
+{%- if page.lang == site.default_lang -%}{%- assign lang_prefix = "" -%}{%- else -%}{%- assign lang_prefix = "/" | append: page.lang -%}{%- endif -%}
 {%- assign home_url = lang_prefix | append: "/" | relative_url -%}
-{%- assign zh_url = "/" | append: page.path_key | relative_url -%}
-{%- assign en_url = "/en/" | append: page.path_key | relative_url -%}
-{%- if page.lang == "en" -%}{%- assign alt_url = zh_url -%}{%- assign alt_lang = "zh" -%}{%- else -%}{%- assign alt_url = en_url -%}{%- assign alt_lang = "en" -%}{%- endif -%}
 {%- if page.title -%}{%- assign full_title = page.title | append: " · Streamline" -%}{%- else -%}{%- assign full_title = t.meta.title -%}{%- endif -%}
 {%- assign description = page.description | default: t.meta.description -%}
 <!doctype html>
@@ -18,8 +15,10 @@
   <meta name="color-scheme" content="dark">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   {%- unless page.ref == "404" %}
-  <link rel="alternate" hreflang="zh-CN" href="{{ '/' | append: page.path_key | absolute_url }}">
-  <link rel="alternate" hreflang="en" href="{{ '/en/' | append: page.path_key | absolute_url }}">
+  {%- for l in site.languages %}
+  {%- if l == site.default_lang %}{% assign l_path = "/" | append: page.path_key %}{% else %}{% assign l_path = "/" | append: l | append: "/" | append: page.path_key %}{% endif %}
+  <link rel="alternate" hreflang="{{ site.data.locales[l].html_lang }}" href="{{ l_path | absolute_url }}">
+  {%- endfor %}
   <link rel="alternate" hreflang="x-default" href="{{ '/' | append: page.path_key | absolute_url }}">
   {%- endunless %}
   <meta property="og:type" content="website">
@@ -56,7 +55,7 @@
         <a href="{{ home_url }}#platforms">{{ t.nav.platforms }}</a>
         <a href="{{ lang_prefix | append: '/roadmap/' | relative_url }}"{% if page.ref == "roadmap" %} aria-current="page"{% endif %}>{{ t.nav.roadmap }}</a>
         <a href="{{ lang_prefix | append: '/support/' | relative_url }}"{% if page.ref == "support" %} aria-current="page"{% endif %}>{{ t.nav.support }}</a>
-        <a class="lang-switch" href="{{ alt_url }}" hreflang="{{ alt_lang }}" data-track="language_switch" data-track-to="{{ alt_lang }}">{% include icon.html name="globe" %}<span>{{ t.switch_label }}</span></a>
+        {% include language-menu.html %}
         <a class="btn btn-primary btn-sm nav-cta" href="{{ home_url }}#download" data-track="cta_click" data-track-target="download_anchor" data-track-location="header">{{ t.nav.download }}</a>
       </nav>
     </div>

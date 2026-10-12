@@ -1,7 +1,6 @@
 html_lang: zh-CN
 og_locale: zh_CN
 lang_name: 中文
-switch_label: English
 
 meta:
   title: Streamline — 原生 IPTV 播放器，适用于 iPhone、iPad 与 Mac
@@ -158,7 +157,8 @@ roadmap:
         - title: 远程播放列表缓存与离线打开
         - title: AirPlay 投放
         - title: 万级频道列表性能优化
-        - title: 全面本地化（简体中文 / English）
+        - title: App 多语言
+          desc: 简体中文、English、Bahasa Melayu、Bahasa Indonesia、Tiếng Việt、ไทย。
     - status: later
       title: 更多内容与平台
       items:

@@ -1,0 +1,213 @@
+html_lang: ms
+og_locale: ms_MY
+lang_name: Bahasa Melayu
+
+meta:
+  title: Streamline — Pemain IPTV asli untuk iPhone, iPad dan Mac
+  description: Streamline ialah pemain M3U/M3U8 asli. Import senarai main anda sendiri, layari mengikut kumpulan, semak saluran yang boleh dimainkan, tonton dalam Gambar dalam Gambar dan hantar ke TV. Tiada saluran terbina, tiada data peribadi dikumpul.
+
+nav:
+  features: Ciri
+  platforms: Platform
+  roadmap: Pelan hala tuju
+  support: Sokongan
+  privacy: Privasi
+  download: Muat turun
+
+cta:
+  app_store: Muat turun di App Store
+  testflight: Sertai beta TestFlight
+  coming_soon: Akan datang ke App Store
+  roadmap: Lihat pelan hala tuju
+
+hero:
+  eyebrow: Untuk iPhone · iPad · Mac
+  title: Senarai main anda,<br><span class="gradient-text">sekali ketik terus main.</span>
+  subtitle: Streamline ialah pemain IPTV asli. Import M3U/M3U8, layari mengikut kumpulan dan semak saluran sebelum menonton. Jika strim gagal, ia memberitahu sebabnya.
+  note: Dibina secara asli · Tiada saluran terbina · Data anda kekal pada peranti anda
+
+mock:
+  playlist: Senarai Main Saya
+  live: Langsung
+  checked: Disemak · 128 daripada 142 boleh dicapai
+  groups: [Semua, Berita, Sukan, Dokumentari, Muzik]
+  channels:
+    - name: Berita 24
+      group: Berita
+      state: playing
+    - name: Sukan HD
+      group: Sukan
+      state: ok
+    - name: Dokumentari Alam
+      group: Dokumentari
+      state: ok
+    - name: Muzik Langsung
+      group: Muzik
+      state: fail
+      reason: Akses ditolak oleh sumber (HTTP 403)
+
+features:
+  eyebrow: Ciri
+  title: Kurang cuba-cuba, dari import hingga menonton
+  subtitle: Dibina hanya dengan rangka kerja Apple, jadi ia ringan, lancar dan jimat bateri.
+  items:
+    - icon: import
+      title: Import mana-mana senarai main M3U
+      desc: Tambah URL atau fail .m3u / .m3u8 tempatan. Nama saluran, kumpulan dan logo dihuraikan secara automatik, dan 20 senarai main terakhir diingati serta dipulihkan semasa aplikasi dibuka.
+    - icon: grid
+      title: Kumpulan, carian dan kegemaran
+      desc: Layari mengikut group-title, cari nama saluran dan kumpulan serta-merta, tandakan saluran kegemaran dan kembali ke saluran yang baru ditonton.
+    - icon: pulse
+      title: Semak dahulu, kemudian tonton
+      desc: Setiap strim diuji serentak, jadi anda boleh paparkan hanya saluran yang boleh dicapai tanpa perlu mencuba satu demi satu.
+    - icon: diagnose
+      title: Sebab kegagalan yang mudah difahami
+      desc: Membezakan pengesahan (401), sekatan wilayah atau akses (403), strim yang telah dibuang (404), tamat masa, DNS dan format yang tidak disokong, serta mencadangkan langkah seterusnya.
+    - icon: route
+      title: Tukar talian dengan sekali ketik
+      desc: Jika satu saluran mempunyai beberapa sumber dalam senarai main anda, tukar antaranya di bahagian Talian dan lihat keputusan semakan setiap talian.
+    - icon: pip
+      title: Pengalaman main balik asli
+      desc: Dibina atas AVKit, dengan Gambar dalam Gambar, trek sari kata, kelajuan main balik dan skrin penuh landskap. Baris saluran yang sedang dimainkan memaparkan bingkai langsung.
+    - icon: cast
+      title: Hantar ke TV anda
+      desc: Hantar ke TV pintar DLNA dalam rangkaian yang sama, atau buka fail video tempatan untuk dimainkan terus.
+    - icon: lock
+      title: Privasi diutamakan
+      desc: Senarai main, kegemaran dan sejarah kekal pada peranti anda. Aplikasi ini tiada SDK iklan atau analitik dan tidak mengumpul sebarang data peribadi.
+
+how:
+  eyebrow: Mula
+  title: Tonton dalam tiga langkah
+  steps:
+    - title: Tambah senarai main
+      desc: Tampal URL M3U yang anda dibenarkan gunakan, atau import daripada Fail.
+    - title: Semak saluran
+      desc: Sekali ketik untuk menapis saluran yang boleh dicapai dari rangkaian anda.
+    - title: Main atau hantar ke TV
+      desc: Ketik untuk main, teruskan menonton dalam Gambar dalam Gambar, atau hantar ke TV di ruang tamu.
+
+platforms:
+  eyebrow: Platform
+  title: Dibina secara asli untuk peranti Apple
+  subtitle: SwiftUI dan AVFoundation memberikan satu pengalaman merentas telefon, tablet dan komputer.
+  available: Tersedia
+  planned: Dirancang
+  items:
+    - name: iPhone
+      detail: iOS 17 atau lebih baharu
+      status: available
+    - name: iPad
+      detail: iPadOS 17 atau lebih baharu
+      status: available
+    - name: Mac
+      detail: macOS 14 atau lebih baharu
+      status: available
+    - name: Apple TV
+      detail: tvOS
+      status: planned
+    - name: CarPlay
+      detail: Audio dan pelayaran
+      status: planned
+
+roadmap_teaser:
+  eyebrow: Pelan hala tuju
+  title: Apa seterusnya
+  subtitle: Keutamaan kami mudah. Pertama, pastikan lebih banyak saluran dapat dimainkan dengan stabil. Kemudian tambah panduan program, tonton semula dan banyak lagi.
+  link: Lihat pelan hala tuju penuh
+
+roadmap:
+  title: Pelan hala tuju
+  subtitle: Kami mengutamakan kejayaan main balik, kemudian mengembangkan ciri dan platform. Ini hala tuju yang dirancang, bukan janji tarikh keluaran.
+  updated: "Kemas kini terakhir: "
+  updated_date: Oktober 2026
+  feedback: Ada cadangan? Kongsikan di GitHub.
+  feedback_link: Cadangkan ciri
+  status:
+    done: Sudah dilancarkan
+    now: Sedang dibangunkan
+    next: Seterusnya
+    later: Akan datang
+  columns:
+    - status: done
+      title: Asas 1.0
+      items:
+        - title: Import M3U/M3U8 dan pemulihan sejarah
+          desc: Import daripada URL atau fail; senarai main terkini diingati.
+        - title: Kumpulan, carian, kegemaran, baru ditonton
+        - title: Semakan ketersediaan serentak
+        - title: Diagnosis kegagalan main balik
+        - title: Gambar dalam Gambar, sari kata, kelajuan main balik
+        - title: Tukar antara talian saluran yang sama nama
+        - title: Penghantaran DLNA dan video tempatan
+    - status: now
+      title: Kejayaan main balik
+      items:
+        - title: Keserasian strim HTTP yang lebih luas
+        - title: Audio latar belakang dan Gambar dalam Gambar yang lebih baik
+        - title: Penghuraian M3U yang lebih kaya
+          desc: Pengekodan GBK dan lain-lain, tvg-id, pengepala User-Agent / Referer setiap saluran.
+        - title: Status kesihatan saluran
+          desc: Belum disemak, boleh dicapai, disekat, tamat masa atau tidak disokong, dengan keputusan disimpan.
+    - status: next
+      title: Kebolehpercayaan dan kelajuan
+      items:
+        - title: Saluran berbilang talian dengan pertukaran automatik
+          desc: Cuba talian seterusnya secara automatik apabila talian semasa gagal.
+        - title: Senarai main jauh disimpan dan boleh dibuka luar talian
+        - title: AirPlay
+        - title: Prestasi untuk senarai melebihi 10,000 saluran
+        - title: Aplikasi berbilang bahasa
+          desc: English, Bahasa Cina Ringkas, Bahasa Melayu, Bahasa Indonesia, Tiếng Việt dan Thai.
+    - status: later
+      title: Lebih banyak kandungan dan platform
+      items:
+        - title: Panduan program XMLTV (EPG)
+        - title: Tonton semula (Catch-up)
+          desc: Hanya tersedia jika sumber strim menyediakan parameter tonton semula.
+        - title: Penyegerakan iCloud
+          desc: Kegemaran, senarai main dan tetapan merentas peranti.
+        - title: Sokongan Xtream Codes
+        - title: Apple TV dan CarPlay
+        - title: Carian global
+
+faq:
+  title: Soalan lazim
+  items:
+    - q: Adakah Streamline menyediakan saluran TV?
+      a: Tidak. Streamline ialah pemain; ia tidak membekalkan atau menjual kandungan saluran. Tambah senarai main yang anda dibenarkan gunakan. Senarai yang disyorkan dalam aplikasi ialah pautan awam pihak ketiga, dan ketersediaan serta hak tontonan ditentukan oleh penyedianya.
+    - q: Kenapa sesetengah saluran tidak boleh dimainkan?
+      a: Strim mungkin luar talian, memerlukan akaun, disekat mengikut wilayah, atau menggunakan codec yang tidak disokong oleh pemain Apple. Streamline cuba mengenal pasti sebabnya dan memaparkannya pada baris saluran. Ciri semakan menapis saluran yang tidak boleh dicapai lebih awal.
+    - q: Adakah data saya dikumpul?
+      a: Aplikasi ini tidak mengumpul data peribadi. Senarai main, kegemaran dan sejarah tontonan kekal pada peranti anda. Laman web ini menggunakan Google Analytics untuk memahami lawatan; lihat dasar privasi.
+    - q: Apa yang diperlukan untuk menghantar ke TV?
+      a: TV mesti menyokong pemaparan DLNA (DMR) dan berada dalam rangkaian yang sama. Penemuan automatik pada iPhone dan iPad memerlukan kebenaran rangkaian multicast Apple, yang masih dalam proses; Mac tidak terjejas.
+
+support:
+  title: Sokongan
+  subtitle: Menghadapi masalah atau ada idea? Begini cara menghubungi kami.
+  issues_title: Laporkan pepijat atau cadangkan ciri
+  issues_desc: Buka isu di GitHub dengan maklumat peranti, versi sistem dan langkah untuk menghasilkan semula masalah. Jangan kongsi URL senarai main yang mengandungi token atau kata laluan.
+  issues_link: Pergi ke GitHub Issues
+  email_title: E-mel
+
+privacy_label: Dasar Privasi
+
+consent:
+  text: Kami menggunakan Google Analytics untuk memahami cara laman web ini digunakan. Pilih sama ada membenarkan kuki analitik; anda boleh mengubahnya bila-bila masa di bahagian bawah halaman.
+  accept: Terima
+  decline: Tolak
+  more: Ketahui lanjut
+  manage: Tetapan kuki
+
+footer:
+  tagline: Pemain IPTV asli untuk iPhone, iPad dan Mac.
+  disclaimer: Streamline tidak menyediakan sebarang kandungan saluran. Mainkan hanya kandungan yang anda dibenarkan akses. Apple, iPhone, iPad, Mac, Apple TV, AirPlay dan CarPlay ialah tanda dagangan Apple Inc.
+  product: Produk
+  resources: Sumber
+  feedback: Maklum balas
+
+not_found:
+  title: Halaman tidak ditemui
+  desc: Halaman yang anda cari mungkin telah dialihkan atau dibuang.
+  home: Kembali ke laman utama

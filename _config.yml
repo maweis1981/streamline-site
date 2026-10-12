@@ -17,7 +17,7 @@ analytics:
   ga_measurement_id: ""  # G-XXXXXXXXXX
   consent: eea           # "eea": opt-in in EEA/UK/CH, opt-out elsewhere; "strict": opt-in everywhere
 
-languages: [zh, en]
+languages: [zh, en, ms, id, vi, th]   # Order of the language menu; each needs _data/locales/<code>.yml and pages under /<code>/.
 default_lang: zh
 
 markdown: kramdown

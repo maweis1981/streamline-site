@@ -2,7 +2,7 @@
 layout: default
 ---
 {%- assign t = site.data.locales[page.lang] -%}
-{%- if page.lang == "en" -%}{%- assign lang_prefix = "/en" -%}{%- else -%}{%- assign lang_prefix = "" -%}{%- endif -%}
+{%- if page.lang == site.default_lang -%}{%- assign lang_prefix = "" -%}{%- else -%}{%- assign lang_prefix = "/" | append: page.lang -%}{%- endif -%}
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-copy">

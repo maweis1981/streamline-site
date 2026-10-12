@@ -1,0 +1,213 @@
+html_lang: vi
+og_locale: vi_VN
+lang_name: Tiếng Việt
+
+meta:
+  title: Streamline — Trình phát IPTV gốc cho iPhone, iPad và Mac
+  description: Streamline là trình phát M3U/M3U8 gốc. Nhập danh sách phát của riêng bạn, duyệt theo nhóm, kiểm tra kênh nào phát được, xem bằng Hình trong hình và truyền lên TV. Không kèm sẵn kênh, không thu thập dữ liệu cá nhân.
+
+nav:
+  features: Tính năng
+  platforms: Nền tảng
+  roadmap: Lộ trình
+  support: Hỗ trợ
+  privacy: Quyền riêng tư
+  download: Tải về
+
+cta:
+  app_store: Tải về trên App Store
+  testflight: Tham gia thử nghiệm TestFlight
+  coming_soon: Sắp có trên App Store
+  roadmap: Xem lộ trình
+
+hero:
+  eyebrow: Dành cho iPhone · iPad · Mac
+  title: Danh sách phát của bạn,<br><span class="gradient-text">chạm là phát.</span>
+  subtitle: Streamline là trình phát IPTV gốc. Nhập M3U/M3U8, duyệt theo nhóm và kiểm tra kênh trước khi xem. Khi luồng phát lỗi, ứng dụng cho bạn biết lý do.
+  note: Phát triển gốc · Không kèm sẵn kênh · Dữ liệu luôn nằm trên thiết bị của bạn
+
+mock:
+  playlist: Danh sách của tôi
+  live: Trực tiếp
+  checked: Đã kiểm tra · 128/142 kênh truy cập được
+  groups: [Tất cả, Tin tức, Thể thao, Tài liệu, Âm nhạc]
+  channels:
+    - name: Tin tức 24
+      group: Tin tức
+      state: playing
+    - name: Thể thao HD
+      group: Thể thao
+      state: ok
+    - name: Thế giới tự nhiên
+      group: Tài liệu
+      state: ok
+    - name: Âm nhạc trực tiếp
+      group: Âm nhạc
+      state: fail
+      reason: Nguồn từ chối truy cập (HTTP 403)
+
+features:
+  eyebrow: Tính năng
+  title: Bớt thử sai, từ lúc nhập đến lúc xem
+  subtitle: Chỉ dùng các framework của Apple nên nhẹ, mượt và tiết kiệm pin.
+  items:
+    - icon: import
+      title: Nhập mọi danh sách phát M3U
+      desc: Thêm URL hoặc tệp .m3u / .m3u8 trên máy. Tên kênh, nhóm và logo được phân tích tự động; 20 danh sách gần nhất được ghi nhớ và khôi phục khi mở ứng dụng.
+    - icon: grid
+      title: Nhóm, tìm kiếm và yêu thích
+      desc: Duyệt theo group-title, tìm tên kênh và nhóm tức thì, đánh dấu kênh yêu thích và quay lại kênh vừa xem.
+    - icon: pulse
+      title: Kiểm tra trước khi xem
+      desc: Mọi luồng phát được kiểm tra song song, để bạn chỉ hiển thị các kênh truy cập được thay vì bấm thử từng kênh.
+    - icon: diagnose
+      title: Lỗi phát được giải thích dễ hiểu
+      desc: Phân biệt lỗi xác thực (401), giới hạn khu vực hoặc truy cập (403), luồng đã bị gỡ (404), hết thời gian chờ, DNS và định dạng không hỗ trợ, kèm gợi ý cách xử lý.
+    - icon: route
+      title: Đổi đường truyền chỉ một chạm
+      desc: Khi một kênh có nhiều nguồn trong danh sách, chuyển đổi giữa chúng ở mục Đường truyền và xem kết quả kiểm tra của từng nguồn.
+    - icon: pip
+      title: Trải nghiệm phát gốc
+      desc: Xây dựng trên AVKit, có Hình trong hình, chọn phụ đề, tốc độ phát và toàn màn hình khi xoay ngang. Dòng kênh đang phát hiển thị hình ảnh trực tiếp.
+    - icon: cast
+      title: Truyền lên TV
+      desc: Truyền tới smart TV hỗ trợ DLNA trong cùng mạng, hoặc mở tệp video trên máy để phát trực tiếp.
+    - icon: lock
+      title: Ưu tiên quyền riêng tư
+      desc: Danh sách phát, mục yêu thích và lịch sử luôn nằm trên thiết bị. Ứng dụng không có SDK quảng cáo hay phân tích và không thu thập dữ liệu cá nhân.
+
+how:
+  eyebrow: Bắt đầu
+  title: Xem chỉ với ba bước
+  steps:
+    - title: Thêm danh sách phát
+      desc: Dán URL M3U mà bạn được phép sử dụng, hoặc nhập từ ứng dụng Tệp.
+    - title: Kiểm tra kênh
+      desc: Một chạm để lọc ra các kênh truy cập được từ mạng của bạn.
+    - title: Phát hoặc truyền lên TV
+      desc: Chạm để phát, tiếp tục xem bằng Hình trong hình, hoặc truyền lên TV phòng khách.
+
+platforms:
+  eyebrow: Nền tảng
+  title: Phát triển gốc cho thiết bị Apple
+  subtitle: SwiftUI và AVFoundation mang lại trải nghiệm thống nhất trên điện thoại, máy tính bảng và máy tính.
+  available: Đã hỗ trợ
+  planned: Dự kiến
+  items:
+    - name: iPhone
+      detail: iOS 17 trở lên
+      status: available
+    - name: iPad
+      detail: iPadOS 17 trở lên
+      status: available
+    - name: Mac
+      detail: macOS 14 trở lên
+      status: available
+    - name: Apple TV
+      detail: tvOS
+      status: planned
+    - name: CarPlay
+      detail: Âm thanh và duyệt kênh
+      status: planned
+
+roadmap_teaser:
+  eyebrow: Lộ trình
+  title: Sắp tới có gì
+  subtitle: Ưu tiên của chúng tôi rất đơn giản. Trước hết, giúp nhiều kênh phát ổn định hơn. Sau đó bổ sung lịch phát sóng, xem lại và nhiều hơn nữa.
+  link: Xem toàn bộ lộ trình
+
+roadmap:
+  title: Lộ trình
+  subtitle: Chúng tôi ưu tiên tỷ lệ phát thành công trước, sau đó mở rộng tính năng và nền tảng. Đây là định hướng dự kiến, không phải cam kết về ngày phát hành.
+  updated: "Cập nhật lần cuối: "
+  updated_date: tháng 10 năm 2026
+  feedback: Bạn muốn có tính năng nào? Hãy góp ý trên GitHub.
+  feedback_link: Đề xuất tính năng
+  status:
+    done: Đã phát hành
+    now: Đang thực hiện
+    next: Tiếp theo
+    later: Dự kiến
+  columns:
+    - status: done
+      title: Nền tảng 1.0
+      items:
+        - title: Nhập M3U/M3U8 và khôi phục lịch sử
+          desc: Nhập từ URL hoặc tệp; ghi nhớ các danh sách gần đây.
+        - title: Nhóm, tìm kiếm, yêu thích, vừa xem
+        - title: Kiểm tra khả dụng song song
+        - title: Chẩn đoán lỗi phát
+        - title: Hình trong hình, phụ đề, tốc độ phát
+        - title: Chuyển đường truyền cho kênh trùng tên
+        - title: Truyền DLNA và phát video trên máy
+    - status: now
+      title: Tỷ lệ phát thành công
+      items:
+        - title: Tương thích rộng hơn với luồng HTTP
+        - title: Hoàn thiện phát nền và Hình trong hình
+        - title: Phân tích M3U đầy đủ hơn
+          desc: Mã hóa GBK và các mã khác, tvg-id, header User-Agent / Referer theo từng kênh.
+        - title: Trạng thái sức khỏe kênh
+          desc: Chưa kiểm tra, truy cập được, bị giới hạn, hết thời gian chờ hoặc không hỗ trợ, có lưu kết quả.
+    - status: next
+      title: Ổn định và tốc độ
+      items:
+        - title: Kênh nhiều đường truyền, tự động chuyển khi lỗi
+          desc: Tự động thử đường truyền tiếp theo khi đường hiện tại lỗi.
+        - title: Lưu danh sách phát từ xa và mở khi ngoại tuyến
+        - title: AirPlay
+        - title: Hiệu năng cho danh sách trên 10.000 kênh
+        - title: Ứng dụng đa ngôn ngữ
+          desc: English, tiếng Trung giản thể, Bahasa Melayu, Bahasa Indonesia, Tiếng Việt và tiếng Thái.
+    - status: later
+      title: Thêm nội dung và nền tảng
+      items:
+        - title: Lịch phát sóng XMLTV (EPG)
+        - title: Xem lại (Catch-up)
+          desc: Chỉ khả dụng khi nguồn phát cung cấp tham số xem lại.
+        - title: Đồng bộ iCloud
+          desc: Yêu thích, danh sách phát và cài đặt trên mọi thiết bị.
+        - title: Hỗ trợ Xtream Codes
+        - title: Apple TV và CarPlay
+        - title: Tìm kiếm toàn cục
+
+faq:
+  title: Câu hỏi thường gặp
+  items:
+    - q: Streamline có cung cấp kênh truyền hình không?
+      a: Không. Streamline là trình phát; ứng dụng không kèm sẵn hay bán nội dung kênh. Hãy thêm danh sách phát mà bạn được phép sử dụng. Các danh sách đề xuất trong ứng dụng là liên kết công khai của bên thứ ba; khả năng truy cập và quyền xem do nhà cung cấp quyết định.
+    - q: Vì sao một số kênh không phát được?
+      a: Luồng phát có thể đang ngừng hoạt động, yêu cầu tài khoản, bị giới hạn khu vực hoặc dùng codec mà trình phát của Apple không hỗ trợ. Streamline cố gắng xác định nguyên nhân và hiển thị ngay trên dòng kênh. Tính năng kiểm tra giúp lọc trước các kênh không truy cập được.
+    - q: Ứng dụng có thu thập dữ liệu của tôi không?
+      a: Ứng dụng không thu thập dữ liệu cá nhân. Danh sách phát, mục yêu thích và lịch sử xem luôn nằm trên thiết bị của bạn. Trang web này dùng Google Analytics để hiểu lượt truy cập; xem chính sách quyền riêng tư.
+    - q: Cần gì để truyền lên TV?
+      a: TV phải hỗ trợ DLNA renderer (DMR) và kết nối cùng mạng. Tự động tìm thiết bị trên iPhone và iPad cần quyền mạng multicast của Apple, hiện vẫn đang chờ cấp; Mac không bị ảnh hưởng.
+
+support:
+  title: Hỗ trợ
+  subtitle: Gặp sự cố hoặc có ý tưởng? Đây là cách liên hệ với chúng tôi.
+  issues_title: Báo lỗi hoặc đề xuất tính năng
+  issues_desc: Tạo issue trên GitHub, ghi rõ thiết bị, phiên bản hệ điều hành và các bước tái hiện lỗi. Vui lòng không đăng URL danh sách phát có chứa token hoặc mật khẩu.
+  issues_link: Đến GitHub Issues
+  email_title: Email
+
+privacy_label: Chính sách quyền riêng tư
+
+consent:
+  text: Chúng tôi dùng Google Analytics để hiểu cách trang web này được sử dụng. Bạn có thể chọn cho phép cookie phân tích hay không và thay đổi bất cứ lúc nào ở cuối trang.
+  accept: Đồng ý
+  decline: Từ chối
+  more: Tìm hiểu thêm
+  manage: Cài đặt cookie
+
+footer:
+  tagline: Trình phát IPTV gốc cho iPhone, iPad và Mac.
+  disclaimer: Streamline không cung cấp bất kỳ nội dung kênh nào. Chỉ phát nội dung bạn được phép truy cập. Apple, iPhone, iPad, Mac, Apple TV, AirPlay và CarPlay là nhãn hiệu của Apple Inc.
+  product: Sản phẩm
+  resources: Tài nguyên
+  feedback: Góp ý
+
+not_found:
+  title: Không tìm thấy trang
+  desc: Trang bạn tìm có thể đã được chuyển hoặc xóa.
+  home: Về trang chủ
