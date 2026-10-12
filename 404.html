@@ -7,12 +7,14 @@ permalink: /404.html
 title: 页面不存在 / Page not found
 ---
 {%- assign zh = site.data.locales.zh -%}{%- assign en = site.data.locales.en -%}
-<section class="page-hero section">
-  <div class="container narrow center">
-    <p class="eyebrow">404</p>
+<section class="page-hero notfound">
+  <div class="container center">
+    <div class="tv notfound-tv" aria-hidden="true">
+      <div class="tv-screen no-signal"><span>404</span></div>
+    </div>
     <h1>{{ zh.not_found.title }}</h1>
     <p class="lead">{{ zh.not_found.desc }}<br>{{ en.not_found.desc }}</p>
-    <div class="cta-row" style="justify-content:center;margin-top:32px">
+    <div class="cta-row center">
       <a class="btn btn-primary" href="{{ '/' | relative_url }}">{{ zh.not_found.home }}</a>
       <a class="btn btn-ghost" href="{{ '/en/' | relative_url }}">{{ en.not_found.home }}</a>
     </div>

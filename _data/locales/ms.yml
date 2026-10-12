@@ -31,6 +31,7 @@ hero:
 mock:
   playlist: Senarai Main Saya
   live: Langsung
+  casting: "Menghantar ke TV"
   checked: Disemak · 128 daripada 142 boleh dicapai
   groups: [Semua, Berita, Sukan, Dokumentari, Muzik]
   channels:

@@ -3,34 +3,69 @@ layout: default
 ---
 {%- assign t = site.data.locales[page.lang] -%}
 {%- if page.lang == site.default_lang -%}{%- assign lang_prefix = "" -%}{%- else -%}{%- assign lang_prefix = "/" | append: page.lang -%}{%- endif -%}
+<link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow">{{ t.hero.eyebrow }}</p>
+      <p class="eyebrow eyebrow-chip"><i aria-hidden="true"></i>{{ t.hero.eyebrow }}</p>
       <h1>{{ t.hero.title }}</h1>
       <p class="lead">{{ t.hero.subtitle }}</p>
       {% include download-buttons.html location="hero" %}
-      <p class="hero-note">{{ t.hero.note }}</p>
+      {%- comment -%} hero.note uses " · " as separator in all 6 locales; keep it that way. {%- endcomment -%}
+      {%- assign notes = t.hero.note | split: " · " -%}
+      <ul class="hero-notes">{% for note in notes %}<li>{% include icon.html name="check" %}<span>{{ note }}</span></li>{% endfor %}</ul>
     </div>
 
-    <div class="hero-visual" aria-hidden="true">
-      <div class="device">
-        <div class="device-screen">
-          <div class="mock-player">
-            <div class="mock-video"></div>
-            <span class="mock-live">● {{ t.mock.live }}</span>
-            <span class="mock-title">{{ t.mock.channels[0].name }}</span>
+    <div class="hero-visual stage" aria-hidden="true">
+      <div class="stage-tv tv">
+        <div class="tv-screen scene">
+          <span class="mock-live"><i></i>{{ t.mock.live }}</span>
+          <span class="mock-cast">{% include icon.html name="cast" %}<span>{{ t.mock.casting }}</span></span>
+          <div class="tv-lower">
+            <b>{{ t.mock.channels[0].name }}</b>
+            <small>{{ t.mock.channels[0].group }}</small>
+            <span class="tv-progress"><i></i></span>
           </div>
-          <div class="mock-head">
-            <strong>{{ t.mock.playlist }}</strong>
-            <span>{{ t.mock.checked }}</span>
+        </div>
+      </div>
+
+      <div class="stage-mac">
+        <div class="mac-bar">
+          <span class="mac-dots"><i></i><i></i><i></i></span>
+          <b>{{ t.mock.playlist }}</b>
+        </div>
+        <div class="mac-body">
+          <ul class="mac-side">
+            {%- for g in t.mock.groups %}<li{% if forloop.first %} class="is-active"{% endif %}>{{ g }}</li>{% endfor -%}
+          </ul>
+          <div class="mac-main">
+            <p class="mac-checked"><i></i>{{ t.mock.checked }}</p>
+            <ul class="mac-tiles">
+              {%- for c in t.mock.channels %}
+              <li class="mac-tile is-{{ c.state }}" style="--i:{{ forloop.index0 }}">
+                <span class="mac-thumb"></span>
+                <span class="mac-meta"><b>{{ c.name }}</b>{% if c.state == "playing" %}<span class="eq"><i></i><i></i><i></i></span>{% else %}<span class="mock-state"></span>{% endif %}</span>
+              </li>
+              {%- endfor %}
+              <li class="mac-tile is-skel"><span class="mac-thumb"></span><span class="mac-meta"><b></b></span></li>
+              <li class="mac-tile is-skel"><span class="mac-thumb"></span><span class="mac-meta"><b></b></span></li>
+            </ul>
           </div>
+        </div>
+      </div>
+
+      <svg class="stage-arc" viewBox="0 0 100 68.75" preserveAspectRatio="none" focusable="false"><path d="M86 22 C 88 11, 85 6.5, 79.5 9"/></svg>
+
+      <div class="stage-phone">
+        <div class="phone-screen">
+          <div class="phone-player scene"><span class="mock-live"><i></i>{{ t.mock.live }}</span><span class="phone-cast">{% include icon.html name="cast" %}</span></div>
+          <strong class="phone-title">{{ t.mock.playlist }}</strong>
           <div class="mock-chips">
             {%- for g in t.mock.groups %}<span{% if forloop.first %} class="is-active"{% endif %}>{{ g }}</span>{% endfor -%}
           </div>
           <ul class="mock-list">
             {%- for c in t.mock.channels %}
-            <li class="mock-row is-{{ c.state }}">
+            <li class="mock-row is-{{ c.state }}" style="--i:{{ forloop.index0 }}">
               <span class="mock-thumb"></span>
               <span class="mock-text">
                 <b>{{ c.name }}</b>
@@ -48,35 +83,84 @@ layout: default
 
 <section class="section" id="features">
   <div class="container">
-    <header class="section-head">
+    <header class="section-head reveal">
       <p class="eyebrow">{{ t.features.eyebrow }}</p>
       <h2>{{ t.features.title }}</h2>
       <p class="lead">{{ t.features.subtitle }}</p>
     </header>
-    <div class="feature-grid">
-      {%- for f in t.features.items %}
-      <article class="card feature">
+
+    <div class="spotlights">
+      {%- assign si = 0 -%}
+      {%- for f in t.features.items -%}{%- if f.icon == "pulse" or f.icon == "diagnose" %}
+      <article class="card spotlight spotlight--{{ f.icon }} reveal" style="--i:{{ si }}">
         <span class="feature-icon">{% include icon.html name=f.icon %}</span>
         <h3>{{ f.title }}</h3>
         <p>{{ f.desc }}</p>
+        <div class="spot-visual" aria-hidden="true">
+          {%- if f.icon == "pulse" %}
+          <ul class="scan">
+            {%- assign dots = "ok,ok,fail,ok,ok" | split: "," -%}
+            {%- for d in dots %}
+            <li class="scan-row is-{{ d }}" style="--i:{{ forloop.index0 }}"><span class="scan-thumb"></span><span class="scan-bars"><i></i><i></i></span><span class="scan-dot"></span></li>
+            {%- endfor %}
+            <li class="scan-line"></li>
+          </ul>
+          <p class="scan-caption">{{ t.mock.checked }}</p>
+          {%- else %}
+          <ul class="scan diag">
+            {%- assign codes = "401,403,404,DNS,clock" | split: "," -%}
+            {%- for c in codes %}
+            <li class="scan-row"><span class="code code-{{ c | downcase }}">{% if c == "clock" %}<i class="clock"></i>{% else %}{{ c }}{% endif %}</span><span class="scan-bars"><i></i><i></i></span>{% include icon.html name="arrow" %}<span class="diag-fix"></span></li>
+            {%- endfor %}
+          </ul>
+          {%- endif %}
+        </div>
       </article>
-      {%- endfor %}
+      {%- assign si = si | plus: 1 -%}
+      {%- endif -%}{%- endfor %}
     </div>
+
+    <div class="shelf">
+      {%- assign ti = 0 -%}
+      {%- for f in t.features.items -%}{%- unless f.icon == "pulse" or f.icon == "diagnose" or f.icon == "lock" %}
+      <article class="card tile reveal" style="--i:{{ ti }}">
+        <span class="feature-icon">{% include icon.html name=f.icon %}</span>
+        <div class="tile-text">
+          <h3>{{ f.title }}</h3>
+          <p>{{ f.desc }}</p>
+        </div>
+      </article>
+      {%- assign ti = ti | plus: 1 -%}
+      {%- endunless -%}{%- endfor %}
+    </div>
+
+    {%- for f in t.features.items -%}{%- if f.icon == "lock" %}
+    <article class="card privacy-band reveal">
+      <span class="feature-icon">{% include icon.html name=f.icon %}</span>
+      <div class="privacy-text">
+        <h3>{{ f.title }}</h3>
+        <p>{{ f.desc }}</p>
+      </div>
+      <a class="text-link" href="{{ lang_prefix | append: '/privacy/' | relative_url }}">{{ t.privacy_label }} {% include icon.html name="arrow" %}</a>
+    </article>
+    {%- endif -%}{%- endfor %}
   </div>
 </section>
 
-<section class="section section-alt">
+<section class="section section-alt section-how">
   <div class="container">
-    <header class="section-head">
+    <header class="section-head reveal">
       <p class="eyebrow">{{ t.how.eyebrow }}</p>
       <h2>{{ t.how.title }}</h2>
     </header>
-    <ol class="steps">
+    <ol class="steps js-inview">
       {%- for s in t.how.steps %}
-      <li class="step">
-        <span class="step-num">{{ forloop.index }}</span>
-        <h3>{{ s.title }}</h3>
-        <p>{{ s.desc }}</p>
+      <li class="step reveal" style="--i:{{ forloop.index0 }}">
+        <span class="step-num">0{{ forloop.index }}</span>
+        <div class="step-text">
+          <h3>{{ s.title }}</h3>
+          <p>{{ s.desc }}</p>
+        </div>
       </li>
       {%- endfor %}
     </ol>
@@ -85,7 +169,7 @@ layout: default
 
 <section class="section" id="platforms">
   <div class="container">
-    <header class="section-head">
+    <header class="section-head reveal">
       <p class="eyebrow">{{ t.platforms.eyebrow }}</p>
       <h2>{{ t.platforms.title }}</h2>
       <p class="lead">{{ t.platforms.subtitle }}</p>
@@ -93,9 +177,9 @@ layout: default
     <ul class="platforms">
       {%- assign platform_icons = "phone,tablet,laptop,tv,car" | split: "," -%}
       {%- for p in t.platforms.items %}
-      <li class="platform is-{{ p.status }}">
+      <li class="platform is-{{ p.status }} reveal" style="--i:{{ forloop.index0 }}">
         {%- assign platform_icon = platform_icons[forloop.index0] %}
-        {% include icon.html name=platform_icon %}
+        <span class="platform-icon">{% include icon.html name=platform_icon %}</span>
         <strong>{{ p.name }}</strong>
         <span>{{ p.detail }}</span>
         <em class="badge badge-{{ p.status }}">{% if p.status == "available" %}{{ t.platforms.available }}{% else %}{{ t.platforms.planned }}{% endif %}</em>
@@ -107,14 +191,14 @@ layout: default
 
 <section class="section section-alt" id="roadmap">
   <div class="container">
-    <header class="section-head">
+    <header class="section-head reveal">
       <p class="eyebrow">{{ t.roadmap_teaser.eyebrow }}</p>
       <h2>{{ t.roadmap_teaser.title }}</h2>
       <p class="lead">{{ t.roadmap_teaser.subtitle }}</p>
     </header>
     <div class="roadmap-teaser">
       {%- for col in t.roadmap.columns %}
-      <div class="card teaser-col">
+      <div class="card teaser-col is-{{ col.status }} reveal" style="--i:{{ forloop.index0 }}">
         <span class="badge badge-{{ col.status }}">{{ t.roadmap.status[col.status] }}</span>
         <h3>{{ col.title }}</h3>
         <ul>
@@ -123,16 +207,19 @@ layout: default
       </div>
       {%- endfor %}
     </div>
-    <p class="center"><a class="text-link" href="{{ lang_prefix | append: '/roadmap/' | relative_url }}" data-track="cta_click" data-track-target="roadmap" data-track-location="home_teaser">{{ t.roadmap_teaser.link }} {% include icon.html name="arrow" %}</a></p>
+    <p class="center teaser-link"><a class="text-link" href="{{ lang_prefix | append: '/roadmap/' | relative_url }}" data-track="cta_click" data-track-target="roadmap" data-track-location="home_teaser">{{ t.roadmap_teaser.link }} {% include icon.html name="arrow" %}</a></p>
   </div>
 </section>
 
 <section class="section" id="faq">
-  <div class="container narrow">
-    <header class="section-head">
-      <h2>{{ t.faq.title }}</h2>
-    </header>
-    <div class="faq">
+  <div class="container faq-layout">
+    <div class="faq-aside">
+      <header class="section-head reveal">
+        <h2>{{ t.faq.title }}</h2>
+      </header>
+      <p class="faq-more">{{ t.support.subtitle }}<br><a class="text-link" href="{{ lang_prefix | append: '/support/' | relative_url }}">{{ t.nav.support }} {% include icon.html name="arrow" %}</a></p>
+    </div>
+    <div class="faq reveal">
       {%- for item in t.faq.items %}
       <details data-track-faq="{{ forloop.index }}">
         <summary>{{ item.q }}</summary>
@@ -144,8 +231,8 @@ layout: default
 </section>
 
 <section class="section download-band" id="download">
-  <div class="container center">
-    <img src="{{ '/assets/img/icon-256.png' | relative_url }}" alt="" width="96" height="96" class="band-icon">
+  <div class="container center reveal">
+    <img src="{{ '/assets/img/icon-256.png' | relative_url }}" alt="" width="112" height="112" class="band-icon" loading="lazy" decoding="async">
     <h2>{{ t.slogan }}</h2>
     <p class="lead">{{ t.footer.tagline }}</p>
     {% include download-buttons.html location="footer_band" %}

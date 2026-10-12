@@ -31,6 +31,7 @@ hero:
 mock:
   playlist: 我的播放列表
   live: 直播中
+  casting: "正在投屏到电视"
   checked: 已检测 128 / 142 可访问
   groups: [全部, 新闻, 体育, 纪录片, 音乐]
   channels:

@@ -15,7 +15,7 @@ layout: default
   <div class="container">
     <div class="roadmap-board">
       {%- for col in t.roadmap.columns %}
-      <section class="roadmap-col is-{{ col.status }}" aria-labelledby="col-{{ col.status }}">
+      <section class="roadmap-col is-{{ col.status }} reveal" style="--i:{{ forloop.index0 }}" aria-labelledby="col-{{ col.status }}">
         <header>
           <span class="badge badge-{{ col.status }}">{{ t.roadmap.status[col.status] }}</span>
           <h2 id="col-{{ col.status }}">{{ col.title }}</h2>
@@ -34,7 +34,7 @@ layout: default
       </section>
       {%- endfor %}
     </div>
-    <div class="card feedback">
+    <div class="card feedback gborder reveal">
       <p>{{ t.roadmap.feedback }}</p>
       <a class="btn btn-ghost" href="{{ site.repository_url }}/issues/new" data-track="cta_click" data-track-target="feature_request" data-track-location="roadmap">{% include icon.html name="github" %}<span>{{ t.roadmap.feedback_link }}</span></a>
     </div>

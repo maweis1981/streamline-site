@@ -31,6 +31,7 @@ hero:
 mock:
   playlist: Playlist Saya
   live: Langsung
+  casting: "Mentransmisikan ke TV"
   checked: Diperiksa · 128 dari 142 dapat diakses
   groups: [Semua, Berita, Olahraga, Dokumenter, Musik]
   channels:

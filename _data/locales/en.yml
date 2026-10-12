@@ -31,6 +31,7 @@ hero:
 mock:
   playlist: My Playlist
   live: Live
+  casting: "Casting to TV"
   checked: Checked · 128 of 142 reachable
   groups: [All, News, Sports, Docs, Music]
   channels:

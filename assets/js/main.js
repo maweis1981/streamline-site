@@ -1,5 +1,6 @@
 (function () {
   'use strict';
+  document.documentElement.classList.add('js');
 
   var analytics = window.SL_ANALYTICS || null;
   window.dataLayer = window.dataLayer || [];
@@ -60,6 +61,34 @@
       }
     });
   }
+
+  // Header, nav, reveal, spotlight
+  var root = document.documentElement, header = document.querySelector('.site-header');
+  var reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function onScroll() { header.classList.toggle('is-scrolled', scrollY > 8); }
+  if (header) { addEventListener('scroll', onScroll); onScroll(); }
+  function lock(on) {
+    root.classList.toggle('nav-open', on);
+    document.querySelectorAll('main,.site-footer').forEach(function(m) { m.inert = on; });
+  }
+  if (toggle && nav) {
+    var shut = function() { if (nav.classList.contains('is-open')) toggle.click(); };
+    toggle.addEventListener('click', function() { lock(toggle.getAttribute('aria-expanded') == 'true'); });
+    nav.addEventListener('click', function(e) { if (e.target.closest('a')) lock(false); });
+    addEventListener('keydown', function(e) { if (e.key == 'Escape' && nav.classList.contains('is-open')) { toggle.click(); toggle.focus(); } });
+    matchMedia('(min-width:960px)').addEventListener('change', shut);
+  }
+  var io = !reduce && window.IntersectionObserver && new IntersectionObserver(function(es) {
+    es.forEach(function(n) { if (n.isIntersecting) { n.target.classList.add('is-in'); io.unobserve(n.target); } });
+  }, { rootMargin: '0px 0px -10% 0px' });
+  document.querySelectorAll('.reveal,.js-inview').forEach(function(el) {
+    if (io && el.getBoundingClientRect().top >= innerHeight) return io.observe(el);
+    el.classList.add('is-in', 'seen');
+  });
+  if (!reduce && matchMedia('(hover:hover) and (pointer:fine)').matches) addEventListener('pointermove', function(e) {
+    var c = e.target.closest('.card'), r = c && c.getBoundingClientRect();
+    if (c) { c.style.setProperty('--mx', e.clientX - r.left + 'px'); c.style.setProperty('--my', e.clientY - r.top + 'px'); }
+  });
 
   // Consent banner (only rendered when analytics is configured)
   var banner = document.getElementById('consent');

@@ -31,6 +31,7 @@ hero:
 mock:
   playlist: Danh sách của tôi
   live: Trực tiếp
+  casting: "Đang truyền lên TV"
   checked: Đã kiểm tra · 128/142 kênh truy cập được
   groups: [Tất cả, Tin tức, Thể thao, Tài liệu, Âm nhạc]
   channels:

@@ -2,9 +2,9 @@
 layout: default
 ---
 <section class="page-hero">
-  <div class="container narrow">
+  <div class="container">
     <h1>{{ page.title }}</h1>
-    {%- if page.subtitle %}<p class="lead">{{ page.subtitle }}</p>{% endif %}
+    {%- if page.subtitle %}<p class="lead{% if page.ref == "privacy" %} muted{% endif %}">{{ page.subtitle }}</p>{% endif %}
   </div>
 </section>
 <section class="section section-tight">
