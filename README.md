@@ -4,7 +4,7 @@ Source for the official website of **Streamline**, a native IPTV player for iPho
 
 **Live site:** https://doubo.tv/ — 简体中文 (`/`), English (`/en/`), Bahasa Melayu (`/ms/`), Bahasa Indonesia (`/id/`), Tiếng Việt (`/vi/`), ไทย (`/th/`)
 
-It's a Jekyll site in six languages (Simplified Chinese by default, plus English, Malay, Indonesian, Vietnamese, and Thai) with: home, roadmap, support, and privacy policy. The support and privacy pages serve as the App Store Connect *Support URL* and *Privacy Policy URL*.
+It's a Jekyll site in six languages (Simplified Chinese by default, plus English, Malay, Indonesian, Vietnamese, and Thai): home, roadmap, support, and privacy policy. The support and privacy pages serve as the App Store Connect *Support URL* and *Privacy Policy URL*.
 
 ## Deployment
 
