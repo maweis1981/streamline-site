@@ -48,6 +48,10 @@ Analytics tags only render in production builds when an ID is set, so local prev
 | `web_playlist_add` | `source` (`url`, `file`, `text`), `channels` | A playlist is added in the web player |
 | `tool_m3u_analyze` | `entries` | A playlist is analyzed in the M3U tool |
 | `tool_m3u_download` | `entries` | A cleaned playlist is downloaded from the M3U tool |
+| `web_vod_play` | `section` (`movies`, `anime`, …), `source` (`archive` or `youtube`) | An on-demand video is opened in the web player |
+| `web_share` | `kind` (`live` or `vod`) | The share button is used in the player |
+| `web_cast` | `kind` (`live` or `vod`) | Casting to a Chromecast / Google TV starts |
+| `web_install` | — | The web player is installed as an app |
 
 Every page also pushes `page_language` and `page_section`, and GA4 receives `content_group` = page section. Register `target`, `location`, and `page_section` as GA4 custom dimensions, and mark `cta_click` with `target = app_store` and `web_play` as key events. Set GA4 data retention to **14 months** to match the privacy policy.
 
