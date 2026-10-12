@@ -1,6 +1,6 @@
 """Prepare the channel directory pages from the iptv-playlists index.
 
-Reads index.json published by maweis1981/iptv-playlists, adds localized country
+Reads index.json published by streamline-iptv/iptv-playlists, adds localized country
 and language names, writes _data/directory.json and generates one directory
 page plus one page per country for every site language. Generated pages are
 not committed (see .gitignore); the deploy workflow runs this before Jekyll.
@@ -18,9 +18,9 @@ from babel import Locale
 from babel.core import get_global
 
 SITE = Path(__file__).resolve().parent.parent
-PLAYLISTS = "https://cdn.jsdelivr.net/gh/maweis1981/iptv-playlists@dist"
-MIRROR = "https://raw.githubusercontent.com/maweis1981/iptv-playlists/dist"
-REPO = "https://github.com/maweis1981/iptv-playlists"
+PLAYLISTS = "https://cdn.jsdelivr.net/gh/streamline-iptv/iptv-playlists@dist"
+MIRROR = "https://raw.githubusercontent.com/streamline-iptv/iptv-playlists/dist"
+REPO = "https://github.com/streamline-iptv/iptv-playlists"
 BABEL_LOCALE = {"zh": "zh_Hans"}
 TERRITORY = {"uk": "GB"}  # iptv-org uses UK for the United Kingdom
 MIN_LANGUAGE_CHANNELS = 5

@@ -6,7 +6,7 @@ on:
   pull_request:
   workflow_dispatch:
   schedule:
-    - cron: "7 3 * * *"   # daily, after maweis1981/iptv-playlists rebuilds the channel directory
+    - cron: "7 3 * * *"   # daily, after streamline-iptv/iptv-playlists rebuilds the channel directory
 
 permissions:
   contents: write
@@ -52,11 +52,11 @@ jobs:
         with:
           python-version: "3.12"
 
-      # The channel directory pages are generated from the index published by maweis1981/iptv-playlists.
+      # The channel directory pages are generated from the index published by streamline-iptv/iptv-playlists.
       # If the index cannot be fetched, the site still builds, just without the directory.
       - name: Generate channel directory pages
         run: |
-          if curl -fsSL --retry 3 -o "$RUNNER_TEMP/index.json" https://raw.githubusercontent.com/maweis1981/iptv-playlists/dist/index.json; then
+          if curl -fsSL --retry 3 -o "$RUNNER_TEMP/index.json" https://raw.githubusercontent.com/streamline-iptv/iptv-playlists/dist/index.json; then
             pip install -q babel==2.17.0 pyyaml==6.0.2
             python scripts/directory.py "$RUNNER_TEMP/index.json"
           else

@@ -12,7 +12,7 @@ Doubo is a native IPTV / M3U playlist player, available for iPhone, iPad, and Ma
 ## Pages
 - [Home]({{ '/en/' | absolute_url }}): features, platforms, roadmap summary, FAQ
 - [Guide]({{ '/en/guide/' | absolute_url }}): how to add and play M3U / M3U8 playlists
-- [Free channel directory]({{ '/en/playlists/' | absolute_url }}): free-to-air channels that broadcasters publish openly, as M3U playlists by country, category and language (source and policy: https://github.com/maweis1981/iptv-playlists)
+- [Free channel directory]({{ '/en/playlists/' | absolute_url }}): free-to-air channels that broadcasters publish openly, as M3U playlists by country, category and language (source and policy: https://github.com/streamline-iptv/iptv-playlists)
 - [Roadmap]({{ '/en/roadmap/' | absolute_url }}): shipped, in-progress, and planned features
 - [Support]({{ '/en/support/' | absolute_url }}): FAQ and contact
 - [Privacy Policy]({{ '/en/privacy/' | absolute_url }})
