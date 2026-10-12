@@ -31,6 +31,12 @@ jobs:
             echo "$url -> $(curl -s -o /dev/null -m 15 -w '%{http_code} %{redirect_url}' "$url" || echo unreachable)"
           done
           echo "GTM on homepage: $(curl -s -m 15 https://doubo.tv/ | grep -c GTM-MJDCLXML || true)"
+          echo "--- head of https://doubo.tv/ ---"
+          curl -s -m 15 https://doubo.tv/ | head -40
+          echo "--- served headers ---"
+          curl -sI -m 15 https://doubo.tv/ | grep -iE 'last-modified|age|cache|etag|x-cache' || true
+          echo "--- container script (404 = container not published yet) ---"
+          echo "gtm.js -> $(curl -s -o /dev/null -w '%{http_code} %{size_download}B' -m 15 'https://www.googletagmanager.com/gtm.js?id=GTM-MJDCLXML')"
 
       - name: TLS certificate served
         run: |
