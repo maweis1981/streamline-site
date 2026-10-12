@@ -16,6 +16,7 @@ nav:
   support: 支持
   privacy: 隐私
   download: 下载
+  tools: M3U 工具
 cta:
   app_store: App Store 下载
   testflight: 加入 TestFlight 测试
@@ -308,9 +309,15 @@ directory:
     sports: 体育
     travel: 旅游
     weather: 天气
+  categories_more: 查看全部%category%频道
+  category_title: '%category%频道 M3U 播放列表：%count% 个免费直播频道'
+  category_desc: 全球 %count% 个官方公开、免费播出的%category%频道，整理成 M3U 播放列表，每日更新，可在都播或其他 IPTV 播放器中播放。
+  category_h1: '%category%频道'
+  category_lead: 来自 %countries% 个国家和地区的 %count% 个%category%频道，复制下方链接即可收看。
+  country_col: 国家和地区
 web:
   nav: 网页版
-  page_title: 网页版播放器：在浏览器中直接播放 M3U 播放列表
+  page_title: 在线 M3U 播放器：在浏览器中直接播放 IPTV 播放列表
   page_desc: 都播网页版：无需安装，在浏览器中打开 M3U / M3U8 播放列表，分组浏览、搜索、收藏、多线路切换与画中画。播放列表只保存在你的浏览器里。
   playlists: 播放列表
   groups: 分组
@@ -332,9 +339,9 @@ web:
   app_hint_title: 这个频道建议在都播 App 中观看
   app_hint_desc: 浏览器对部分直播源有限制，都播 App 可以直接播放，还支持投屏和后台播放。
   open_app: 下载都播 App
-  shortcuts: 快捷键：↑ ↓ 切换频道 · F 全屏 · P 画中画 · M 静音 · / 搜索
+  shortcuts: 快捷键：/ 搜索 · 观看时 ↑ ↓ 切换频道 · F 全屏 · P 画中画 · M 静音 · Esc 返回
   empty_title: 在浏览器里直接看电视
-  empty_desc: 添加你自己的 M3U 播放列表链接，或从频道目录挑一个免费播放列表开始。
+  empty_desc: 这里还没有可以在网页播放的频道。可以添加你自己的 M3U 播放列表，或回到“免费频道”。
   browse_directory: 浏览频道目录
   privacy_note: 播放列表只保存在你的浏览器里，不会上传到任何服务器。
   url_label: 播放列表链接（M3U / M3U8）
@@ -350,3 +357,77 @@ web:
   my_playlist: 我的播放列表
   watch_web: 在网页播放
   try_web: 网页版
+  seo_title: 免费在线 M3U 播放器，打开就能看
+  seo_intro: 都播网页版是一个免费的在线 M3U / M3U8 播放器。无需下载、无需注册，粘贴播放列表链接或导入文件，就能在电脑和手机浏览器里按分组浏览、搜索和观看直播频道。
+  features:
+  - t: 无需安装
+    d: 打开网页即可使用，支持 Chrome、Edge、Safari、Firefox 等主流浏览器。
+  - t: 分组与搜索
+    d: 自动读取播放列表里的分组，几千个频道也能快速找到。
+  - t: 多线路自动切换
+    d: 同一频道有多条线路时自动合并，一条不通会自动换下一条。
+  - t: 隐私优先
+    d: 播放列表只保存在你的浏览器里，不上传、不收集。
+  faq_title: 常见问题
+  faq:
+  - q: 都播网页版免费吗？需要注册吗？
+    a: 完全免费，也不需要注册账号。打开页面、添加播放列表就能看。
+  - q: 支持哪些播放列表格式？
+    a: 支持 M3U 和 M3U8 播放列表，包括带 tvg-id、tvg-logo、group-title 等扩展信息的 IPTV 列表；直播流支持 HLS（.m3u8）。
+  - q: 我的播放列表保存在哪里？
+    a: 只保存在你当前浏览器的本地存储里，不会上传到任何服务器。换浏览器或清除网站数据后需要重新添加。
+  - q: 为什么有些频道建议用 App 观看？
+    a: 浏览器出于安全原因，对部分直播源（例如 http 链接或需要特殊请求头的线路）有限制。都播 App 不受这些限制，还支持投屏和后台播放。
+  tool_link: 分析和整理你的 M3U 播放列表
+  free_channels: 免费频道
+  all_countries: 全部国家和地区
+  load_more: 显示更多频道
+  back: 返回
+  prev_channel: 上一个频道
+  next_channel: 下一个频道
+tools:
+  nav: M3U 工具
+  page_title: M3U 播放列表在线分析与整理工具：统计、去重、按分组导出
+  page_desc: 免费的 M3U / M3U8 在线工具：统计频道和分组数量，找出重复链接，去重、按分组排序后导出新的播放列表。全部在浏览器本地完成，不上传文件。
+  title: M3U 播放列表分析与整理
+  lead: 粘贴链接、导入文件或直接粘贴内容，几秒钟看清一份播放列表里有什么，再一键整理导出。
+  input_url: 播放列表链接
+  input_file: 或导入文件
+  input_text: 或粘贴内容
+  analyze: 开始分析
+  loading: 正在读取…
+  need_input: 请填写链接、选择文件或粘贴内容。
+  url_blocked: 这个链接不支持在网页中直接读取，可以下载文件后导入。
+  no_channels: 没有找到频道，请确认是 M3U 格式。
+  stat_entries: 条目
+  stat_channels: 频道
+  stat_groups: 分组
+  stat_duplicates: 重复链接
+  stat_https: HTTPS 链接
+  stat_logos: 带台标
+  stat_tvgid: 带 tvg-id
+  stat_multi: 多线路频道
+  groups_title: 分组
+  group_col: 分组
+  channels_col: 频道数
+  clean_title: 整理并导出
+  opt_dedupe: 去除重复链接
+  opt_sort: 按分组和名称排序
+  opt_https: 只保留 HTTPS 链接
+  opt_merge: 合并同一频道的多条线路（保留全部线路）
+  download: 下载整理后的 M3U
+  open_web: 在网页版中打开
+  privacy: 所有处理都在你的浏览器里完成，文件不会上传。
+  seo_title: 这个工具能做什么
+  seo_points:
+  - 统计播放列表的条目、频道、分组数量，以及带台标、带 tvg-id 的比例。
+  - 找出完全重复的直播链接，一键去重。
+  - 按分组和频道名重新排序，导出整洁的 M3U 文件。
+  - 只保留 HTTPS 链接，方便在网页和更多设备上播放。
+  faq:
+  - q: 这个工具会检测链接能不能播放吗？
+    a: 不会。它只读取播放列表的文本内容来统计和整理，不访问任何直播链接。想直接观看可以用都播网页版或 App。
+  - q: 支持多大的播放列表？
+    a: 几万条目的播放列表也可以在几秒内处理完，具体取决于你的设备性能。
+  - q: 会保存我的播放列表吗？
+    a: 不会。所有处理都在浏览器内存中完成，关闭页面即清除。

@@ -16,6 +16,7 @@ nav:
   support: Sokongan
   privacy: Privasi
   download: Muat turun
+  tools: Alat M3U
 cta:
   app_store: Muat turun di App Store
   testflight: Sertai beta TestFlight
@@ -308,9 +309,15 @@ directory:
     sports: Sukan
     travel: Pelancongan
     weather: Cuaca
+  categories_more: Semua saluran %category%
+  category_title: 'Senarai Main IPTV M3U %category%: %count% Saluran Langsung Percuma'
+  category_desc: '%count% saluran %category% percuma dari seluruh dunia yang disiarkan secara rasmi oleh penyiar, dalam senarai main M3U yang dikemas kini setiap hari. Tonton dalam Doubo atau pemain IPTV lain.'
+  category_h1: Saluran %category%
+  category_lead: '%count% saluran %category% dari %countries% negara dan wilayah. Salin pautan di bawah untuk mula menonton.'
+  country_col: Negara atau wilayah
 web:
   nav: Versi web
-  page_title: 'Pemain Web: Main Senarai Main M3U dalam Pelayar'
+  page_title: 'Pemain M3U Dalam Talian: Main Senarai Main IPTV dalam Pelayar'
   page_desc: 'Doubo untuk web: buka senarai main M3U / M3U8 dalam pelayar tanpa memasang apa-apa. Layari kumpulan, cari, simpan kegemaran, tukar laluan dan tonton dalam Picture in Picture. Senarai main kekal dalam pelayar anda.'
   playlists: Senarai main
   groups: Kumpulan
@@ -332,9 +339,9 @@ web:
   app_hint_title: Saluran ini lebih baik ditonton dalam aplikasi Doubo
   app_hint_desc: Pelayar mengehadkan sesetengah strim langsung. Aplikasi Doubo memainkannya terus, serta menyokong pancaran ke TV dan main balik latar.
   open_app: Dapatkan aplikasi Doubo
-  shortcuts: 'Pintasan: ↑ ↓ tukar saluran · F skrin penuh · P Picture in Picture · M senyap · / cari'
+  shortcuts: 'Pintasan: / cari · semasa menonton ↑ ↓ tukar saluran · F skrin penuh · P Picture in Picture · M senyap · Esc kembali'
   empty_title: Tonton TV terus dalam pelayar
-  empty_desc: Tambah pautan senarai main M3U anda sendiri, atau mula dengan senarai main percuma daripada direktori saluran.
+  empty_desc: Belum ada saluran di sini yang boleh dimainkan dalam pelayar. Tambah senarai main M3U anda sendiri, atau kembali ke Saluran percuma.
   browse_directory: Layari direktori saluran
   privacy_note: Senarai main disimpan dalam pelayar anda sahaja dan tidak dimuat naik.
   url_label: Pautan senarai main (M3U / M3U8)
@@ -350,3 +357,77 @@ web:
   my_playlist: Senarai main saya
   watch_web: Tonton di web
   try_web: Versi web
+  seo_title: Pemain M3U dalam talian percuma, terus boleh guna
+  seo_intro: 'Doubo versi web ialah pemain M3U / M3U8 dalam talian yang percuma. Tanpa muat turun dan tanpa daftar: tampal pautan senarai main atau import fail, kemudian layari kumpulan, cari dan tonton saluran langsung dalam pelayar komputer atau telefon.'
+  features:
+  - t: Tiada pemasangan
+    d: Berfungsi dalam Chrome, Edge, Safari, Firefox dan pelayar moden lain.
+  - t: Kumpulan dan carian
+    d: Membaca kumpulan dalam senarai main supaya anda cepat menemui saluran walaupun ada ribuan.
+  - t: Tukar laluan secara automatik
+    d: Saluran dengan beberapa pautan strim digabungkan, dan pemain beralih ke pautan seterusnya jika satu tidak bermula.
+  - t: Privasi diutamakan
+    d: Senarai main kekal dalam pelayar anda. Tiada apa-apa dimuat naik atau dikumpul.
+  faq_title: Soalan lazim
+  faq:
+  - q: Adakah pemain web ini percuma? Perlukah akaun?
+    a: Ia percuma sepenuhnya dan tidak memerlukan akaun. Buka halaman, tambah senarai main dan mula menonton.
+  - q: Format senarai main apa yang disokong?
+    a: Senarai main M3U dan M3U8, termasuk senarai IPTV dengan atribut tvg-id, tvg-logo dan group-title. Strim langsung dimainkan melalui HLS (.m3u8).
+  - q: Di mana senarai main saya disimpan?
+    a: Hanya dalam storan setempat pelayar anda. Ia tidak pernah dimuat naik. Jika anda menukar pelayar atau memadam data laman, tambahkannya semula.
+  - q: Mengapa sesetengah saluran lebih baik ditonton dalam aplikasi?
+    a: Atas sebab keselamatan, pelayar mengehadkan sesetengah strim langsung, seperti pautan http atau laluan yang memerlukan pengepala khas. Aplikasi Doubo tiada had ini dan turut menyokong pancaran ke TV serta main balik latar.
+  tool_link: Analisis dan kemas kini senarai main M3U anda
+  free_channels: Saluran percuma
+  all_countries: Semua negara dan wilayah
+  load_more: Tunjuk lebih banyak saluran
+  back: Kembali
+  prev_channel: Saluran sebelumnya
+  next_channel: Saluran seterusnya
+tools:
+  nav: Alat M3U
+  page_title: 'Penganalisis & Pengemas Senarai Main M3U: Kira, Buang Pendua dan Susun Dalam Talian'
+  page_desc: 'Alat dalam talian percuma untuk senarai main M3U / M3U8: kira saluran dan kumpulan, cari pautan pendua, buang pendua, susun mengikut kumpulan dan eksport senarai main yang kemas. Berjalan sepenuhnya dalam pelayar anda; tiada apa-apa dimuat naik.'
+  title: Penganalisis & pengemas senarai main M3U
+  lead: Tampal pautan, import fail atau tampal senarai main. Lihat kandungannya dalam beberapa saat, kemudian eksport salinan yang kemas.
+  input_url: Pautan senarai main
+  input_file: Atau import fail
+  input_text: Atau tampal senarai main
+  analyze: Analisis
+  loading: Memuatkan…
+  need_input: Masukkan pautan, pilih fail atau tampal senarai main.
+  url_blocked: Pautan ini tidak boleh dibaca terus oleh halaman web. Muat turun fail dan importnya.
+  no_channels: Tiada saluran ditemui. Pastikan ini senarai main M3U.
+  stat_entries: Entri
+  stat_channels: Saluran
+  stat_groups: Kumpulan
+  stat_duplicates: Pautan pendua
+  stat_https: Pautan HTTPS
+  stat_logos: Ada logo
+  stat_tvgid: Ada tvg-id
+  stat_multi: Saluran berbilang laluan
+  groups_title: Kumpulan
+  group_col: Kumpulan
+  channels_col: Saluran
+  clean_title: Kemas dan eksport
+  opt_dedupe: Buang pautan pendua
+  opt_sort: Susun mengikut kumpulan dan nama
+  opt_https: Simpan pautan HTTPS sahaja
+  opt_merge: Gabungkan laluan saluran yang sama (semua laluan disimpan)
+  download: Muat turun M3U yang dikemas
+  open_web: Buka dalam pemain web
+  privacy: Semuanya berjalan dalam pelayar anda. Fail anda tidak pernah dimuat naik.
+  seo_title: Apa yang alat ini lakukan
+  seo_points:
+  - Mengira entri, saluran dan kumpulan, serta berapa entri yang ada logo atau tvg-id.
+  - Mencari pautan strim yang sama sekali pendua dan membuangnya dengan satu klik.
+  - Menyusun mengikut kumpulan dan nama saluran, lalu mengeksport fail M3U yang kemas.
+  - Menyimpan pautan HTTPS sahaja, yang boleh dimainkan dalam lebih banyak pelayar dan peranti.
+  faq:
+  - q: Adakah alat ini menyemak sama ada pautan boleh dimainkan?
+    a: Tidak. Ia hanya membaca teks senarai main untuk mengira dan mengemasnya, dan tidak membuka sebarang strim. Untuk menonton, gunakan pemain web atau aplikasi Doubo.
+  - q: Sebesar mana senarai main yang disokong?
+    a: Senarai main dengan puluhan ribu entri diproses dalam beberapa saat, bergantung pada peranti anda.
+  - q: Adakah senarai main saya disimpan?
+    a: Tidak. Semuanya diproses dalam memori pelayar dan dipadam apabila anda menutup halaman.

@@ -16,6 +16,7 @@ nav:
   support: Dukungan
   privacy: Privasi
   download: Unduh
+  tools: Alat M3U
 cta:
   app_store: Unduh di App Store
   testflight: Ikuti beta TestFlight
@@ -308,9 +309,15 @@ directory:
     sports: Olahraga
     travel: Wisata
     weather: Cuaca
+  categories_more: Semua saluran %category%
+  category_title: 'Playlist IPTV M3U %category%: %count% Saluran Live Gratis'
+  category_desc: '%count% saluran %category% gratis dari seluruh dunia yang disiarkan resmi oleh penyiarnya, dalam playlist M3U yang diperbarui setiap hari. Putar di Doubo atau pemutar IPTV lainnya.'
+  category_h1: Saluran %category%
+  category_lead: '%count% saluran %category% dari %countries% negara dan wilayah. Salin tautan di bawah untuk mulai menonton.'
+  country_col: Negara atau wilayah
 web:
   nav: Versi web
-  page_title: 'Pemutar Web: Putar Playlist M3U di Browser'
+  page_title: 'Pemutar M3U Online: Putar Playlist IPTV di Browser'
   page_desc: 'Doubo versi web: buka playlist M3U / M3U8 di browser tanpa instalasi. Jelajahi grup, cari, simpan favorit, ganti jalur, dan tonton dalam Picture in Picture. Playlist tetap tersimpan di browser Anda.'
   playlists: Playlist
   groups: Grup
@@ -332,9 +339,9 @@ web:
   app_hint_title: Saluran ini lebih baik ditonton di aplikasi Doubo
   app_hint_desc: Browser membatasi sebagian siaran langsung. Aplikasi Doubo memutarnya langsung, plus mendukung transmisi ke TV dan pemutaran di latar.
   open_app: Dapatkan aplikasi Doubo
-  shortcuts: 'Pintasan: ↑ ↓ ganti saluran · F layar penuh · P Picture in Picture · M bisukan · / cari'
+  shortcuts: 'Pintasan: / cari · saat menonton ↑ ↓ ganti saluran · F layar penuh · P Picture in Picture · M bisukan · Esc kembali'
   empty_title: Nonton TV langsung di browser
-  empty_desc: Tambahkan tautan playlist M3U milik Anda, atau mulai dengan playlist gratis dari direktori saluran.
+  empty_desc: Belum ada saluran di sini yang bisa diputar di browser. Tambahkan playlist M3U Anda sendiri, atau kembali ke Saluran gratis.
   browse_directory: Jelajahi direktori saluran
   privacy_note: Playlist hanya disimpan di browser Anda dan tidak pernah diunggah.
   url_label: Tautan playlist (M3U / M3U8)
@@ -350,3 +357,77 @@ web:
   my_playlist: Playlist saya
   watch_web: Tonton di web
   try_web: Versi web
+  seo_title: Pemutar M3U online gratis, langsung bisa dipakai
+  seo_intro: 'Doubo versi web adalah pemutar M3U / M3U8 online yang gratis. Tanpa unduhan dan tanpa daftar: tempel tautan playlist atau impor file, lalu jelajahi grup, cari, dan tonton saluran live di browser komputer maupun ponsel.'
+  features:
+  - t: Tanpa instalasi
+    d: Berjalan di Chrome, Edge, Safari, Firefox, dan browser modern lainnya.
+  - t: Grup dan pencarian
+    d: Membaca grup di playlist Anda sehingga saluran mudah ditemukan meski ada ribuan.
+  - t: Ganti jalur otomatis
+    d: Saluran dengan beberapa tautan stream digabung, dan pemutar pindah ke tautan berikutnya bila satu tidak berjalan.
+  - t: Mengutamakan privasi
+    d: Playlist tetap di browser Anda. Tidak ada yang diunggah atau dikumpulkan.
+  faq_title: Pertanyaan umum
+  faq:
+  - q: Apakah pemutar web ini gratis? Perlu akun?
+    a: Sepenuhnya gratis dan tidak perlu akun. Buka halaman, tambahkan playlist, dan mulai menonton.
+  - q: Format playlist apa yang didukung?
+    a: Playlist M3U dan M3U8, termasuk daftar IPTV dengan atribut tvg-id, tvg-logo, dan group-title. Siaran live diputar melalui HLS (.m3u8).
+  - q: Di mana playlist saya disimpan?
+    a: Hanya di penyimpanan lokal browser Anda saat ini, dan tidak pernah diunggah. Jika berganti browser atau menghapus data situs, tambahkan lagi.
+  - q: Mengapa beberapa saluran lebih baik ditonton di aplikasi?
+    a: Demi keamanan, browser membatasi sebagian siaran live, seperti tautan http atau jalur yang memerlukan header khusus. Aplikasi Doubo tidak punya batasan ini dan juga mendukung transmisi ke TV serta pemutaran di latar.
+  tool_link: Analisis dan rapikan playlist M3U Anda
+  free_channels: Saluran gratis
+  all_countries: Semua negara dan wilayah
+  load_more: Tampilkan lebih banyak saluran
+  back: Kembali
+  prev_channel: Saluran sebelumnya
+  next_channel: Saluran berikutnya
+tools:
+  nav: Alat M3U
+  page_title: 'Penganalisis & Perapi Playlist M3U: Hitung, Hapus Duplikat, dan Urutkan Online'
+  page_desc: 'Alat online gratis untuk playlist M3U / M3U8: hitung saluran dan grup, temukan tautan duplikat, hapus duplikat, urutkan per grup, dan ekspor playlist yang rapi. Berjalan sepenuhnya di browser; tidak ada yang diunggah.'
+  title: Penganalisis & perapi playlist M3U
+  lead: Tempel tautan, impor file, atau tempel isi playlist. Lihat isinya dalam hitungan detik, lalu ekspor salinan yang rapi.
+  input_url: Tautan playlist
+  input_file: Atau impor file
+  input_text: Atau tempel isi playlist
+  analyze: Analisis
+  loading: Memuat…
+  need_input: Isi tautan, pilih file, atau tempel playlist.
+  url_blocked: Tautan ini tidak bisa dibaca langsung oleh halaman web. Unduh filenya lalu impor.
+  no_channels: Tidak ada saluran yang ditemukan. Pastikan ini playlist M3U.
+  stat_entries: Entri
+  stat_channels: Saluran
+  stat_groups: Grup
+  stat_duplicates: Tautan duplikat
+  stat_https: Tautan HTTPS
+  stat_logos: Dengan logo
+  stat_tvgid: Dengan tvg-id
+  stat_multi: Saluran multi-jalur
+  groups_title: Grup
+  group_col: Grup
+  channels_col: Saluran
+  clean_title: Rapikan dan ekspor
+  opt_dedupe: Hapus tautan duplikat
+  opt_sort: Urutkan per grup dan nama
+  opt_https: Simpan hanya tautan HTTPS
+  opt_merge: Gabungkan jalur saluran yang sama (semua jalur disimpan)
+  download: Unduh M3U yang dirapikan
+  open_web: Buka di pemutar web
+  privacy: Semua proses berjalan di browser Anda. File tidak pernah diunggah.
+  seo_title: Apa yang dilakukan alat ini
+  seo_points:
+  - Menghitung entri, saluran, dan grup, serta berapa entri yang punya logo atau tvg-id.
+  - Menemukan tautan stream yang persis sama dan menghapusnya dengan satu klik.
+  - Mengurutkan per grup dan nama saluran, lalu mengekspor file M3U yang rapi.
+  - Menyimpan hanya tautan HTTPS, yang bisa diputar di lebih banyak browser dan perangkat.
+  faq:
+  - q: Apakah alat ini memeriksa apakah tautan bisa diputar?
+    a: Tidak. Alat ini hanya membaca teks playlist untuk menghitung dan merapikannya, tanpa membuka stream apa pun. Untuk menonton, gunakan pemutar web atau aplikasi Doubo.
+  - q: Seberapa besar playlist yang didukung?
+    a: Playlist dengan puluhan ribu entri diproses dalam hitungan detik, tergantung perangkat Anda.
+  - q: Apakah playlist saya disimpan?
+    a: Tidak. Semuanya diproses di memori browser dan terhapus saat halaman ditutup.

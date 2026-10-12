@@ -1,0 +1,27 @@
+/* M3U analyzer & cleaner. Uses the design tokens and .card/.btn from /assets/css/main.css. */
+#doubo-tool{display:grid;gap:24px}
+.tl-form{display:grid;gap:14px}
+.tl-form label{display:grid;gap:6px;color:var(--text-2);font-size:14px}
+.tl-form input[type=url],.tl-form textarea{padding:11px 14px;border-radius:var(--r-sm);border:1px solid var(--line-strong);background:var(--bg-2);color:var(--text);font:inherit;font-size:15px;width:100%}
+.tl-form textarea{font-family:var(--font-mono);font-size:12px;margin-top:8px;resize:vertical}
+.tl-form summary{color:var(--text-2);font-size:14px;cursor:pointer}
+.tl-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.tl-msg{color:var(--blue-ink);font-size:14px}
+.tl-note{color:var(--text-3);font-size:13px}
+.tl-result[hidden]{display:none}
+.tl-stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin:0}
+.tl-stats .card{padding:16px 18px}
+.tl-stats dt{color:var(--text-3);font-size:13px}
+.tl-stats dd{margin:4px 0 0;font-size:24px;font-weight:700}
+.tl-stats small{color:var(--text-3);font-size:13px;font-weight:500}
+.tl-cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-top:16px}
+.tl-cols h2{font-size:18px;margin-bottom:12px}
+.tl-groups{max-height:420px;overflow:auto}
+.tl-groups table{width:100%;border-collapse:collapse;font-size:14px}
+.tl-groups th{text-align:left;color:var(--text-3);font-weight:500;padding:6px 0;border-bottom:1px solid var(--line)}
+.tl-groups td{padding:7px 0;border-bottom:1px solid var(--line);color:var(--text-2)}
+.tl-groups td:last-child,.tl-groups th:last-child{text-align:right;font-family:var(--font-mono)}
+.tl-clean{display:grid;gap:10px;align-content:start}
+.tl-clean label{display:flex;gap:8px;align-items:center;color:var(--text-2);font-size:15px}
+.tl-out{color:var(--text-3);font:13px/1.4 var(--font-mono)}
+@media (max-width:719.98px){.tl-cols{grid-template-columns:1fr}}

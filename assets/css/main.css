@@ -389,3 +389,8 @@ html.js.nav-open .site-header{background:rgba(5,7,15,.96);border-bottom-color:va
 .dir-policy-links{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:12px}
 .page-hero .eyebrow a{color:inherit;text-underline-offset:4px}
 .dir-web{justify-self:start}.dir-web .icon{width:16px;height:16px}
+.tool-about h2,.web-about h2{margin:40px 0 16px;font-size:var(--fs-h3-lg)}
+.tool-about h2:first-child{margin-top:0}
+.tool-points{padding-left:1.2em;display:grid;gap:8px;color:var(--text-2)}
+.web-links{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:24px}
+.dir-row a.dir-name{color:var(--text);text-decoration:none}.dir-row a.dir-name:hover{color:var(--teal)}.dir-channels a.badge{text-decoration:none}

@@ -14,6 +14,9 @@
   <meta name="theme-color" content="#05070F">
   <meta name="color-scheme" content="dark">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
+  {%- if page.noindex %}
+  <meta name="robots" content="noindex,follow">
+  {%- endif %}
   {%- unless page.ref == "404" %}
   {%- for l in site.languages %}
   {%- if l == site.default_lang %}{% assign l_path = "/" | append: page.path_key %}{% else %}{% assign l_path = "/" | append: l | append: "/" | append: page.path_key %}{% endif %}
@@ -85,6 +88,7 @@
         <h2>{{ t.footer.product }}</h2>
         <a href="{{ home_url }}#features">{{ t.nav.features }}</a>
         <a href="{{ lang_prefix | append: '/web/' | relative_url }}">{{ t.nav.web }}</a>
+        <a href="{{ lang_prefix | append: '/tools/m3u/' | relative_url }}">{{ t.nav.tools }}</a>
         <a href="{{ lang_prefix | append: '/roadmap/' | relative_url }}">{{ t.nav.roadmap }}</a>
         <a href="{{ home_url }}#download">{{ t.nav.download }}</a>
       </div>

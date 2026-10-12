@@ -5,6 +5,9 @@ export interface WebConfig {
   lang: string;
   appUrl: string;        // download section of the localized home page
   directoryUrl: string;  // localized channel directory
+  freePlaylistUrl: string; // the iptv-playlists index (all free channels)
+  playableUrl: string;   // hashes of streams verified to play on doubo.tv (scripts/web_playable.py)
+  categories: Record<string, string>; // localized category names by id
   strings: Record<string, string>;
 }
 
@@ -15,7 +18,15 @@ declare global {
   }
 }
 
-export const config: WebConfig = window.DOUBO_WEB ?? { lang: "en", appUrl: "/", directoryUrl: "/playlists/", strings: {} };
+export const config: WebConfig = window.DOUBO_WEB ?? {
+  lang: "en",
+  appUrl: "/",
+  directoryUrl: "/playlists/",
+  freePlaylistUrl: "https://cdn.jsdelivr.net/gh/streamline-iptv/iptv-playlists@dist/index.m3u",
+  playableUrl: "/web/playable.json",
+  categories: {},
+  strings: {},
+};
 
 export function t(key: string, vars: Record<string, string | number> = {}): string {
   let s = config.strings[key] ?? key;

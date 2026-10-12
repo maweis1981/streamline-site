@@ -84,17 +84,20 @@ Once DNS resolves, check **Enforce HTTPS** under Settings → Pages. To prevent 
 
 To move to a different domain, update `CNAME` and `url`. To go back to `maweis1981.github.io/streamline-site/`, delete `CNAME` and set `baseurl: "/streamline-site"`.
 
-## Web player
+## Web player and tools
 
-`/web/` (and `/<lang>/web/`) is a browser version of Doubo, built from `web-app/` (TypeScript + Vite, with hls.js bundled, so there are no external CDNs).
+`/web/` (and `/<lang>/web/`) is a browser version of Doubo; `/tools/m3u/` is a free M3U analyzer and cleaner. Both are built from `web-app/` (TypeScript + Vite, with hls.js bundled, so there are no external CDNs).
 
-- `web-app/src/model.ts` holds the domain model (playlist, channel, route), `m3u.ts` the parser, `player.ts` the playback logic, and `main.ts` the interface.
-- UI strings live in the `web:` block of each `_data/locales/<lang>.yml`; the `webapp` layout passes them to the app as `window.DOUBO_WEB`.
-- Playlists are stored in the visitor's browser (IndexedDB) and are never uploaded.
-- When a route will not play, the player moves to the next one; when none plays, it suggests the app instead of showing an error.
-- The channel directory's country pages link to `/web/?add=<playlist url>&name=<label>`, which imports that playlist on first visit.
+- `web-app/src/model.ts` holds the domain model (playlist, channel, route), `m3u.ts` the parser, `preview.ts` the muted preview wall, `player.ts` playback, `main.ts` the web player and `tool.ts` the analyzer.
+- The web player opens on a wall of free channels from the directory. Only tiles on screen play, muted, a few at a time; clicking one opens it with sound and stops the rest. Channels that cannot play in a browser are never shown:
+  - `scripts/web_playable.py` runs at deploy time, checks every directory stream the way a browser on doubo.tv would (HTTPS, CORS on playlist and segment, no HEVC, real media) and writes `web/playable.json` with FNV-1a hashes of the playable URLs, so the site itself carries no stream links;
+  - routes a browser cannot open (http on an https page, custom headers) are filtered out;
+  - a tile whose preview does not start is removed and remembered for 12 hours.
+- Visitors can add their own playlists (link, file or paste); they are stored in the browser (IndexedDB) and never uploaded.
+- UI strings live in the `web:` and `tools:` blocks of each `_data/locales/<lang>.yml` and reach the scripts as `window.DOUBO_WEB`.
+- Directory country pages link to `/web/?country=<code>`.
 
-The deploy workflow runs `npm ci`, `npm test` and `npm run build` in `web-app/` before Jekyll, writing `assets/web/app.js`, `app.css` and the lazily loaded `hls.js`. To work on it locally:
+The deploy workflow runs `npm ci`, `npm test` and `npm run build` in `web-app/` before Jekyll, writing `assets/web/`. Locally:
 
 ```sh
 cd web-app && npm install && npm test && npm run build && cd ..

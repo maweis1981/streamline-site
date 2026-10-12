@@ -16,6 +16,7 @@ nav:
   support: Hỗ trợ
   privacy: Quyền riêng tư
   download: Tải về
+  tools: Công cụ M3U
 cta:
   app_store: Tải về trên App Store
   testflight: Tham gia thử nghiệm TestFlight
@@ -308,9 +309,15 @@ directory:
     sports: Thể thao
     travel: Du lịch
     weather: Thời tiết
+  categories_more: Tất cả kênh %category%
+  category_title: 'Danh sách phát IPTV M3U %category%: %count% kênh trực tiếp miễn phí'
+  category_desc: '%count% kênh %category% miễn phí trên toàn thế giới do chính các đài phát sóng công khai, trong danh sách phát M3U cập nhật hằng ngày. Xem bằng Doubo hoặc trình phát IPTV khác.'
+  category_h1: Kênh %category%
+  category_lead: '%count% kênh %category% từ %countries% quốc gia và vùng lãnh thổ. Sao chép liên kết bên dưới để bắt đầu xem.'
+  country_col: Quốc gia hoặc vùng
 web:
   nav: Bản web
-  page_title: 'Trình phát web: Phát danh sách M3U ngay trên trình duyệt'
+  page_title: 'Trình phát M3U trực tuyến: Phát danh sách IPTV ngay trên trình duyệt'
   page_desc: 'Doubo bản web: mở danh sách phát M3U / M3U8 ngay trên trình duyệt, không cần cài đặt. Duyệt theo nhóm, tìm kiếm, lưu kênh yêu thích, đổi luồng và xem ở chế độ hình trong hình. Danh sách phát chỉ lưu trong trình duyệt của bạn.'
   playlists: Danh sách phát
   groups: Nhóm
@@ -332,9 +339,9 @@ web:
   app_hint_title: Kênh này nên xem trên ứng dụng Doubo
   app_hint_desc: Trình duyệt hạn chế một số luồng trực tiếp. Ứng dụng Doubo phát trực tiếp được, kèm truyền lên TV và phát nền.
   open_app: Tải ứng dụng Doubo
-  shortcuts: 'Phím tắt: ↑ ↓ đổi kênh · F toàn màn hình · P hình trong hình · M tắt tiếng · / tìm kiếm'
+  shortcuts: 'Phím tắt: / tìm kiếm · khi xem ↑ ↓ đổi kênh · F toàn màn hình · P hình trong hình · M tắt tiếng · Esc quay lại'
   empty_title: Xem TV ngay trên trình duyệt
-  empty_desc: Thêm liên kết danh sách phát M3U của bạn, hoặc bắt đầu với một danh sách phát miễn phí từ danh bạ kênh.
+  empty_desc: Chưa có kênh nào ở đây phát được trên trình duyệt. Hãy thêm danh sách phát M3U của bạn, hoặc quay lại Kênh miễn phí.
   browse_directory: Xem danh bạ kênh
   privacy_note: Danh sách phát chỉ lưu trong trình duyệt của bạn và không bao giờ được tải lên.
   url_label: Liên kết danh sách phát (M3U / M3U8)
@@ -350,3 +357,77 @@ web:
   my_playlist: Danh sách phát của tôi
   watch_web: Xem trên web
   try_web: Bản web
+  seo_title: Trình phát M3U trực tuyến miễn phí, mở là dùng
+  seo_intro: 'Doubo bản web là trình phát M3U / M3U8 trực tuyến miễn phí. Không cần tải về, không cần đăng ký: dán liên kết danh sách phát hoặc nhập tệp, rồi duyệt theo nhóm, tìm kiếm và xem kênh trực tiếp trên trình duyệt máy tính hoặc điện thoại.'
+  features:
+  - t: Không cần cài đặt
+    d: Chạy trên Chrome, Edge, Safari, Firefox và các trình duyệt hiện đại khác.
+  - t: Nhóm và tìm kiếm
+    d: Đọc các nhóm trong danh sách phát để bạn tìm kênh nhanh dù có hàng nghìn kênh.
+  - t: Tự động đổi luồng
+    d: Kênh có nhiều liên kết được gộp lại, và trình phát tự chuyển sang liên kết tiếp theo khi một liên kết không chạy.
+  - t: Ưu tiên quyền riêng tư
+    d: Danh sách phát chỉ nằm trong trình duyệt của bạn. Không có gì được tải lên hay thu thập.
+  faq_title: Câu hỏi thường gặp
+  faq:
+  - q: Trình phát web có miễn phí không? Có cần tài khoản không?
+    a: Hoàn toàn miễn phí và không cần tài khoản. Mở trang, thêm danh sách phát và bắt đầu xem.
+  - q: Hỗ trợ định dạng danh sách phát nào?
+    a: Danh sách phát M3U và M3U8, kể cả danh sách IPTV có thuộc tính tvg-id, tvg-logo và group-title. Luồng trực tiếp được phát qua HLS (.m3u8).
+  - q: Danh sách phát của tôi được lưu ở đâu?
+    a: Chỉ trong bộ nhớ cục bộ của trình duyệt hiện tại và không bao giờ được tải lên. Nếu đổi trình duyệt hoặc xóa dữ liệu trang, hãy thêm lại.
+  - q: Vì sao một số kênh nên xem trên ứng dụng?
+    a: Vì lý do bảo mật, trình duyệt hạn chế một số luồng trực tiếp, chẳng hạn liên kết http hoặc luồng cần tiêu đề yêu cầu đặc biệt. Ứng dụng Doubo không bị giới hạn này và còn hỗ trợ truyền lên TV, phát nền.
+  tool_link: Phân tích và sắp xếp danh sách M3U của bạn
+  free_channels: Kênh miễn phí
+  all_countries: Tất cả quốc gia và vùng
+  load_more: Hiện thêm kênh
+  back: Quay lại
+  prev_channel: Kênh trước
+  next_channel: Kênh tiếp theo
+tools:
+  nav: Công cụ M3U
+  page_title: 'Công cụ phân tích & dọn dẹp danh sách M3U: Đếm, lọc trùng và sắp xếp trực tuyến'
+  page_desc: 'Công cụ trực tuyến miễn phí cho danh sách phát M3U / M3U8: đếm kênh và nhóm, tìm liên kết trùng, lọc trùng, sắp xếp theo nhóm và xuất danh sách gọn gàng. Chạy hoàn toàn trong trình duyệt, không tải lên gì cả.'
+  title: Phân tích & dọn dẹp danh sách M3U
+  lead: Dán liên kết, nhập tệp hoặc dán nội dung danh sách phát. Xem bên trong có gì chỉ trong vài giây, rồi xuất bản sao gọn gàng.
+  input_url: Liên kết danh sách phát
+  input_file: Hoặc nhập tệp
+  input_text: Hoặc dán nội dung
+  analyze: Phân tích
+  loading: Đang tải…
+  need_input: Nhập liên kết, chọn tệp hoặc dán danh sách phát.
+  url_blocked: Trang web không thể đọc trực tiếp liên kết này. Hãy tải tệp về rồi nhập.
+  no_channels: Không tìm thấy kênh nào. Hãy kiểm tra đây có phải danh sách phát M3U.
+  stat_entries: Mục
+  stat_channels: Kênh
+  stat_groups: Nhóm
+  stat_duplicates: Liên kết trùng
+  stat_https: Liên kết HTTPS
+  stat_logos: Có logo
+  stat_tvgid: Có tvg-id
+  stat_multi: Kênh nhiều luồng
+  groups_title: Nhóm
+  group_col: Nhóm
+  channels_col: Số kênh
+  clean_title: Dọn dẹp và xuất
+  opt_dedupe: Xóa liên kết trùng
+  opt_sort: Sắp xếp theo nhóm và tên
+  opt_https: Chỉ giữ liên kết HTTPS
+  opt_merge: Gộp các luồng của cùng một kênh (giữ tất cả luồng)
+  download: Tải M3U đã dọn dẹp
+  open_web: Mở trong trình phát web
+  privacy: Mọi xử lý đều diễn ra trong trình duyệt. Tệp của bạn không bao giờ được tải lên.
+  seo_title: Công cụ này làm được gì
+  seo_points:
+  - Đếm số mục, kênh, nhóm và tỷ lệ mục có logo hoặc tvg-id.
+  - Tìm các liên kết trùng hoàn toàn và xóa chỉ với một cú nhấp.
+  - Sắp xếp theo nhóm và tên kênh, xuất tệp M3U gọn gàng.
+  - Chỉ giữ liên kết HTTPS, phát được trên nhiều trình duyệt và thiết bị hơn.
+  faq:
+  - q: Công cụ có kiểm tra liên kết phát được hay không?
+    a: Không. Công cụ chỉ đọc nội dung văn bản của danh sách phát để thống kê và sắp xếp, không mở bất kỳ luồng nào. Muốn xem, hãy dùng trình phát web hoặc ứng dụng Doubo.
+  - q: Danh sách phát lớn đến đâu?
+    a: Danh sách hàng chục nghìn mục được xử lý trong vài giây, tùy vào thiết bị của bạn.
+  - q: Danh sách phát của tôi có được lưu không?
+    a: Không. Mọi thứ được xử lý trong bộ nhớ trình duyệt và bị xóa khi bạn đóng trang.

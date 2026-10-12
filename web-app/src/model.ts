@@ -12,6 +12,7 @@ export interface Channel {
   key: string;            // stable within a playlist: tvg-id, else the normalized name
   name: string;
   group: string;
+  country?: string;       // ISO 3166 code from tvg-country, when the playlist has one
   logo?: string;
   routes: Route[];
 }

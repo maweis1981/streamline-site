@@ -59,6 +59,10 @@ jobs:
           if curl -fsSL --retry 3 -o "$RUNNER_TEMP/index.json" https://raw.githubusercontent.com/streamline-iptv/iptv-playlists/dist/index.json; then
             pip install -q babel==2.17.0 pyyaml==6.0.2
             python scripts/directory.py "$RUNNER_TEMP/index.json"
+            # Which free streams a browser on doubo.tv can play; the web player shows only those.
+            if curl -fsSL --retry 3 -o "$RUNNER_TEMP/index.m3u" https://raw.githubusercontent.com/streamline-iptv/iptv-playlists/dist/index.m3u; then
+              python scripts/web_playable.py "$RUNNER_TEMP/index.m3u" web/playable.json || echo "::warning::web playability check failed"
+            fi
           else
             echo "::warning::Channel directory index not available; building without it"
           fi

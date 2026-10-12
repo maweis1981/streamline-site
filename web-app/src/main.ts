@@ -1,79 +1,95 @@
 import "./styles.css";
+import { fnv1a } from "./hash";
 import { config, t, track } from "./i18n";
 import { groupsOf, parseM3U } from "./m3u";
 import type { Channel, Playlist, PlaylistSource } from "./model";
 import { favoriteId } from "./model";
 import { Player } from "./player";
+import { PreviewWall, webRoutes } from "./preview";
 import { deletePlaylist, loadPlaylists, readPref, savePlaylist, writePref } from "./store";
 
-const ALL = "__doubo_all__"; // sentinels must survive HTML attributes (no control characters)
-const FAVORITES = "__doubo_favorites__";
-const MAX_ROWS = 400; // the list renders the first matches; search narrows the rest
+// Sources shown as chips: the free channel directory, favorites across sources, then the visitor's playlists.
+const FREE = "free";
+const FAVORITES = "favorites";
+const PAGE_SIZE = 48;
+const DEAD_TTL_MS = 12 * 60 * 60 * 1000;
 
 interface State {
+  free: Playlist | null;
   playlists: Playlist[];
-  playlistId: string | null;
-  group: string;
+  source: string;
+  group: string;      // "" = all
+  country: string;    // "" = all
   query: string;
   favorites: Set<string>;
-  playing: Channel | null;
+  dead: Record<string, number>;   // favoriteId -> time it was found unplayable here
+  shown: number;
+  playing: { playlistId: string; channel: Channel } | null;
 }
 
 const state: State = {
+  free: null,
   playlists: [],
-  playlistId: readPref<string | null>("playlist", null),
-  group: ALL,
+  source: readPref<string>("source", FREE),
+  group: "",
+  country: "",
   query: "",
   favorites: new Set(readPref<string[]>("favorites", [])),
+  dead: pruneDead(readPref<Record<string, number>>("dead", {})),
+  shown: PAGE_SIZE,
   playing: null,
 };
+const liveRoute = new Map<string, number>(); // favoriteId -> route that played in the preview
+
+function pruneDead(dead: Record<string, number>): Record<string, number> {
+  const now = Date.now();
+  return Object.fromEntries(Object.entries(dead).filter(([, at]) => now - at < DEAD_TTL_MS));
+}
 
 const root = document.getElementById("doubo-web")!;
 root.innerHTML = `
   <div class="dw">
-    <aside class="dw-side">
-      <div class="dw-side-head">
-        <select class="dw-playlist" aria-label="${t("playlists")}"></select>
-        <button type="button" class="dw-icon-btn" data-action="add" title="${t("add_playlist")}" aria-label="${t("add_playlist")}">+</button>
+    <div class="dw-bar">
+      <div class="dw-sources" role="tablist" aria-label="${t("playlists")}"></div>
+      <div class="dw-filters">
+        <select class="dw-country" aria-label="${t("all_countries")}" hidden></select>
+        <input class="dw-search" type="search" placeholder="${t("search")}" aria-label="${t("search")}">
+        <button type="button" class="dw-link" data-action="remove" hidden>${t("remove_playlist")}</button>
       </div>
-      <nav class="dw-groups" aria-label="${t("groups")}"></nav>
-      <button type="button" class="dw-link dw-remove" data-action="remove">${t("remove_playlist")}</button>
-    </aside>
-    <section class="dw-list">
-      <input class="dw-search" type="search" placeholder="${t("search")}" aria-label="${t("search")}">
-      <p class="dw-count"></p>
-      <ul class="dw-channels" role="listbox" aria-label="${t("channels")}"></ul>
-    </section>
-    <section class="dw-stage">
-      <div class="dw-video-wrap">
-        <video class="dw-video" controls playsinline></video>
-        <div class="dw-overlay dw-placeholder"><p>${t("select_channel")}</p></div>
-        <div class="dw-overlay dw-app-hint" hidden>
-          <h2>${t("app_hint_title")}</h2>
-          <p>${t("app_hint_desc")}</p>
-          <a class="dw-btn dw-btn-primary" href="${config.appUrl}" data-track="cta_click" data-track-target="download_anchor" data-track-location="web_player">${t("open_app")}</a>
-        </div>
-      </div>
-      <div class="dw-now">
-        <div class="dw-now-title"><h1 class="dw-now-name"></h1><span class="dw-now-group"></span></div>
-        <div class="dw-now-actions">
-          <button type="button" class="dw-btn" data-action="favorite" hidden></button>
-          <button type="button" class="dw-btn" data-action="pip" hidden>${t("pip")}</button>
-          <button type="button" class="dw-btn" data-action="fullscreen" hidden>${t("fullscreen")}</button>
-        </div>
-      </div>
-      <div class="dw-routes" role="group" aria-label="${t("routes")}"></div>
-      <p class="dw-hint">${t("shortcuts")}</p>
-    </section>
+      <div class="dw-groups" aria-label="${t("groups")}"></div>
+    </div>
+    <p class="dw-count" aria-live="polite"></p>
+    <ul class="dw-grid"></ul>
+    <div class="dw-more"><button type="button" class="dw-btn" data-action="more" hidden>${t("load_more")}</button></div>
     <div class="dw-empty" hidden>
       <h2>${t("empty_title")}</h2>
       <p>${t("empty_desc")}</p>
-      <div class="dw-empty-actions">
-        <button type="button" class="dw-btn dw-btn-primary" data-action="add">${t("add_playlist")}</button>
-        <a class="dw-btn" href="${config.directoryUrl}">${t("browse_directory")}</a>
-      </div>
-      <p class="dw-note">${t("privacy_note")}</p>
+      <div class="dw-empty-actions"><button type="button" class="dw-btn dw-btn-primary" data-action="add">${t("add_playlist")}</button></div>
     </div>
+    <p class="dw-note">${t("privacy_note")}</p>
+  </div>
+  <div class="dw-theater" hidden role="dialog" aria-modal="true">
+    <div class="dw-theater-bar">
+      <button type="button" class="dw-btn" data-action="close">← ${t("back")}</button>
+      <div class="dw-now-title"><h1 class="dw-now-name"></h1><span class="dw-now-group"></span></div>
+      <div class="dw-now-actions">
+        <button type="button" class="dw-btn" data-action="prev" aria-label="${t("prev_channel")}">↑</button>
+        <button type="button" class="dw-btn" data-action="next" aria-label="${t("next_channel")}">↓</button>
+        <button type="button" class="dw-btn" data-action="favorite"></button>
+        <button type="button" class="dw-btn" data-action="pip">${t("pip")}</button>
+        <button type="button" class="dw-btn" data-action="fullscreen">${t("fullscreen")}</button>
+      </div>
+    </div>
+    <div class="dw-video-wrap">
+      <video class="dw-video" controls playsinline autoplay></video>
+      <div class="dw-overlay dw-app-hint" hidden>
+        <h2>${t("app_hint_title")}</h2>
+        <p>${t("app_hint_desc")}</p>
+        <a class="dw-btn dw-btn-primary" href="${config.appUrl}" data-track="cta_click" data-track-target="download_anchor" data-track-location="web_player">${t("open_app")}</a>
+      </div>
+    </div>
+    <div class="dw-routes" role="group" aria-label="${t("routes")}"></div>
+    <p class="dw-hint">${t("shortcuts")}</p>
   </div>
   <dialog class="dw-dialog">
     <form method="dialog" class="dw-form">
@@ -93,163 +109,272 @@ root.innerHTML = `
 
 const $ = <T extends Element>(sel: string) => root.querySelector<T>(sel)!;
 const els = {
-  shell: $<HTMLDivElement>(".dw"),
-  playlist: $<HTMLSelectElement>(".dw-playlist"),
-  groups: $<HTMLElement>(".dw-groups"),
+  sources: $<HTMLDivElement>(".dw-sources"),
+  country: $<HTMLSelectElement>(".dw-country"),
   search: $<HTMLInputElement>(".dw-search"),
+  remove: $<HTMLButtonElement>('[data-action="remove"]'),
+  groups: $<HTMLDivElement>(".dw-groups"),
   count: $<HTMLParagraphElement>(".dw-count"),
-  channels: $<HTMLUListElement>(".dw-channels"),
+  grid: $<HTMLUListElement>(".dw-grid"),
+  more: $<HTMLButtonElement>('[data-action="more"]'),
+  empty: $<HTMLDivElement>(".dw-empty"),
+  theater: $<HTMLDivElement>(".dw-theater"),
   video: $<HTMLVideoElement>(".dw-video"),
-  placeholder: $<HTMLDivElement>(".dw-placeholder"),
   appHint: $<HTMLDivElement>(".dw-app-hint"),
   nowName: $<HTMLHeadingElement>(".dw-now-name"),
   nowGroup: $<HTMLSpanElement>(".dw-now-group"),
   favorite: $<HTMLButtonElement>('[data-action="favorite"]'),
   pip: $<HTMLButtonElement>('[data-action="pip"]'),
-  fullscreen: $<HTMLButtonElement>('[data-action="fullscreen"]'),
   routes: $<HTMLDivElement>(".dw-routes"),
-  empty: $<HTMLDivElement>(".dw-empty"),
   dialog: $<HTMLDialogElement>(".dw-dialog"),
   form: $<HTMLFormElement>(".dw-form"),
   formMsg: $<HTMLParagraphElement>(".dw-form-msg"),
 };
 
+const smallScreen = matchMedia("(max-width: 639.98px)").matches;
+const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData === true;
+const wall = new PreviewWall(
+  saveData ? 0 : smallScreen ? 4 : 9,
+  (channel, routeIndex) => liveRoute.set(tileId(channel), routeIndex),
+  (channel, el) => hide(tileOwner(el), channel, el),
+);
+
 const player = new Player(
   els.video,
   (index) => renderRoutes(index),
   () => {
+    // Nothing plays in this browser: offer the app, and keep the channel off the wall from now on.
     els.appHint.hidden = false;
+    if (state.playing) markDead(state.playing.playlistId, state.playing.channel);
     track("web_play_unavailable");
   },
 );
 
 // ---------------------------------------------------------------- helpers
 
+const regionNames = (() => {
+  try {
+    return new Intl.DisplayNames([document.documentElement.lang || config.lang], { type: "region" });
+  } catch {
+    return null;
+  }
+})();
+const countryName = (code: string) => {
+  try {
+    return regionNames?.of(code) ?? code;
+  } catch {
+    return code;
+  }
+};
+const categoryName = (group: string) => config.categories?.[group.toLowerCase()] ?? group;
+
 function esc(s: string): string {
   return s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
 }
 
-function current(): Playlist | undefined {
-  return state.playlists.find((p) => p.id === state.playlistId);
+function sourcePlaylists(): Playlist[] {
+  return [...(state.free ? [state.free] : []), ...state.playlists];
 }
 
-function visibleChannels(p: Playlist): Channel[] {
+function playlistById(id: string): Playlist | undefined {
+  return sourcePlaylists().find((p) => p.id === id);
+}
+
+let renderedOwners = new WeakMap<HTMLElement, string>();
+function tileOwner(el: HTMLElement): string {
+  return renderedOwners.get(el) ?? state.source;
+}
+
+function tileId(channel: Channel): string {
+  for (const p of sourcePlaylists()) if (p.channels.includes(channel)) return favoriteId(p.id, channel.key);
+  return channel.key;
+}
+
+/** Channels for the current source and filters, with everything unplayable left out. */
+function visible(): { playlistId: string; channel: Channel }[] {
+  const items: { playlistId: string; channel: Channel }[] = [];
+  const pools = state.source === FAVORITES ? sourcePlaylists() : sourcePlaylists().filter((p) => p.id === state.source);
   const q = state.query.trim().toLowerCase();
-  return p.channels.filter((c) => {
-    if (state.group === FAVORITES && !state.favorites.has(favoriteId(p.id, c.key))) return false;
-    if (state.group !== ALL && state.group !== FAVORITES && c.group !== state.group) return false;
-    return !q || c.name.toLowerCase().includes(q) || c.group.toLowerCase().includes(q);
-  });
+  for (const p of pools) {
+    for (const c of p.channels) {
+      const id = favoriteId(p.id, c.key);
+      if (state.dead[id] || webRoutes(c).length === 0) continue;
+      if (state.source === FAVORITES && !state.favorites.has(id)) continue;
+      if (state.group && c.group !== state.group) continue;
+      if (state.country && c.country !== state.country) continue;
+      if (q && !c.name.toLowerCase().includes(q) && !categoryName(c.group).toLowerCase().includes(q)) continue;
+      items.push({ playlistId: p.id, channel: c });
+    }
+  }
+  return items;
 }
 
 // ---------------------------------------------------------------- rendering
 
-function render(): void {
-  const p = current();
-  els.empty.hidden = !!p;
-  els.shell.classList.toggle("is-empty", !p);
-  els.playlist.innerHTML = state.playlists
-    .map((pl) => `<option value="${esc(pl.id)}"${pl.id === state.playlistId ? " selected" : ""}>${esc(pl.name)}</option>`)
-    .join("");
-  if (!p) return;
+function renderBar(): void {
+  const chip = (id: string, label: string) =>
+    `<button type="button" role="tab" data-source="${esc(id)}" aria-selected="${state.source === id}">${esc(label)}</button>`;
+  els.sources.innerHTML =
+    chip(FREE, t("free_channels")) +
+    chip(FAVORITES, `★ ${t("favorites")}`) +
+    state.playlists.map((p) => chip(p.id, p.name)).join("") +
+    `<button type="button" class="dw-add" data-action="add">+ ${t("add_playlist")}</button>`;
+  els.remove.hidden = !state.playlists.some((p) => p.id === state.source);
 
-  const groups = groupsOf(p.channels);
-  const favCount = p.channels.filter((c) => state.favorites.has(favoriteId(p.id, c.key))).length;
-  const groupItem = (id: string, label: string, n: number) =>
-    `<button type="button" data-group="${esc(id)}"${state.group === id ? ' aria-current="true"' : ""}><span>${esc(label)}</span><span class="dw-n">${n}</span></button>`;
-  els.groups.innerHTML =
-    groupItem(ALL, t("all"), p.channels.length) +
-    groupItem(FAVORITES, t("favorites"), favCount) +
-    groups.map((g) => groupItem(g, g, p.channels.filter((c) => c.group === g).length)).join("");
-  renderChannels();
+  const pools = state.source === FAVORITES ? sourcePlaylists() : sourcePlaylists().filter((p) => p.id === state.source);
+  const channels = pools.flatMap((p) => p.channels.filter((c) => !state.dead[favoriteId(p.id, c.key)] && webRoutes(c).length));
+  const countries = [...new Set(channels.map((c) => c.country).filter(Boolean) as string[])]
+    .map((code) => ({ code, name: countryName(code) }))
+    .sort((a, b) => a.name.localeCompare(b.name));
+  els.country.hidden = countries.length < 2;
+  els.country.innerHTML =
+    `<option value="">${esc(t("all_countries"))}</option>` +
+    countries.map((c) => `<option value="${c.code}"${c.code === state.country ? " selected" : ""}>${esc(c.name)}</option>`).join("");
+  const groups = groupsOf(channels.filter((c) => !state.country || c.country === state.country));
+  els.groups.innerHTML = groups.length < 2 ? "" :
+    `<button type="button" data-group="" aria-pressed="${state.group === ""}">${esc(t("all"))}</button>` +
+    groups.map((g) => `<button type="button" data-group="${esc(g)}" aria-pressed="${state.group === g}">${esc(categoryName(g))}</button>`).join("");
 }
 
-function renderChannels(): void {
-  const p = current();
-  if (!p) return;
-  const list = visibleChannels(p);
-  els.count.textContent = t("channels_count", { count: list.length });
-  els.channels.innerHTML = list
-    .slice(0, MAX_ROWS)
-    .map((c) => {
-      const active = state.playing?.key === c.key;
-      const fav = state.favorites.has(favoriteId(p.id, c.key));
-      const logo = c.logo
-        ? `<img src="${esc(c.logo)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`
-        : "";
-      return `<li role="option" tabindex="-1" data-key="${esc(c.key)}"${active ? ' aria-selected="true"' : ""}>
-        <span class="dw-logo">${logo}<b>${esc(c.name.slice(0, 1))}</b></span>
-        <span class="dw-ch-name">${esc(c.name)}</span>${fav ? '<span class="dw-star" aria-hidden="true">★</span>' : ""}</li>`;
-    })
-    .join("");
+function renderGrid(): void {
+  wall.clear();
+  renderedOwners = new WeakMap();
+  const items = visible();
+  els.count.textContent = state.free || state.playlists.length ? t("channels_count", { count: items.length }) : t("loading");
+  els.empty.hidden = items.length > 0 || (state.source === FREE && !state.free);
+  els.grid.innerHTML = "";
+  appendTiles(items, 0, Math.min(state.shown, items.length));
+  els.more.hidden = items.length <= state.shown;
 }
 
-function renderNowPlaying(): void {
-  const p = current();
-  const c = state.playing;
-  els.placeholder.hidden = !!c;
-  els.nowName.textContent = c?.name ?? "";
-  els.nowGroup.textContent = c?.group ?? "";
-  els.favorite.hidden = !c;
-  els.pip.hidden = !c || !document.pictureInPictureEnabled;
-  els.fullscreen.hidden = !c;
-  if (c && p) {
-    const fav = state.favorites.has(favoriteId(p.id, c.key));
-    els.favorite.textContent = fav ? `★ ${t("favorite_remove")}` : `☆ ${t("favorite_add")}`;
-    els.favorite.setAttribute("aria-pressed", String(fav));
+function appendTiles(items: { playlistId: string; channel: Channel }[], from: number, to: number): void {
+  const frag = document.createDocumentFragment();
+  for (const { playlistId, channel } of items.slice(from, to)) {
+    const li = document.createElement("li");
+    li.className = "dw-tile";
+    const fav = state.favorites.has(favoriteId(playlistId, channel.key));
+    li.innerHTML = `<button type="button" class="dw-tile-btn" data-key="${esc(channel.key)}" data-owner="${esc(playlistId)}">
+      <span class="dw-tile-media">
+        <span class="dw-tile-logo">${channel.logo ? `<img src="${esc(channel.logo)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">` : ""}<b>${esc(channel.name.slice(0, 2))}</b></span>
+        <span class="dw-live" aria-hidden="true">LIVE</span>
+      </span>
+      <span class="dw-tile-name">${fav ? "★ " : ""}${esc(channel.name)}</span>
+      <span class="dw-tile-meta">${esc([channel.country ? countryName(channel.country) : "", categoryName(channel.group)].filter(Boolean).join(" · "))}</span>
+    </button>`;
+    renderedOwners.set(li, playlistId);
+    frag.appendChild(li);
+    wall.add(li, channel);
   }
+  els.grid.appendChild(frag);
+}
+
+function render(): void {
+  state.shown = PAGE_SIZE;
+  renderBar();
+  renderGrid();
+}
+
+function renderTheater(): void {
+  const p = state.playing;
+  if (!p) return;
+  const fav = state.favorites.has(favoriteId(p.playlistId, p.channel.key));
+  els.nowName.textContent = p.channel.name;
+  els.nowGroup.textContent = [p.channel.country ? countryName(p.channel.country) : "", categoryName(p.channel.group)].filter(Boolean).join(" · ");
+  els.favorite.textContent = fav ? `★ ${t("favorite_remove")}` : `☆ ${t("favorite_add")}`;
+  els.favorite.setAttribute("aria-pressed", String(fav));
+  els.pip.hidden = !document.pictureInPictureEnabled;
 }
 
 function renderRoutes(activeIndex: number): void {
-  const c = state.playing;
-  if (!c || c.routes.length < 2) {
-    els.routes.innerHTML = "";
-    return;
-  }
-  els.routes.innerHTML = c.routes
-    .map((r, i) => `<button type="button" data-route="${i}"${i === activeIndex ? ' aria-pressed="true"' : ""}>${esc(t("route", { n: i + 1 }))}${r.label && r.label !== String(i + 1) ? ` · ${esc(r.label)}` : ""}</button>`)
+  const c = state.playing?.channel;
+  const usable = c ? webRoutes(c) : [];
+  els.routes.innerHTML = usable.length < 2 ? "" : usable
+    .map((i, n) => `<button type="button" data-route="${i}"${i === activeIndex ? ' aria-pressed="true"' : ""}>${esc(t("route", { n: n + 1 }))}${c!.routes[i].label && c!.routes[i].label !== String(i + 1) ? ` · ${esc(c!.routes[i].label)}` : ""}</button>`)
     .join("");
 }
 
 // ---------------------------------------------------------------- actions
 
-function selectPlaylist(id: string | null): void {
-  state.playlistId = id;
-  state.group = ALL;
-  writePref("playlist", id);
+function markDead(playlistId: string, channel: Channel): void {
+  state.dead[favoriteId(playlistId, channel.key)] = Date.now();
+  writePref("dead", state.dead);
+}
+
+function hide(playlistId: string, channel: Channel, el: HTMLElement): void {
+  markDead(playlistId, channel);
+  el.remove();
+  els.count.textContent = t("channels_count", { count: visible().length });
+}
+
+function selectSource(id: string): void {
+  state.source = id;
+  state.group = "";
+  state.country = "";
+  writePref("source", id);
   render();
 }
 
-function play(c: Channel): void {
-  state.playing = c;
+function open(playlistId: string, channel: Channel): void {
+  wall.pause();
+  state.playing = { playlistId, channel };
   els.appHint.hidden = true;
-  renderNowPlaying();
-  renderChannels();
-  player.play(c);
-  track("web_play", { channel_group: c.group || "(none)" });
+  els.theater.hidden = false;
+  document.body.classList.add("dw-theater-open");
+  renderTheater();
+  player.play(channel, liveRoute.get(favoriteId(playlistId, channel.key)) ?? webRoutes(channel)[0] ?? 0);
+  track("web_play", { channel_group: channel.group || "(none)", source: playlistId === FREE ? "free" : "own" });
+}
+
+function close(): void {
+  player.stop();
+  if (document.fullscreenElement) document.exitFullscreen().catch(() => undefined);
+  els.theater.hidden = true;
+  document.body.classList.remove("dw-theater-open");
+  const wasDead = state.playing && state.dead[favoriteId(state.playing.playlistId, state.playing.channel.key)];
+  state.playing = null;
+  if (wasDead) renderGrid();
+  else wall.resume();
 }
 
 function step(delta: number): void {
-  const p = current();
-  if (!p) return;
-  const list = visibleChannels(p).slice(0, MAX_ROWS);
-  if (!list.length) return;
-  const i = list.findIndex((c) => c.key === state.playing?.key);
-  const next = list[(i + delta + list.length) % list.length];
-  play(next);
-  els.channels.querySelector(`[data-key="${CSS.escape(next.key)}"]`)?.scrollIntoView({ block: "nearest" });
+  const items = visible();
+  if (!items.length || !state.playing) return;
+  const i = items.findIndex((x) => x.channel === state.playing!.channel);
+  const next = items[(i + delta + items.length) % items.length];
+  open(next.playlistId, next.channel);
 }
 
 function toggleFavorite(): void {
-  const p = current();
-  const c = state.playing;
-  if (!p || !c) return;
-  const id = favoriteId(p.id, c.key);
+  const p = state.playing;
+  if (!p) return;
+  const id = favoriteId(p.playlistId, p.channel.key);
   if (state.favorites.has(id)) state.favorites.delete(id);
   else state.favorites.add(id);
   writePref("favorites", [...state.favorites]);
-  renderNowPlaying();
-  render();
+  renderTheater();
+}
+
+async function fetchText(url: string): Promise<string> {
+  const res = await fetch(url, { credentials: "omit" });
+  if (!res.ok) throw new Error(String(res.status));
+  return res.text();
+}
+
+/** The free directory: the iptv-playlists index, narrowed to streams verified to play on doubo.tv. */
+async function loadFree(): Promise<void> {
+  try {
+    const [text, playable] = await Promise.all([
+      fetchText(config.freePlaylistUrl),
+      fetch(config.playableUrl).then((r) => (r.ok ? r.json() : null)).catch(() => null),
+    ]);
+    const allowed: Set<string> | null = playable?.hashes ? new Set(playable.hashes) : null;
+    const channels = parseM3U(text)
+      .map((c) => ({ ...c, routes: allowed ? c.routes.filter((r) => allowed.has(fnv1a(r.url))) : c.routes }))
+      .filter((c) => c.routes.length > 0);
+    state.free = { id: FREE, name: t("free_channels"), source: { kind: "url", url: config.freePlaylistUrl }, channels, importedAt: 0 };
+  } catch {
+    state.free = { id: FREE, name: t("free_channels"), source: { kind: "url" }, channels: [], importedAt: 0 };
+  }
 }
 
 async function addPlaylist(text: string, name: string, source: PlaylistSource): Promise<Playlist | null> {
@@ -266,12 +391,6 @@ async function addPlaylist(text: string, name: string, source: PlaylistSource): 
   state.playlists.push(playlist);
   track("web_playlist_add", { source: source.kind, channels: channels.length });
   return playlist;
-}
-
-async function fetchText(url: string): Promise<string> {
-  const res = await fetch(url, { credentials: "omit" });
-  if (!res.ok) throw new Error(String(res.status));
-  return res.text();
 }
 
 async function submitForm(): Promise<void> {
@@ -301,23 +420,7 @@ async function submitForm(): Promise<void> {
   els.form.reset();
   els.formMsg.textContent = "";
   els.dialog.close();
-  selectPlaylist(playlist.id);
-}
-
-/** Links like /web/?add=<m3u url>&name=<label> (used by the channel directory) import once, then reuse. */
-async function importFromQuery(): Promise<void> {
-  const params = new URLSearchParams(location.search);
-  const url = params.get("add");
-  if (!url || !/^https:\/\//.test(url)) return;
-  history.replaceState(null, "", location.pathname);
-  const existing = state.playlists.find((p) => p.source.url === url);
-  if (existing) return selectPlaylist(existing.id);
-  try {
-    const playlist = await addPlaylist(await fetchText(url), params.get("name") ?? "", { kind: "url", url });
-    if (playlist) selectPlaylist(playlist.id);
-  } catch {
-    openDialog(url);
-  }
+  selectSource(playlist.id);
 }
 
 function openDialog(url = ""): void {
@@ -327,38 +430,75 @@ function openDialog(url = ""): void {
   els.dialog.showModal();
 }
 
+/** ?country=MY preselects a country in the free directory; ?add=<https url>&name= imports a playlist. */
+async function applyQuery(): Promise<void> {
+  const params = new URLSearchParams(location.search);
+  const country = params.get("country");
+  const url = params.get("add");
+  if (country || url) history.replaceState(null, "", location.pathname);
+  if (country) {
+    state.source = FREE;
+    render();
+    state.country = country.toUpperCase() === "UK" ? "GB" : country.toUpperCase();
+    renderBar();
+    renderGrid();
+  }
+  if (url && /^https:\/\//.test(url)) {
+    const existing = state.playlists.find((p) => p.source.url === url);
+    if (existing) return selectSource(existing.id);
+    try {
+      const playlist = await addPlaylist(await fetchText(url), params.get("name") ?? "", { kind: "url", url });
+      if (playlist) selectSource(playlist.id);
+    } catch {
+      openDialog(url);
+    }
+  }
+}
+
 // ---------------------------------------------------------------- events
 
 root.addEventListener("click", async (e) => {
   const target = e.target as HTMLElement;
   const action = target.closest<HTMLElement>("[data-action]")?.dataset.action;
   if (action === "add") openDialog();
-  if (action === "cancel") els.dialog.close();
-  if (action === "favorite") toggleFavorite();
-  if (action === "pip") {
+  else if (action === "cancel") els.dialog.close();
+  else if (action === "close") close();
+  else if (action === "prev") step(-1);
+  else if (action === "next") step(1);
+  else if (action === "favorite") toggleFavorite();
+  else if (action === "pip") {
     if (document.pictureInPictureElement) await document.exitPictureInPicture();
     else await els.video.requestPictureInPicture().catch(() => undefined);
-  }
-  if (action === "fullscreen") els.video.requestFullscreen?.().catch(() => undefined);
-  if (action === "remove") {
-    const p = current();
+  } else if (action === "fullscreen") els.video.requestFullscreen?.().catch(() => undefined);
+  else if (action === "more") {
+    const items = visible();
+    appendTiles(items, state.shown, Math.min(state.shown + PAGE_SIZE, items.length));
+    state.shown += PAGE_SIZE;
+    els.more.hidden = items.length <= state.shown;
+  } else if (action === "remove") {
+    const p = state.playlists.find((x) => x.id === state.source);
     if (p && confirm(t("confirm_remove", { name: p.name }))) {
-      player.stop();
-      state.playing = null;
-      renderNowPlaying();
       await deletePlaylist(p.id);
       state.playlists = state.playlists.filter((x) => x.id !== p.id);
-      selectPlaylist(state.playlists[0]?.id ?? null);
+      selectSource(FREE);
     }
   }
+
+  const source = target.closest<HTMLElement>("[data-source]")?.dataset.source;
+  if (source !== undefined) selectSource(source);
   const group = target.closest<HTMLElement>("[data-group]")?.dataset.group;
   if (group !== undefined) {
     state.group = group;
-    render();
+    state.shown = PAGE_SIZE;
+    renderBar();
+    renderGrid();
   }
-  const key = target.closest<HTMLElement>("[data-key]")?.dataset.key;
-  const channel = key !== undefined ? current()?.channels.find((c) => c.key === key) : undefined;
-  if (channel) play(channel);
+  const tile = target.closest<HTMLElement>("[data-key]");
+  if (tile) {
+    const p = playlistById(tile.dataset.owner!);
+    const channel = p?.channels.find((c) => c.key === tile.dataset.key);
+    if (p && channel) open(p.id, channel);
+  }
   const route = target.closest<HTMLElement>("[data-route]")?.dataset.route;
   if (route !== undefined) {
     els.appHint.hidden = true;
@@ -366,10 +506,21 @@ root.addEventListener("click", async (e) => {
   }
 });
 
-els.playlist.addEventListener("change", () => selectPlaylist(els.playlist.value));
+els.country.addEventListener("change", () => {
+  state.country = els.country.value;
+  state.group = "";
+  state.shown = PAGE_SIZE;
+  renderBar();
+  renderGrid();
+});
+let searchTimer = 0;
 els.search.addEventListener("input", () => {
-  state.query = els.search.value;
-  renderChannels();
+  clearTimeout(searchTimer);
+  searchTimer = window.setTimeout(() => {
+    state.query = els.search.value;
+    state.shown = PAGE_SIZE;
+    renderGrid();
+  }, 200);
 });
 els.form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -377,13 +528,15 @@ els.form.addEventListener("submit", (e) => {
 });
 
 document.addEventListener("keydown", (e) => {
-  const typing = (e.target as HTMLElement).closest("input, textarea, select") || els.dialog.open;
-  if (typing) return;
-  if (e.key === "ArrowDown") { e.preventDefault(); step(1); }
+  if ((e.target as HTMLElement).closest("input, textarea, select") || els.dialog.open) return;
+  const theater = !els.theater.hidden;
+  if (e.key === "Escape" && theater && !document.fullscreenElement) close();
+  else if (e.key === "/" && !theater) { e.preventDefault(); els.search.focus(); }
+  else if (!theater) return;
+  else if (e.key === "ArrowDown") { e.preventDefault(); step(1); }
   else if (e.key === "ArrowUp") { e.preventDefault(); step(-1); }
-  else if (e.key === "/") { e.preventDefault(); els.search.focus(); }
-  else if (e.key.toLowerCase() === "f" && state.playing) els.video.requestFullscreen?.().catch(() => undefined);
-  else if (e.key.toLowerCase() === "p" && state.playing && document.pictureInPictureEnabled) els.pip.click();
+  else if (e.key.toLowerCase() === "f") els.video.requestFullscreen?.().catch(() => undefined);
+  else if (e.key.toLowerCase() === "p" && document.pictureInPictureEnabled) els.pip.click();
   else if (e.key.toLowerCase() === "m") els.video.muted = !els.video.muted;
 });
 
@@ -391,8 +544,10 @@ document.addEventListener("keydown", (e) => {
 
 (async () => {
   state.playlists = await loadPlaylists();
-  if (!current()) state.playlistId = state.playlists[0]?.id ?? null;
+  if (state.source !== FREE && state.source !== FAVORITES && !state.playlists.some((p) => p.id === state.source)) state.source = FREE;
+  renderBar();
+  renderGrid();
+  await loadFree();
   render();
-  renderNowPlaying();
-  await importFromQuery();
+  await applyQuery();
 })();

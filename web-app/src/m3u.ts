@@ -79,6 +79,8 @@ export function parseM3U(text: string): Channel[] {
       let channel = channels.get(key);
       if (!channel) {
         channel = { key, name, group, logo: pending.attrs["tvg-logo"] || undefined, routes: [] };
+        const country = pending.attrs["tvg-country"]?.split(";")[0].trim().toUpperCase();
+        if (country) channel.country = country === "UK" ? "GB" : country;
         channels.set(key, channel);
       }
       if (!channel.routes.some((r) => r.url === line)) {
@@ -97,4 +99,36 @@ export function groupsOf(channels: Channel[]): string[] {
   const seen = new Set<string>();
   for (const c of channels) if (c.group) seen.add(c.group);
   return [...seen].sort((a, b) => a.localeCompare(b));
+}
+
+export interface RawEntry {
+  extinf: string;          // the original #EXTINF line
+  options: string[];       // #EXTVLCOPT / #EXTGRP lines that belong to the entry
+  attrs: Record<string, string>;
+  title: string;
+  url: string;
+}
+
+/** Entries exactly as they appear in the playlist, for tools that rewrite it. */
+export function parseEntries(text: string): RawEntry[] {
+  const entries: RawEntry[] = [];
+  let pending: Omit<RawEntry, "url"> | null = null;
+  for (const raw of text.replace(/^﻿/, "").split(/\r?\n/)) {
+    const line = raw.trim();
+    if (!line) continue;
+    if (line.startsWith("#EXTINF")) {
+      const { attrs, title } = parseExtinf(line);
+      pending = { extinf: line, options: [], attrs, title };
+    } else if (line.startsWith("#EXTVLCOPT") || line.startsWith("#EXTGRP")) {
+      pending?.options.push(line);
+    } else if (!line.startsWith("#") && pending) {
+      entries.push({ ...pending, url: line });
+      pending = null;
+    }
+  }
+  return entries;
+}
+
+export function serializeEntries(entries: RawEntry[]): string {
+  return "#EXTM3U\n" + entries.map((e) => [e.extinf, ...e.options, e.url].join("\n")).join("\n") + "\n";
 }

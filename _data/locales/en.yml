@@ -16,6 +16,7 @@ nav:
   support: Support
   privacy: Privacy
   download: Download
+  tools: M3U tools
 cta:
   app_store: Download on the App Store
   testflight: Join the TestFlight beta
@@ -308,9 +309,15 @@ directory:
     sports: Sports
     travel: Travel
     weather: Weather
+  categories_more: All %category% channels
+  category_title: '%category% IPTV M3U Playlist: %count% Free Live Channels'
+  category_desc: '%count% free-to-air %category% channels from around the world, published by the broadcasters themselves, in an M3U playlist updated daily. Play it in Doubo or any IPTV player.'
+  category_h1: '%category% channels'
+  category_lead: '%count% %category% channels from %countries% countries and regions. Copy the link below to start watching.'
+  country_col: Country or region
 web:
   nav: Web player
-  page_title: 'Web Player: Play M3U Playlists in Your Browser'
+  page_title: 'Online M3U Player: Play IPTV Playlists in Your Browser'
   page_desc: 'Doubo for the web: open M3U / M3U8 playlists in your browser with no install. Browse groups, search, save favorites, switch routes and watch in Picture in Picture. Playlists stay in your browser.'
   playlists: Playlists
   groups: Groups
@@ -332,9 +339,9 @@ web:
   app_hint_title: This channel is best watched in the Doubo app
   app_hint_desc: Browsers limit some live streams. The Doubo app plays them directly, and adds casting and background playback.
   open_app: Get the Doubo app
-  shortcuts: 'Shortcuts: ↑ ↓ change channel · F full screen · P Picture in Picture · M mute · / search'
+  shortcuts: 'Shortcuts: / search · while watching ↑ ↓ change channel · F full screen · P Picture in Picture · M mute · Esc back'
   empty_title: Watch TV right in your browser
-  empty_desc: Add a link to your own M3U playlist, or start with a free playlist from the channel directory.
+  empty_desc: No channels here play in the browser yet. Add your own M3U playlist, or go back to Free channels.
   browse_directory: Browse the channel directory
   privacy_note: Playlists are stored only in your browser and never uploaded.
   url_label: Playlist link (M3U / M3U8)
@@ -350,3 +357,77 @@ web:
   my_playlist: My playlist
   watch_web: Watch on the web
   try_web: Web player
+  seo_title: A free online M3U player that just works
+  seo_intro: 'Doubo for the web is a free online M3U / M3U8 player. No download and no sign-up: paste a playlist link or import a file, then browse groups, search and watch live channels in any desktop or mobile browser.'
+  features:
+  - t: Nothing to install
+    d: Works in Chrome, Edge, Safari, Firefox and other modern browsers.
+  - t: Groups and search
+    d: Reads the groups in your playlist so you can find a channel among thousands.
+  - t: Automatic route switching
+    d: Channels with several stream links are merged, and the player moves to the next link when one does not start.
+  - t: Private by design
+    d: Playlists stay in your browser. Nothing is uploaded or collected.
+  faq_title: Frequently asked questions
+  faq:
+  - q: Is the web player free? Do I need an account?
+    a: It is completely free and needs no account. Open the page, add a playlist and start watching.
+  - q: Which playlist formats are supported?
+    a: M3U and M3U8 playlists, including IPTV lists with tvg-id, tvg-logo and group-title attributes. Live streams are played over HLS (.m3u8).
+  - q: Where is my playlist stored?
+    a: Only in your current browser’s local storage. It is never uploaded. If you switch browsers or clear site data, add it again.
+  - q: Why are some channels best watched in the app?
+    a: For security reasons browsers restrict some live streams, such as http links or routes that need special request headers. The Doubo app has no such limits and also supports casting and background playback.
+  tool_link: Analyze and clean up your M3U playlist
+  free_channels: Free channels
+  all_countries: All countries and regions
+  load_more: Show more channels
+  back: Back
+  prev_channel: Previous channel
+  next_channel: Next channel
+tools:
+  nav: M3U tools
+  page_title: 'M3U Playlist Analyzer & Cleaner: Count, Deduplicate and Sort Online'
+  page_desc: 'A free online tool for M3U / M3U8 playlists: count channels and groups, find duplicate links, remove duplicates, sort by group and export a clean playlist. Runs entirely in your browser; nothing is uploaded.'
+  title: M3U playlist analyzer & cleaner
+  lead: Paste a link, import a file or paste the playlist. See what’s inside in seconds, then export a tidy copy.
+  input_url: Playlist link
+  input_file: Or import a file
+  input_text: Or paste the playlist
+  analyze: Analyze
+  loading: Loading…
+  need_input: Enter a link, choose a file or paste a playlist.
+  url_blocked: This link can’t be read directly by a web page. Download the file and import it instead.
+  no_channels: No channels found. Check that this is an M3U playlist.
+  stat_entries: Entries
+  stat_channels: Channels
+  stat_groups: Groups
+  stat_duplicates: Duplicate links
+  stat_https: HTTPS links
+  stat_logos: With logo
+  stat_tvgid: With tvg-id
+  stat_multi: Multi-route channels
+  groups_title: Groups
+  group_col: Group
+  channels_col: Channels
+  clean_title: Clean up and export
+  opt_dedupe: Remove duplicate links
+  opt_sort: Sort by group and name
+  opt_https: Keep HTTPS links only
+  opt_merge: Merge routes of the same channel (keeps every route)
+  download: Download cleaned M3U
+  open_web: Open in the web player
+  privacy: Everything runs in your browser. Your file is never uploaded.
+  seo_title: What this tool does
+  seo_points:
+  - Counts entries, channels and groups, and how many entries have a logo or a tvg-id.
+  - Finds exact duplicate stream links and removes them in one click.
+  - Sorts by group and channel name and exports a clean M3U file.
+  - Keeps only HTTPS links, which play in more browsers and devices.
+  faq:
+  - q: Does this tool check whether links play?
+    a: No. It only reads the playlist text to count and tidy it, and never opens any stream. To watch, use the Doubo web player or app.
+  - q: How large can the playlist be?
+    a: Playlists with tens of thousands of entries are processed in seconds, depending on your device.
+  - q: Is my playlist saved?
+    a: No. Everything is processed in your browser’s memory and cleared when you close the page.

@@ -4,7 +4,7 @@ permalink: /sitemap.xml
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-{%- assign pages = site.pages | where_exp: "p", "p.ref" | where_exp: "p", "p.ref != '404'" -%}
+{%- assign pages = site.pages | where_exp: "p", "p.ref" | where_exp: "p", "p.ref != '404'" | where_exp: "p", "p.noindex != true" -%}
 {%- for p in pages %}
   <url>
     <loc>{{ p.url | absolute_url }}</loc>

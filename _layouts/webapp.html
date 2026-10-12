@@ -2,15 +2,42 @@
 layout: default
 ---
 {%- assign t = site.data.locales[page.lang] -%}
+{%- assign w = t.web -%}
 {%- if page.lang == site.default_lang -%}{%- assign lang_prefix = "" -%}{%- else -%}{%- assign lang_prefix = "/" | append: page.lang -%}{%- endif -%}
+{%- assign free_url = site.data.directory.base_url | default: "https://cdn.jsdelivr.net/gh/streamline-iptv/iptv-playlists@dist" | append: "/index.m3u" -%}
 <link rel="stylesheet" href="{{ '/assets/web/app.css' | relative_url }}">
-<div id="doubo-web"><noscript><p class="container">{{ t.web.page_desc }}</p></noscript></div>
+<div id="doubo-web"><noscript><p class="container">{{ w.page_desc }}</p></noscript></div>
 <script>
   window.DOUBO_WEB = {
     lang: {{ page.lang | jsonify }},
     appUrl: {{ lang_prefix | append: '/#download' | relative_url | jsonify }},
     directoryUrl: {{ lang_prefix | append: '/playlists/' | relative_url | jsonify }},
-    strings: {{ t.web | jsonify }}
+    freePlaylistUrl: {{ free_url | jsonify }},
+    playableUrl: {{ '/web/playable.json' | relative_url | jsonify }},
+    categories: {{ t.directory.categories | jsonify }},
+    strings: {{ w | jsonify }}
   };
 </script>
 <script type="module" src="{{ '/assets/web/app.js' | relative_url }}"></script>
+
+<section class="section section-alt web-about" aria-labelledby="web-about-title">
+  <div class="container narrow">
+    <h2 id="web-about-title">{{ w.seo_title }}</h2>
+    <p class="lead">{{ w.seo_intro }}</p>
+    <ul class="web-features">
+      {%- for f in w.features %}
+      <li class="card"><h3>{{ f.t }}</h3><p>{{ f.d }}</p></li>
+      {%- endfor %}
+    </ul>
+    <h2>{{ w.faq_title }}</h2>
+    <div class="faq">
+      {%- for item in w.faq %}
+      <details data-track-faq="web-{{ forloop.index }}"><summary>{{ item.q }}</summary><p>{{ item.a }}</p></details>
+      {%- endfor %}
+    </div>
+    <p class="web-links">
+      <a class="text-link" href="{{ lang_prefix | append: '/tools/m3u/' | relative_url }}">{{ w.tool_link }} {% include icon.html name="arrow" %}</a>
+      <a class="text-link" href="{{ lang_prefix | append: '/playlists/' | relative_url }}">{{ w.browse_directory }} {% include icon.html name="arrow" %}</a>
+    </p>
+  </div>
+</section>

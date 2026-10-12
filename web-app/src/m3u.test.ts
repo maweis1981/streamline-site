@@ -32,6 +32,7 @@ describe("parseM3U", () => {
     expect(channels[0].routes.map((r) => r.url)).toEqual(["https://a.example/tv1.m3u8", "https://b.example/tv1.m3u8"]);
     expect(channels[0].routes[1].referrer).toBe("https://ref.example/");
     expect(channels[0].logo).toBe("https://x/l.png");
+    expect(channels[0].country).toBeUndefined();
     expect(channels[0].name).toBe("TV1");
     expect(channels[0].routes.map((r) => r.label)).toEqual(["720p", "1080p"]);
   });
@@ -51,5 +52,27 @@ describe("splitTitle", () => {
   it("separates trailing qualifiers", () => {
     expect(splitTitle("Berita RTM (720p) [Geo-blocked]")).toEqual({ name: "Berita RTM", qualifiers: "720p · Geo-blocked" });
     expect(splitTitle("(Not) a qualifier")).toEqual({ name: "(Not) a qualifier", qualifiers: "" });
+  });
+});
+
+describe("fnv1a", () => {
+  it("matches the Python implementation", async () => {
+    const { fnv1a } = await import("./hash");
+    expect(fnv1a("")).toBe("811c9dc5");
+    expect(fnv1a("https://a.example/tv1.m3u8")).toBe("b0dff56a");
+  });
+});
+
+describe("parseEntries / serializeEntries", () => {
+  it("round-trips entries with their options", async () => {
+    const { parseEntries, serializeEntries } = await import("./m3u");
+    const text = '#EXTM3U\n#EXTINF:-1 group-title="A",One\n#EXTVLCOPT:http-referrer=https://r/\nhttps://x/1.m3u8\n#EXTINF:-1,Two\nhttps://x/2.m3u8\n';
+    const entries = parseEntries(text);
+    expect(entries.map((e) => e.title)).toEqual(["One", "Two"]);
+    expect(serializeEntries(entries)).toBe(text);
+  });
+  it("reads tvg-country into channels", () => {
+    const [c] = parseM3U('#EXTINF:-1 tvg-id="a" tvg-country="UK",A\nhttps://x/a.m3u8');
+    expect(c.country).toBe("GB");
   });
 });

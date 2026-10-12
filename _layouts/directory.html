@@ -40,10 +40,10 @@ layout: default
 
     <h2 class="dir-subhead">{{ s.categories_title }}</h2>
     <ul class="dir-rows">
-      {%- for c in d.categories %}
+      {%- for c in d.categories %}{% assign c_channels = c.count | default: c.channels %}
       <li class="card dir-row">
-        <span class="dir-name">{{ s.categories[c.id] | default: c.id }}</span>
-        <span class="dir-count">{{ c.channels }} {{ s.channels_unit }}</span>
+        <a class="dir-name" href="{{ lang_prefix | append: '/playlists/category/' | append: c.id | append: '/' | relative_url }}">{{ s.categories[c.id] | default: c.id }}</a>
+        <span class="dir-count">{{ c_channels }} {{ s.channels_unit }}</span>
         {%- assign pl_path = "categories/" | append: c.id | append: ".m3u" %}
         {% include playlist-link.html path=pl_path scope="category" %}
       </li>
