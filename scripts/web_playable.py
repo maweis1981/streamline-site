@@ -5,7 +5,8 @@ request on the way (master playlist, variant playlist, first segment) answers wi
 an Access-Control-Allow-Origin header that admits https://doubo.tv, the variant is
 not HEVC, and the first segment is real audio/video.
 
-Only FNV-1a hashes of the stream URLs are written (web/playable.json), so the site
+Only FNV-1a hashes of the stream URLs (and the ids of channels with at least one
+playable stream) are written (web/playable.json), so the site
 itself carries no stream links; the web player fetches the playlist from the
 iptv-playlists repository and keeps the entries whose URL hash is listed.
 
@@ -35,17 +36,19 @@ def fnv1a(text: str) -> str:
     return f"{h:08x}"
 
 
-def parse_entries(text: str) -> list[tuple[str, bool]]:
-    """(url, needs_headers) for each entry of an M3U playlist."""
-    entries, needs_headers, in_entry = [], False, False
+def parse_entries(text: str) -> list[tuple[str, bool, str]]:
+    """(url, needs_headers, channel_id) for each entry of an M3U playlist."""
+    entries, needs_headers, in_entry, channel = [], False, False, ""
     for line in text.splitlines():
         line = line.strip()
         if line.startswith("#EXTINF"):
             in_entry, needs_headers = True, False
+            m = re.search(r'tvg-id="([^"@]*)', line)
+            channel = m.group(1) if m else ""
         elif line.startswith("#EXTVLCOPT"):
             needs_headers = True
         elif line and not line.startswith("#") and in_entry:
-            entries.append((line, needs_headers))
+            entries.append((line, needs_headers, channel))
             in_entry = False
     return entries
 
@@ -119,13 +122,15 @@ def web_playable(url: str, needs_headers: bool) -> bool:
 def main(index_path: str, out_path: str) -> None:
     entries = parse_entries(Path(index_path).read_text(encoding="utf-8", errors="replace"))
     with concurrent.futures.ThreadPoolExecutor(64) as pool:
-        results = list(pool.map(lambda e: web_playable(*e), entries))
-    hashes = sorted({fnv1a(url) for (url, _), ok in zip(entries, results) if ok})
+        results = list(pool.map(lambda e: web_playable(e[0], e[1]), entries))
+    hashes = sorted({fnv1a(url) for (url, _, _), ok in zip(entries, results) if ok})
+    channels = sorted({cid for (_, _, cid), ok in zip(entries, results) if ok and cid})
     out = Path(out_path)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps({
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "hashes": hashes,
+        "channels": channels,
     }, separators=(",", ":")), encoding="utf-8")
     print(f"web-playable: {len(hashes)}/{len(entries)}")
 

@@ -62,6 +62,10 @@ jobs:
             # Which free streams a browser on doubo.tv can play; the web player shows only those.
             if curl -fsSL --retry 3 -o "$RUNNER_TEMP/index.m3u" https://raw.githubusercontent.com/streamline-iptv/iptv-playlists/dist/index.m3u; then
               python scripts/web_playable.py "$RUNNER_TEMP/index.m3u" web/playable.json || echo "::warning::web playability check failed"
+              # One page per channel (/channels/<slug>/), using channel facts from the iptv-org database.
+              curl -fsSL --retry 3 -o "$RUNNER_TEMP/channels.csv" https://raw.githubusercontent.com/iptv-org/database/master/data/channels.csv \
+                && python scripts/channels.py "$RUNNER_TEMP/index.m3u" "$RUNNER_TEMP/channels.csv" web/playable.json \
+                || echo "::warning::channel pages were not generated"
             fi
           else
             echo "::warning::Channel directory index not available; building without it"

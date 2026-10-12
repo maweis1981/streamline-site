@@ -431,3 +431,34 @@ tools:
     a: Playlist dengan puluhan ribu entri diproses dalam hitungan detik, tergantung perangkat Anda.
   - q: Apakah playlist saya disimpan?
     a: Tidak. Semuanya diproses di memori browser dan terhapus saat halaman ditutup.
+channel:
+  title: 'Live Streaming %name%: Nonton Online Gratis (%country%)'
+  description: '%name% adalah saluran TV %category% dari %country%. Nonton live streaming %name% gratis di pemutar web Doubo, atau tambahkan playlist M3U ke TV, ponsel, atau komputer Anda.'
+  h1: '%name% live'
+  lead_playable: Nonton live streaming %name% gratis di browser. Tanpa unduhan, tanpa daftar.
+  lead_other: Siaran publik resmi %name% termasuk dalam playlist gratis %country%. Tonton di aplikasi Doubo atau pemutar M3U apa pun.
+  summary: '%name% adalah saluran televisi %category% dari %country%.'
+  summary_network: Saluran ini bagian dari %network%.
+  summary_owner: Dioperasikan oleh %owner%.
+  summary_launched: Saluran ini mulai mengudara pada %launched%.
+  watch: Nonton live sekarang
+  watch_app: Tonton di aplikasi Doubo
+  facts: Info saluran
+  f_country: Negara atau wilayah
+  f_category: Kategori
+  f_language: Bahasa
+  f_network: Jaringan
+  f_owner: Pemilik
+  f_launched: Mulai mengudara
+  f_website: Situs resmi
+  playlist_title: Playlist yang memuat saluran ini
+  how_title: Tonton di perangkat lain
+  related: Saluran lain dari %country%
+  source: Data saluran dari proyek open source iptv-org.
+  faq_title: Pertanyaan umum
+  q_free: Apakah %name% gratis ditonton?
+  a_free: Ya. Siaran langsung %name% disediakan secara terbuka oleh penyiarnya; Doubo hanya mencantumkan tautan dan tidak memungut biaya. Sebagian saluran hanya bisa ditonton dari negara atau wilayahnya sendiri.
+  q_tv: Bagaimana cara menonton %name% di TV?
+  a_tv: Salin tautan playlist gratis %country% lalu buka di pemutar pada smart TV, Android TV, Fire TV, atau Apple TV Anda. Panduan perangkat Doubo menjelaskan langkah-langkahnya.
+  q_site: Apa situs resmi %name%?
+  a_site: Situs resmi %name% adalah %website%.

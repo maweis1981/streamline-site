@@ -409,3 +409,21 @@ html.js.nav-open .site-header{background:rgba(5,7,15,.96);border-bottom-color:va
 .dg-hub{margin:48px 0}
 .dg-hub h2{font-size:var(--fs-h3-lg);margin-bottom:6px}
 .dg-hub .muted{margin:0 0 18px;font-family:var(--font);font-size:15px}
+/* Channel pages */
+.ch-hero{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start}
+.ch-logo{position:relative;display:grid;place-items:center;width:120px;height:84px;border-radius:var(--r-md);background:var(--surface);border:1px solid var(--line);overflow:hidden;margin-top:6px}
+.ch-logo img{position:absolute;inset:0;margin:auto;max-width:84%;max-height:76%;object-fit:contain;background:var(--surface)}
+.ch-logo span{color:var(--text-3);font-size:28px;font-weight:700}
+.ch-hero .cta-row{margin-top:24px}
+.ch-hero .btn .icon{width:18px;height:18px}
+.ch-summary{font-size:17px;color:var(--text-2);margin-bottom:24px}
+.ch-facts h2{font-size:18px;margin-bottom:12px}
+.ch-facts dl{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px 24px;margin:0}
+.ch-facts dt{color:var(--text-3);font-size:13px}
+.ch-facts dd{margin:2px 0 0;color:var(--text);overflow-wrap:anywhere}
+.ch-facts a{color:var(--teal);text-underline-offset:3px}
+.ch-related{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.ch-related a{display:inline-block;padding:7px 14px;border-radius:var(--r-pill);border:1px solid var(--line-strong);color:var(--text-2);text-decoration:none;font-size:14px}
+.ch-related a:hover{color:var(--teal);border-color:var(--teal)}
+@media (max-width:559.98px){.ch-hero{grid-template-columns:1fr}.ch-logo{width:96px;height:64px}}
+.dir-channels a.dir-name{color:var(--text);text-decoration:none}.dir-channels a.dir-name:hover{color:var(--teal)}

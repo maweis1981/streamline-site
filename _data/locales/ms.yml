@@ -431,3 +431,34 @@ tools:
     a: Senarai main dengan puluhan ribu entri diproses dalam beberapa saat, bergantung pada peranti anda.
   - q: Adakah senarai main saya disimpan?
     a: Tidak. Semuanya diproses dalam memori pelayar dan dipadam apabila anda menutup halaman.
+channel:
+  title: 'Siaran Langsung %name%: Tonton Dalam Talian Percuma (%country%)'
+  description: '%name% ialah saluran TV %category% dari %country%. Tonton siaran langsung %name% secara percuma dalam pemain web Doubo, atau tambah senarai main M3U ke TV, telefon atau komputer anda.'
+  h1: '%name% secara langsung'
+  lead_playable: Tonton siaran langsung %name% secara percuma dalam pelayar. Tanpa muat turun, tanpa daftar.
+  lead_other: Strim awam rasmi %name% termasuk dalam senarai main percuma %country%. Tonton dalam aplikasi Doubo atau mana-mana pemain M3U.
+  summary: '%name% ialah saluran televisyen %category% dari %country%.'
+  summary_network: Ia sebahagian daripada %network%.
+  summary_owner: Ia dikendalikan oleh %owner%.
+  summary_launched: Saluran ini dilancarkan pada %launched%.
+  watch: Tonton secara langsung
+  watch_app: Tonton dalam aplikasi Doubo
+  facts: Maklumat saluran
+  f_country: Negara atau wilayah
+  f_category: Kategori
+  f_language: Bahasa
+  f_network: Rangkaian
+  f_owner: Pemilik
+  f_launched: Dilancarkan
+  f_website: Laman web rasmi
+  playlist_title: Senarai main dengan saluran ini
+  how_title: Tonton pada peranti lain
+  related: Lebih banyak saluran dari %country%
+  source: Data saluran daripada projek sumber terbuka iptv-org.
+  faq_title: Soalan lazim
+  q_free: Adakah %name% percuma untuk ditonton?
+  a_free: Ya. Siaran langsung %name% disediakan secara terbuka oleh penyiar; Doubo hanya menyenaraikan pautan dan tidak mengenakan sebarang bayaran. Sesetengah saluran hanya boleh ditonton dari negara atau wilayahnya sendiri.
+  q_tv: Bagaimana menonton %name% di TV?
+  a_tv: Salin pautan senarai main percuma %country% dan bukanya dalam pemain pada smart TV, Android TV, Fire TV atau Apple TV anda. Panduan peranti Doubo menerangkan setiap langkah.
+  q_site: Apakah laman web rasmi %name%?
+  a_site: Laman web rasmi %name% ialah %website%.

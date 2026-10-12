@@ -430,12 +430,19 @@ function openDialog(url = ""): void {
   els.dialog.showModal();
 }
 
-/** ?country=MY preselects a country in the free directory; ?add=<https url>&name= imports a playlist. */
+/** ?channel=<tvg-id> opens a free channel; ?country=MY preselects a country in the free directory;
+ *  ?add=<https url>&name= imports a playlist. */
 async function applyQuery(): Promise<void> {
   const params = new URLSearchParams(location.search);
   const country = params.get("country");
   const url = params.get("add");
-  if (country || url) history.replaceState(null, "", location.pathname);
+  const channelId = params.get("channel");
+  if (country || url || channelId) history.replaceState(null, "", location.pathname);
+  if (channelId && state.free) {
+    // Channel pages link here: open that channel (any of its feeds) straight away.
+    const match = state.free.channels.find((c) => c.key === channelId || c.key.startsWith(`${channelId}@`));
+    if (match && !state.dead[favoriteId(FREE, match.key)]) open(FREE, match);
+  }
   if (country) {
     state.source = FREE;
     render();

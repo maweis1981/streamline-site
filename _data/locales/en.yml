@@ -431,3 +431,34 @@ tools:
     a: Playlists with tens of thousands of entries are processed in seconds, depending on your device.
   - q: Is my playlist saved?
     a: No. Everything is processed in your browser’s memory and cleared when you close the page.
+channel:
+  title: '%name% Live Stream: Watch Online Free (%country%)'
+  description: '%name% is a %category% TV channel from %country%. Watch the %name% live stream free in Doubo’s web player, or add the M3U playlist to your TV, phone or computer.'
+  h1: '%name% live'
+  lead_playable: Watch the %name% live stream free in your browser. No download, no sign-up.
+  lead_other: The official public %name% stream is included in the free %country% playlist. Watch it in the Doubo app or any M3U player.
+  summary: '%name% is a %category% television channel from %country%.'
+  summary_network: It is part of %network%.
+  summary_owner: It is operated by %owner%.
+  summary_launched: The channel launched in %launched%.
+  watch: Watch live now
+  watch_app: Watch in the Doubo app
+  facts: Channel facts
+  f_country: Country or region
+  f_category: Category
+  f_language: Language
+  f_network: Network
+  f_owner: Owner
+  f_launched: Launched
+  f_website: Official website
+  playlist_title: Playlists with this channel
+  how_title: Watch on other devices
+  related: More channels from %country%
+  source: Channel data from the open-source iptv-org project.
+  faq_title: Questions
+  q_free: Is %name% free to watch?
+  a_free: Yes. The %name% live stream is made publicly available by the broadcaster; Doubo only lists the link and charges nothing. Some channels can only be watched from their own country or region.
+  q_tv: How can I watch %name% on my TV?
+  a_tv: Copy the link to the free %country% playlist and open it in a player on your smart TV, Android TV, Fire TV or Apple TV. Doubo’s device guides walk you through each one.
+  q_site: What is the official website of %name%?
+  a_site: The official website of %name% is %website%.

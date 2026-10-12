@@ -431,3 +431,34 @@ tools:
     a: Danh sách hàng chục nghìn mục được xử lý trong vài giây, tùy vào thiết bị của bạn.
   - q: Danh sách phát của tôi có được lưu không?
     a: Không. Mọi thứ được xử lý trong bộ nhớ trình duyệt và bị xóa khi bạn đóng trang.
+channel:
+  title: 'Xem %name% trực tiếp: Xem online miễn phí (%country%)'
+  description: '%name% là kênh truyền hình %category% của %country%. Xem trực tiếp %name% miễn phí trên trình phát web Doubo, hoặc thêm danh sách M3U vào TV, điện thoại hay máy tính.'
+  h1: '%name% trực tiếp'
+  lead_playable: Xem trực tiếp %name% miễn phí ngay trên trình duyệt. Không cần tải về, không cần đăng ký.
+  lead_other: Luồng phát công khai chính thức của %name% có trong danh sách phát miễn phí của %country%. Xem bằng ứng dụng Doubo hoặc trình phát M3U bất kỳ.
+  summary: '%name% là kênh truyền hình %category% của %country%.'
+  summary_network: Kênh thuộc %network%.
+  summary_owner: Kênh do %owner% vận hành.
+  summary_launched: Kênh bắt đầu phát sóng năm %launched%.
+  watch: Xem trực tiếp ngay
+  watch_app: Xem trên ứng dụng Doubo
+  facts: Thông tin kênh
+  f_country: Quốc gia hoặc vùng
+  f_category: Thể loại
+  f_language: Ngôn ngữ
+  f_network: Mạng lưới
+  f_owner: Đơn vị sở hữu
+  f_launched: Năm phát sóng
+  f_website: Trang web chính thức
+  playlist_title: Danh sách phát có kênh này
+  how_title: Xem trên thiết bị khác
+  related: Thêm kênh của %country%
+  source: Dữ liệu kênh từ dự án mã nguồn mở iptv-org.
+  faq_title: Câu hỏi thường gặp
+  q_free: Xem %name% có miễn phí không?
+  a_free: Có. Luồng trực tiếp của %name% do đài phát sóng công khai; Doubo chỉ liệt kê liên kết và không thu phí. Một số kênh chỉ xem được trong quốc gia hoặc vùng lãnh thổ của kênh.
+  q_tv: Làm sao xem %name% trên TV?
+  a_tv: Sao chép liên kết danh sách phát miễn phí của %country% và mở bằng trình phát trên smart TV, Android TV, Fire TV hoặc Apple TV. Hướng dẫn thiết bị của Doubo có các bước chi tiết.
+  q_site: Trang web chính thức của %name% là gì?
+  a_site: Trang web chính thức của %name% là %website%.

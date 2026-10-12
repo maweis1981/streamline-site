@@ -12,3 +12,6 @@ assets/web/
 web-app/node_modules/
 web/playable.json
 __pycache__/
+channels/
+*/channels/
+_data/channel_slugs.json

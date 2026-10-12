@@ -1,0 +1,60 @@
+---
+layout: default
+---
+{%- assign t = site.data.locales[page.lang] -%}
+{%- assign s = t.channel -%}
+{%- assign c = page.channel -%}
+{%- if page.lang == site.default_lang -%}{%- assign lang_prefix = "" -%}{%- else -%}{%- assign lang_prefix = "/" | append: page.lang -%}{%- endif -%}
+<section class="page-hero">
+  <div class="container narrow ch-hero">
+    <div class="ch-logo" aria-hidden="true"><span>{{ c.name | slice: 0, 2 }}</span>{% if c.logo %}<img src="{{ c.logo }}" alt="" width="96" height="64" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">{% endif %}</div>
+    <div>
+      <p class="eyebrow"><a href="{{ lang_prefix | append: '/playlists/' | append: c.country | append: '/' | relative_url }}">{{ c.flag }} {{ c.country_name }}</a> · {{ c.category }}</p>
+      <h1>{{ c.h1 }}</h1>
+      <p class="lead">{{ c.lead }}</p>
+      <div class="cta-row">
+        {%- if c.playable %}
+        <a class="btn btn-primary" href="{{ lang_prefix | append: '/web/' | relative_url }}?channel={{ c.id | url_encode }}" data-track="cta_click" data-track-target="web_player" data-track-location="channel_page">{% include icon.html name="tv" %}<span>{{ s.watch }}</span></a>
+        {%- endif %}
+        <a class="btn {% if c.playable %}btn-ghost{% else %}btn-primary{% endif %}" href="{{ lang_prefix | append: '/#download' | relative_url }}" data-track="cta_click" data-track-target="download_anchor" data-track-location="channel_page">{{ s.watch_app }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section section-tight">
+  <div class="container narrow">
+    <p class="ch-summary">{{ c.summary }}</p>
+    <div class="card ch-facts">
+      <h2>{{ s.facts }}</h2>
+      <dl>
+        {%- for f in c.facts %}
+        <div><dt>{{ f.label }}</dt><dd>{% if f.url %}<a href="{{ f.url }}" rel="nofollow noopener" target="_blank">{{ f.value }}</a>{% elsif f.href %}<a href="{{ lang_prefix | append: '/' | append: f.href | relative_url }}">{{ f.value }}</a>{% else %}{{ f.value }}{% endif %}</dd></div>
+        {%- endfor %}
+      </dl>
+    </div>
+
+    <h2 class="dg-head">{{ s.playlist_title }}</h2>
+    <div class="card gborder dir-all">
+      {%- assign pl_path = "countries/" | append: c.country | append: ".m3u" %}
+      {% include playlist-link.html path=pl_path scope="channel_country" %}
+    </div>
+
+    <h2 class="dg-head">{{ s.how_title }}</h2>
+    {% include device-links.html plain=true %}
+
+    <h2 class="dg-head">{{ s.faq_title }}</h2>
+    <div class="faq">
+      {%- for item in c.faq %}
+      <details><summary>{{ item.q }}</summary><p>{{ item.a }}</p></details>
+      {%- endfor %}
+    </div>
+
+    {%- if c.related.size > 0 %}
+    <h2 class="dg-head">{{ c.related_title }}</h2>
+    <ul class="ch-related">
+      {%- for r in c.related %}<li><a href="{{ lang_prefix | append: '/channels/' | append: r.slug | append: '/' | relative_url }}">{{ r.name }}</a></li>{% endfor %}
+    </ul>
+    {%- endif %}
+    <p class="muted">{{ s.source }}</p>
+  </div>
+</section>

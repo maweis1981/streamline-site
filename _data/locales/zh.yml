@@ -431,3 +431,34 @@ tools:
     a: 几万条目的播放列表也可以在几秒内处理完，具体取决于你的设备性能。
   - q: 会保存我的播放列表吗？
     a: 不会。所有处理都在浏览器内存中完成，关闭页面即清除。
+channel:
+  title: '%name%直播在线观看 · %country%%category%频道'
+  description: '%name%是%country%的%category%电视频道。在都播网页版免费在线观看%name%直播，或把 M3U 播放列表添加到电视、手机和电脑上收看。'
+  h1: '%name% 直播'
+  lead_playable: 免费在浏览器里观看%name%直播，无需下载、无需注册。
+  lead_other: '%name%的官方公开直播流收录在%country%免费播放列表中，可以用都播 App 或其他 M3U 播放器收看。'
+  summary: '%name%是一个来自%country%的%category%电视频道。'
+  summary_network: 它隶属于 %network%。
+  summary_owner: 运营方为 %owner%。
+  summary_launched: 频道开播于 %launched% 年。
+  watch: 立即观看直播
+  watch_app: 在都播 App 中观看
+  facts: 频道信息
+  f_country: 国家和地区
+  f_category: 分类
+  f_language: 语言
+  f_network: 所属网络
+  f_owner: 运营方
+  f_launched: 开播年份
+  f_website: 官方网站
+  playlist_title: 包含这个频道的播放列表
+  how_title: 在其他设备上观看
+  related: '%country%的更多频道'
+  source: 频道资料来自开源项目 iptv-org。
+  faq_title: 常见问题
+  q_free: '%name%可以免费观看吗？'
+  a_free: 可以。%name%的直播流由电视台公开提供，都播只收录链接，不收取任何费用。部分频道只在所在国家或地区开放观看。
+  q_tv: 怎样在电视上看%name%？
+  a_tv: 复制%country%免费播放列表的链接，在智能电视、Android TV、Fire TV 或 Apple TV 上的播放器中打开即可。具体步骤可以参考都播的设备教程。
+  q_site: '%name%的官方网站是什么？'
+  a_site: '%name%的官方网站是 %website%。'

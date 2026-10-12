@@ -4,7 +4,7 @@
   {%- for item in site.guide_devices %}
   {%- unless item.key == include.current %}
   {%- assign dev = gd.devices[item.key] %}
-  <li><a class="card dg-device" href="{{ dl_prefix | append: '/guide/' | append: item.key | append: '/' | relative_url }}">{% include icon.html name=item.icon %}<span>{{ dev.name }}</span></a></li>
+  <li><a class="card dg-device" href="{{ dl_prefix | append: '/guide/' | append: item.key | append: '/' | relative_url }}">{% unless include.plain %}{% include icon.html name=item.icon %}{% endunless %}<span>{{ dev.name }}</span></a></li>
   {%- endunless %}
   {%- endfor %}
 </ul>

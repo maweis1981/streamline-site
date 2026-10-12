@@ -26,7 +26,7 @@ After changing a variable, re-run the workflow from the Actions tab.
 
 ## Analytics
 
-The GTM container `GTM-MJDCLXML` is set in `_config.yml`, and GA4 (`G-3TGF00MYWL`) runs inside that container. `analytics/gtm-container-doubo.json` is an importable GTM container (Admin → Import Container → Merge) with the GA4 Google tag, event tags for the four events below, their triggers, and Data Layer Variables. Keep `ga_measurement_id` empty so GA4 isn't loaded twice. A `GTM_ID` repository variable, if set, overrides the container ID.
+The GTM container `GTM-MJDCLXML` is set in `_config.yml`, and GA4 (`G-3TGF00MYWL`) runs inside that container. `analytics/gtm-container-doubo.json` is an importable GTM container (Admin → Import Container → Merge) with the GA4 Google tag, event tags for the events below, their triggers, and Data Layer Variables. Keep `ga_measurement_id` empty so GA4 isn't loaded twice. A `GTM_ID` repository variable, if set, overrides the container ID.
 
 Analytics tags only render in production builds when an ID is set, so local previews never send data.
 
@@ -42,8 +42,14 @@ Analytics tags only render in production builds when an ID is set, so local prev
 | `language_switch` | `to` (`zh` or `en`), `link_url` | Language toggle |
 | `faq_open` | `faq_index`, `faq_question` | An FAQ item is expanded |
 | `consent_update` | `analytics_consent` | The visitor accepts or declines |
+| `playlist_copy` | `scope` (`all`, `country`, `category`, `language`, `channel_country`), `link_url` | A playlist link is copied in the channel directory |
+| `web_play` | `channel_group`, `source` (`free` or `own`) | A channel is opened in the web player |
+| `web_play_unavailable` | — | No route of the opened channel plays in the browser (the app is suggested) |
+| `web_playlist_add` | `source` (`url`, `file`, `text`), `channels` | A playlist is added in the web player |
+| `tool_m3u_analyze` | `entries` | A playlist is analyzed in the M3U tool |
+| `tool_m3u_download` | `entries` | A cleaned playlist is downloaded from the M3U tool |
 
-Every page also pushes `page_language` and `page_section`, and GA4 receives `content_group` = page section. Register `target`, `location`, and `page_section` as GA4 custom dimensions, and mark `cta_click` with `target = app_store` as a key event. Set GA4 data retention to **14 months** to match the privacy policy.
+Every page also pushes `page_language` and `page_section`, and GA4 receives `content_group` = page section. Register `target`, `location`, and `page_section` as GA4 custom dimensions, and mark `cta_click` with `target = app_store` and `web_play` as key events. Set GA4 data retention to **14 months** to match the privacy policy.
 
 To track another element, add `data-track="event_name"` plus `data-track-<param>="value"` attributes.
 
