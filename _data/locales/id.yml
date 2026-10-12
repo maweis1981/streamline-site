@@ -25,14 +25,14 @@ cta:
 hero:
   eyebrow: Untuk iPhone · iPad · Mac
   title: Playlist Anda,<br><span class="gradient-text">sekali ketuk langsung putar.</span>
-  subtitle: Doubo adalah pemutar IPTV native. Impor M3U/M3U8, jelajahi per grup, dan periksa saluran sebelum menonton. Jika siaran gagal, aplikasi memberi tahu penyebabnya.
+  subtitle: Doubo adalah pemutar IPTV native. Impor M3U/M3U8, jelajahi per grup, simpan saluran favorit, dan tonton dengan Picture in Picture atau di TV Anda.
   note: Dibuat secara native · Tanpa saluran bawaan · Data Anda tetap di perangkat Anda
 
 mock:
   playlist: Playlist Saya
   live: Langsung
   casting: "Mentransmisikan ke TV"
-  checked: Diperiksa · 128 dari 142 dapat diakses
+  checked: 142 saluran · 5 grup
   groups: [Semua, Berita, Olahraga, Dokumenter, Musik]
   channels:
     - name: Berita 24
@@ -46,12 +46,11 @@ mock:
       state: ok
     - name: Musik Live
       group: Musik
-      state: fail
-      reason: "Tidak dapat diputar · mungkin dibatasi wilayah"
+      state: ok
 
 features:
   eyebrow: Fitur
-  title: Lebih sedikit coba-coba, dari impor sampai menonton
+  title: Mulus dari impor sampai menonton
   subtitle: Dibangun hanya dengan framework Apple, sehingga ringan, mulus, dan hemat baterai.
   items:
     - icon: import
@@ -61,14 +60,11 @@ features:
       title: Grup, pencarian, dan favorit
       desc: Jelajahi per group-title, cari nama saluran dan grup secara instan, tandai saluran favorit, dan kembali ke saluran yang baru ditonton.
     - icon: pulse
-      title: Periksa dulu, baru tonton
-      desc: Setiap siaran diuji secara paralel, sehingga Anda bisa menampilkan hanya saluran yang dapat diakses tanpa harus mencoba satu per satu.
-    - icon: diagnose
-      title: Penyebab gagal yang mudah dipahami
-      desc: Membedakan autentikasi (401), pembatasan wilayah atau akses (403), siaran yang sudah dihapus (404), waktu habis, DNS, dan format yang tidak didukung, lalu menyarankan langkah berikutnya.
+      title: Periksa semua saluran sekaligus
+      desc: Doubo menguji seluruh playlist secara paralel dan menyusun saluran yang siap diputar, jadi Anda tinggal tekan putar.
     - icon: route
       title: Ganti jalur dengan sekali ketuk
-      desc: Jika satu saluran punya beberapa sumber di playlist Anda, ganti di antaranya pada bagian Jalur dan lihat hasil pemeriksaan tiap jalur.
+      desc: Jika satu saluran punya beberapa sumber, ganti di antaranya pada bagian Jalur dan pilih yang paling lancar kapan saja.
     - icon: pip
       title: Pengalaman pemutaran native
       desc: Dibangun di atas AVKit, dengan Picture in Picture, trek subtitle, kecepatan putar, dan layar penuh lanskap. Baris saluran yang sedang diputar menampilkan cuplikan langsung.
@@ -85,8 +81,8 @@ how:
   steps:
     - title: Tambahkan playlist
       desc: Tempel URL M3U yang berhak Anda gunakan, atau impor dari aplikasi File.
-    - title: Periksa saluran
-      desc: Sekali ketuk untuk menyaring saluran yang dapat diakses dari jaringan Anda.
+    - title: Rapikan saluran
+      desc: Sekali ketuk untuk menyusun saluran yang siap diputar.
     - title: Putar atau kirim ke TV
       desc: Ketuk untuk memutar, lanjutkan menonton dengan Picture in Picture, atau kirim ke TV di ruang keluarga.
 
@@ -116,12 +112,12 @@ platforms:
 roadmap_teaser:
   eyebrow: Peta jalan
   title: Yang akan datang
-  subtitle: Prioritas kami sederhana. Pertama, membuat lebih banyak saluran dapat diputar dengan stabil. Lalu menambahkan panduan acara, tayangan ulang, dan lainnya.
+  subtitle: Prioritas kami sederhana. Pertama, membuat pemutaran lebih lancar dan stabil. Lalu menambahkan panduan acara, tayangan ulang, dan lainnya.
   link: Lihat peta jalan lengkap
 
 roadmap:
   title: Peta jalan
-  subtitle: Kami mengutamakan keberhasilan pemutaran, lalu memperluas fitur dan platform. Ini adalah arah yang direncanakan, bukan janji tanggal rilis.
+  subtitle: Kami mengutamakan pengalaman pemutaran yang lancar dan stabil, lalu memperluas fitur dan platform. Ini adalah arah yang direncanakan, bukan janji tanggal rilis.
   updated: "Terakhir diperbarui: "
   updated_date: Oktober 2026
   feedback: Ada usulan? Sampaikan di GitHub.
@@ -139,24 +135,23 @@ roadmap:
           desc: Impor dari URL atau file; playlist terakhir diingat.
         - title: Grup, pencarian, favorit, baru ditonton
         - title: Pemeriksaan ketersediaan paralel
-        - title: Diagnosis kegagalan pemutaran
         - title: Picture in Picture, subtitle, kecepatan putar
         - title: Ganti jalur untuk saluran bernama sama
         - title: Transmisi DLNA dan video lokal
     - status: now
-      title: Keberhasilan pemutaran
+      title: Pemutaran lebih lancar
       items:
         - title: Kompatibilitas siaran HTTP yang lebih luas
         - title: Penyempurnaan audio latar dan Picture in Picture
         - title: Penguraian M3U yang lebih lengkap
           desc: Encoding GBK dan lainnya, tvg-id, header User-Agent / Referer per saluran.
         - title: Status kesehatan saluran
-          desc: Belum diperiksa, dapat diakses, dibatasi, waktu habis, atau tidak didukung, dengan hasil tersimpan.
+          desc: Menampilkan status terkini setiap saluran, dengan hasil tersimpan.
     - status: next
       title: Keandalan dan kecepatan
       items:
         - title: Saluran multi-jalur dengan peralihan otomatis
-          desc: Otomatis mencoba jalur berikutnya saat jalur saat ini gagal.
+          desc: Otomatis memilih jalur yang paling lancar.
         - title: Playlist jarak jauh tersimpan dan bisa dibuka offline
         - title: AirPlay
         - title: Performa untuk daftar lebih dari 10.000 saluran
@@ -179,8 +174,6 @@ faq:
   items:
     - q: Apakah Doubo menyediakan saluran TV?
       a: Tidak. Doubo adalah pemutar; aplikasi ini tidak menyertakan atau menjual konten saluran. Tambahkan playlist yang berhak Anda gunakan. Daftar rekomendasi di aplikasi adalah tautan publik pihak ketiga, dan ketersediaan serta hak tontonnya ditentukan oleh penyedianya.
-    - q: Mengapa beberapa saluran tidak bisa diputar?
-      a: Siaran mungkin sedang offline, memerlukan akun, dibatasi wilayah, atau memakai codec yang tidak didukung pemutar Apple. Doubo berusaha mengenali penyebabnya dan menampilkannya di baris saluran. Fitur pemeriksaan menyaring saluran yang tidak dapat diakses sejak awal.
     - q: Apakah data saya dikumpulkan?
       a: Aplikasi ini tidak mengumpulkan data pribadi. Playlist, favorit, dan riwayat tontonan tetap di perangkat Anda. Situs web ini menggunakan Google Analytics untuk memahami kunjungan; lihat kebijakan privasi.
     - q: Apa yang dibutuhkan untuk mengirim ke TV?

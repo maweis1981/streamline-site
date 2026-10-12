@@ -78,7 +78,7 @@
 .mac-thumb{display:block;aspect-ratio:16/9;border-radius:calc(.6*var(--u));background:linear-gradient(135deg,#22C7B0,#1E5BFF)}
 .mac-tile:nth-child(2) .mac-thumb{background:linear-gradient(135deg,#448BFF,#7C4DFF)}
 .mac-tile:nth-child(3) .mac-thumb{background:linear-gradient(135deg,#2BD67B,#1BA9A0)}
-.mac-tile:nth-child(4) .mac-thumb{background:linear-gradient(135deg,#F5A524,#E5484D);box-shadow:0 0 0 1px var(--fail);opacity:.75}
+.mac-tile:nth-child(4) .mac-thumb{background:linear-gradient(135deg,#F5A524,#E5484D)}
 .mac-meta{display:flex;align-items:center;justify-content:space-between;gap:calc(.5*var(--u));margin-top:calc(.6*var(--u));min-height:calc(1.9*var(--u))}
 .mac-meta b{font-size:calc(1.4*var(--u));font-weight:600;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .is-skel .mac-thumb{background:rgba(255,255,255,.06)}
@@ -87,7 +87,6 @@
 .eq i{width:calc(.4*var(--u));height:100%;background:var(--teal);border-radius:1px;transform-origin:bottom;animation:eq 1.1s ease-in-out infinite}
 .eq i:nth-child(2){animation-delay:-.4s}.eq i:nth-child(3){animation-delay:-.75s}
 .mock-state{position:relative;flex:none;width:calc(.9*var(--pu,var(--u)));height:calc(.9*var(--pu,var(--u)));border-radius:50%;background:var(--ok)}
-.is-fail .mock-state{background:var(--fail)}
 .is-playing .mock-state{background:var(--teal);box-shadow:0 0 0 calc(.3*var(--pu,var(--u))) rgba(89,241,209,.25)}
 .mock-state::after{content:"";position:absolute;inset:0;border-radius:50%;background:#55607A;opacity:0}
 .stage-arc{display:none;position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;overflow:visible}
@@ -114,8 +113,6 @@
 .mock-text b{font-size:calc(1.5*var(--pu));line-height:1.3;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .mock-text small{font-size:calc(1.2*var(--pu));line-height:1.3;color:var(--text-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .mock-row.is-playing{background:rgba(89,241,209,.08)}
-.mock-row.is-fail{background:rgba(255,122,122,.08);box-shadow:inset calc(.4*var(--pu)) 0 0 var(--fail)}
-.mock-row.is-fail small{color:var(--fail);white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 @media (min-width:560px){
   .stage-mac{display:block}
 }
@@ -132,7 +129,7 @@
 .spotlights{display:grid;gap:20px}
 .spotlight{display:flex;flex-direction:column;border-radius:var(--r-xl);padding:24px;border:1px solid transparent;background:linear-gradient(var(--surface),var(--surface)) padding-box,var(--grad-border) border-box}
 .spotlight::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:.25;background:radial-gradient(circle 360px at 100% 0%,var(--teal),transparent 70%)}
-.spotlight--diagnose::after{background:radial-gradient(circle 360px at 100% 0%,var(--blue),transparent 70%)}
+.spotlight--route::after{background:radial-gradient(circle 360px at 100% 0%,var(--blue),transparent 70%)}
 .spotlight>*{position:relative;z-index:1}
 .spotlight h3{font-size:var(--fs-h3-lg);line-height:1.22;font-weight:650;letter-spacing:-.015em;margin:22px 0 10px}
 .spotlight p{color:var(--text-2);max-width:52ch}
@@ -145,20 +142,20 @@
 .scan-bars i+i{width:36%;background:rgba(255,255,255,.06)}
 .scan-row:nth-child(2n) .scan-bars i{width:48%}
 .scan-dot{position:relative;width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 10px rgba(74,222,128,.5)}
-.scan-row.is-fail .scan-dot{background:var(--fail);box-shadow:0 0 10px rgba(255,122,122,.5)}
 .scan-dot::after{content:"";position:absolute;inset:0;border-radius:50%;background:#55607A;opacity:0}
 .scan-line{position:absolute;inset:0;pointer-events:none;opacity:0;background:linear-gradient(var(--teal),var(--teal)) top/100% 2px no-repeat,linear-gradient(rgba(89,241,209,.18),transparent 24px) top/100% 24px no-repeat}
 .scan-caption{margin-top:14px;font:13px/1.5 var(--font-mono),var(--font);color:var(--text-2)}
-.diag .code{flex:none;justify-content:center;width:56px;min-height:28px;padding:4px 8px;font-size:13px}
-.diag .icon{width:14px;height:14px;color:var(--text-3)}
-.diag-fix{width:18%;height:6px;border-radius:3px;background:var(--c,rgba(255,255,255,.1));opacity:.55}
-.diag .scan-row:nth-child(1){--c:var(--warn)}.diag .scan-row:nth-child(2),.diag .scan-row:nth-child(3){--c:var(--fail)}.diag .scan-row:nth-child(4){--c:var(--blue-ink)}.diag .scan-row:nth-child(5){--c:var(--text-3)}
-.diag .scan-row:nth-child(5) .scan-bars i{width:54%}
+.line-row{transition:background .3s}
+.line-row.is-active{background:rgba(89,241,209,.10);box-shadow:inset 0 0 0 1px rgba(89,241,209,.35)}
+.line-num{flex:none;display:grid;place-items:center;width:28px;height:28px;border-radius:8px;font:600 13px/1 var(--font-mono),var(--font);color:var(--text-2);background:rgba(255,255,255,.06)}
+.line-row.is-active .line-num{color:#04131a;background:var(--gradient)}
+.lines .code{flex:none;justify-content:center;width:52px;min-height:26px;padding:4px 6px;font-size:12px;--c:var(--blue-ink)}
+.line-row.is-active .code{--c:var(--teal)}
+.line-signal{flex:none;display:flex;align-items:flex-end;gap:2px;height:14px}
+.line-signal i{width:3px;border-radius:1px;background:var(--ok)}
+.line-signal i:nth-child(1){height:5px}.line-signal i:nth-child(2){height:8px}.line-signal i:nth-child(3){height:11px}.line-signal i:nth-child(4){height:14px}
+.line-row:nth-child(4) .line-signal i:nth-child(4),.line-row:nth-child(3) .line-signal i:nth-child(4){opacity:.3}
 .code{--c:var(--text-2);display:inline-flex;align-items:center;min-height:40px;padding:8px 14px;border-radius:var(--r-sm);font:600 14px/1 var(--font-mono);color:var(--c);background:color-mix(in srgb,var(--c) 12%,transparent);border:1px solid color-mix(in srgb,var(--c) 25%,transparent)}
-.code-401{--c:var(--warn)}.code-403,.code-404{--c:var(--fail)}.code-dns{--c:var(--blue-ink)}.code-clock{--c:var(--text-2)}
-.clock{position:relative;width:16px;height:16px;border:1.5px solid currentColor;border-radius:50%}
-.clock::before,.clock::after{content:"";position:absolute;left:6px;bottom:6px;width:1.5px;height:5px;background:currentColor;transform-origin:bottom;border-radius:1px}
-.clock::after{height:4px;transform:rotate(90deg)}
 .shelf{display:grid;margin-top:20px}
 .tile .feature-icon{margin-bottom:0}
 .tile h3{margin:18px 0 8px}

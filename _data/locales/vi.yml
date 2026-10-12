@@ -25,14 +25,14 @@ cta:
 hero:
   eyebrow: Dành cho iPhone · iPad · Mac
   title: Danh sách phát của bạn,<br><span class="gradient-text">chạm là phát.</span>
-  subtitle: Doubo là trình phát IPTV gốc. Nhập M3U/M3U8, duyệt theo nhóm và kiểm tra kênh trước khi xem. Khi luồng phát lỗi, ứng dụng cho bạn biết lý do.
+  subtitle: Doubo là trình phát IPTV gốc. Nhập M3U/M3U8, duyệt theo nhóm, lưu kênh yêu thích và xem bằng Hình trong hình hoặc trên TV.
   note: Phát triển gốc · Không kèm sẵn kênh · Dữ liệu luôn nằm trên thiết bị của bạn
 
 mock:
   playlist: Danh sách của tôi
   live: Trực tiếp
   casting: "Đang truyền lên TV"
-  checked: Đã kiểm tra · 128/142 kênh truy cập được
+  checked: 142 kênh · 5 nhóm
   groups: [Tất cả, Tin tức, Thể thao, Tài liệu, Âm nhạc]
   channels:
     - name: Tin tức 24
@@ -46,12 +46,11 @@ mock:
       state: ok
     - name: Âm nhạc trực tiếp
       group: Âm nhạc
-      state: fail
-      reason: "Chưa phát được · có thể bị giới hạn khu vực"
+      state: ok
 
 features:
   eyebrow: Tính năng
-  title: Bớt thử sai, từ lúc nhập đến lúc xem
+  title: Mượt mà từ lúc nhập đến lúc xem
   subtitle: Chỉ dùng các framework của Apple nên nhẹ, mượt và tiết kiệm pin.
   items:
     - icon: import
@@ -61,14 +60,11 @@ features:
       title: Nhóm, tìm kiếm và yêu thích
       desc: Duyệt theo group-title, tìm tên kênh và nhóm tức thì, đánh dấu kênh yêu thích và quay lại kênh vừa xem.
     - icon: pulse
-      title: Kiểm tra trước khi xem
-      desc: Mọi luồng phát được kiểm tra song song, để bạn chỉ hiển thị các kênh truy cập được thay vì bấm thử từng kênh.
-    - icon: diagnose
-      title: Lỗi phát được giải thích dễ hiểu
-      desc: Phân biệt lỗi xác thực (401), giới hạn khu vực hoặc truy cập (403), luồng đã bị gỡ (404), hết thời gian chờ, DNS và định dạng không hỗ trợ, kèm gợi ý cách xử lý.
+      title: Kiểm tra mọi kênh cùng lúc
+      desc: Doubo kiểm tra song song toàn bộ danh sách phát và sắp xếp sẵn các kênh sẵn sàng phát, bạn chỉ việc bấm xem.
     - icon: route
       title: Đổi đường truyền chỉ một chạm
-      desc: Khi một kênh có nhiều nguồn trong danh sách, chuyển đổi giữa chúng ở mục Đường truyền và xem kết quả kiểm tra của từng nguồn.
+      desc: Khi một kênh có nhiều nguồn, chuyển đổi giữa chúng ở mục Đường truyền và chọn nguồn mượt nhất bất cứ lúc nào.
     - icon: pip
       title: Trải nghiệm phát gốc
       desc: Xây dựng trên AVKit, có Hình trong hình, chọn phụ đề, tốc độ phát và toàn màn hình khi xoay ngang. Dòng kênh đang phát hiển thị hình ảnh trực tiếp.
@@ -85,8 +81,8 @@ how:
   steps:
     - title: Thêm danh sách phát
       desc: Dán URL M3U mà bạn được phép sử dụng, hoặc nhập từ ứng dụng Tệp.
-    - title: Kiểm tra kênh
-      desc: Một chạm để lọc ra các kênh truy cập được từ mạng của bạn.
+    - title: Sắp xếp kênh
+      desc: Một chạm để sắp xếp sẵn các kênh sẵn sàng phát.
     - title: Phát hoặc truyền lên TV
       desc: Chạm để phát, tiếp tục xem bằng Hình trong hình, hoặc truyền lên TV phòng khách.
 
@@ -116,12 +112,12 @@ platforms:
 roadmap_teaser:
   eyebrow: Lộ trình
   title: Sắp tới có gì
-  subtitle: Ưu tiên của chúng tôi rất đơn giản. Trước hết, giúp nhiều kênh phát ổn định hơn. Sau đó bổ sung lịch phát sóng, xem lại và nhiều hơn nữa.
+  subtitle: Ưu tiên của chúng tôi rất đơn giản. Trước hết, giúp việc phát mượt và ổn định hơn nữa. Sau đó bổ sung lịch phát sóng, xem lại và nhiều hơn nữa.
   link: Xem toàn bộ lộ trình
 
 roadmap:
   title: Lộ trình
-  subtitle: Chúng tôi ưu tiên tỷ lệ phát thành công trước, sau đó mở rộng tính năng và nền tảng. Đây là định hướng dự kiến, không phải cam kết về ngày phát hành.
+  subtitle: Chúng tôi ưu tiên trải nghiệm phát mượt mà, ổn định trước, sau đó mở rộng tính năng và nền tảng. Đây là định hướng dự kiến, không phải cam kết về ngày phát hành.
   updated: "Cập nhật lần cuối: "
   updated_date: tháng 10 năm 2026
   feedback: Bạn muốn có tính năng nào? Hãy góp ý trên GitHub.
@@ -139,24 +135,23 @@ roadmap:
           desc: Nhập từ URL hoặc tệp; ghi nhớ các danh sách gần đây.
         - title: Nhóm, tìm kiếm, yêu thích, vừa xem
         - title: Kiểm tra khả dụng song song
-        - title: Chẩn đoán lỗi phát
         - title: Hình trong hình, phụ đề, tốc độ phát
         - title: Chuyển đường truyền cho kênh trùng tên
         - title: Truyền DLNA và phát video trên máy
     - status: now
-      title: Tỷ lệ phát thành công
+      title: Phát mượt mà hơn
       items:
         - title: Tương thích rộng hơn với luồng HTTP
         - title: Hoàn thiện phát nền và Hình trong hình
         - title: Phân tích M3U đầy đủ hơn
           desc: Mã hóa GBK và các mã khác, tvg-id, header User-Agent / Referer theo từng kênh.
         - title: Trạng thái sức khỏe kênh
-          desc: Chưa kiểm tra, truy cập được, bị giới hạn, hết thời gian chờ hoặc không hỗ trợ, có lưu kết quả.
+          desc: Hiển thị trạng thái hiện tại của từng kênh, có lưu kết quả.
     - status: next
       title: Ổn định và tốc độ
       items:
-        - title: Kênh nhiều đường truyền, tự động chuyển khi lỗi
-          desc: Tự động thử đường truyền tiếp theo khi đường hiện tại lỗi.
+        - title: Kênh nhiều đường truyền, tự động chọn nguồn mượt nhất
+          desc: Tự động chọn đường truyền mượt nhất.
         - title: Lưu danh sách phát từ xa và mở khi ngoại tuyến
         - title: AirPlay
         - title: Hiệu năng cho danh sách trên 10.000 kênh
@@ -179,8 +174,6 @@ faq:
   items:
     - q: Doubo có cung cấp kênh truyền hình không?
       a: Không. Doubo là trình phát; ứng dụng không kèm sẵn hay bán nội dung kênh. Hãy thêm danh sách phát mà bạn được phép sử dụng. Các danh sách đề xuất trong ứng dụng là liên kết công khai của bên thứ ba; khả năng truy cập và quyền xem do nhà cung cấp quyết định.
-    - q: Vì sao một số kênh không phát được?
-      a: Luồng phát có thể đang ngừng hoạt động, yêu cầu tài khoản, bị giới hạn khu vực hoặc dùng codec mà trình phát của Apple không hỗ trợ. Doubo cố gắng xác định nguyên nhân và hiển thị ngay trên dòng kênh. Tính năng kiểm tra giúp lọc trước các kênh không truy cập được.
     - q: Ứng dụng có thu thập dữ liệu của tôi không?
       a: Ứng dụng không thu thập dữ liệu cá nhân. Danh sách phát, mục yêu thích và lịch sử xem luôn nằm trên thiết bị của bạn. Trang web này dùng Google Analytics để hiểu lượt truy cập; xem chính sách quyền riêng tư.
     - q: Cần gì để truyền lên TV?

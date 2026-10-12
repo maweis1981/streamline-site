@@ -25,14 +25,14 @@ cta:
 hero:
   eyebrow: For iPhone · iPad · Mac
   title: Your playlists,<br><span class="gradient-text">one tap away.</span>
-  subtitle: Doubo is a native IPTV player. Import M3U/M3U8, browse by group, and check channels before you play. When a stream fails, it tells you why.
+  subtitle: Doubo is a native IPTV player. Import M3U/M3U8, browse by group, save your favorites, and watch in Picture in Picture or on your TV.
   note: Built natively · No bundled channels · Your data stays on your device
 
 mock:
   playlist: My Playlist
   live: Live
   casting: "Casting to TV"
-  checked: Checked · 128 of 142 reachable
+  checked: 142 channels · 5 groups
   groups: [All, News, Sports, Docs, Music]
   channels:
     - name: News 24
@@ -46,12 +46,11 @@ mock:
       state: ok
     - name: Live Music
       group: Music
-      state: fail
-      reason: "Can't play right now · likely region-restricted"
+      state: ok
 
 features:
   eyebrow: Features
-  title: Less trial and error, from import to watching
+  title: Smooth from import to watching
   subtitle: Built only with Apple frameworks, so it stays light, smooth, and easy on your battery.
   items:
     - icon: import
@@ -61,14 +60,11 @@ features:
       title: Groups, search, and favorites
       desc: Browse by group-title, search channel names and groups instantly, star the channels you watch, and jump back through recently played.
     - icon: pulse
-      title: Check before you play
-      desc: Every stream is probed in parallel, so you can show only reachable channels instead of tapping through dead ones.
-    - icon: diagnose
-      title: Failures you can understand
-      desc: Tells authentication (401), regional or access limits (403), removed streams (404), timeouts, DNS, and unsupported formats apart, and suggests what to try next.
+      title: Check every channel at once
+      desc: Doubo tests your whole playlist in parallel and lines up the channels that are ready to play, so you can just press play.
     - icon: route
       title: Switch lines in one tap
-      desc: When a channel has several sources in your playlist, switch between them under Lines and see each line's check result.
+      desc: When a channel has several sources, switch between them under Lines and pick the smoothest one anytime.
     - icon: pip
       title: A native playback experience
       desc: Built on AVKit, with Picture in Picture, subtitle tracks, playback speed, and landscape full screen. The playing channel's row shows a live frame.
@@ -85,8 +81,8 @@ how:
   steps:
     - title: Add a playlist
       desc: Paste an M3U URL you're authorized to use, or import one from Files.
-    - title: Check channels
-      desc: One tap filters the list to channels reachable from your network.
+    - title: Organize channels
+      desc: One tap lines up the channels that are ready to play.
     - title: Play or cast
       desc: Tap to play, keep watching in Picture in Picture, or send it to the living-room TV.
 
@@ -116,12 +112,12 @@ platforms:
 roadmap_teaser:
   eyebrow: Roadmap
   title: What's next
-  subtitle: Our priority is simple. First, get more channels to play reliably. Then add the program guide, catch-up, and more.
+  subtitle: Our priority is simple. First, make playback even smoother and more stable. Then add the program guide, catch-up, and more.
   link: See the full roadmap
 
 roadmap:
   title: Roadmap
-  subtitle: We focus on playback success first, then expand features and platforms. This is our planned direction, not a promise of release dates.
+  subtitle: We focus on a smooth, stable playback experience first, then expand features and platforms. This is our planned direction, not a promise of release dates.
   updated: "Last updated: "
   updated_date: October 2026
   feedback: Missing something? Suggest it on GitHub.
@@ -139,24 +135,23 @@ roadmap:
           desc: Import from a URL or file; recent playlists are remembered.
         - title: Groups, search, favorites, recently played
         - title: Parallel availability checks
-        - title: Playback failure diagnosis
         - title: Picture in Picture, subtitles, playback speed
         - title: Switch between same-name channel lines
         - title: DLNA casting and local video
     - status: now
-      title: Playback success
+      title: Smoother playback
       items:
         - title: Broader HTTP stream compatibility
         - title: Background audio and Picture in Picture polish
         - title: Richer M3U parsing
           desc: GBK and other encodings, tvg-id, per-channel User-Agent / Referer headers.
         - title: Channel health status
-          desc: Unchecked, reachable, restricted, timed out, or unsupported, with cached results.
+          desc: Shows each channel’s live status, with cached results.
     - status: next
       title: Reliability and speed
       items:
-        - title: Multi-line channels with automatic failover
-          desc: Automatically try the next line when the current one fails.
+        - title: Multi-line channels with smart switching
+          desc: Automatically picks the smoothest line.
         - title: Cached remote playlists and offline open
         - title: AirPlay
         - title: Performance for 10,000+ channel lists
@@ -179,8 +174,6 @@ faq:
   items:
     - q: Does Doubo provide TV channels?
       a: No. Doubo is a player; it doesn't bundle or sell channel content. Add playlists you're authorized to use. Recommended lists in the app are third-party public links, and their availability and viewing rights are set by their providers.
-    - q: Why won't some channels play?
-      a: A stream may be offline, need an account, be region-restricted, or use a codec Apple's player doesn't support. Doubo tries to identify the reason and shows it on the channel's row. The check feature filters out unreachable channels ahead of time.
     - q: Do you collect my data?
       a: The app collects no personal data. Playlists, favorites, and watch history stay on your device. This website uses Google Analytics to understand visits; see the privacy policy.
     - q: What do I need to cast to a TV?

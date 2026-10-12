@@ -69,7 +69,7 @@ layout: default
               <span class="mock-thumb"></span>
               <span class="mock-text">
                 <b>{{ c.name }}</b>
-                <small>{% if c.reason %}{{ c.reason }}{% else %}{{ c.group }}{% endif %}</small>
+                <small>{{ c.group }}</small>
               </span>
               <span class="mock-state"></span>
             </li>
@@ -91,7 +91,7 @@ layout: default
 
     <div class="spotlights">
       {%- assign si = 0 -%}
-      {%- for f in t.features.items -%}{%- if f.icon == "pulse" or f.icon == "diagnose" %}
+      {%- for f in t.features.items -%}{%- if f.icon == "pulse" or f.icon == "route" %}
       <article class="card spotlight spotlight--{{ f.icon }} reveal" style="--i:{{ si }}">
         <span class="feature-icon">{% include icon.html name=f.icon %}</span>
         <h3>{{ f.title }}</h3>
@@ -99,7 +99,7 @@ layout: default
         <div class="spot-visual" aria-hidden="true">
           {%- if f.icon == "pulse" %}
           <ul class="scan">
-            {%- assign dots = "ok,ok,fail,ok,ok" | split: "," -%}
+            {%- assign dots = "ok,ok,ok,ok,ok" | split: "," -%}
             {%- for d in dots %}
             <li class="scan-row is-{{ d }}" style="--i:{{ forloop.index0 }}"><span class="scan-thumb"></span><span class="scan-bars"><i></i><i></i></span><span class="scan-dot"></span></li>
             {%- endfor %}
@@ -107,10 +107,10 @@ layout: default
           </ul>
           <p class="scan-caption">{{ t.mock.checked }}</p>
           {%- else %}
-          <ul class="scan diag">
-            {%- assign codes = "401,403,404,DNS,clock" | split: "," -%}
-            {%- for c in codes %}
-            <li class="scan-row"><span class="code code-{{ c | downcase }}">{% if c == "clock" %}<i class="clock"></i>{% else %}{{ c }}{% endif %}</span><span class="scan-bars"><i></i><i></i></span>{% include icon.html name="arrow" %}<span class="diag-fix"></span></li>
+          <ul class="scan lines">
+            {%- assign qualities = "4K,FHD,HD,SD" | split: "," -%}
+            {%- for qv in qualities %}
+            <li class="scan-row line-row{% if forloop.index == 2 %} is-active{% endif %}" style="--i:{{ forloop.index0 }}"><span class="line-num">{{ forloop.index }}</span><span class="scan-bars"><i></i><i></i></span><span class="code line-q">{{ qv }}</span><span class="line-signal"><i></i><i></i><i></i><i></i></span></li>
             {%- endfor %}
           </ul>
           {%- endif %}
@@ -122,7 +122,7 @@ layout: default
 
     <div class="shelf">
       {%- assign ti = 0 -%}
-      {%- for f in t.features.items -%}{%- unless f.icon == "pulse" or f.icon == "diagnose" or f.icon == "lock" %}
+      {%- for f in t.features.items -%}{%- unless f.icon == "pulse" or f.icon == "route" or f.icon == "lock" %}
       <article class="card tile reveal" style="--i:{{ ti }}">
         <span class="feature-icon">{% include icon.html name=f.icon %}</span>
         <div class="tile-text">
