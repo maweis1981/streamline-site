@@ -11,3 +11,4 @@ playlists/
 assets/web/
 web-app/node_modules/
 web/playable.json
+__pycache__/
