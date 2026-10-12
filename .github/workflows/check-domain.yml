@@ -38,6 +38,16 @@ jobs:
           echo "--- container script (404 = container not published yet) ---"
           echo "gtm.js -> $(curl -s -o /dev/null -w '%{http_code} %{size_download}B' -m 15 'https://www.googletagmanager.com/gtm.js?id=GTM-MJDCLXML')"
 
+      - name: Analytics (GTM container contents)
+        run: |
+          curl -s -m 20 -o gtm.js 'https://www.googletagmanager.com/gtm.js?id=GTM-MJDCLXML'
+          echo "gtm.js size: $(wc -c < gtm.js) bytes"
+          echo "GA4 measurement IDs in container: $(grep -o 'G-[A-Z0-9]\{6,12\}' gtm.js | sort -u | tr '\n' ' ')"
+          for event in cta_click language_switch faq_open consent_update web_play web_playlist_add tool_m3u_analyze tool_m3u_download playlist_copy; do
+            echo "trigger for $event: $(grep -c "\"$event\"" gtm.js)"
+          done
+          echo "consent mode references: $(grep -o 'ad_storage\|analytics_storage' gtm.js | sort | uniq -c | tr '\n' ' ')"
+
       - name: TLS certificate served
         run: |
           echo | openssl s_client -connect doubo.tv:443 -servername doubo.tv 2>/dev/null | openssl x509 -noout -subject -issuer -dates -ext subjectAltName || echo "no certificate"
