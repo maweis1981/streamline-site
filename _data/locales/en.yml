@@ -1,10 +1,12 @@
 html_lang: en
 og_locale: en_US
+brand: Doubo
+slogan: "Every channel, one player."
 lang_name: English
 
 meta:
-  title: Streamline — A native IPTV player for iPhone, iPad, and Mac
-  description: Streamline is a native M3U/M3U8 player. Import your own playlists, browse by group, check which channels play, watch in Picture in Picture, and cast to your TV. No bundled channels, no personal data collected.
+  title: Doubo — A native IPTV player for iPhone, iPad, and Mac
+  description: Doubo is a native M3U/M3U8 player. Import your own playlists, browse by group, check which channels play, watch in Picture in Picture, and cast to your TV. No bundled channels, no personal data collected.
 
 nav:
   features: Features
@@ -23,7 +25,7 @@ cta:
 hero:
   eyebrow: For iPhone · iPad · Mac
   title: Your playlists,<br><span class="gradient-text">one tap away.</span>
-  subtitle: Streamline is a native IPTV player. Import M3U/M3U8, browse by group, and check channels before you play. When a stream fails, it tells you why.
+  subtitle: Doubo is a native IPTV player. Import M3U/M3U8, browse by group, and check channels before you play. When a stream fails, it tells you why.
   note: Built natively · No bundled channels · Your data stays on your device
 
 mock:
@@ -174,10 +176,10 @@ roadmap:
 faq:
   title: FAQ
   items:
-    - q: Does Streamline provide TV channels?
-      a: No. Streamline is a player; it doesn't bundle or sell channel content. Add playlists you're authorized to use. Recommended lists in the app are third-party public links, and their availability and viewing rights are set by their providers.
+    - q: Does Doubo provide TV channels?
+      a: No. Doubo is a player; it doesn't bundle or sell channel content. Add playlists you're authorized to use. Recommended lists in the app are third-party public links, and their availability and viewing rights are set by their providers.
     - q: Why won't some channels play?
-      a: A stream may be offline, need an account, be region-restricted, or use a codec Apple's player doesn't support. Streamline tries to identify the reason and shows it on the channel's row. The check feature filters out unreachable channels ahead of time.
+      a: A stream may be offline, need an account, be region-restricted, or use a codec Apple's player doesn't support. Doubo tries to identify the reason and shows it on the channel's row. The check feature filters out unreachable channels ahead of time.
     - q: Do you collect my data?
       a: The app collects no personal data. Playlists, favorites, and watch history stay on your device. This website uses Google Analytics to understand visits; see the privacy policy.
     - q: What do I need to cast to a TV?
@@ -202,7 +204,7 @@ consent:
 
 footer:
   tagline: A native IPTV player for iPhone, iPad, and Mac.
-  disclaimer: Streamline does not provide any channel content. Only play content you're authorized to access. Apple, iPhone, iPad, Mac, Apple TV, AirPlay, and CarPlay are trademarks of Apple Inc.
+  disclaimer: Doubo does not provide any channel content. Only play content you're authorized to access. Apple, iPhone, iPad, Mac, Apple TV, AirPlay, and CarPlay are trademarks of Apple Inc.
   product: Product
   resources: Resources
   feedback: Feedback

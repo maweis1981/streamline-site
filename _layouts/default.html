@@ -1,7 +1,7 @@
 {%- assign t = site.data.locales[page.lang] -%}
 {%- if page.lang == site.default_lang -%}{%- assign lang_prefix = "" -%}{%- else -%}{%- assign lang_prefix = "/" | append: page.lang -%}{%- endif -%}
 {%- assign home_url = lang_prefix | append: "/" | relative_url -%}
-{%- if page.title -%}{%- assign full_title = page.title | append: " · Streamline" -%}{%- else -%}{%- assign full_title = t.meta.title -%}{%- endif -%}
+{%- if page.title -%}{%- assign full_title = page.title | append: " · " | append: t.brand -%}{%- else -%}{%- assign full_title = t.meta.title -%}{%- endif -%}
 {%- assign description = page.description | default: t.meta.description -%}
 <!doctype html>
 <html lang="{{ t.html_lang }}">
@@ -22,7 +22,7 @@
   <link rel="alternate" hreflang="x-default" href="{{ '/' | append: page.path_key | absolute_url }}">
   {%- endunless %}
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Streamline">
+  <meta property="og:site_name" content="{{ t.brand }}">
   <meta property="og:title" content="{{ full_title | escape }}">
   <meta property="og:description" content="{{ description | strip_html | escape }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   {%- if page.ref == "home" %}
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Streamline","applicationCategory":"MultimediaApplication","operatingSystem":"iOS 17, iPadOS 17, macOS 14","description":{{ t.meta.description | jsonify }},"url":{{ home_url | absolute_url | jsonify }},"image":{{ '/assets/img/icon-256.png' | absolute_url | jsonify }}}
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Doubo","alternateName":"都播","applicationCategory":"MultimediaApplication","operatingSystem":"iOS 17, iPadOS 17, macOS 14","description":{{ t.meta.description | jsonify }},"url":{{ home_url | absolute_url | jsonify }},"image":{{ '/assets/img/icon-256.png' | absolute_url | jsonify }}}
   </script>
   {%- endif %}
   <script defer src="{{ '/assets/js/main.js' | relative_url }}"></script>
@@ -45,9 +45,9 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header" id="top">
     <div class="container header-inner">
-      <a class="brand" href="{{ home_url }}" aria-label="Streamline">
+      <a class="brand" href="{{ home_url }}" aria-label="{{ t.brand }}">
         <img src="{{ '/assets/img/logo.svg' | relative_url }}" alt="" width="32" height="32">
-        <span>Streamline</span>
+        <span>{{ t.brand }}</span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">{% include icon.html name="menu" %}</button>
       <nav class="site-nav" id="site-nav">
@@ -70,7 +70,7 @@
       <div class="footer-brand">
         <a class="brand" href="{{ home_url }}">
           <img src="{{ '/assets/img/logo.svg' | relative_url }}" alt="" width="28" height="28">
-          <span>Streamline</span>
+          <span>{{ t.brand }}</span>
         </a>
         <p>{{ t.footer.tagline }}</p>
       </div>
@@ -90,7 +90,7 @@
     </div>
     <div class="container footer-legal">
       <p>{{ t.footer.disclaimer }}</p>
-      <p>© {{ site.time | date: "%Y" }} Streamline</p>
+      <p>© {{ site.time | date: "%Y" }} Doubo</p>
     </div>
   </footer>
   {% include consent-banner.html %}

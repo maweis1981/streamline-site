@@ -5,12 +5,12 @@ ref: privacy
 path_key: privacy/
 title: Kebijakan Privasi
 subtitle: "Tanggal berlaku: 12 Oktober 2026"
-description: Kebijakan privasi untuk aplikasi dan situs web Streamline. Aplikasi tidak mengumpulkan data pribadi; situs web menggunakan Google Analytics dan Google Tag Manager untuk memahami kunjungan.
+description: Kebijakan privasi untuk aplikasi dan situs web Doubo. Aplikasi tidak mengumpulkan data pribadi; situs web menggunakan Google Analytics dan Google Tag Manager untuk memahami kunjungan.
 ---
 
-Kebijakan ini menjelaskan bagaimana aplikasi Streamline ("aplikasi") dan situs web ini menangani informasi Anda. Ini adalah terjemahan; jika terdapat perbedaan, [versi bahasa Inggris]({{ '/en/privacy/' | relative_url }}) yang berlaku.
+Kebijakan ini menjelaskan bagaimana aplikasi Doubo ("aplikasi") dan situs web ini menangani informasi Anda. Ini adalah terjemahan; jika terdapat perbedaan, [versi bahasa Inggris]({{ '/en/privacy/' | relative_url }}) yang berlaku.
 
-## 1. Aplikasi Streamline
+## 1. Aplikasi Doubo
 
 **Aplikasi ini tidak mengumpulkan atau mengunggah data pribadi apa pun.**
 

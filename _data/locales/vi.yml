@@ -1,10 +1,12 @@
 html_lang: vi
 og_locale: vi_VN
+brand: Doubo
+slogan: "Mọi kênh, một trình phát."
 lang_name: Tiếng Việt
 
 meta:
-  title: Streamline — Trình phát IPTV gốc cho iPhone, iPad và Mac
-  description: Streamline là trình phát M3U/M3U8 gốc. Nhập danh sách phát của riêng bạn, duyệt theo nhóm, kiểm tra kênh nào phát được, xem bằng Hình trong hình và truyền lên TV. Không kèm sẵn kênh, không thu thập dữ liệu cá nhân.
+  title: Doubo — Trình phát IPTV gốc cho iPhone, iPad và Mac
+  description: Doubo là trình phát M3U/M3U8 gốc. Nhập danh sách phát của riêng bạn, duyệt theo nhóm, kiểm tra kênh nào phát được, xem bằng Hình trong hình và truyền lên TV. Không kèm sẵn kênh, không thu thập dữ liệu cá nhân.
 
 nav:
   features: Tính năng
@@ -23,7 +25,7 @@ cta:
 hero:
   eyebrow: Dành cho iPhone · iPad · Mac
   title: Danh sách phát của bạn,<br><span class="gradient-text">chạm là phát.</span>
-  subtitle: Streamline là trình phát IPTV gốc. Nhập M3U/M3U8, duyệt theo nhóm và kiểm tra kênh trước khi xem. Khi luồng phát lỗi, ứng dụng cho bạn biết lý do.
+  subtitle: Doubo là trình phát IPTV gốc. Nhập M3U/M3U8, duyệt theo nhóm và kiểm tra kênh trước khi xem. Khi luồng phát lỗi, ứng dụng cho bạn biết lý do.
   note: Phát triển gốc · Không kèm sẵn kênh · Dữ liệu luôn nằm trên thiết bị của bạn
 
 mock:
@@ -174,10 +176,10 @@ roadmap:
 faq:
   title: Câu hỏi thường gặp
   items:
-    - q: Streamline có cung cấp kênh truyền hình không?
-      a: Không. Streamline là trình phát; ứng dụng không kèm sẵn hay bán nội dung kênh. Hãy thêm danh sách phát mà bạn được phép sử dụng. Các danh sách đề xuất trong ứng dụng là liên kết công khai của bên thứ ba; khả năng truy cập và quyền xem do nhà cung cấp quyết định.
+    - q: Doubo có cung cấp kênh truyền hình không?
+      a: Không. Doubo là trình phát; ứng dụng không kèm sẵn hay bán nội dung kênh. Hãy thêm danh sách phát mà bạn được phép sử dụng. Các danh sách đề xuất trong ứng dụng là liên kết công khai của bên thứ ba; khả năng truy cập và quyền xem do nhà cung cấp quyết định.
     - q: Vì sao một số kênh không phát được?
-      a: Luồng phát có thể đang ngừng hoạt động, yêu cầu tài khoản, bị giới hạn khu vực hoặc dùng codec mà trình phát của Apple không hỗ trợ. Streamline cố gắng xác định nguyên nhân và hiển thị ngay trên dòng kênh. Tính năng kiểm tra giúp lọc trước các kênh không truy cập được.
+      a: Luồng phát có thể đang ngừng hoạt động, yêu cầu tài khoản, bị giới hạn khu vực hoặc dùng codec mà trình phát của Apple không hỗ trợ. Doubo cố gắng xác định nguyên nhân và hiển thị ngay trên dòng kênh. Tính năng kiểm tra giúp lọc trước các kênh không truy cập được.
     - q: Ứng dụng có thu thập dữ liệu của tôi không?
       a: Ứng dụng không thu thập dữ liệu cá nhân. Danh sách phát, mục yêu thích và lịch sử xem luôn nằm trên thiết bị của bạn. Trang web này dùng Google Analytics để hiểu lượt truy cập; xem chính sách quyền riêng tư.
     - q: Cần gì để truyền lên TV?
@@ -202,7 +204,7 @@ consent:
 
 footer:
   tagline: Trình phát IPTV gốc cho iPhone, iPad và Mac.
-  disclaimer: Streamline không cung cấp bất kỳ nội dung kênh nào. Chỉ phát nội dung bạn được phép truy cập. Apple, iPhone, iPad, Mac, Apple TV, AirPlay và CarPlay là nhãn hiệu của Apple Inc.
+  disclaimer: Doubo không cung cấp bất kỳ nội dung kênh nào. Chỉ phát nội dung bạn được phép truy cập. Apple, iPhone, iPad, Mac, Apple TV, AirPlay và CarPlay là nhãn hiệu của Apple Inc.
   product: Sản phẩm
   resources: Tài nguyên
   feedback: Góp ý

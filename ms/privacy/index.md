@@ -5,12 +5,12 @@ ref: privacy
 path_key: privacy/
 title: Dasar Privasi
 subtitle: "Tarikh berkuat kuasa: 12 Oktober 2026"
-description: Dasar privasi untuk aplikasi dan laman web Streamline. Aplikasi tidak mengumpul data peribadi; laman web menggunakan Google Analytics dan Google Tag Manager untuk memahami lawatan.
+description: Dasar privasi untuk aplikasi dan laman web Doubo. Aplikasi tidak mengumpul data peribadi; laman web menggunakan Google Analytics dan Google Tag Manager untuk memahami lawatan.
 ---
 
-Dasar ini menerangkan cara aplikasi Streamline ("aplikasi") dan laman web ini mengendalikan maklumat anda. Ini ialah terjemahan; jika terdapat sebarang percanggahan, [versi Bahasa Inggeris]({{ '/en/privacy/' | relative_url }}) terpakai.
+Dasar ini menerangkan cara aplikasi Doubo ("aplikasi") dan laman web ini mengendalikan maklumat anda. Ini ialah terjemahan; jika terdapat sebarang percanggahan, [versi Bahasa Inggeris]({{ '/en/privacy/' | relative_url }}) terpakai.
 
-## 1. Aplikasi Streamline
+## 1. Aplikasi Doubo
 
 **Aplikasi ini tidak mengumpul atau memuat naik sebarang data peribadi.**
 

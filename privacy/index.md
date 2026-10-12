@@ -5,12 +5,12 @@ ref: privacy
 path_key: privacy/
 title: 隐私政策
 subtitle: 生效日期：2026 年 10 月 12 日
-description: Streamline App 与官网的隐私政策。App 不收集个人数据；官网使用 Google Analytics 与 Google Tag Manager 统计访问情况。
+description: 都播 App 与官网的隐私政策。App 不收集个人数据；官网使用 Google Analytics 与 Google Tag Manager 统计访问情况。
 ---
 
-本政策说明 Streamline App（以下简称“App”）和本网站如何处理你的信息。
+本政策说明都播 App（以下简称“App”）和本网站如何处理你的信息。
 
-## 一、Streamline App
+## 一、都播 App
 
 **App 不收集、不上传任何个人数据。**
 

@@ -5,12 +5,12 @@ ref: privacy
 path_key: privacy/
 title: Privacy Policy
 subtitle: "Effective date: October 12, 2026"
-description: Privacy policy for the Streamline app and website. The app collects no personal data; the website uses Google Analytics and Google Tag Manager to understand visits.
+description: Privacy policy for the Doubo app and website. The app collects no personal data; the website uses Google Analytics and Google Tag Manager to understand visits.
 ---
 
-This policy explains how the Streamline app ("the app") and this website handle your information.
+This policy explains how the Doubo app ("the app") and this website handle your information.
 
-## 1. The Streamline app
+## 1. The Doubo app
 
 **The app does not collect or upload any personal data.**
 

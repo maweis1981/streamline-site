@@ -1,10 +1,12 @@
 html_lang: zh-CN
 og_locale: zh_CN
+brand: 都播
+slogan: "都播，什么都能播。"
 lang_name: 中文
 
 meta:
-  title: Streamline — 原生 IPTV 播放器，适用于 iPhone、iPad 与 Mac
-  description: Streamline 是一款原生 M3U/M3U8 播放器。导入你自己的播放列表，按分组浏览、检测可播放频道、画中画观看，并投放到电视。不内置任何频道内容，不收集个人数据。
+  title: 都播 Doubo — 原生 IPTV 播放器，适用于 iPhone、iPad 与 Mac
+  description: 都播是一款原生 M3U/M3U8 播放器。导入你自己的播放列表，按分组浏览、检测可播放频道、画中画观看，并投放到电视。不内置任何频道内容，不收集个人数据。
 
 nav:
   features: 功能
@@ -23,7 +25,7 @@ cta:
 hero:
   eyebrow: 适用于 iPhone · iPad · Mac
   title: 你的播放列表，<br><span class="gradient-text">一点就播。</span>
-  subtitle: Streamline 是一款原生 IPTV 播放器。导入 M3U/M3U8，按分组浏览，先检测再播放；播放失败时，告诉你原因。
+  subtitle: 都播是一款原生 IPTV 播放器。导入 M3U/M3U8，按分组浏览，先检测再播放；播放失败时，告诉你原因。
   note: 原生开发 · 不内置频道 · 数据只存在你的设备上
 
 mock:
@@ -174,10 +176,10 @@ roadmap:
 faq:
   title: 常见问题
   items:
-    - q: Streamline 提供电视频道吗？
-      a: 不提供。Streamline 是播放器，不内置、不出售任何频道内容。你需要添加自己有权使用的播放列表。App 中的推荐列表均为第三方公开链接，可用性与观看权限由其提供方决定。
+    - q: 都播提供电视频道吗？
+      a: 不提供。都播是播放器，不内置、不出售任何频道内容。你需要添加自己有权使用的播放列表。App 中的推荐列表均为第三方公开链接，可用性与观看权限由其提供方决定。
     - q: 为什么有些频道无法播放？
-      a: 直播源可能已失效、需要账号授权、有地区限制，或使用了 Apple 播放器不支持的编码。Streamline 会尽量识别具体原因并显示在频道行上。“检测”功能可以帮你提前筛掉无法访问的频道。
+      a: 直播源可能已失效、需要账号授权、有地区限制，或使用了 Apple 播放器不支持的编码。都播会尽量识别具体原因并显示在频道行上。“检测”功能可以帮你提前筛掉无法访问的频道。
     - q: 会收集我的数据吗？
       a: App 不收集个人数据，播放列表、收藏和观看历史只保存在你的设备上。本网站使用 Google Analytics 了解访问情况，详见隐私政策。
     - q: 投屏到电视需要什么条件？
@@ -202,7 +204,7 @@ consent:
 
 footer:
   tagline: 原生 IPTV 播放器，适用于 iPhone、iPad 与 Mac。
-  disclaimer: Streamline 不提供任何频道内容。请仅播放你有权访问的内容。Apple、iPhone、iPad、Mac、Apple TV、AirPlay 与 CarPlay 是 Apple Inc. 的商标。
+  disclaimer: 都播不提供任何频道内容。请仅播放你有权访问的内容。Apple、iPhone、iPad、Mac、Apple TV、AirPlay 与 CarPlay 是 Apple Inc. 的商标。
   product: 产品
   resources: 资源
   feedback: 反馈建议

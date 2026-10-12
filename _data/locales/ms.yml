@@ -1,10 +1,12 @@
 html_lang: ms
 og_locale: ms_MY
+brand: Doubo
+slogan: "Semua saluran, satu pemain."
 lang_name: Bahasa Melayu
 
 meta:
-  title: Streamline — Pemain IPTV asli untuk iPhone, iPad dan Mac
-  description: Streamline ialah pemain M3U/M3U8 asli. Import senarai main anda sendiri, layari mengikut kumpulan, semak saluran yang boleh dimainkan, tonton dalam Gambar dalam Gambar dan hantar ke TV. Tiada saluran terbina, tiada data peribadi dikumpul.
+  title: Doubo — Pemain IPTV asli untuk iPhone, iPad dan Mac
+  description: Doubo ialah pemain M3U/M3U8 asli. Import senarai main anda sendiri, layari mengikut kumpulan, semak saluran yang boleh dimainkan, tonton dalam Gambar dalam Gambar dan hantar ke TV. Tiada saluran terbina, tiada data peribadi dikumpul.
 
 nav:
   features: Ciri
@@ -23,7 +25,7 @@ cta:
 hero:
   eyebrow: Untuk iPhone · iPad · Mac
   title: Senarai main anda,<br><span class="gradient-text">sekali ketik terus main.</span>
-  subtitle: Streamline ialah pemain IPTV asli. Import M3U/M3U8, layari mengikut kumpulan dan semak saluran sebelum menonton. Jika strim gagal, ia memberitahu sebabnya.
+  subtitle: Doubo ialah pemain IPTV asli. Import M3U/M3U8, layari mengikut kumpulan dan semak saluran sebelum menonton. Jika strim gagal, ia memberitahu sebabnya.
   note: Dibina secara asli · Tiada saluran terbina · Data anda kekal pada peranti anda
 
 mock:
@@ -174,10 +176,10 @@ roadmap:
 faq:
   title: Soalan lazim
   items:
-    - q: Adakah Streamline menyediakan saluran TV?
-      a: Tidak. Streamline ialah pemain; ia tidak membekalkan atau menjual kandungan saluran. Tambah senarai main yang anda dibenarkan gunakan. Senarai yang disyorkan dalam aplikasi ialah pautan awam pihak ketiga, dan ketersediaan serta hak tontonan ditentukan oleh penyedianya.
+    - q: Adakah Doubo menyediakan saluran TV?
+      a: Tidak. Doubo ialah pemain; ia tidak membekalkan atau menjual kandungan saluran. Tambah senarai main yang anda dibenarkan gunakan. Senarai yang disyorkan dalam aplikasi ialah pautan awam pihak ketiga, dan ketersediaan serta hak tontonan ditentukan oleh penyedianya.
     - q: Kenapa sesetengah saluran tidak boleh dimainkan?
-      a: Strim mungkin luar talian, memerlukan akaun, disekat mengikut wilayah, atau menggunakan codec yang tidak disokong oleh pemain Apple. Streamline cuba mengenal pasti sebabnya dan memaparkannya pada baris saluran. Ciri semakan menapis saluran yang tidak boleh dicapai lebih awal.
+      a: Strim mungkin luar talian, memerlukan akaun, disekat mengikut wilayah, atau menggunakan codec yang tidak disokong oleh pemain Apple. Doubo cuba mengenal pasti sebabnya dan memaparkannya pada baris saluran. Ciri semakan menapis saluran yang tidak boleh dicapai lebih awal.
     - q: Adakah data saya dikumpul?
       a: Aplikasi ini tidak mengumpul data peribadi. Senarai main, kegemaran dan sejarah tontonan kekal pada peranti anda. Laman web ini menggunakan Google Analytics untuk memahami lawatan; lihat dasar privasi.
     - q: Apa yang diperlukan untuk menghantar ke TV?
@@ -202,7 +204,7 @@ consent:
 
 footer:
   tagline: Pemain IPTV asli untuk iPhone, iPad dan Mac.
-  disclaimer: Streamline tidak menyediakan sebarang kandungan saluran. Mainkan hanya kandungan yang anda dibenarkan akses. Apple, iPhone, iPad, Mac, Apple TV, AirPlay dan CarPlay ialah tanda dagangan Apple Inc.
+  disclaimer: Doubo tidak menyediakan sebarang kandungan saluran. Mainkan hanya kandungan yang anda dibenarkan akses. Apple, iPhone, iPad, Mac, Apple TV, AirPlay dan CarPlay ialah tanda dagangan Apple Inc.
   product: Produk
   resources: Sumber
   feedback: Maklum balas

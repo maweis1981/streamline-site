@@ -1,6 +1,6 @@
-# Streamline website
+# Doubo (都播) website
 
-Source for the official website of **Streamline**, a native IPTV player for iPhone, iPad, and Mac.
+Source for the official website of **Doubo (都播)**, a native IPTV player for iPhone, iPad, and Mac.
 
 **Live site:** https://doubo.tv/ — 简体中文 (`/`), English (`/en/`), Bahasa Melayu (`/ms/`), Bahasa Indonesia (`/id/`), Tiếng Việt (`/vi/`), ไทย (`/th/`)
 

@@ -5,12 +5,12 @@ ref: privacy
 path_key: privacy/
 title: Chính sách quyền riêng tư
 subtitle: "Ngày có hiệu lực: 12 tháng 10 năm 2026"
-description: Chính sách quyền riêng tư của ứng dụng và trang web Streamline. Ứng dụng không thu thập dữ liệu cá nhân; trang web dùng Google Analytics và Google Tag Manager để hiểu lượt truy cập.
+description: Chính sách quyền riêng tư của ứng dụng và trang web Doubo. Ứng dụng không thu thập dữ liệu cá nhân; trang web dùng Google Analytics và Google Tag Manager để hiểu lượt truy cập.
 ---
 
-Chính sách này giải thích cách ứng dụng Streamline ("ứng dụng") và trang web này xử lý thông tin của bạn. Đây là bản dịch; nếu có khác biệt, [bản tiếng Anh]({{ '/en/privacy/' | relative_url }}) sẽ được ưu tiên áp dụng.
+Chính sách này giải thích cách ứng dụng Doubo ("ứng dụng") và trang web này xử lý thông tin của bạn. Đây là bản dịch; nếu có khác biệt, [bản tiếng Anh]({{ '/en/privacy/' | relative_url }}) sẽ được ưu tiên áp dụng.
 
-## 1. Ứng dụng Streamline
+## 1. Ứng dụng Doubo
 
 **Ứng dụng không thu thập hay tải lên bất kỳ dữ liệu cá nhân nào.**
 

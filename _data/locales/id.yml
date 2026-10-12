@@ -1,10 +1,12 @@
 html_lang: id
 og_locale: id_ID
+brand: Doubo
+slogan: "Semua saluran, satu pemutar."
 lang_name: Bahasa Indonesia
 
 meta:
-  title: Streamline — Pemutar IPTV native untuk iPhone, iPad, dan Mac
-  description: Streamline adalah pemutar M3U/M3U8 native. Impor playlist Anda sendiri, jelajahi per grup, periksa saluran yang bisa diputar, tonton dengan Picture in Picture, dan kirim ke TV. Tanpa saluran bawaan, tanpa pengumpulan data pribadi.
+  title: Doubo — Pemutar IPTV native untuk iPhone, iPad, dan Mac
+  description: Doubo adalah pemutar M3U/M3U8 native. Impor playlist Anda sendiri, jelajahi per grup, periksa saluran yang bisa diputar, tonton dengan Picture in Picture, dan kirim ke TV. Tanpa saluran bawaan, tanpa pengumpulan data pribadi.
 
 nav:
   features: Fitur
@@ -23,7 +25,7 @@ cta:
 hero:
   eyebrow: Untuk iPhone · iPad · Mac
   title: Playlist Anda,<br><span class="gradient-text">sekali ketuk langsung putar.</span>
-  subtitle: Streamline adalah pemutar IPTV native. Impor M3U/M3U8, jelajahi per grup, dan periksa saluran sebelum menonton. Jika siaran gagal, aplikasi memberi tahu penyebabnya.
+  subtitle: Doubo adalah pemutar IPTV native. Impor M3U/M3U8, jelajahi per grup, dan periksa saluran sebelum menonton. Jika siaran gagal, aplikasi memberi tahu penyebabnya.
   note: Dibuat secara native · Tanpa saluran bawaan · Data Anda tetap di perangkat Anda
 
 mock:
@@ -174,10 +176,10 @@ roadmap:
 faq:
   title: Pertanyaan umum
   items:
-    - q: Apakah Streamline menyediakan saluran TV?
-      a: Tidak. Streamline adalah pemutar; aplikasi ini tidak menyertakan atau menjual konten saluran. Tambahkan playlist yang berhak Anda gunakan. Daftar rekomendasi di aplikasi adalah tautan publik pihak ketiga, dan ketersediaan serta hak tontonnya ditentukan oleh penyedianya.
+    - q: Apakah Doubo menyediakan saluran TV?
+      a: Tidak. Doubo adalah pemutar; aplikasi ini tidak menyertakan atau menjual konten saluran. Tambahkan playlist yang berhak Anda gunakan. Daftar rekomendasi di aplikasi adalah tautan publik pihak ketiga, dan ketersediaan serta hak tontonnya ditentukan oleh penyedianya.
     - q: Mengapa beberapa saluran tidak bisa diputar?
-      a: Siaran mungkin sedang offline, memerlukan akun, dibatasi wilayah, atau memakai codec yang tidak didukung pemutar Apple. Streamline berusaha mengenali penyebabnya dan menampilkannya di baris saluran. Fitur pemeriksaan menyaring saluran yang tidak dapat diakses sejak awal.
+      a: Siaran mungkin sedang offline, memerlukan akun, dibatasi wilayah, atau memakai codec yang tidak didukung pemutar Apple. Doubo berusaha mengenali penyebabnya dan menampilkannya di baris saluran. Fitur pemeriksaan menyaring saluran yang tidak dapat diakses sejak awal.
     - q: Apakah data saya dikumpulkan?
       a: Aplikasi ini tidak mengumpulkan data pribadi. Playlist, favorit, dan riwayat tontonan tetap di perangkat Anda. Situs web ini menggunakan Google Analytics untuk memahami kunjungan; lihat kebijakan privasi.
     - q: Apa yang dibutuhkan untuk mengirim ke TV?
@@ -202,7 +204,7 @@ consent:
 
 footer:
   tagline: Pemutar IPTV native untuk iPhone, iPad, dan Mac.
-  disclaimer: Streamline tidak menyediakan konten saluran apa pun. Putar hanya konten yang berhak Anda akses. Apple, iPhone, iPad, Mac, Apple TV, AirPlay, dan CarPlay adalah merek dagang Apple Inc.
+  disclaimer: Doubo tidak menyediakan konten saluran apa pun. Putar hanya konten yang berhak Anda akses. Apple, iPhone, iPad, Mac, Apple TV, AirPlay, dan CarPlay adalah merek dagang Apple Inc.
   product: Produk
   resources: Sumber daya
   feedback: Masukan
