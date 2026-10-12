@@ -639,7 +639,19 @@ async function applyQuery(): Promise<void> {
   const url = params.get("add");
   const channelId = params.get("channel");
   const vodId = params.get("vod");
-  if (country || url || channelId || vodId) history.replaceState(null, "", location.pathname);
+  const category = params.get("category")?.toLowerCase();
+  if (country || url || channelId || vodId || category) history.replaceState(null, "", location.pathname);
+  if (category && state.free) {
+    // Articles link here to open one category of free channels, e.g. ?category=shop.
+    const group = groupsOf(state.free.channels).find((g) => g.toLowerCase() === category);
+    if (group) {
+      state.source = FREE;
+      state.group = group;
+      state.country = "";
+      renderBar();
+      renderGrid();
+    }
+  }
   if (vodId) {
     const item = state.vod.flatMap((v) => v.items).find((i) => i.id === vodId);
     if (item) openVod(item);

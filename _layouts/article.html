@@ -1,0 +1,57 @@
+---
+layout: default
+---
+{%- assign t = site.data.locales[page.lang] -%}
+{%- assign a = site.data.articles[page.article][page.lang] -%}
+{%- assign d = site.data.directory -%}
+{%- if page.lang == site.default_lang -%}{%- assign lang_prefix = "" -%}{%- else -%}{%- assign lang_prefix = "/" | append: page.lang -%}{%- endif -%}
+<section class="page-hero">
+  <div class="container narrow">
+    <p class="eyebrow">{{ a.eyebrow }}</p>
+    <h1>{{ a.h1 }}</h1>
+    <p class="lead">{{ a.lead }}</p>
+    <p class="cta-row">
+      <a class="btn btn-primary btn-sm" href="{{ lang_prefix | append: '/web/' | relative_url }}?category={{ page.category }}" data-track="cta_click" data-track-target="web_player" data-track-location="article_hero">{% include icon.html name="tv" %}<span>{{ a.cta_web }}</span></a>
+    </p>
+  </div>
+</section>
+<section class="section section-tight">
+  <div class="container narrow ar-body">
+    {%- for sec in a.sections %}
+    <h2>{{ sec.h }}</h2>
+    {%- for p in sec.p %}<p>{{ p }}</p>{% endfor %}
+    {%- if sec.list %}<ul>{% for li in sec.list %}<li>{{ li }}</li>{% endfor %}</ul>{% endif %}
+    {%- if sec.steps %}<ol>{% for li in sec.steps %}<li>{{ li }}</li>{% endfor %}</ol>{% endif %}
+
+    {%- if forloop.index == 2 %}
+    {%- assign cat = d.categories | where: "id", page.category | first %}
+    {%- if cat %}
+    <h2 id="channels">{{ a.table_title }}</h2>
+    <p>{{ a.table_desc }}</p>
+    {%- assign groups = cat.list | group_by: "country" | sort: "size" | reverse %}
+    <div class="ar-table-wrap"><table class="ar-table">
+      <thead><tr><th>{{ a.col_country }}</th><th>{{ a.col_channels }}</th></tr></thead>
+      <tbody>
+        {%- for g in groups %}
+        {%- assign country = d.countries | where: "code", g.name | first %}
+        <tr>
+          <td><a href="{{ lang_prefix | append: '/playlists/' | append: g.name | append: '/' | relative_url }}">{{ country.flag }} {{ country.names[page.lang] | default: g.name }}</a></td>
+          <td>{% for ch in g.items %}{% assign ch_key = g.name | append: ":" | append: ch.name %}{% assign ch_slug = site.data.channel_slugs[ch_key] %}{% if ch_slug %}<a href="{{ lang_prefix | append: '/channels/' | append: ch_slug | append: '/' | relative_url }}">{{ ch.name }}</a>{% else %}{{ ch.name }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</td>
+        </tr>
+        {%- endfor %}
+      </tbody>
+    </table></div>
+    {%- endif %}
+    {%- endif %}
+    {%- endfor %}
+
+    <h2>{{ t.watch.faq_title }}</h2>
+    <div class="faq">
+      {%- for item in a.faq %}<details><summary>{{ item.q }}</summary><p>{{ item.a }}</p></details>{% endfor %}
+    </div>
+    <p class="cta-row ar-cta">
+      <a class="btn btn-primary btn-sm" href="{{ lang_prefix | append: '/web/' | relative_url }}?category={{ page.category }}" data-track="cta_click" data-track-target="web_player" data-track-location="article_footer">{% include icon.html name="tv" %}<span>{{ a.cta_web }}</span></a>
+      <a class="btn btn-ghost btn-sm" href="{{ lang_prefix | append: '/playlists/category/' | append: page.category | append: '/' | relative_url }}">{{ a.cta_directory }}</a>
+    </p>
+  </div>
+</section>
