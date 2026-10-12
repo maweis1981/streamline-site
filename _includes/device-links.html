@@ -1,0 +1,10 @@
+{%- assign gd = site.data.guides[page.lang] -%}
+{%- if page.lang == site.default_lang -%}{%- assign dl_prefix = "" -%}{%- else -%}{%- assign dl_prefix = "/" | append: page.lang -%}{%- endif -%}
+<ul class="dg-devices">
+  {%- for item in site.guide_devices %}
+  {%- unless item.key == include.current %}
+  {%- assign dev = gd.devices[item.key] %}
+  <li><a class="card dg-device" href="{{ dl_prefix | append: '/guide/' | append: item.key | append: '/' | relative_url }}">{% include icon.html name=item.icon %}<span>{{ dev.name }}</span></a></li>
+  {%- endunless %}
+  {%- endfor %}
+</ul>

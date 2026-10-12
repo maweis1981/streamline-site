@@ -1,0 +1,265 @@
+hub:
+  title: Panduan mengikut peranti
+  intro: Arahan langkah demi langkah untuk memainkan senarai main M3U / M3U8 pada peranti yang paling banyak digunakan.
+labels:
+  eyebrow: Panduan peranti
+  need: Apa yang anda perlukan
+  steps: Langkah-langkah
+  tips: Petua
+  faq: Soalan
+  related: Peranti lain
+  try_web: Cuba dalam pelayar anda dahulu
+  try_web_desc: Tiada pemasangan diperlukan. Pemain web Doubo terus membuka saluran langsung percuma, dan turut memainkan pautan M3U anda sendiri.
+  open_web: Buka pemain web
+  free_title: Perlukan senarai main?
+  free_desc: Direktori saluran percuma Doubo menyenaraikan saluran yang disediakan secara terbuka oleh penyiar, sebagai pautan M3U yang boleh anda tampal ke dalam mana-mana pemain.
+  free_link: Layari saluran percuma
+devices:
+  vlc:
+    name: VLC
+    title: Cara Main Senarai Main M3U dalam VLC (Windows, Mac, Android, iPhone)
+    description: 'Buka senarai main IPTV M3U / M3U8 dalam VLC di Windows, macOS, Android dan iOS: langkah demi langkah, dengan nama menu bagi setiap platform.'
+    intro: VLC ialah pemain media percuma dan sumber terbuka untuk hampir semua platform, dan ia boleh membuka senarai main M3U daripada pautan atau fail. Begini caranya pada setiap sistem.
+    need:
+    - VLC media player, percuma dari videolan.org atau gedung aplikasi peranti anda
+    - Pautan atau fail senarai main M3U / M3U8
+    steps:
+    - title: Salin pautan senarai main
+      desc: Salin alamat M3U yang ingin anda mainkan, contohnya senarai main mengikut negara daripada direktori saluran percuma Doubo.
+    - title: 'Windows dan Linux: Open Network Stream'
+      desc: Dalam VLC, pilih Media → Open Network Stream (Ctrl+N), tampal pautan dan klik Play. Untuk membuka fail .m3u yang telah dimuat turun, gunakan Media → Open File.
+    - title: 'Mac: Open Network'
+      desc: Pilih File → Open Network (⌘N), tampal pautan ke dalam medan URL dan klik Open.
+    - title: 'Android dan iPhone: strim rangkaian'
+      desc: Di Android, buka tab More dan pilih New stream (dipanggil Stream dalam versi lama). Di iPhone dan iPad, buka tab Network dan pilih Open Network Stream. Tampal pautan dan mulakan main balik.
+    - title: Tukar saluran
+      desc: VLC memuatkan keseluruhan senarai main. Pada komputer, buka View → Playlist (Ctrl+L di Windows) untuk melihat setiap saluran dan klik dua kali pada satu saluran untuk memainkannya.
+    tips:
+    - Jika saluran tidak bermula, tunggu beberapa saat atau pilih saluran seterusnya; strim langsung kadangkala mengambil sedikit masa untuk menimbal.
+    - Simpan senarai main yang kerap anda gunakan dengan Media → Save Playlist to File supaya anda boleh membukanya semula tanpa pautan.
+    - VLC memaparkan saluran sebagai senarai rata. Untuk kumpulan, kegemaran dan logo saluran, gunakan aplikasi Doubo atau pemain web.
+    faq:
+    - q: Bolehkah VLC membuka pautan M3U8?
+      a: Ya. M3U8 ialah versi UTF-8 bagi M3U dan juga digunakan untuk strim langsung HLS; VLC membuka kedua-duanya dengan cara yang sama.
+    - q: Kenapa VLC hanya menunjukkan satu saluran?
+      a: Anda mungkin membuka satu alamat strim sahaja dan bukannya senarai main. Pastikan pautan berakhir dengan fail senarai main (selalunya .m3u atau .m3u8) yang menyenaraikan banyak saluran.
+  kodi:
+    name: Kodi
+    title: Cara Tambah Senarai Main M3U ke Kodi dengan PVR IPTV Simple Client
+    description: 'Sediakan TV langsung dalam Kodi daripada senarai main M3U / M3U8 menggunakan add-on rasmi PVR IPTV Simple Client: pasang, tetapkan pautan dan tonton.'
+    intro: Kodi memainkan senarai main IPTV melalui add-on rasminya, PVR IPTV Simple Client. Setelah dikonfigurasi, saluran akan muncul dalam bahagian TV Kodi bersama kumpulan dan panduan saluran jika senarai main anda menyediakannya.
+    need:
+    - Kodi di Windows, Mac, Linux, Android, Android TV atau Fire TV
+    - Pautan senarai main M3U / M3U8
+    steps:
+    - title: Buka pelayar add-on
+      desc: Dalam Kodi, buka Settings (ikon gear) → Add-ons → Install from repository → PVR clients.
+    - title: Pasang PVR IPTV Simple Client
+      desc: Pilih PVR IPTV Simple Client dan pilih Install. Pada sesetengah sistem, ia sudah dipasang dan hanya perlu diaktifkan.
+    - title: Masukkan pautan senarai main
+      desc: Pilih Configure. Di bawah General, tetapkan Location kepada Remote path (Internet address), kemudian tampal pautan anda ke dalam M3U play list URL dan sahkan dengan OK.
+    - title: Aktifkan add-on
+      desc: Pilih Enable jika ia belum aktif. Kodi akan memuatkan saluran; mulakan semula Kodi jika saluran tidak muncul serta-merta.
+    - title: Tonton
+      desc: Pergi ke TV pada skrin utama Kodi. Saluran disenaraikan mengikut kumpulan, dan anda boleh membuka mana-mana saluran.
+    tips:
+    - Versi Kodi terkini membolehkan anda menambah beberapa konfigurasi add-on, satu bagi setiap senarai main.
+    - Jika senarai main anda dipautkan ke fail EPG (XMLTV), tambahkannya dalam tetapan EPG add-on untuk mendapatkan panduan rancangan.
+    faq:
+    - q: Adakah saya perlukan add-on pihak ketiga?
+      a: Tidak. PVR IPTV Simple Client diselenggara oleh pasukan Kodi dan itu sahaja yang anda perlukan untuk senarai main M3U.
+    - q: Senarai saluran kosong. Apa yang perlu saya semak?
+      a: Pastikan Location ditetapkan kepada Remote path, pautan lengkap, dan add-on telah diaktifkan. Kemudian mulakan semula Kodi.
+  smart-tv:
+    name: Smart TV
+    title: Cara Tonton Senarai Main M3U di Smart TV (Samsung, LG dan lain-lain)
+    description: 'Tiga cara memainkan senarai main IPTV M3U / M3U8 di Samsung, LG atau smart TV lain: aplikasi pemain IPTV, cast dari telefon, atau pelayar TV.'
+    intro: Kebanyakan smart TV tidak boleh membuka senarai main M3U dengan sendirinya, tetapi ada tiga cara mudah untuk menonton saluran anda di skrin besar.
+    need:
+    - Smart TV pada rangkaian Wi-Fi yang sama dengan telefon atau komputer anda
+    - Pautan senarai main M3U / M3U8
+    steps:
+    - title: 'Pilihan 1: pasang pemain IPTV pada TV'
+      desc: Buka gedung aplikasi TV anda (Samsung Smart Hub, LG Content Store dan sebagainya) dan cari “IPTV player” atau “M3U”. Pilih pemain yang anda percayai, bukanya dan tampal atau taip pautan senarai main anda.
+    - title: 'Pilihan 2: cast dari aplikasi Doubo'
+      desc: Mainkan saluran dalam Doubo di iPhone, iPad atau Mac anda, ketik ikon cast dalam pemain dan pilih TV anda. Banyak smart TV menerima cast melalui DLNA pada rangkaian yang sama.
+    - title: 'Pilihan 3: cerminkan skrin anda'
+      desc: Banyak TV Samsung, LG, Sony dan Vizio dari tahun 2018 ke atas menyokong AirPlay. Di iPhone atau iPad, buka Control Center → Screen Mirroring dan pilih TV, kemudian mainkan dalam Doubo pada skrin penuh.
+    - title: 'Pilihan 4: gunakan pelayar TV'
+      desc: Buka pelayar web TV dan pergi ke doubo.tv/web. Ia berfungsi pada sesetengah TV; cast atau aplikasi pemain biasanya lebih lancar.
+    tips:
+    - Menaip pautan panjang dengan alat kawalan jauh TV adalah perlahan. Banyak aplikasi TV membolehkan anda menaip di telefon.
+    - Ethernet berwayar atau Wi-Fi 5 GHz memberikan main balik yang lebih lancar untuk saluran HD.
+    faq:
+    - q: Bolehkah TV Samsung atau LG memainkan M3U tanpa aplikasi?
+      a: Secara amnya tidak. Pemain media terbina dalam tidak membuka senarai main IPTV, jadi anda memerlukan aplikasi pemain, cast atau pencerminan skrin.
+    - q: Pilihan mana yang terbaik?
+      a: Cast dari telefon tidak memerlukan apa-apa dipasang pada TV, jadi ia paling cepat untuk dicuba. Aplikasi pemain pada TV lebih baik jika anda menonton setiap hari.
+  android-tv:
+    name: Android TV / TV box
+    title: Cara Main Senarai Main M3U di Android TV, Google TV dan TV Box
+    description: 'Mainkan senarai main IPTV M3U / M3U8 di Android TV, Google TV atau Android TV box: pasang pemain dari Google Play, tambah pautan dan guna alat kawalan jauh.'
+    intro: Android TV, Google TV dan Android TV box boleh memasang pemain IPTV dari Google Play. Berikut ialah persediaan yang boleh dipercayai dengan VLC, yang percuma dan tanpa iklan.
+    need:
+    - Android TV, Google TV atau Android TV box dengan Google Play
+    - Pautan senarai main M3U / M3U8
+    steps:
+    - title: Pasang VLC
+      desc: Buka Google Play pada TV, cari VLC dan pasang VLC for Android.
+    - title: Tambah pautan senarai main
+      desc: Buka VLC, pergi ke Browse → Stream (atau pilihan strim rangkaian dalam versi anda) dan masukkan pautan senarai main.
+    - title: Main dan tukar saluran
+      desc: VLC memuatkan senarai main; pilih saluran untuk dimainkan. Gunakan butang kembali pada alat kawalan jauh untuk kembali ke senarai.
+    tips:
+    - Untuk mengelakkan menaip pautan panjang dengan alat kawalan jauh, pasang Google TV atau aplikasi papan kekunci di telefon anda dan taip di situ.
+    - Doubo untuk Android dan Android TV akan datang tidak lama lagi, dengan kumpulan, kegemaran dan penukaran laluan automatik.
+    faq:
+    - q: Adakah aplikasi Doubo untuk Android TV?
+      a: Ia sedang dibangunkan. Sementara menunggu ia dilancarkan, anda boleh menggunakan VLC atau pemain lain, atau cast dari pemain web Doubo dalam Chrome.
+    - q: Selamatkah memasang aplikasi IPTV dari luar Google Play?
+      a: Aplikasi dari sumber tidak diketahui boleh mengandungi perisian hasad atau kandungan cetak rompak. Gunakan Google Play dan pemain yang terkenal sahaja.
+  fire-tv:
+    name: Fire TV Stick
+    title: Cara Main Senarai Main M3U di Amazon Fire TV Stick
+    description: 'Tonton senarai main IPTV M3U / M3U8 di Fire TV Stick atau Fire TV: pasang VLC dari Amazon Appstore, buka pautan senarai main dan tukar saluran.'
+    intro: Peranti Fire TV boleh memainkan senarai main M3U dengan VLC, yang tersedia secara percuma di Amazon Appstore.
+    need:
+    - Amazon Fire TV Stick atau Fire TV
+    - Pautan senarai main M3U / M3U8
+    steps:
+    - title: Pasang VLC
+      desc: Dari skrin utama Fire TV, gunakan Find → Search, taip VLC dan pasang VLC for Fire.
+    - title: Buka strim rangkaian
+      desc: Buka VLC, pergi ke Network atau Stream dan pilih untuk membuka strim rangkaian. Masukkan pautan senarai main.
+    - title: Tonton
+      desc: VLC memuatkan saluran dalam senarai main. Pilih satu untuk dimainkan.
+    tips:
+    - Menaip dengan alat kawalan jauh adalah perlahan. Aplikasi Amazon Fire TV di telefon anda mempunyai papan kekunci yang boleh digunakan.
+    - Fire TV dengan Ethernet (atau penyesuai Ethernet) membantu untuk strim HD.
+    faq:
+    - q: Adakah saya perlu sideload apa-apa?
+      a: Tidak. VLC ada di Amazon Appstore, jadi tiada apa-apa yang perlu dipasang dari sumber luar.
+    - q: Bolehkah saya guna Kodi di Fire TV sebagai ganti?
+      a: Ya. Kodi dengan PVR IPTV Simple Client berfungsi di Fire TV; lihat panduan Kodi.
+  apple-tv:
+    name: Apple TV
+    title: Cara Tonton Senarai Main M3U di Apple TV
+    description: 'Dua cara memainkan senarai main IPTV M3U / M3U8 di Apple TV: AirPlay dari Doubo di iPhone, iPad atau Mac, atau VLC untuk tvOS dengan strim rangkaian.'
+    intro: Apple TV tiada pemain IPTV terbina dalam, tetapi anda boleh AirPlay saluran dari Doubo di iPhone, iPad atau Mac anda, atau menggunakan VLC untuk tvOS.
+    need:
+    - Apple TV pada rangkaian yang sama dengan iPhone, iPad atau Mac anda
+    - Pautan senarai main M3U / M3U8
+    steps:
+    - title: 'Pilihan 1: AirPlay dari Doubo'
+      desc: Buka saluran dalam Doubo di iPhone, iPad atau Mac anda, kemudian pilih Apple TV anda melalui Screen Mirroring (Control Center di iPhone dan iPad, bar menu di Mac), atau melalui butang AirPlay apabila pemain memaparkannya.
+    - title: 'Pilihan 2: pasang VLC pada Apple TV'
+      desc: Buka App Store pada Apple TV, cari VLC dan pasangkannya.
+    - title: Buka senarai main dalam VLC
+      desc: Dalam VLC, buka tab Network Stream dan masukkan pautan senarai main. VLC akan memuatkan saluran.
+    tips:
+    - Tab Remote Playback dalam VLC membolehkan anda menghantar fail senarai main dari pelayar komputer pada rangkaian yang sama tanpa perlu menaip.
+    - Aplikasi Doubo untuk Apple TV sedang dirancang.
+    faq:
+    - q: Adakah aplikasi Doubo untuk Apple TV?
+      a: Ia ada dalam pelan pembangunan. Buat masa ini, AirPlay dari Doubo di iPhone, iPad atau Mac ialah cara paling mudah.
+    - q: Adakah AirPlay terus bermain jika saya mengunci iPhone?
+      a: Pencerminan skrin berhenti apabila telefon dikunci, jadi biarkan ia tidak berkunci, atau gunakan VLC pada Apple TV untuk tontonan yang lama.
+  chromecast:
+    name: Chromecast / Google TV
+    title: Cara Cast Senarai Main M3U ke Chromecast dan Google TV
+    description: 'Hantar saluran langsung daripada senarai main M3U / M3U8 ke Chromecast atau Google TV: cast tab Chrome dengan pemain web Doubo, atau cast dari VLC di Android.'
+    intro: Chromecast tidak boleh membuka senarai main dengan sendirinya, tetapi komputer atau telefon boleh menghantar saluran kepadanya dengan beberapa ketikan.
+    need:
+    - Chromecast atau Google TV pada rangkaian Wi-Fi yang sama
+    - Google Chrome pada komputer, atau telefon Android
+    - Pautan senarai main M3U / M3U8
+    steps:
+    - title: Buka pemain web dalam Chrome
+      desc: Pada komputer anda, buka doubo.tv/web dalam Chrome. Pilih saluran percuma atau tambah pautan senarai main anda sendiri.
+    - title: Cast tab
+      desc: Buka menu Chrome ⋮ → Cast (dalam sesetengah versi di bawah Save and share), pilih Chromecast anda, dan mainkan saluran pada skrin penuh.
+    - title: 'Dari telefon Android: VLC'
+      desc: Buka senarai main dalam VLC for Android, mulakan saluran, ketik ikon cast dan pilih Chromecast anda.
+    tips:
+    - Pastikan tab yang sedang di-cast kekal di hadapan pada komputer anda untuk main balik paling lancar.
+    - Model Google TV juga boleh memasang VLC secara terus; lihat panduan Android TV.
+    faq:
+    - q: Adakah cast tab Chrome menurunkan kualiti?
+      a: Cast tab mengekod semula gambar, jadi kualiti bergantung pada komputer dan Wi-Fi anda. Untuk kualiti terbaik, pasang pemain pada Google TV.
+    - q: Bolehkah saya cast dari iPhone ke Chromecast?
+      a: Chromecast tidak menyokong AirPlay. Gunakan komputer dengan Chrome atau telefon Android sebagai ganti.
+  iphone-ipad:
+    name: iPhone & iPad
+    title: Cara Main Senarai Main M3U di iPhone dan iPad
+    description: 'Mainkan senarai main IPTV M3U / M3U8 di iPhone dan iPad dengan Doubo: tambah pautan atau fail, layari kumpulan, tonton dalam Picture in Picture dan cast ke TV.'
+    intro: Doubo ialah pemain IPTV asli untuk iPhone dan iPad. Ia membaca kumpulan dan logo dalam senarai main anda, dan terus memainkan video dalam Picture in Picture semasa anda menggunakan aplikasi lain.
+    need:
+    - iPhone atau iPad dengan iOS / iPadOS 17 atau lebih baharu
+    - Aplikasi Doubo
+    - Pautan atau fail senarai main M3U / M3U8
+    steps:
+    - title: Tambah senarai main
+      desc: Buka Doubo, ketik Add dan tampal pautan M3U anda, atau import fail .m3u / .m3u8 dari aplikasi Files.
+    - title: Layari dan cari
+      desc: Saluran dikumpulkan secara automatik. Cari mengikut nama saluran atau kumpulan, dan bintangkan saluran yang paling kerap anda tonton.
+    - title: Tonton sambil buat kerja lain
+      desc: Ketik saluran untuk dimainkan. Leret ke skrin utama untuk terus menonton dalam Picture in Picture.
+    - title: Tonton di TV
+      desc: Gunakan ikon cast untuk menghantar saluran ke smart TV DLNA, atau Screen Mirroring dalam Control Center untuk Apple TV atau TV yang serasi dengan AirPlay.
+    tips:
+    - Belum ada aplikasi? Buka doubo.tv/web dalam Safari untuk terus menonton saluran percuma.
+    - Doubo menyimpan senarai main pada peranti anda sahaja; tiada apa-apa yang dimuat naik.
+    faq:
+    - q: Bolehkah Safari memainkan senarai main M3U?
+      a: Safari boleh memainkan satu strim HLS, tetapi bukan keseluruhan senarai main IPTV. Gunakan pemain web Doubo di doubo.tv/web atau aplikasi Doubo.
+    - q: Adakah Doubo menyertakan saluran?
+      a: Aplikasi ini ialah pemain; anda menambah senarai main anda sendiri. Pemain web dan direktori saluran percuma menawarkan saluran percuma yang tersedia secara terbuka.
+  computer:
+    name: Komputer (pelayar)
+    title: Cara Main Senarai Main M3U Secara Dalam Talian di Pelayar (Windows & Mac)
+    description: 'Main senarai main IPTV M3U / M3U8 dalam talian di Chrome, Edge, Safari atau Firefox tanpa pasang: saluran percuma, pautan sendiri, kumpulan, carian, Picture in Picture.'
+    intro: Cara paling cepat untuk menonton senarai main M3U pada komputer ialah dalam pelayar. Pemain web Doubo tidak memerlukan pemasangan atau akaun.
+    need:
+    - Chrome, Edge, Safari atau Firefox di Windows, macOS atau Linux
+    - 'Pilihan: pautan atau fail senarai main M3U / M3U8 anda sendiri'
+    steps:
+    - title: Buka pemain web
+      desc: Pergi ke doubo.tv/web. Paparan saluran langsung percuma dimuatkan serta-merta, dengan pratonton tanpa bunyi.
+    - title: Pilih saluran
+      desc: Tapis mengikut negara atau kategori, atau cari mengikut nama. Klik jubin untuk menonton dengan bunyi; pratonton lain akan berhenti.
+    - title: Tambah senarai main anda sendiri
+      desc: Klik Add playlist dan tampal pautan, import fail atau tampal teks senarai main. Ia disimpan dalam pelayar anda sahaja.
+    - title: Skrin penuh dan Picture in Picture
+      desc: Tekan F untuk skrin penuh atau P untuk Picture in Picture, dan gunakan ↑ ↓ untuk menukar saluran.
+    tips:
+    - Saluran yang tidak boleh dimainkan oleh pelayar disembunyikan secara automatik; aplikasi Doubo memainkan lebih banyak daripadanya.
+    - Di Mac, aplikasi Doubo menambah pemain asli dengan Picture in Picture dan pengurusan senarai main.
+    faq:
+    - q: Adakah ia percuma?
+      a: Ya. Pemain web adalah percuma dan tidak memerlukan akaun.
+    - q: Bolehkah saya guna VLC sebagai ganti?
+      a: Sudah tentu. Lihat panduan VLC untuk Windows dan Mac.
+  android-phone:
+    name: Telefon Android
+    title: Cara Main Senarai Main M3U di Telefon Android
+    description: 'Tonton senarai main IPTV M3U / M3U8 di telefon atau tablet Android: guna pemain web Doubo dalam Chrome tanpa pemasangan, atau VLC for Android.'
+    intro: Di Android, anda boleh menonton terus dalam Chrome dengan pemain web Doubo, atau menggunakan VLC for Android. Aplikasi Doubo asli untuk Android akan datang tidak lama lagi.
+    need:
+    - Telefon atau tablet Android
+    - Chrome, atau VLC for Android dari Google Play
+    - 'Pilihan: pautan senarai main M3U / M3U8 anda sendiri'
+    steps:
+    - title: 'Dalam Chrome: buka pemain web'
+      desc: Pergi ke doubo.tv/web dan ketik saluran untuk menonton. Tambah senarai main anda sendiri dengan Add playlist.
+    - title: Tambahkan ke skrin utama
+      desc: Dalam menu Chrome ⋮, pilih Add to Home screen untuk membuka pemain web seperti aplikasi.
+    - title: 'Dengan VLC: buka strim rangkaian'
+      desc: Pasang VLC dari Google Play, buka More → New stream (Stream dalam versi lama) dan tampal pautan senarai main anda.
+    tips:
+    - Penggunaan data mudah alih cepat bertambah dengan video langsung; gunakan Wi-Fi jika boleh.
+    - Doubo untuk Android akan datang tidak lama lagi, dengan kumpulan, kegemaran dan penukaran laluan automatik.
+    faq:
+    - q: Adakah aplikasi Doubo di Google Play?
+      a: Belum lagi. Ia sedang dibangunkan; pemain web boleh digunakan buat sementara waktu.
+    - q: Kenapa sesetengah saluran boleh dimainkan dalam VLC tetapi tidak dalam pelayar?
+      a: Pelayar menyekat sesetengah jenis strim atas sebab keselamatan. Pemain asli seperti VLC atau aplikasi Doubo tidak mempunyai had tersebut.

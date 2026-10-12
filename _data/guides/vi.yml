@@ -1,0 +1,265 @@
+hub:
+  title: Hướng dẫn theo thiết bị
+  intro: Hướng dẫn từng bước cách phát danh sách M3U / M3U8 trên những thiết bị được dùng phổ biến nhất.
+labels:
+  eyebrow: Hướng dẫn thiết bị
+  need: Bạn cần chuẩn bị
+  steps: Các bước
+  tips: Mẹo
+  faq: Câu hỏi thường gặp
+  related: Thiết bị khác
+  try_web: Thử ngay trên trình duyệt
+  try_web_desc: Không cần cài đặt. Trình phát web của Doubo mở ngay các kênh truyền hình trực tiếp miễn phí, và phát được cả link M3U của riêng bạn.
+  open_web: Mở trình phát web
+  free_title: Cần danh sách kênh?
+  free_desc: Danh mục kênh miễn phí của Doubo liệt kê các kênh được đài phát công khai, dưới dạng link M3U bạn có thể dán vào bất kỳ trình phát nào.
+  free_link: Xem kênh miễn phí
+devices:
+  vlc:
+    name: VLC
+    title: Cách xem danh sách M3U trên VLC (Windows, Mac, Android, iPhone)
+    description: 'Mở danh sách IPTV M3U / M3U8 bằng VLC trên Windows, macOS, Android và iOS: hướng dẫn từng bước kèm tên menu cho từng nền tảng.'
+    intro: VLC là trình phát đa phương tiện miễn phí, mã nguồn mở cho gần như mọi nền tảng, và có thể mở danh sách M3U từ link hoặc tệp. Dưới đây là cách làm trên từng hệ điều hành.
+    need:
+    - VLC media player, tải miễn phí từ videolan.org hoặc kho ứng dụng trên thiết bị của bạn
+    - Một link hoặc tệp danh sách M3U / M3U8
+    steps:
+    - title: Sao chép link danh sách
+      desc: Sao chép địa chỉ M3U bạn muốn phát, ví dụ danh sách kênh của một quốc gia trong danh mục kênh miễn phí của Doubo.
+    - title: 'Windows và Linux: Open Network Stream'
+      desc: Trong VLC, chọn Media → Open Network Stream (Ctrl+N), dán link và nhấn Play. Để mở tệp .m3u đã tải về, hãy dùng Media → Open File.
+    - title: 'Mac: Open Network'
+      desc: Chọn File → Open Network (⌘N), dán link vào ô URL và nhấn Open.
+    - title: 'Android và iPhone: luồng mạng'
+      desc: Trên Android, mở thẻ More và chọn New stream (ở phiên bản cũ gọi là Stream). Trên iPhone và iPad, mở thẻ Network và chọn Open Network Stream. Dán link và bắt đầu phát.
+    - title: Chuyển kênh
+      desc: VLC tải toàn bộ danh sách. Trên máy tính, mở View → Playlist (Ctrl+L trên Windows) để xem tất cả kênh và nhấp đúp vào một kênh để phát.
+    tips:
+    - Nếu kênh không phát, hãy chờ vài giây hoặc chọn kênh tiếp theo; luồng trực tiếp đôi khi cần chút thời gian để tải đệm.
+    - Lưu danh sách hay dùng bằng Media → Save Playlist to File để mở lại mà không cần link.
+    - VLC hiển thị kênh dưới dạng danh sách phẳng. Để có nhóm kênh, mục yêu thích và logo kênh, hãy dùng ứng dụng hoặc trình phát web Doubo.
+    faq:
+    - q: VLC có mở được link M3U8 không?
+      a: Có. M3U8 là phiên bản UTF-8 của M3U và cũng được dùng cho luồng trực tiếp HLS; VLC mở cả hai theo cùng một cách.
+    - q: Tại sao VLC chỉ hiện một kênh?
+      a: Có thể bạn đã mở địa chỉ của một luồng đơn lẻ thay vì danh sách kênh. Hãy đảm bảo link trỏ tới một tệp danh sách (thường là .m3u hoặc .m3u8) chứa nhiều kênh.
+  kodi:
+    name: Kodi
+    title: Cách thêm danh sách M3U vào Kodi bằng PVR IPTV Simple Client
+    description: 'Cài đặt truyền hình trực tiếp trên Kodi từ danh sách M3U / M3U8 bằng add-on chính thức PVR IPTV Simple Client: cài đặt, nhập link và xem.'
+    intro: Kodi phát danh sách IPTV thông qua add-on chính thức PVR IPTV Simple Client. Sau khi cấu hình, các kênh sẽ xuất hiện trong mục TV của Kodi, kèm nhóm kênh và lịch phát sóng nếu danh sách của bạn có cung cấp.
+    need:
+    - Kodi trên Windows, Mac, Linux, Android, Android TV hoặc Fire TV
+    - Một link danh sách M3U / M3U8
+    steps:
+    - title: Mở trình duyệt add-on
+      desc: Trong Kodi, mở Settings (biểu tượng bánh răng) → Add-ons → Install from repository → PVR clients.
+    - title: Cài PVR IPTV Simple Client
+      desc: Chọn PVR IPTV Simple Client rồi chọn Install. Trên một số hệ thống, add-on đã được cài sẵn và chỉ cần bật lên.
+    - title: Nhập link danh sách
+      desc: Chọn Configure. Trong mục General, đặt Location thành Remote path (Internet address), sau đó dán link vào M3U play list URL và xác nhận bằng OK.
+    - title: Bật add-on
+      desc: Chọn Enable nếu add-on chưa được bật. Kodi sẽ tải các kênh; nếu kênh không hiện ngay, hãy khởi động lại Kodi.
+    - title: Xem
+      desc: Vào mục TV trên màn hình chính của Kodi. Các kênh được liệt kê theo nhóm và bạn có thể mở bất kỳ kênh nào.
+    tips:
+    - Các phiên bản Kodi gần đây cho phép thêm nhiều cấu hình của add-on, mỗi cấu hình cho một danh sách.
+    - Nếu danh sách của bạn có link tới tệp EPG (XMLTV), hãy thêm nó trong phần cài đặt EPG của add-on để có lịch phát sóng.
+    faq:
+    - q: Tôi có cần add-on của bên thứ ba không?
+      a: Không. PVR IPTV Simple Client do đội ngũ Kodi duy trì và là tất cả những gì bạn cần cho danh sách M3U.
+    - q: Danh sách kênh trống. Tôi nên kiểm tra gì?
+      a: Hãy đảm bảo Location được đặt là Remote path, link đầy đủ và add-on đã được bật. Sau đó khởi động lại Kodi.
+  smart-tv:
+    name: Smart TV
+    title: Cách xem danh sách M3U trên Smart TV (Samsung, LG và các hãng khác)
+    description: '3 cách phát danh sách IPTV M3U / M3U8 trên TV Samsung, LG hoặc Smart TV khác: ứng dụng IPTV, truyền từ điện thoại hoặc trình duyệt của TV.'
+    intro: Hầu hết Smart TV không tự mở được danh sách M3U, nhưng có ba cách đơn giản để đưa các kênh lên màn hình lớn.
+    need:
+    - Một Smart TV kết nối cùng mạng Wi-Fi với điện thoại hoặc máy tính của bạn
+    - Một link danh sách M3U / M3U8
+    steps:
+    - title: 'Cách 1: cài trình phát IPTV trên TV'
+      desc: Mở kho ứng dụng của TV (Samsung Smart Hub, LG Content Store, v.v.) và tìm “IPTV player” hoặc “M3U”. Chọn một trình phát bạn tin tưởng, mở ra rồi dán hoặc nhập link danh sách.
+    - title: 'Cách 2: truyền từ ứng dụng Doubo'
+      desc: Phát kênh trong Doubo trên iPhone, iPad hoặc Mac, chạm vào biểu tượng truyền trong trình phát và chọn TV của bạn. Nhiều Smart TV nhận nội dung truyền qua DLNA trong cùng mạng.
+    - title: 'Cách 3: phản chiếu màn hình'
+      desc: Nhiều TV Samsung, LG, Sony và Vizio từ năm 2018 trở đi hỗ trợ AirPlay. Trên iPhone hoặc iPad, mở Trung tâm điều khiển → Phản chiếu màn hình và chọn TV, sau đó phát toàn màn hình trong Doubo.
+    - title: 'Cách 4: dùng trình duyệt của TV'
+      desc: Mở trình duyệt web trên TV và truy cập doubo.tv/web. Cách này hoạt động trên một số TV; truyền nội dung hoặc dùng ứng dụng trình phát thường mượt hơn.
+    tips:
+    - Gõ link dài bằng điều khiển TV rất chậm. Nhiều ứng dụng TV cho phép bạn gõ trên điện thoại thay thế.
+    - Mạng dây Ethernet hoặc Wi-Fi 5 GHz giúp phát kênh HD mượt hơn.
+    faq:
+    - q: TV Samsung hoặc LG có phát được M3U mà không cần ứng dụng không?
+      a: Nhìn chung là không. Trình phát đa phương tiện tích hợp không mở được danh sách IPTV, nên bạn cần ứng dụng trình phát, truyền nội dung hoặc phản chiếu màn hình.
+    - q: Cách nào tốt nhất?
+      a: Truyền từ điện thoại không cần cài gì trên TV nên là cách nhanh nhất để thử. Ứng dụng trình phát trên TV sẽ tốt hơn nếu bạn xem hằng ngày.
+  android-tv:
+    name: Android TV / TV box
+    title: Cách xem danh sách M3U trên Android TV, Google TV và TV box
+    description: 'Phát danh sách IPTV M3U / M3U8 trên Android TV, Google TV hoặc Android TV box: cài trình phát từ Google Play, thêm link và dùng điều khiển.'
+    intro: Android TV, Google TV và Android TV box có thể cài trình phát IPTV từ Google Play. Dưới đây là cách thiết lập ổn định với VLC, miễn phí và không có quảng cáo.
+    need:
+    - Một Android TV, Google TV hoặc Android TV box có Google Play
+    - Một link danh sách M3U / M3U8
+    steps:
+    - title: Cài VLC
+      desc: Mở Google Play trên TV, tìm VLC và cài VLC for Android.
+    - title: Thêm link danh sách
+      desc: Mở VLC, vào Browse → Stream (hoặc tùy chọn luồng mạng trong phiên bản của bạn) và nhập link danh sách.
+    - title: Phát và chuyển kênh
+      desc: VLC tải danh sách; chọn một kênh để phát. Dùng nút quay lại trên điều khiển để trở về danh sách.
+    tips:
+    - Để không phải gõ link dài bằng điều khiển, hãy cài Google TV hoặc một ứng dụng bàn phím trên điện thoại và gõ ở đó.
+    - Doubo cho Android và Android TV sắp ra mắt, với nhóm kênh, mục yêu thích và tự động chuyển nguồn phát.
+    faq:
+    - q: Có ứng dụng Doubo cho Android TV không?
+      a: Ứng dụng đang được phát triển. Trong thời gian chờ, bạn có thể dùng VLC hoặc trình phát khác, hoặc truyền từ trình phát web Doubo trong Chrome.
+    - q: Cài ứng dụng IPTV ngoài Google Play có an toàn không?
+      a: Ứng dụng từ nguồn không xác định có thể chứa phần mềm độc hại hoặc nội dung vi phạm bản quyền. Hãy chỉ dùng Google Play và các trình phát nổi tiếng.
+  fire-tv:
+    name: Fire TV Stick
+    title: Cách xem danh sách M3U trên Amazon Fire TV Stick
+    description: 'Xem danh sách IPTV M3U / M3U8 trên Fire TV Stick hoặc Fire TV: cài VLC từ Amazon Appstore, mở link danh sách và chuyển kênh.'
+    intro: Thiết bị Fire TV có thể phát danh sách M3U bằng VLC, ứng dụng có sẵn miễn phí trên Amazon Appstore.
+    need:
+    - Một Amazon Fire TV Stick hoặc Fire TV
+    - Một link danh sách M3U / M3U8
+    steps:
+    - title: Cài VLC
+      desc: Từ màn hình chính Fire TV, dùng Find → Search, gõ VLC và cài VLC for Fire.
+    - title: Mở luồng mạng
+      desc: Mở VLC, vào Network hoặc Stream và chọn mở luồng mạng. Nhập link danh sách.
+    - title: Xem
+      desc: VLC tải các kênh trong danh sách. Chọn một kênh để phát.
+    tips:
+    - Gõ bằng điều khiển khá chậm. Ứng dụng Amazon Fire TV trên điện thoại có bàn phím để bạn dùng thay thế.
+    - Fire TV có cổng Ethernet (hoặc bộ chuyển đổi Ethernet) giúp phát luồng HD tốt hơn.
+    faq:
+    - q: Tôi có cần cài ứng dụng ngoài (sideload) không?
+      a: Không. VLC có trên Amazon Appstore nên không cần cài gì từ nguồn bên ngoài.
+    - q: Tôi có thể dùng Kodi trên Fire TV thay thế không?
+      a: Có. Kodi với PVR IPTV Simple Client hoạt động trên Fire TV; xem hướng dẫn Kodi.
+  apple-tv:
+    name: Apple TV
+    title: Cách xem danh sách M3U trên Apple TV
+    description: '2 cách phát danh sách IPTV M3U / M3U8 trên Apple TV: AirPlay từ Doubo trên iPhone, iPad hoặc Mac, hoặc VLC cho tvOS qua luồng mạng.'
+    intro: Apple TV không có trình phát IPTV tích hợp, nhưng bạn có thể AirPlay kênh từ Doubo trên iPhone, iPad hoặc Mac, hoặc dùng VLC cho tvOS.
+    need:
+    - Một Apple TV kết nối cùng mạng với iPhone, iPad hoặc Mac của bạn
+    - Một link danh sách M3U / M3U8
+    steps:
+    - title: 'Cách 1: AirPlay từ Doubo'
+      desc: Mở một kênh trong Doubo trên iPhone, iPad hoặc Mac, sau đó chọn Apple TV bằng Phản chiếu màn hình (Trung tâm điều khiển trên iPhone và iPad, thanh menu trên Mac), hoặc bằng nút AirPlay khi trình phát hiển thị nút này.
+    - title: 'Cách 2: cài VLC trên Apple TV'
+      desc: Mở App Store trên Apple TV, tìm VLC và cài đặt.
+    - title: Mở danh sách trong VLC
+      desc: Trong VLC, mở thẻ Network Stream và nhập link danh sách. VLC sẽ tải các kênh.
+    tips:
+    - Thẻ Remote Playback của VLC cho phép gửi tệp danh sách từ trình duyệt máy tính trong cùng mạng thay vì phải gõ.
+    - Ứng dụng Doubo cho Apple TV đang được lên kế hoạch.
+    faq:
+    - q: Có ứng dụng Doubo cho Apple TV không?
+      a: Ứng dụng đã nằm trong lộ trình phát triển. Hiện tại, AirPlay từ Doubo trên iPhone, iPad hoặc Mac là cách dễ nhất.
+    - q: AirPlay có tiếp tục phát khi tôi khóa iPhone không?
+      a: Phản chiếu màn hình sẽ dừng khi điện thoại khóa, vì vậy hãy để máy mở khóa, hoặc dùng VLC trên Apple TV khi xem lâu.
+  chromecast:
+    name: Chromecast / Google TV
+    title: Cách truyền danh sách M3U lên Chromecast và Google TV
+    description: 'Gửi kênh trực tiếp từ danh sách M3U / M3U8 lên Chromecast hoặc Google TV: truyền tab Chrome với trình phát web Doubo, hoặc truyền từ VLC trên Android.'
+    intro: Chromecast không tự mở được danh sách kênh, nhưng máy tính hoặc điện thoại có thể gửi kênh tới nó chỉ với vài thao tác.
+    need:
+    - Một Chromecast hoặc Google TV trong cùng mạng Wi-Fi
+    - Google Chrome trên máy tính, hoặc một điện thoại Android
+    - Một link danh sách M3U / M3U8
+    steps:
+    - title: Mở trình phát web trong Chrome
+      desc: Trên máy tính, mở doubo.tv/web trong Chrome. Chọn một kênh miễn phí hoặc thêm link danh sách của riêng bạn.
+    - title: Truyền tab
+      desc: Mở menu ⋮ của Chrome → Cast (ở một số phiên bản nằm trong Save and share), chọn Chromecast của bạn và phát kênh ở chế độ toàn màn hình.
+    - title: 'Từ điện thoại Android: VLC'
+      desc: Mở danh sách trong VLC for Android, bắt đầu phát một kênh, chạm vào biểu tượng truyền và chọn Chromecast của bạn.
+    tips:
+    - Giữ tab đang truyền ở chế độ hiển thị phía trước trên máy tính để phát mượt nhất.
+    - Các mẫu Google TV cũng có thể cài trực tiếp VLC; xem hướng dẫn Android TV.
+    faq:
+    - q: Truyền tab Chrome có làm giảm chất lượng không?
+      a: Truyền tab sẽ mã hóa lại hình ảnh, nên chất lượng phụ thuộc vào máy tính và Wi-Fi của bạn. Để có chất lượng tốt nhất, hãy cài trình phát trên Google TV.
+    - q: Tôi có thể truyền từ iPhone lên Chromecast không?
+      a: Chromecast không hỗ trợ AirPlay. Hãy dùng máy tính có Chrome hoặc điện thoại Android thay thế.
+  iphone-ipad:
+    name: iPhone & iPad
+    title: Cách xem danh sách M3U trên iPhone và iPad
+    description: 'Phát danh sách IPTV M3U / M3U8 trên iPhone và iPad với Doubo: thêm link hoặc tệp, duyệt nhóm kênh, xem bằng Hình trong hình và truyền lên TV.'
+    intro: Doubo là trình phát IPTV gốc cho iPhone và iPad. Ứng dụng đọc nhóm kênh và logo trong danh sách của bạn, và tiếp tục phát bằng Hình trong hình khi bạn dùng ứng dụng khác.
+    need:
+    - iPhone hoặc iPad chạy iOS / iPadOS 17 trở lên
+    - Ứng dụng Doubo
+    - Một link hoặc tệp danh sách M3U / M3U8
+    steps:
+    - title: Thêm danh sách
+      desc: Mở Doubo, chạm Thêm và dán link M3U, hoặc nhập tệp .m3u / .m3u8 từ ứng dụng Tệp.
+    - title: Duyệt và tìm kiếm
+      desc: Các kênh được tự động phân nhóm. Tìm theo tên kênh hoặc tên nhóm, và gắn sao cho những kênh bạn xem nhiều nhất.
+    - title: Xem và làm việc khác cùng lúc
+      desc: Chạm vào một kênh để phát. Vuốt về màn hình chính để tiếp tục xem bằng Hình trong hình.
+    - title: Đưa lên TV
+      desc: Dùng biểu tượng truyền để gửi kênh tới Smart TV hỗ trợ DLNA, hoặc dùng Phản chiếu màn hình trong Trung tâm điều khiển cho Apple TV hoặc TV tương thích AirPlay.
+    tips:
+    - Chưa có ứng dụng? Mở doubo.tv/web trong Safari để xem ngay các kênh miễn phí.
+    - Doubo chỉ lưu danh sách trên thiết bị của bạn; không có gì được tải lên.
+    faq:
+    - q: Safari có phát được danh sách M3U không?
+      a: Safari có thể phát một luồng HLS đơn lẻ, nhưng không phát được cả danh sách IPTV. Hãy dùng trình phát web Doubo tại doubo.tv/web hoặc ứng dụng Doubo.
+    - q: Doubo có sẵn kênh không?
+      a: Ứng dụng là một trình phát; bạn tự thêm danh sách của mình. Trình phát web và danh mục kênh miễn phí cung cấp các kênh miễn phí, công khai.
+  computer:
+    name: Máy tính (trình duyệt)
+    title: Cách xem danh sách M3U online trên trình duyệt (Windows & Mac)
+    description: 'Xem danh sách IPTV M3U / M3U8 online trên Chrome, Edge, Safari hoặc Firefox không cần cài đặt: kênh miễn phí, link riêng, nhóm kênh, tìm kiếm và Hình trong hình.'
+    intro: Cách nhanh nhất để xem danh sách M3U trên máy tính là dùng trình duyệt. Trình phát web của Doubo không cần cài đặt và không cần tài khoản.
+    need:
+    - Chrome, Edge, Safari hoặc Firefox trên Windows, macOS hoặc Linux
+    - 'Tùy chọn: link hoặc tệp danh sách M3U / M3U8 của riêng bạn'
+    steps:
+    - title: Mở trình phát web
+      desc: Truy cập doubo.tv/web. Một lưới kênh trực tiếp miễn phí tải ngay lập tức, kèm bản xem trước không tiếng.
+    - title: Chọn kênh
+      desc: Lọc theo quốc gia hoặc thể loại, hoặc tìm theo tên. Nhấp vào một ô để xem có tiếng; các bản xem trước khác sẽ dừng.
+    - title: Thêm danh sách của riêng bạn
+      desc: Nhấp Thêm danh sách rồi dán link, nhập tệp hoặc dán nội dung danh sách. Danh sách chỉ được lưu trong trình duyệt của bạn.
+    - title: Toàn màn hình và Hình trong hình
+      desc: Nhấn F để xem toàn màn hình hoặc P để bật Hình trong hình, và dùng ↑ ↓ để chuyển kênh.
+    tips:
+    - Các kênh mà trình duyệt không phát được sẽ tự động bị ẩn; ứng dụng Doubo phát được nhiều kênh hơn.
+    - Trên Mac, ứng dụng Doubo bổ sung trình phát gốc với Hình trong hình và quản lý danh sách.
+    faq:
+    - q: Có miễn phí không?
+      a: Có. Trình phát web miễn phí và không cần tài khoản.
+    - q: Tôi có thể dùng VLC thay thế không?
+      a: Tất nhiên. Xem hướng dẫn VLC cho Windows và Mac.
+  android-phone:
+    name: Điện thoại Android
+    title: Cách xem danh sách M3U trên điện thoại Android
+    description: 'Xem danh sách IPTV M3U / M3U8 trên điện thoại hoặc máy tính bảng Android: dùng trình phát web Doubo trong Chrome không cần cài đặt, hoặc VLC for Android.'
+    intro: Trên Android, bạn có thể xem ngay trong Chrome với trình phát web của Doubo, hoặc dùng VLC for Android. Ứng dụng Doubo gốc cho Android sắp ra mắt.
+    need:
+    - Một điện thoại hoặc máy tính bảng Android
+    - Chrome, hoặc VLC for Android từ Google Play
+    - 'Tùy chọn: link danh sách M3U / M3U8 của riêng bạn'
+    steps:
+    - title: 'Trên Chrome: mở trình phát web'
+      desc: Truy cập doubo.tv/web và chạm vào một kênh để xem. Thêm danh sách của riêng bạn bằng Thêm danh sách.
+    - title: Thêm vào màn hình chính
+      desc: Trong menu ⋮ của Chrome, chọn Add to Home screen để mở trình phát web như một ứng dụng.
+    - title: 'Với VLC: mở luồng mạng'
+      desc: Cài VLC từ Google Play, mở More → New stream (Stream ở phiên bản cũ) và dán link danh sách.
+    tips:
+    - Xem video trực tiếp bằng dữ liệu di động tốn dung lượng rất nhanh; hãy dùng Wi-Fi khi có thể.
+    - Doubo cho Android sắp ra mắt, với nhóm kênh, mục yêu thích và tự động chuyển nguồn phát.
+    faq:
+    - q: Có ứng dụng Doubo trên Google Play không?
+      a: Chưa có. Ứng dụng đang được phát triển; trong thời gian chờ, bạn có thể dùng trình phát web.
+    - q: Tại sao một số kênh phát được trong VLC nhưng không phát được trên trình duyệt?
+      a: Trình duyệt chặn một số loại luồng vì lý do bảo mật. Các trình phát gốc như VLC hoặc ứng dụng Doubo không có những giới hạn đó.

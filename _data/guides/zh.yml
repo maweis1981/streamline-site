@@ -1,0 +1,265 @@
+hub:
+  title: 按设备分类的教程
+  intro: 在最常用的设备上播放 M3U / M3U8 播放列表的分步教程。
+labels:
+  eyebrow: 设备教程
+  need: 准备工作
+  steps: 操作步骤
+  tips: 小贴士
+  faq: 常见问题
+  related: 其他设备
+  try_web: 先在浏览器里试试
+  try_web_desc: 无需安装。都播网页播放器打开即可观看免费直播频道，也能播放你自己的 M3U 链接。
+  open_web: 打开网页播放器
+  free_title: 需要播放列表？
+  free_desc: 都播免费频道目录收录了各电视台公开提供的频道，以 M3U 链接形式列出，可粘贴到任意播放器中使用。
+  free_link: 浏览免费频道
+devices:
+  vlc:
+    name: VLC
+    title: VLC 播放 M3U 播放列表教程（Windows、Mac、安卓、iPhone）
+    description: 在 Windows、macOS、安卓和 iOS 上用 VLC 打开 M3U / M3U8 IPTV 播放列表的分步教程，附各平台对应的菜单名称。
+    intro: VLC 是一款免费开源的媒体播放器，几乎支持所有平台，可以通过链接或文件打开 M3U 播放列表。下面介绍在各个系统上的操作方法。
+    need:
+    - VLC 媒体播放器，可从 videolan.org 或设备的应用商店免费下载
+    - 一个 M3U / M3U8 播放列表链接或文件
+    steps:
+    - title: 复制播放列表链接
+      desc: 复制你想播放的 M3U 地址，例如都播免费频道目录中某个国家的播放列表。
+    - title: Windows 和 Linux：打开网络串流
+      desc: 在 VLC 中选择「媒体 → 打开网络串流」（Ctrl+N），粘贴链接后点击「播放」。如需打开已下载的 .m3u 文件，请改用「媒体 → 打开文件」。
+    - title: Mac：打开网络
+      desc: 选择「文件 → 打开网络」（⌘N），将链接粘贴到 URL 栏中，然后点击「打开」。
+    - title: 安卓和 iPhone：网络串流
+      desc: 在安卓上，打开 “More” 标签页并选择 “New stream”（旧版本中名为 “Stream”）。在 iPhone 和 iPad 上，打开 “Network” 标签页并选择 “Open Network Stream”。粘贴链接即可开始播放。
+    - title: 切换频道
+      desc: VLC 会加载整个播放列表。在电脑上打开「视图 → 播放列表」（Windows 上为 Ctrl+L）即可看到所有频道，双击任一频道即可播放。
+    tips:
+    - 如果某个频道无法播放，请稍等几秒或换下一个；直播流有时需要一点时间缓冲。
+    - 常用的播放列表可以通过「媒体 → 保存播放列表为文件」保存下来，以后无需链接即可重新打开。
+    - VLC 只以平铺列表显示频道。如需分组、收藏和频道台标，请使用都播 App 或网页播放器。
+    faq:
+    - q: VLC 能打开 M3U8 链接吗？
+      a: 可以。M3U8 是 M3U 的 UTF-8 版本，也用于 HLS 直播流；VLC 打开两者的方式完全相同。
+    - q: 为什么 VLC 只显示一个频道？
+      a: 你可能打开的是单个直播流地址，而不是播放列表。请确认链接指向的是包含多个频道的播放列表文件（通常以 .m3u 或 .m3u8 结尾）。
+  kodi:
+    name: Kodi
+    title: Kodi 添加 M3U 播放列表教程（PVR IPTV Simple Client 设置）
+    description: 使用官方 PVR IPTV Simple Client 插件，在 Kodi 中通过 M3U / M3U8 播放列表设置电视直播：安装插件、配置播放列表链接即可观看。
+    intro: Kodi 通过官方的 PVR IPTV Simple Client 插件播放 IPTV 播放列表。配置完成后，频道会按分组显示在 Kodi 的「电视」板块中；如果播放列表提供节目单，还会显示节目指南。
+    need:
+    - 运行在 Windows、Mac、Linux、安卓、Android TV 或 Fire TV 上的 Kodi
+    - 一个 M3U / M3U8 播放列表链接
+    steps:
+    - title: 打开插件浏览器
+      desc: 在 Kodi 中打开「设置」（齿轮图标）→「插件」→「从库安装」→「PVR 客户端」。
+    - title: 安装 PVR IPTV Simple Client
+      desc: 选择 PVR IPTV Simple Client，然后选择「安装」。在部分系统上它已预装，只需启用即可。
+    - title: 填写播放列表链接
+      desc: 选择「配置」。在「常规」（General）下，将 “Location” 设置为 “Remote path (Internet address)”，然后将链接粘贴到 “M3U play list URL” 中，点击「确定」。
+    - title: 启用插件
+      desc: 如果插件尚未启用，请选择「启用」。Kodi 会加载频道；如果频道没有立即出现，重启 Kodi 通常可以解决。
+    - title: 开始观看
+      desc: 在 Kodi 主屏幕进入「电视」。频道按分组列出，点击任意频道即可打开。
+    tips:
+    - 较新版本的 Kodi 支持为该插件添加多个配置，每个播放列表对应一个配置。
+    - 如果你的播放列表附带 EPG（XMLTV）文件链接，可在插件的 EPG 设置中添加，以获得节目指南。
+    faq:
+    - q: 需要安装第三方插件吗？
+      a: 不需要。PVR IPTV Simple Client 由 Kodi 团队维护，播放 M3U 播放列表只需要它就够了。
+    - q: 频道列表是空的，应该检查什么？
+      a: 请确认 “Location” 已设置为 “Remote path”、链接完整无误，并且插件已启用。然后重启 Kodi。
+  smart-tv:
+    name: 智能电视
+    title: 智能电视播放 M3U 播放列表教程（三星、LG 等）
+    description: 在三星、LG 等智能电视上播放 M3U / M3U8 IPTV 播放列表的三种方法：安装 IPTV 播放器 App、从手机投屏，或使用电视浏览器。
+    intro: 大多数智能电视本身无法打开 M3U 播放列表，但有三种简单的方法可以把频道搬上大屏幕。
+    need:
+    - 一台与手机或电脑连接同一 Wi-Fi 网络的智能电视
+    - 一个 M3U / M3U8 播放列表链接
+    steps:
+    - title: 方法一：在电视上安装 IPTV 播放器
+      desc: 打开电视的应用商店（Samsung Smart Hub、LG Content Store 等），搜索 “IPTV player” 或 “M3U”。选择一款你信任的播放器，打开后粘贴或输入播放列表链接。
+    - title: 方法二：从都播 App 投屏
+      desc: 在 iPhone、iPad 或 Mac 上用都播播放频道，点击播放器中的投屏图标并选择你的电视。许多智能电视支持在同一网络下通过 DLNA 接收投屏。
+    - title: 方法三：屏幕镜像
+      desc: 2018 年及以后的许多三星、LG、索尼和 Vizio 电视支持 AirPlay。在 iPhone 或 iPad 上打开「控制中心 → 屏幕镜像」并选择电视，然后在都播中全屏播放。
+    - title: 方法四：使用电视浏览器
+      desc: 打开电视的网页浏览器，访问 doubo.tv/web。部分电视可以正常使用；不过投屏或播放器 App 通常更流畅。
+    tips:
+    - 用电视遥控器输入长链接很慢。许多电视 App 支持改用手机输入。
+    - 使用有线以太网或 5 GHz Wi-Fi，播放高清频道会更流畅。
+    faq:
+    - q: 三星或 LG 电视不装 App 能播放 M3U 吗？
+      a: 一般不能。电视自带的媒体播放器无法打开 IPTV 播放列表，因此需要播放器 App、投屏或屏幕镜像。
+    - q: 哪种方法最好？
+      a: 从手机投屏无需在电视上安装任何东西，是最快的尝试方式。如果每天都看，在电视上装一个播放器 App 会更好。
+  android-tv:
+    name: Android TV / 电视盒子
+    title: Android TV、Google TV 和电视盒子播放 M3U 播放列表教程
+    description: 在 Android TV、Google TV 或安卓电视盒子上播放 M3U / M3U8 IPTV 播放列表：从 Google Play 安装播放器，添加链接，用遥控器操作即可。
+    intro: Android TV、Google TV 和安卓电视盒子可以从 Google Play 安装 IPTV 播放器。下面介绍一种可靠的方案：使用免费且无广告的 VLC。
+    need:
+    - 一台带有 Google Play 的 Android TV、Google TV 或安卓电视盒子
+    - 一个 M3U / M3U8 播放列表链接
+    steps:
+    - title: 安装 VLC
+      desc: 在电视上打开 Google Play，搜索 VLC 并安装 VLC for Android。
+    - title: 添加播放列表链接
+      desc: 打开 VLC，进入 “Browse” → “Stream”（或你所用版本中的网络串流选项），输入播放列表链接。
+    - title: 播放和切换频道
+      desc: VLC 会加载播放列表，选择一个频道即可播放。按遥控器的返回键可回到频道列表。
+    tips:
+    - 为了避免用遥控器输入长链接，可以在手机上安装 Google TV 或键盘类 App，在手机上输入。
+    - 安卓版和 Android TV 版都播即将推出，支持分组、收藏和自动线路切换。
+    faq:
+    - q: 有 Android TV 版的都播 App 吗？
+      a: 正在开发中。在推出之前，你可以使用 VLC 或其他播放器，或在 Chrome 中通过都播网页播放器投屏。
+    - q: 从 Google Play 以外的渠道安装 IPTV App 安全吗？
+      a: 来源不明的 App 可能携带恶意软件或盗版内容。建议只使用 Google Play 和知名播放器。
+  fire-tv:
+    name: Fire TV Stick
+    title: 亚马逊 Fire TV Stick 播放 M3U 播放列表教程
+    description: 在 Fire TV Stick 或 Fire TV 上观看 M3U / M3U8 IPTV 播放列表：从 Amazon Appstore 安装 VLC，打开播放列表链接并切换频道。
+    intro: Fire TV 设备可以用 VLC 播放 M3U 播放列表，VLC 可在 Amazon Appstore 中免费下载。
+    need:
+    - 一台亚马逊 Fire TV Stick 或 Fire TV
+    - 一个 M3U / M3U8 播放列表链接
+    steps:
+    - title: 安装 VLC
+      desc: 在 Fire TV 主屏幕上进入 “Find” → “Search”，输入 VLC 并安装 VLC for Fire。
+    - title: 打开网络串流
+      desc: 打开 VLC，进入 “Network” 或 “Stream”，选择打开网络串流，然后输入播放列表链接。
+    - title: 开始观看
+      desc: VLC 会加载播放列表中的频道，选择一个即可播放。
+    tips:
+    - 用遥控器输入很慢。可以改用手机上 Amazon Fire TV App 自带的键盘输入。
+    - 使用带以太网口（或以太网转接器）的 Fire TV，播放高清直播流会更稳定。
+    faq:
+    - q: 需要侧载安装什么吗？
+      a: 不需要。VLC 已上架 Amazon Appstore，无需从外部来源安装任何东西。
+    - q: 可以改用 Fire TV 上的 Kodi 吗？
+      a: 可以。Kodi 搭配 PVR IPTV Simple Client 可以在 Fire TV 上使用，详见 Kodi 教程。
+  apple-tv:
+    name: Apple TV
+    title: Apple TV 观看 M3U 播放列表教程
+    description: 在 Apple TV 上播放 M3U / M3U8 IPTV 播放列表的两种方法：从 iPhone、iPad 或 Mac 上的都播通过 AirPlay 投放，或使用 tvOS 版 VLC 打开网络串流。
+    intro: Apple TV 没有内置 IPTV 播放器，但你可以从 iPhone、iPad 或 Mac 上的都播通过 AirPlay 投放频道，或使用 tvOS 版 VLC。
+    need:
+    - 一台与 iPhone、iPad 或 Mac 连接同一网络的 Apple TV
+    - 一个 M3U / M3U8 播放列表链接
+    steps:
+    - title: 方法一：从都播通过 AirPlay 投放
+      desc: 在 iPhone、iPad 或 Mac 上用都播打开频道，然后通过「屏幕镜像」（iPhone 和 iPad 在控制中心，Mac 在菜单栏）选择你的 Apple TV；如果播放器显示 AirPlay 按钮，也可以直接点击该按钮。
+    - title: 方法二：在 Apple TV 上安装 VLC
+      desc: 在 Apple TV 上打开 App Store，搜索 VLC 并安装。
+    - title: 在 VLC 中打开播放列表
+      desc: 在 VLC 中打开 “Network Stream” 标签页，输入播放列表链接，VLC 会加载频道。
+    tips:
+    - 通过 VLC 的 “Remote Playback” 标签页，可以在同一网络下的电脑浏览器中发送播放列表文件，免去手动输入。
+    - 都播 Apple TV 版 App 已在计划中。
+    faq:
+    - q: 有 Apple TV 版的都播 App 吗？
+      a: 已列入开发计划。目前最简单的方法是从 iPhone、iPad 或 Mac 上的都播通过 AirPlay 投放。
+    - q: 锁定 iPhone 后 AirPlay 还会继续播放吗？
+      a: 手机锁屏后屏幕镜像会停止，所以请保持手机解锁；如需长时间观看，建议在 Apple TV 上使用 VLC。
+  chromecast:
+    name: Chromecast / Google TV
+    title: Chromecast 和 Google TV 投屏 M3U 播放列表教程
+    description: 将 M3U / M3U8 播放列表中的直播频道投放到 Chromecast 或 Google TV：在 Chrome 中用都播网页播放器投放标签页，或在安卓上用 VLC 投屏。
+    intro: Chromecast 本身无法打开播放列表，但电脑或手机只需点几下就能把频道投放过去。
+    need:
+    - 一台连接同一 Wi-Fi 网络的 Chromecast 或 Google TV
+    - 电脑上的 Google Chrome，或一部安卓手机
+    - 一个 M3U / M3U8 播放列表链接
+    steps:
+    - title: 在 Chrome 中打开网页播放器
+      desc: 在电脑上用 Chrome 打开 doubo.tv/web，选择一个免费频道或添加你自己的播放列表链接。
+    - title: 投放标签页
+      desc: 打开 Chrome 菜单 ⋮ →「投放」（部分版本位于「保存并分享」下），选择你的 Chromecast，然后全屏播放频道。
+    - title: 安卓手机：使用 VLC
+      desc: 在 VLC for Android 中打开播放列表，播放一个频道，点击投屏图标并选择你的 Chromecast。
+    tips:
+    - 投放时请让电脑上的投放标签页保持在前台，播放会更流畅。
+    - Google TV 设备也可以直接安装 VLC，详见 Android TV 教程。
+    faq:
+    - q: 投放 Chrome 标签页会降低画质吗？
+      a: 标签页投放会对画面重新编码，因此画质取决于你的电脑和 Wi-Fi。想要最佳画质，请在 Google TV 上安装播放器。
+    - q: 可以从 iPhone 投屏到 Chromecast 吗？
+      a: Chromecast 不支持 AirPlay。请改用装有 Chrome 的电脑或安卓手机。
+  iphone-ipad:
+    name: iPhone 和 iPad
+    title: iPhone 和 iPad 播放 M3U 播放列表教程
+    description: 用都播在 iPhone 和 iPad 上播放 M3U / M3U8 IPTV 播放列表：添加链接或文件、浏览分组、画中画观看并投屏到电视。
+    intro: 都播是一款适用于 iPhone 和 iPad 的原生 IPTV 播放器。它能读取播放列表中的分组和台标，并在你使用其他 App 时通过画中画继续播放。
+    need:
+    - 一台运行 iOS / iPadOS 17 或更高版本的 iPhone 或 iPad
+    - 都播 App
+    - 一个 M3U / M3U8 播放列表链接或文件
+    steps:
+    - title: 添加播放列表
+      desc: 打开都播，点击「添加」并粘贴 M3U 链接，或从「文件」App 导入 .m3u / .m3u8 文件。
+    - title: 浏览和搜索
+      desc: 频道会自动分组。可以按频道名或分组名搜索，并为常看的频道加星标收藏。
+    - title: 观看与多任务
+      desc: 点击频道即可播放。上滑回到主屏幕，即可通过画中画继续观看。
+    - title: 投到电视上
+      desc: 使用投屏图标将频道发送到支持 DLNA 的智能电视，或通过控制中心的「屏幕镜像」投放到 Apple TV 或兼容 AirPlay 的电视。
+    tips:
+    - 还没安装 App？在 Safari 中打开 doubo.tv/web，即可立即观看免费频道。
+    - 都播仅将播放列表保存在你的设备上，不会上传任何内容。
+    faq:
+    - q: Safari 能播放 M3U 播放列表吗？
+      a: Safari 可以播放单个 HLS 直播流，但无法播放完整的 IPTV 播放列表。请使用 doubo.tv/web 上的都播网页播放器或都播 App。
+    - q: 都播自带频道吗？
+      a: 都播 App 是一款播放器，需要你自行添加播放列表。网页播放器和免费频道目录提供免费的公开频道。
+  computer:
+    name: 电脑（浏览器）
+    title: 浏览器在线播放 M3U 播放列表教程（Windows 和 Mac）
+    description: 无需安装，在 Chrome、Edge、Safari 或 Firefox 中在线播放 M3U / M3U8 IPTV 播放列表：免费频道、自有链接、分组、搜索和画中画一应俱全。
+    intro: 在电脑上观看 M3U 播放列表，最快的方式就是用浏览器。都播网页播放器无需安装，也无需注册账号。
+    need:
+    - Windows、macOS 或 Linux 上的 Chrome、Edge、Safari 或 Firefox
+    - 可选，你自己的 M3U / M3U8 播放列表链接或文件
+    steps:
+    - title: 打开网页播放器
+      desc: 访问 doubo.tv/web。页面会立即加载一整面免费直播频道墙，并以静音方式预览。
+    - title: 选择频道
+      desc: 可按国家或类别筛选，也可按名称搜索。点击频道卡片即可有声观看，其他预览会自动停止。
+    - title: 添加你自己的播放列表
+      desc: 点击「添加播放列表」，粘贴链接、导入文件或粘贴播放列表文本。播放列表仅保存在你的浏览器中。
+    - title: 全屏和画中画
+      desc: 按 F 进入全屏，按 P 开启画中画，用 ↑ ↓ 切换频道。
+    tips:
+    - 浏览器无法播放的频道会被自动隐藏；都播 App 能播放其中更多频道。
+    - 在 Mac 上，都播 App 提供支持画中画和播放列表管理的原生播放器。
+    faq:
+    - q: 是免费的吗？
+      a: 是的。网页播放器免费使用，无需注册账号。
+    - q: 可以改用 VLC 吗？
+      a: 当然可以。请参阅适用于 Windows 和 Mac 的 VLC 教程。
+  android-phone:
+    name: 安卓手机
+    title: 安卓手机播放 M3U 播放列表教程
+    description: 在安卓手机或平板上观看 M3U / M3U8 IPTV 播放列表：无需安装，直接在 Chrome 中使用都播网页播放器，或使用 VLC for Android。
+    intro: 在安卓上，你可以直接在 Chrome 中用都播网页播放器观看，也可以使用 VLC for Android。原生安卓版都播 App 即将推出。
+    need:
+    - 一部安卓手机或平板
+    - Chrome，或从 Google Play 下载的 VLC for Android
+    - 可选，你自己的 M3U / M3U8 播放列表链接
+    steps:
+    - title: 使用 Chrome：打开网页播放器
+      desc: 访问 doubo.tv/web，点击频道即可观看。通过「添加播放列表」添加你自己的播放列表。
+    - title: 添加到主屏幕
+      desc: 在 Chrome 菜单 ⋮ 中选择「添加到主屏幕」，即可像 App 一样打开网页播放器。
+    - title: 使用 VLC：打开网络串流
+      desc: 从 Google Play 安装 VLC，打开 “More” → “New stream”（旧版本中为 “Stream”），粘贴你的播放列表链接。
+    tips:
+    - 观看直播视频会快速消耗移动数据流量，尽量使用 Wi-Fi。
+    - 安卓版都播即将推出，支持分组、收藏和自动线路切换。
+    faq:
+    - q: Google Play 上有都播 App 吗？
+      a: 暂时还没有。App 正在开发中，在此期间可以使用网页播放器。
+    - q: 为什么有些频道在 VLC 中能播放，在浏览器中却不行？
+      a: 出于安全原因，浏览器会屏蔽部分直播流类型。VLC 或都播 App 等原生播放器没有这些限制。

@@ -1,0 +1,265 @@
+hub:
+  title: Guides by device
+  intro: Step-by-step instructions for playing an M3U / M3U8 playlist on the devices people use most.
+labels:
+  eyebrow: Device guide
+  need: What you need
+  steps: Steps
+  tips: Tips
+  faq: Questions
+  related: Other devices
+  try_web: Try it in your browser first
+  try_web_desc: No install needed. Doubo’s web player opens free live channels right away, and plays your own M3U links too.
+  open_web: Open the web player
+  free_title: Need a playlist?
+  free_desc: Doubo’s free channel directory lists channels that broadcasters make publicly available, as M3U links you can paste into any player.
+  free_link: Browse free channels
+devices:
+  vlc:
+    name: VLC
+    title: How to Play M3U Playlists in VLC (Windows, Mac, Android, iPhone)
+    description: 'Open an M3U / M3U8 IPTV playlist in VLC media player on Windows, macOS, Android and iOS: step-by-step, with menu names for each platform.'
+    intro: VLC is a free, open-source media player for almost every platform, and it can open M3U playlists from a link or a file. Here is how to do it on each system.
+    need:
+    - VLC media player, free from videolan.org or your device’s app store
+    - An M3U / M3U8 playlist link or file
+    steps:
+    - title: Copy the playlist link
+      desc: Copy the M3U address you want to play, for example a country playlist from Doubo’s free channel directory.
+    - title: 'Windows and Linux: Open Network Stream'
+      desc: In VLC, choose Media → Open Network Stream (Ctrl+N), paste the link and click Play. To open a downloaded .m3u file, use Media → Open File instead.
+    - title: 'Mac: Open Network'
+      desc: Choose File → Open Network (⌘N), paste the link into the URL field and click Open.
+    - title: 'Android and iPhone: network stream'
+      desc: On Android, open the More tab and choose New stream (called Stream in older versions). On iPhone and iPad, open the Network tab and choose Open Network Stream. Paste the link and start playback.
+    - title: Switch channels
+      desc: VLC loads the whole playlist. On a computer, open View → Playlist (Ctrl+L on Windows) to see every channel and double-click one to play it.
+    tips:
+    - If a channel does not start, wait a few seconds or pick the next one; live streams sometimes take a moment to buffer.
+    - Save a playlist you use often with Media → Save Playlist to File so you can reopen it without the link.
+    - VLC shows channels as a flat list. For groups, favorites and channel logos, use the Doubo app or web player.
+    faq:
+    - q: Can VLC open M3U8 links?
+      a: Yes. M3U8 is the UTF-8 version of M3U and is also used for HLS live streams; VLC opens both the same way.
+    - q: Why does VLC show only one channel?
+      a: You probably opened a single stream address rather than the playlist. Make sure the link ends in a playlist file (often .m3u or .m3u8) that lists many channels.
+  kodi:
+    name: Kodi
+    title: How to Add an M3U Playlist to Kodi with PVR IPTV Simple Client
+    description: 'Set up live TV in Kodi from an M3U / M3U8 playlist using the official PVR IPTV Simple Client add-on: install, configure the playlist link and watch.'
+    intro: Kodi plays IPTV playlists through its official PVR IPTV Simple Client add-on. Once configured, channels appear in Kodi’s TV section with groups and a channel guide if your playlist provides one.
+    need:
+    - Kodi on Windows, Mac, Linux, Android, Android TV or Fire TV
+    - An M3U / M3U8 playlist link
+    steps:
+    - title: Open the add-on browser
+      desc: In Kodi, open Settings (the gear icon) → Add-ons → Install from repository → PVR clients.
+    - title: Install PVR IPTV Simple Client
+      desc: Select PVR IPTV Simple Client and choose Install. On some systems it is already installed and only needs to be enabled.
+    - title: Enter the playlist link
+      desc: Choose Configure. Under General, set Location to Remote path (Internet address), then paste your link into M3U play list URL and confirm with OK.
+    - title: Enable the add-on
+      desc: Choose Enable if it is not already on. Kodi loads the channels; restarting Kodi helps if they do not appear right away.
+    - title: Watch
+      desc: Go to TV on Kodi’s home screen. Channels are listed by group, and you can open any of them.
+    tips:
+    - Recent Kodi versions let you add several configurations of the add-on, one per playlist.
+    - If your playlist links to an EPG (XMLTV) file, add it under the add-on’s EPG settings to get a programme guide.
+    faq:
+    - q: Do I need any third-party add-ons?
+      a: No. PVR IPTV Simple Client is maintained by the Kodi team and is all you need for M3U playlists.
+    - q: The channel list is empty. What should I check?
+      a: Make sure Location is set to Remote path, the link is complete, and the add-on is enabled. Then restart Kodi.
+  smart-tv:
+    name: Smart TV
+    title: How to Watch M3U Playlists on a Smart TV (Samsung, LG and others)
+    description: 'Three ways to play an M3U / M3U8 IPTV playlist on a Samsung, LG or other smart TV: an IPTV player app, casting from your phone, or the TV’s browser.'
+    intro: Most smart TVs cannot open M3U playlists on their own, but there are three easy ways to get your channels on the big screen.
+    need:
+    - A smart TV on the same Wi-Fi network as your phone or computer
+    - An M3U / M3U8 playlist link
+    steps:
+    - title: 'Option 1: install an IPTV player on the TV'
+      desc: Open your TV’s app store (Samsung Smart Hub, LG Content Store and so on) and search for “IPTV player” or “M3U”. Pick a player you trust, open it and paste or type your playlist link.
+    - title: 'Option 2: cast from the Doubo app'
+      desc: Play the channel in Doubo on your iPhone, iPad or Mac, tap the cast icon in the player and choose your TV. Many smart TVs accept casting over DLNA on the same network.
+    - title: 'Option 3: mirror your screen'
+      desc: Many Samsung, LG, Sony and Vizio TVs from 2018 onward support AirPlay. On an iPhone or iPad, open Control Center → Screen Mirroring and choose the TV, then play in Doubo full screen.
+    - title: 'Option 4: use the TV browser'
+      desc: Open the TV’s web browser and go to doubo.tv/web. It works on some TVs; casting or a player app is usually smoother.
+    tips:
+    - Typing a long link with a TV remote is slow. Many TV apps let you type on your phone instead.
+    - Wired Ethernet or 5 GHz Wi-Fi gives smoother playback for HD channels.
+    faq:
+    - q: Can a Samsung or LG TV play M3U without an app?
+      a: Generally no. The built-in media players do not open IPTV playlists, so you need a player app, casting or screen mirroring.
+    - q: Which option is best?
+      a: Casting from your phone needs nothing installed on the TV, so it is the quickest to try. A player app on the TV is better if you watch every day.
+  android-tv:
+    name: Android TV / TV box
+    title: How to Play M3U Playlists on Android TV, Google TV and TV Boxes
+    description: 'Play an M3U / M3U8 IPTV playlist on Android TV, Google TV or an Android TV box: install a player from Google Play, add the link and use the remote.'
+    intro: Android TV, Google TV and Android TV boxes can install IPTV players from Google Play. Here is a reliable setup with VLC, which is free and has no ads.
+    need:
+    - An Android TV, Google TV or Android TV box with Google Play
+    - An M3U / M3U8 playlist link
+    steps:
+    - title: Install VLC
+      desc: Open Google Play on the TV, search for VLC and install VLC for Android.
+    - title: Add the playlist link
+      desc: Open VLC, go to Browse → Stream (or the network stream option in your version) and enter the playlist link.
+    - title: Play and switch channels
+      desc: VLC loads the playlist; pick a channel to play. Use the remote’s back button to return to the list.
+    tips:
+    - To avoid typing long links with the remote, install Google TV or a keyboard app on your phone and type there.
+    - Doubo for Android and Android TV is coming soon, with groups, favorites and automatic route switching.
+    faq:
+    - q: Is there a Doubo app for Android TV?
+      a: It is in development. Until it is out, you can use VLC or another player, or cast from the Doubo web player in Chrome.
+    - q: Is installing IPTV apps outside Google Play safe?
+      a: Apps from unknown sources can carry malware or pirated content. Stick to Google Play and well-known players.
+  fire-tv:
+    name: Fire TV Stick
+    title: How to Play M3U Playlists on Amazon Fire TV Stick
+    description: 'Watch an M3U / M3U8 IPTV playlist on Fire TV Stick or Fire TV: install VLC from the Amazon Appstore, open the playlist link and switch channels.'
+    intro: Fire TV devices can play M3U playlists with VLC, which is available for free in the Amazon Appstore.
+    need:
+    - An Amazon Fire TV Stick or Fire TV
+    - An M3U / M3U8 playlist link
+    steps:
+    - title: Install VLC
+      desc: From the Fire TV home screen, use Find → Search, type VLC and install VLC for Fire.
+    - title: Open a network stream
+      desc: Open VLC, go to Network or Stream and choose to open a network stream. Enter the playlist link.
+    - title: Watch
+      desc: VLC loads the channels in the playlist. Select one to play.
+    tips:
+    - Typing on the remote is slow. The Amazon Fire TV app on your phone has a keyboard you can use instead.
+    - A Fire TV with Ethernet (or an Ethernet adapter) helps with HD streams.
+    faq:
+    - q: Do I need to sideload anything?
+      a: No. VLC is in the Amazon Appstore, so there is nothing to install from outside sources.
+    - q: Can I use Kodi on Fire TV instead?
+      a: Yes. Kodi with PVR IPTV Simple Client works on Fire TV; see the Kodi guide.
+  apple-tv:
+    name: Apple TV
+    title: How to Watch M3U Playlists on Apple TV
+    description: 'Two ways to play an M3U / M3U8 IPTV playlist on Apple TV: AirPlay from Doubo on iPhone, iPad or Mac, or VLC for tvOS with a network stream.'
+    intro: Apple TV has no built-in IPTV player, but you can AirPlay channels from Doubo on your iPhone, iPad or Mac, or use VLC for tvOS.
+    need:
+    - An Apple TV on the same network as your iPhone, iPad or Mac
+    - An M3U / M3U8 playlist link
+    steps:
+    - title: 'Option 1: AirPlay from Doubo'
+      desc: Open a channel in Doubo on your iPhone, iPad or Mac, then choose your Apple TV with Screen Mirroring (Control Center on iPhone and iPad, the menu bar on Mac), or with the AirPlay button when the player shows one.
+    - title: 'Option 2: install VLC on Apple TV'
+      desc: Open the App Store on Apple TV, search for VLC and install it.
+    - title: Open the playlist in VLC
+      desc: In VLC, open the Network Stream tab and enter the playlist link. VLC loads the channels.
+    tips:
+    - VLC’s Remote Playback tab lets you send a playlist file from a computer browser on the same network instead of typing.
+    - A Doubo app for Apple TV is planned.
+    faq:
+    - q: Is there a Doubo app for Apple TV?
+      a: It is on the roadmap. For now, AirPlay from Doubo on iPhone, iPad or Mac is the easiest way.
+    - q: Does AirPlay keep playing if I lock my iPhone?
+      a: Screen mirroring stops when the phone locks, so keep it unlocked, or use VLC on the Apple TV for long viewing.
+  chromecast:
+    name: Chromecast / Google TV
+    title: How to Cast M3U Playlists to Chromecast and Google TV
+    description: 'Send live channels from an M3U / M3U8 playlist to Chromecast or Google TV: cast a tab from Chrome with Doubo’s web player, or cast from VLC on Android.'
+    intro: Chromecast cannot open playlists by itself, but a computer or phone can send channels to it in a few taps.
+    need:
+    - A Chromecast or Google TV on the same Wi-Fi network
+    - Google Chrome on a computer, or an Android phone
+    - An M3U / M3U8 playlist link
+    steps:
+    - title: Open the web player in Chrome
+      desc: On your computer, open doubo.tv/web in Chrome. Pick a free channel or add your own playlist link.
+    - title: Cast the tab
+      desc: Open Chrome’s menu ⋮ → Cast (in some versions under Save and share), choose your Chromecast, and play the channel full screen.
+    - title: 'From an Android phone: VLC'
+      desc: Open the playlist in VLC for Android, start a channel, tap the cast icon and choose your Chromecast.
+    tips:
+    - Keep the casting tab in the foreground on your computer for the smoothest playback.
+    - Google TV models can also install VLC directly; see the Android TV guide.
+    faq:
+    - q: Does casting a Chrome tab lower quality?
+      a: Tab casting re-encodes the picture, so quality depends on your computer and Wi-Fi. For the best quality, install a player on Google TV.
+    - q: Can I cast from an iPhone to Chromecast?
+      a: Chromecast does not support AirPlay. Use a computer with Chrome or an Android phone instead.
+  iphone-ipad:
+    name: iPhone & iPad
+    title: How to Play M3U Playlists on iPhone and iPad
+    description: 'Play M3U / M3U8 IPTV playlists on iPhone and iPad with Doubo: add a link or file, browse groups, watch in Picture in Picture and cast to your TV.'
+    intro: Doubo is a native IPTV player for iPhone and iPad. It reads your playlist’s groups and logos, and keeps watching in Picture in Picture while you use other apps.
+    need:
+    - An iPhone or iPad with iOS / iPadOS 17 or later
+    - The Doubo app
+    - An M3U / M3U8 playlist link or file
+    steps:
+    - title: Add the playlist
+      desc: Open Doubo, tap Add and paste your M3U link, or import a .m3u / .m3u8 file from the Files app.
+    - title: Browse and search
+      desc: Channels are grouped automatically. Search by channel or group name, and star the ones you watch most.
+    - title: Watch and multitask
+      desc: Tap a channel to play. Swipe home to keep watching in Picture in Picture.
+    - title: Put it on the TV
+      desc: Use the cast icon to send the channel to a DLNA smart TV, or Screen Mirroring in Control Center for an Apple TV or AirPlay-compatible TV.
+    tips:
+    - No app yet? Open doubo.tv/web in Safari to watch free channels right away.
+    - Doubo stores playlists on your device only; nothing is uploaded.
+    faq:
+    - q: Can Safari play M3U playlists?
+      a: Safari can play a single HLS stream, but not a whole IPTV playlist. Use Doubo’s web player at doubo.tv/web or the Doubo app.
+    - q: Does Doubo include channels?
+      a: The app is a player; you add your own playlists. The web player and the free channel directory offer free, publicly available channels.
+  computer:
+    name: Computer (browser)
+    title: How to Play M3U Playlists Online in Your Browser (Windows & Mac)
+    description: 'Play M3U / M3U8 IPTV playlists online in Chrome, Edge, Safari or Firefox with no install: free channels, your own links, groups, search and Picture in Picture.'
+    intro: The quickest way to watch an M3U playlist on a computer is in the browser. Doubo’s web player needs no install and no account.
+    need:
+    - Chrome, Edge, Safari or Firefox on Windows, macOS or Linux
+    - 'Optional: your own M3U / M3U8 playlist link or file'
+    steps:
+    - title: Open the web player
+      desc: Go to doubo.tv/web. A wall of free live channels loads right away, with silent previews.
+    - title: Pick a channel
+      desc: Filter by country or category, or search by name. Click a tile to watch with sound; the other previews stop.
+    - title: Add your own playlist
+      desc: Click Add playlist and paste a link, import a file or paste the playlist text. It is saved in your browser only.
+    - title: Full screen and Picture in Picture
+      desc: Press F for full screen or P for Picture in Picture, and use ↑ ↓ to change channels.
+    tips:
+    - Channels that browsers cannot play are hidden automatically; the Doubo app plays more of them.
+    - On a Mac, the Doubo app adds a native player with Picture in Picture and playlist management.
+    faq:
+    - q: Is it free?
+      a: Yes. The web player is free and needs no account.
+    - q: Can I use VLC instead?
+      a: Of course. See the VLC guide for Windows and Mac.
+  android-phone:
+    name: Android phone
+    title: How to Play M3U Playlists on an Android Phone
+    description: 'Watch M3U / M3U8 IPTV playlists on an Android phone or tablet: use Doubo’s web player in Chrome with no install, or VLC for Android.'
+    intro: On Android you can watch right in Chrome with Doubo’s web player, or use VLC for Android. A native Doubo app for Android is coming soon.
+    need:
+    - An Android phone or tablet
+    - Chrome, or VLC for Android from Google Play
+    - 'Optional: your own M3U / M3U8 playlist link'
+    steps:
+    - title: 'In Chrome: open the web player'
+      desc: Go to doubo.tv/web and tap a channel to watch. Add your own playlist with Add playlist.
+    - title: Add it to your home screen
+      desc: In Chrome’s menu ⋮, choose Add to Home screen to open the web player like an app.
+    - title: 'With VLC: open a network stream'
+      desc: Install VLC from Google Play, open More → New stream (Stream in older versions) and paste your playlist link.
+    tips:
+    - Mobile data use adds up quickly with live video; use Wi-Fi where you can.
+    - Doubo for Android is coming soon, with groups, favorites and automatic route switching.
+    faq:
+    - q: Is there a Doubo app on Google Play?
+      a: Not yet. It is in development; the web player works in the meantime.
+    - q: Why can some channels play in VLC but not in the browser?
+      a: Browsers block some stream types for security reasons. Native players such as VLC or the Doubo app do not have those limits.

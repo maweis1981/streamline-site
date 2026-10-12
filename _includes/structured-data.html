@@ -16,6 +16,10 @@
  {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":{{ t.brand | jsonify }},"item":{{ home_abs | jsonify }}},{"@type":"ListItem","position":2,"name":{{ crumb_name | jsonify }},"item":{{ page.url | absolute_url | jsonify }}}]}
  {%- if page.ref == "support" -%}
  ,{"@type":"FAQPage","mainEntity":[{%- for item in t.faq.items -%}{"@type":"Question","name":{{ item.q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ item.a | jsonify }}}}{% unless forloop.last %},{% endunless %}{%- endfor -%}]}
+ {%- elsif page.layout == "device-guide" -%}
+ {%- assign g = site.data.guides[page.lang].devices[page.device] -%}
+ ,{"@type":"HowTo","name":{{ g.title | jsonify }},"description":{{ g.description | jsonify }},"inLanguage":{{ t.html_lang | jsonify }},"supply":[{%- for n in g.need -%}{"@type":"HowToSupply","name":{{ n | jsonify }}}{% unless forloop.last %},{% endunless %}{%- endfor -%}],"step":[{%- for s in g.steps -%}{"@type":"HowToStep","position":{{ forloop.index }},"name":{{ s.title | jsonify }},"text":{{ s.desc | jsonify }},"url":{{ page.url | append: '#step-' | append: forloop.index | absolute_url | jsonify }}}{% unless forloop.last %},{% endunless %}{%- endfor -%}]}
+ ,{"@type":"FAQPage","mainEntity":[{%- for item in g.faq -%}{"@type":"Question","name":{{ item.q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ item.a | jsonify }}}}{% unless forloop.last %},{% endunless %}{%- endfor -%}]}
  {%- elsif page.ref == "web" -%}
  ,{"@type":"WebApplication","name":{{ t.web.page_title | jsonify }},"url":{{ page.url | absolute_url | jsonify }},"applicationCategory":"MultimediaApplication","operatingSystem":"Any (web browser)","browserRequirements":"Requires JavaScript and HTML5 video","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":{{ t.web.seo_intro | jsonify }},"inLanguage":{{ t.html_lang | jsonify }}}
  ,{"@type":"FAQPage","mainEntity":[{%- for item in t.web.faq -%}{"@type":"Question","name":{{ item.q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ item.a | jsonify }}}}{% unless forloop.last %},{% endunless %}{%- endfor -%}]}

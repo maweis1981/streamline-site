@@ -24,6 +24,19 @@ analytics:
 languages: [zh, en, ms, id, vi, th]   # Order of the language menu; each needs _data/locales/<code>.yml and pages under /<code>/.
 default_lang: zh
 
+# Device guides (/guide/<key>/). Content lives in _data/guides/<lang>.yml; pages are made by scripts/guide_pages.py.
+guide_devices:
+  - { key: computer, icon: laptop }
+  - { key: iphone-ipad, icon: phone }
+  - { key: android-phone, icon: android }
+  - { key: smart-tv, icon: tv }
+  - { key: android-tv, icon: android }
+  - { key: fire-tv, icon: tv }
+  - { key: apple-tv, icon: apple }
+  - { key: chromecast, icon: cast }
+  - { key: vlc, icon: pip }
+  - { key: kodi, icon: grid }
+
 markdown: kramdown
 permalink: pretty
 exclude:

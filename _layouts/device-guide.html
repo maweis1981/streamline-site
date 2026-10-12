@@ -1,0 +1,68 @@
+---
+layout: default
+---
+{%- assign t = site.data.locales[page.lang] -%}
+{%- assign gd = site.data.guides[page.lang] -%}
+{%- assign l = gd.labels -%}
+{%- assign g = gd.devices[page.device] -%}
+{%- if page.lang == site.default_lang -%}{%- assign lang_prefix = "" -%}{%- else -%}{%- assign lang_prefix = "/" | append: page.lang -%}{%- endif -%}
+<section class="page-hero">
+  <div class="container narrow">
+    <p class="eyebrow"><a href="{{ lang_prefix | append: '/guide/' | relative_url }}">{{ l.eyebrow }}</a> · {{ g.name }}</p>
+    <h1>{{ g.title }}</h1>
+    <p class="lead">{{ g.intro }}</p>
+  </div>
+</section>
+<section class="section section-tight">
+  <div class="container narrow">
+    <div class="card dg-need reveal">
+      <h2>{{ l.need }}</h2>
+      <ul>{% for n in g.need %}<li>{{ n }}</li>{% endfor %}</ul>
+    </div>
+
+    <h2 class="dg-head">{{ l.steps }}</h2>
+    <ol class="guide-steps">
+      {%- for s in g.steps %}
+      <li class="card guide-step reveal" style="--i:{{ forloop.index0 }}" id="step-{{ forloop.index }}">
+        <span class="guide-num" aria-hidden="true">{{ forloop.index | prepend: "0" | slice: -2, 2 }}</span>
+        <div>
+          <h3>{{ s.title }}</h3>
+          <p>{{ s.desc }}</p>
+        </div>
+      </li>
+      {%- endfor %}
+    </ol>
+
+    <aside class="card gborder guide-tips reveal">
+      <h2>{{ l.tips }}</h2>
+      <ul>{% for tip in g.tips %}<li>{{ tip }}</li>{% endfor %}</ul>
+    </aside>
+
+    <div class="dg-cta">
+      <div class="card reveal">
+        <h2>{{ l.try_web }}</h2>
+        <p>{{ l.try_web_desc }}</p>
+        <a class="btn btn-primary btn-sm" href="{{ lang_prefix | append: '/web/' | relative_url }}" data-track="cta_click" data-track-target="web_player" data-track-location="device_guide">{% include icon.html name="tv" %}<span>{{ l.open_web }}</span></a>
+      </div>
+      <div class="card reveal">
+        <h2>{{ l.free_title }}</h2>
+        <p>{{ l.free_desc }}</p>
+        <a class="btn btn-ghost btn-sm" href="{{ lang_prefix | append: '/playlists/' | relative_url }}" data-track="cta_click" data-track-target="directory" data-track-location="device_guide">{{ l.free_link }}</a>
+      </div>
+    </div>
+
+    <h2 class="dg-head">{{ l.faq }}</h2>
+    <div class="faq">
+      {%- for item in g.faq %}
+      <details data-track-faq="{{ page.device }}-{{ forloop.index }}"><summary>{{ item.q }}</summary><p>{{ item.a }}</p></details>
+      {%- endfor %}
+    </div>
+
+    <div class="guide-cta reveal">
+      {% include download-buttons.html location="device_guide" %}
+    </div>
+
+    <h2 class="dg-head">{{ l.related }}</h2>
+    {% include device-links.html current=page.device %}
+  </div>
+</section>

@@ -1,0 +1,265 @@
+hub:
+  title: Panduan per perangkat
+  intro: Petunjuk langkah demi langkah untuk memutar playlist M3U / M3U8 di perangkat yang paling banyak digunakan.
+labels:
+  eyebrow: Panduan perangkat
+  need: Yang Anda perlukan
+  steps: Langkah-langkah
+  tips: Tips
+  faq: Pertanyaan
+  related: Perangkat lain
+  try_web: Coba dulu di browser Anda
+  try_web_desc: Tanpa perlu instal. Web player Doubo langsung membuka saluran live gratis, dan juga memutar link M3U Anda sendiri.
+  open_web: Buka web player
+  free_title: Butuh playlist?
+  free_desc: Direktori saluran gratis Doubo mencantumkan saluran yang disediakan untuk publik oleh penyiarnya, berupa link M3U yang bisa Anda tempel ke player apa pun.
+  free_link: Jelajahi saluran gratis
+devices:
+  vlc:
+    name: VLC
+    title: Cara Memutar Playlist M3U di VLC (Windows, Mac, Android, iPhone)
+    description: Cara membuka playlist IPTV M3U / M3U8 di VLC untuk Windows, macOS, Android dan iOS, langkah demi langkah dengan nama menu tiap platform.
+    intro: VLC adalah media player gratis dan open-source untuk hampir semua platform, dan bisa membuka playlist M3U dari link maupun file. Berikut caranya di setiap sistem.
+    need:
+    - VLC media player, gratis dari videolan.org atau app store perangkat Anda
+    - Link atau file playlist M3U / M3U8
+    steps:
+    - title: Salin link playlist
+      desc: Salin alamat M3U yang ingin Anda putar, misalnya playlist per negara dari direktori saluran gratis Doubo.
+    - title: 'Windows dan Linux: Open Network Stream'
+      desc: Di VLC, pilih Media → Open Network Stream (Ctrl+N), tempel link-nya lalu klik Play. Untuk membuka file .m3u yang sudah diunduh, gunakan Media → Open File.
+    - title: 'Mac: Open Network'
+      desc: Pilih File → Open Network (⌘N), tempel link ke kolom URL lalu klik Open.
+    - title: 'Android dan iPhone: network stream'
+      desc: Di Android, buka tab More lalu pilih New stream (bernama Stream di versi lama). Di iPhone dan iPad, buka tab Network lalu pilih Open Network Stream. Tempel link-nya dan mulai putar.
+    - title: Ganti saluran
+      desc: VLC memuat seluruh playlist. Di komputer, buka View → Playlist (Ctrl+L di Windows) untuk melihat semua saluran, lalu klik dua kali salah satunya untuk memutarnya.
+    tips:
+    - Jika saluran tidak mau jalan, tunggu beberapa detik atau pilih saluran berikutnya; siaran live kadang perlu waktu sejenak untuk buffering.
+    - Simpan playlist yang sering Anda pakai dengan Media → Save Playlist to File agar bisa dibuka lagi tanpa link.
+    - VLC menampilkan saluran sebagai daftar datar. Untuk grup, favorit, dan logo saluran, gunakan aplikasi atau web player Doubo.
+    faq:
+    - q: Apakah VLC bisa membuka link M3U8?
+      a: Bisa. M3U8 adalah versi UTF-8 dari M3U dan juga dipakai untuk siaran live HLS; VLC membuka keduanya dengan cara yang sama.
+    - q: Kenapa VLC hanya menampilkan satu saluran?
+      a: Kemungkinan Anda membuka alamat satu stream saja, bukan playlist-nya. Pastikan link mengarah ke file playlist (biasanya .m3u atau .m3u8) yang berisi banyak saluran.
+  kodi:
+    name: Kodi
+    title: Cara Menambahkan Playlist M3U ke Kodi dengan PVR IPTV Simple Client
+    description: 'Atur TV live di Kodi dari playlist M3U / M3U8 dengan add-on resmi PVR IPTV Simple Client: instal, masukkan link playlist, lalu tonton.'
+    intro: Kodi memutar playlist IPTV melalui add-on resminya, PVR IPTV Simple Client. Setelah diatur, saluran muncul di bagian TV Kodi lengkap dengan grup dan panduan acara jika playlist Anda menyediakannya.
+    need:
+    - Kodi di Windows, Mac, Linux, Android, Android TV, atau Fire TV
+    - Link playlist M3U / M3U8
+    steps:
+    - title: Buka browser add-on
+      desc: Di Kodi, buka Settings (ikon roda gigi) → Add-ons → Install from repository → PVR clients.
+    - title: Instal PVR IPTV Simple Client
+      desc: Pilih PVR IPTV Simple Client lalu pilih Install. Di beberapa sistem add-on ini sudah terpasang dan hanya perlu diaktifkan.
+    - title: Masukkan link playlist
+      desc: Pilih Configure. Di bagian General, atur Location ke Remote path (Internet address), lalu tempel link Anda di M3U play list URL dan konfirmasi dengan OK.
+    - title: Aktifkan add-on
+      desc: Pilih Enable jika belum aktif. Kodi akan memuat saluran; jika saluran tidak langsung muncul, coba restart Kodi.
+    - title: Tonton
+      desc: Buka TV di layar utama Kodi. Saluran ditampilkan per grup, dan Anda bisa membuka yang mana saja.
+    tips:
+    - Versi Kodi terbaru memungkinkan Anda menambahkan beberapa konfigurasi add-on, satu untuk setiap playlist.
+    - Jika playlist Anda menautkan file EPG (XMLTV), tambahkan di pengaturan EPG add-on untuk mendapatkan panduan acara.
+    faq:
+    - q: Apakah saya perlu add-on pihak ketiga?
+      a: Tidak. PVR IPTV Simple Client dikelola oleh tim Kodi dan sudah cukup untuk playlist M3U.
+    - q: Daftar saluran kosong. Apa yang perlu dicek?
+      a: Pastikan Location diatur ke Remote path, link-nya lengkap, dan add-on sudah aktif. Lalu restart Kodi.
+  smart-tv:
+    name: Smart TV
+    title: Cara Menonton Playlist M3U di Smart TV (Samsung, LG, dan Lainnya)
+    description: 'Tiga cara memutar playlist IPTV M3U / M3U8 di smart TV Samsung, LG, atau lainnya: aplikasi IPTV player, cast dari ponsel, atau browser TV.'
+    intro: Sebagian besar smart TV tidak bisa membuka playlist M3U sendiri, tetapi ada tiga cara mudah untuk menampilkan saluran Anda di layar besar.
+    need:
+    - Smart TV yang terhubung ke jaringan Wi-Fi yang sama dengan ponsel atau komputer Anda
+    - Link playlist M3U / M3U8
+    steps:
+    - title: 'Opsi 1: instal IPTV player di TV'
+      desc: Buka app store TV Anda (Samsung Smart Hub, LG Content Store, dan sebagainya) lalu cari “IPTV player” atau “M3U”. Pilih player yang Anda percaya, buka, lalu tempel atau ketik link playlist Anda.
+    - title: 'Opsi 2: cast dari aplikasi Doubo'
+      desc: Putar saluran di Doubo pada iPhone, iPad, atau Mac Anda, ketuk ikon cast di player, lalu pilih TV Anda. Banyak smart TV menerima cast melalui DLNA di jaringan yang sama.
+    - title: 'Opsi 3: mirroring layar'
+      desc: Banyak TV Samsung, LG, Sony, dan Vizio keluaran 2018 ke atas mendukung AirPlay. Di iPhone atau iPad, buka Control Center → Screen Mirroring dan pilih TV, lalu putar Doubo dalam layar penuh.
+    - title: 'Opsi 4: gunakan browser TV'
+      desc: Buka browser web di TV dan kunjungi doubo.tv/web. Cara ini berfungsi di sebagian TV; cast atau aplikasi player biasanya lebih lancar.
+    tips:
+    - Mengetik link panjang dengan remote TV itu lambat. Banyak aplikasi TV memungkinkan Anda mengetik lewat ponsel.
+    - Ethernet kabel atau Wi-Fi 5 GHz memberikan pemutaran yang lebih lancar untuk saluran HD.
+    faq:
+    - q: Apakah TV Samsung atau LG bisa memutar M3U tanpa aplikasi?
+      a: Umumnya tidak. Media player bawaan tidak bisa membuka playlist IPTV, jadi Anda perlu aplikasi player, cast, atau screen mirroring.
+    - q: Opsi mana yang terbaik?
+      a: Cast dari ponsel tidak memerlukan instalasi apa pun di TV, jadi paling cepat untuk dicoba. Aplikasi player di TV lebih baik jika Anda menonton setiap hari.
+  android-tv:
+    name: Android TV / TV box
+    title: Cara Memutar Playlist M3U di Android TV, Google TV, dan TV Box
+    description: 'Putar playlist IPTV M3U / M3U8 di Android TV, Google TV, atau TV box Android: instal player dari Google Play, tambahkan link, dan gunakan remote.'
+    intro: Android TV, Google TV, dan TV box Android bisa menginstal IPTV player dari Google Play. Berikut pengaturan andal dengan VLC, yang gratis dan tanpa iklan.
+    need:
+    - Android TV, Google TV, atau TV box Android dengan Google Play
+    - Link playlist M3U / M3U8
+    steps:
+    - title: Instal VLC
+      desc: Buka Google Play di TV, cari VLC, lalu instal VLC for Android.
+    - title: Tambahkan link playlist
+      desc: Buka VLC, masuk ke Browse → Stream (atau opsi network stream di versi Anda) lalu masukkan link playlist.
+    - title: Putar dan ganti saluran
+      desc: VLC memuat playlist; pilih saluran untuk diputar. Gunakan tombol kembali di remote untuk kembali ke daftar.
+    tips:
+    - Agar tidak perlu mengetik link panjang dengan remote, instal aplikasi Google TV atau aplikasi keyboard di ponsel Anda dan ketik di sana.
+    - Doubo untuk Android dan Android TV segera hadir, dengan grup, favorit, dan perpindahan rute otomatis.
+    faq:
+    - q: Apakah ada aplikasi Doubo untuk Android TV?
+      a: Sedang dalam pengembangan. Sampai dirilis, Anda bisa menggunakan VLC atau player lain, atau cast dari web player Doubo di Chrome.
+    - q: Apakah aman menginstal aplikasi IPTV dari luar Google Play?
+      a: Aplikasi dari sumber tidak dikenal bisa membawa malware atau konten bajakan. Tetaplah gunakan Google Play dan player yang sudah terkenal.
+  fire-tv:
+    name: Fire TV Stick
+    title: Cara Memutar Playlist M3U di Amazon Fire TV Stick
+    description: 'Tonton playlist IPTV M3U / M3U8 di Fire TV Stick atau Fire TV: instal VLC dari Amazon Appstore, buka link playlist, dan ganti saluran.'
+    intro: Perangkat Fire TV bisa memutar playlist M3U dengan VLC, yang tersedia gratis di Amazon Appstore.
+    need:
+    - Amazon Fire TV Stick atau Fire TV
+    - Link playlist M3U / M3U8
+    steps:
+    - title: Instal VLC
+      desc: Dari layar utama Fire TV, gunakan Find → Search, ketik VLC, lalu instal VLC for Fire.
+    - title: Buka network stream
+      desc: Buka VLC, masuk ke Network atau Stream lalu pilih untuk membuka network stream. Masukkan link playlist.
+    - title: Tonton
+      desc: VLC memuat saluran dalam playlist. Pilih salah satu untuk diputar.
+    tips:
+    - Mengetik dengan remote itu lambat. Aplikasi Amazon Fire TV di ponsel Anda punya keyboard yang bisa dipakai sebagai gantinya.
+    - Fire TV dengan Ethernet (atau adaptor Ethernet) membantu untuk siaran HD.
+    faq:
+    - q: Apakah saya perlu sideload sesuatu?
+      a: Tidak. VLC ada di Amazon Appstore, jadi tidak ada yang perlu diinstal dari sumber luar.
+    - q: Bisakah saya memakai Kodi di Fire TV?
+      a: Bisa. Kodi dengan PVR IPTV Simple Client berfungsi di Fire TV; lihat panduan Kodi.
+  apple-tv:
+    name: Apple TV
+    title: Cara Menonton Playlist M3U di Apple TV
+    description: 'Dua cara memutar playlist IPTV M3U / M3U8 di Apple TV: AirPlay dari Doubo di iPhone, iPad, atau Mac, atau VLC untuk tvOS dengan network stream.'
+    intro: Apple TV tidak punya IPTV player bawaan, tetapi Anda bisa melakukan AirPlay saluran dari Doubo di iPhone, iPad, atau Mac, atau menggunakan VLC untuk tvOS.
+    need:
+    - Apple TV di jaringan yang sama dengan iPhone, iPad, atau Mac Anda
+    - Link playlist M3U / M3U8
+    steps:
+    - title: 'Opsi 1: AirPlay dari Doubo'
+      desc: Buka saluran di Doubo pada iPhone, iPad, atau Mac Anda, lalu pilih Apple TV Anda lewat Screen Mirroring (Control Center di iPhone dan iPad, bilah menu di Mac), atau dengan tombol AirPlay jika player menampilkannya.
+    - title: 'Opsi 2: instal VLC di Apple TV'
+      desc: Buka App Store di Apple TV, cari VLC, lalu instal.
+    - title: Buka playlist di VLC
+      desc: Di VLC, buka tab Network Stream lalu masukkan link playlist. VLC akan memuat salurannya.
+    tips:
+    - Tab Remote Playback di VLC memungkinkan Anda mengirim file playlist dari browser komputer di jaringan yang sama, tanpa perlu mengetik.
+    - Aplikasi Doubo untuk Apple TV sedang direncanakan.
+    faq:
+    - q: Apakah ada aplikasi Doubo untuk Apple TV?
+      a: Sudah ada dalam roadmap. Untuk saat ini, AirPlay dari Doubo di iPhone, iPad, atau Mac adalah cara termudah.
+    - q: Apakah AirPlay tetap berjalan jika iPhone saya terkunci?
+      a: Screen mirroring berhenti saat ponsel terkunci, jadi biarkan tetap terbuka, atau gunakan VLC di Apple TV untuk menonton lama.
+  chromecast:
+    name: Chromecast / Google TV
+    title: Cara Cast Playlist M3U ke Chromecast dan Google TV
+    description: 'Kirim saluran live dari playlist M3U / M3U8 ke Chromecast atau Google TV: cast tab Chrome dengan web player Doubo, atau cast dari VLC di Android.'
+    intro: Chromecast tidak bisa membuka playlist sendiri, tetapi komputer atau ponsel bisa mengirim saluran ke sana hanya dengan beberapa ketukan.
+    need:
+    - Chromecast atau Google TV di jaringan Wi-Fi yang sama
+    - Google Chrome di komputer, atau ponsel Android
+    - Link playlist M3U / M3U8
+    steps:
+    - title: Buka web player di Chrome
+      desc: Di komputer Anda, buka doubo.tv/web di Chrome. Pilih saluran gratis atau tambahkan link playlist Anda sendiri.
+    - title: Cast tab
+      desc: Buka menu Chrome ⋮ → Cast (di beberapa versi ada di bawah Save and share), pilih Chromecast Anda, lalu putar saluran dalam layar penuh.
+    - title: 'Dari ponsel Android: VLC'
+      desc: Buka playlist di VLC for Android, mulai putar saluran, ketuk ikon cast, lalu pilih Chromecast Anda.
+    tips:
+    - Biarkan tab yang di-cast tetap di depan pada komputer Anda agar pemutaran paling lancar.
+    - Model Google TV juga bisa menginstal VLC secara langsung; lihat panduan Android TV.
+    faq:
+    - q: Apakah cast tab Chrome menurunkan kualitas?
+      a: Cast tab melakukan encoding ulang gambar, jadi kualitasnya bergantung pada komputer dan Wi-Fi Anda. Untuk kualitas terbaik, instal player di Google TV.
+    - q: Bisakah saya cast dari iPhone ke Chromecast?
+      a: Chromecast tidak mendukung AirPlay. Gunakan komputer dengan Chrome atau ponsel Android sebagai gantinya.
+  iphone-ipad:
+    name: iPhone & iPad
+    title: Cara Memutar Playlist M3U di iPhone dan iPad
+    description: 'Putar playlist IPTV M3U / M3U8 di iPhone dan iPad dengan Doubo: tambahkan link atau file, jelajahi grup, tonton dengan Picture in Picture, dan cast ke TV.'
+    intro: Doubo adalah IPTV player native untuk iPhone dan iPad. Aplikasi ini membaca grup dan logo dari playlist Anda, dan tetap memutar dalam Picture in Picture saat Anda memakai aplikasi lain.
+    need:
+    - iPhone atau iPad dengan iOS / iPadOS 17 atau lebih baru
+    - Aplikasi Doubo
+    - Link atau file playlist M3U / M3U8
+    steps:
+    - title: Tambahkan playlist
+      desc: Buka Doubo, ketuk Add lalu tempel link M3U Anda, atau impor file .m3u / .m3u8 dari aplikasi Files.
+    - title: Jelajahi dan cari
+      desc: Saluran dikelompokkan secara otomatis. Cari berdasarkan nama saluran atau grup, dan beri bintang pada saluran yang paling sering Anda tonton.
+    - title: Tonton sambil multitasking
+      desc: Ketuk saluran untuk memutarnya. Usap ke beranda untuk terus menonton dalam Picture in Picture.
+    - title: Tampilkan di TV
+      desc: Gunakan ikon cast untuk mengirim saluran ke smart TV DLNA, atau Screen Mirroring di Control Center untuk Apple TV atau TV yang kompatibel dengan AirPlay.
+    tips:
+    - Belum punya aplikasinya? Buka doubo.tv/web di Safari untuk langsung menonton saluran gratis.
+    - Doubo hanya menyimpan playlist di perangkat Anda; tidak ada yang diunggah.
+    faq:
+    - q: Apakah Safari bisa memutar playlist M3U?
+      a: Safari bisa memutar satu stream HLS, tetapi tidak seluruh playlist IPTV. Gunakan web player Doubo di doubo.tv/web atau aplikasi Doubo.
+    - q: Apakah Doubo menyertakan saluran?
+      a: Aplikasi ini adalah player; Anda menambahkan playlist sendiri. Web player dan direktori saluran gratis menawarkan saluran gratis yang tersedia untuk publik.
+  computer:
+    name: Komputer (browser)
+    title: Cara Memutar Playlist M3U Online di Browser (Windows & Mac)
+    description: 'Putar playlist IPTV M3U / M3U8 online di Chrome, Edge, Safari, atau Firefox tanpa instal: saluran gratis, link sendiri, grup, pencarian, dan Picture in Picture.'
+    intro: Cara tercepat menonton playlist M3U di komputer adalah lewat browser. Web player Doubo tidak perlu diinstal dan tidak perlu akun.
+    need:
+    - Chrome, Edge, Safari, atau Firefox di Windows, macOS, atau Linux
+    - 'Opsional: link atau file playlist M3U / M3U8 Anda sendiri'
+    steps:
+    - title: Buka web player
+      desc: Kunjungi doubo.tv/web. Deretan saluran live gratis langsung dimuat, dengan pratinjau tanpa suara.
+    - title: Pilih saluran
+      desc: Saring berdasarkan negara atau kategori, atau cari berdasarkan nama. Klik salah satu kotak untuk menonton dengan suara; pratinjau lainnya akan berhenti.
+    - title: Tambahkan playlist Anda sendiri
+      desc: Klik Add playlist lalu tempel link, impor file, atau tempel teks playlist. Playlist hanya disimpan di browser Anda.
+    - title: Layar penuh dan Picture in Picture
+      desc: Tekan F untuk layar penuh atau P untuk Picture in Picture, dan gunakan ↑ ↓ untuk mengganti saluran.
+    tips:
+    - Saluran yang tidak bisa diputar browser disembunyikan secara otomatis; aplikasi Doubo bisa memutar lebih banyak saluran.
+    - Di Mac, aplikasi Doubo menambahkan player native dengan Picture in Picture dan pengelolaan playlist.
+    faq:
+    - q: Apakah gratis?
+      a: Ya. Web player gratis dan tidak memerlukan akun.
+    - q: Bisakah saya memakai VLC sebagai gantinya?
+      a: Tentu. Lihat panduan VLC untuk Windows dan Mac.
+  android-phone:
+    name: Ponsel Android
+    title: Cara Memutar Playlist M3U di HP Android
+    description: 'Tonton playlist IPTV M3U / M3U8 di ponsel atau tablet Android: gunakan web player Doubo di Chrome tanpa instal, atau VLC for Android.'
+    intro: Di Android Anda bisa menonton langsung di Chrome dengan web player Doubo, atau menggunakan VLC for Android. Aplikasi Doubo native untuk Android segera hadir.
+    need:
+    - Ponsel atau tablet Android
+    - Chrome, atau VLC for Android dari Google Play
+    - 'Opsional: link playlist M3U / M3U8 Anda sendiri'
+    steps:
+    - title: 'Di Chrome: buka web player'
+      desc: Kunjungi doubo.tv/web lalu ketuk saluran untuk menonton. Tambahkan playlist Anda sendiri dengan Add playlist.
+    - title: Tambahkan ke layar utama
+      desc: Di menu Chrome ⋮, pilih Add to Home screen untuk membuka web player seperti aplikasi.
+    - title: 'Dengan VLC: buka network stream'
+      desc: Instal VLC dari Google Play, buka More → New stream (Stream di versi lama) lalu tempel link playlist Anda.
+    tips:
+    - Pemakaian data seluler cepat membengkak saat menonton video live; gunakan Wi-Fi jika memungkinkan.
+    - Doubo untuk Android segera hadir, dengan grup, favorit, dan perpindahan rute otomatis.
+    faq:
+    - q: Apakah ada aplikasi Doubo di Google Play?
+      a: Belum. Aplikasinya sedang dikembangkan; sementara itu web player bisa digunakan.
+    - q: Kenapa beberapa saluran bisa diputar di VLC tapi tidak di browser?
+      a: Browser memblokir beberapa jenis stream demi alasan keamanan. Player native seperti VLC atau aplikasi Doubo tidak memiliki batasan tersebut.

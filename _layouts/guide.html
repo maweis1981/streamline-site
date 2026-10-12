@@ -24,6 +24,14 @@ layout: default
       </li>
       {%- endfor %}
     </ol>
+    {%- assign gd = site.data.guides[page.lang] %}
+    {%- if gd %}
+    <section class="dg-hub" aria-labelledby="dg-hub-title">
+      <h2 id="dg-hub-title">{{ gd.hub.title }}</h2>
+      <p class="muted">{{ gd.hub.intro }}</p>
+      {% include device-links.html %}
+    </section>
+    {%- endif %}
     <aside class="card gborder guide-tips reveal">
       <h2>{{ t.guide.tips_title }}</h2>
       <ul>
