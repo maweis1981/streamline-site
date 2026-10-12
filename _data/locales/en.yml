@@ -7,6 +7,7 @@ meta:
   title: Doubo — Cross-Platform IPTV & M3U Player
   description: Doubo is a native IPTV & M3U player, available for iPhone, iPad, and Mac, with Android phones, tablets, and TV boxes coming soon. Import your own playlists, browse by group, watch in Picture in Picture, and cast to your TV. No bundled channels, no personal data collected.
 nav:
+  web: Web player
   directory: Channels
   guide: Guide
   features: Features
@@ -307,3 +308,45 @@ directory:
     sports: Sports
     travel: Travel
     weather: Weather
+web:
+  nav: Web player
+  page_title: 'Web Player: Play M3U Playlists in Your Browser'
+  page_desc: 'Doubo for the web: open M3U / M3U8 playlists in your browser with no install. Browse groups, search, save favorites, switch routes and watch in Picture in Picture. Playlists stay in your browser.'
+  playlists: Playlists
+  groups: Groups
+  channels: Channels
+  add_playlist: Add playlist
+  remove_playlist: Remove this playlist
+  confirm_remove: Remove “%name%”?
+  search: Search channels
+  all: All
+  favorites: Favorites
+  channels_count: '%count% channels'
+  routes: Routes
+  route: Route %n%
+  select_channel: Pick a channel to start watching
+  favorite_add: Favorite
+  favorite_remove: Favorited
+  pip: Picture in Picture
+  fullscreen: Full screen
+  app_hint_title: This channel is best watched in the Doubo app
+  app_hint_desc: Browsers limit some live streams. The Doubo app plays them directly, and adds casting and background playback.
+  open_app: Get the Doubo app
+  shortcuts: 'Shortcuts: ↑ ↓ change channel · F full screen · P Picture in Picture · M mute · / search'
+  empty_title: Watch TV right in your browser
+  empty_desc: Add a link to your own M3U playlist, or start with a free playlist from the channel directory.
+  browse_directory: Browse the channel directory
+  privacy_note: Playlists are stored only in your browser and never uploaded.
+  url_label: Playlist link (M3U / M3U8)
+  name_label: Name (optional)
+  from_file: Or import a file
+  paste_label: Or paste the playlist
+  add: Add
+  cancel: Cancel
+  loading: Loading…
+  need_input: Enter a link, choose a file or paste a playlist.
+  url_blocked: This link can’t be read directly by a web page. Download the file and use “Import a file”, or add it in the Doubo app.
+  no_channels: No channels found. Check that this is an M3U playlist.
+  my_playlist: My playlist
+  watch_web: Watch on the web
+  try_web: Web player

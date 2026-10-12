@@ -34,3 +34,4 @@ exclude:
   - README.md
   - analytics
   - scripts
+  - web-app

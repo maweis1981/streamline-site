@@ -7,6 +7,7 @@ meta:
   title: Doubo — Ứng dụng xem IPTV & trình phát M3U đa nền tảng
   description: Doubo là trình phát IPTV & M3U gốc, hiện có trên iPhone, iPad và Mac; phiên bản cho điện thoại, máy tính bảng và TV box Android sắp ra mắt. Nhập danh sách phát của riêng bạn, duyệt theo nhóm, xem bằng Hình trong hình và truyền lên TV. Không kèm sẵn kênh, không thu thập dữ liệu cá nhân.
 nav:
+  web: Bản web
   directory: Kênh
   guide: Hướng dẫn
   features: Tính năng
@@ -307,3 +308,45 @@ directory:
     sports: Thể thao
     travel: Du lịch
     weather: Thời tiết
+web:
+  nav: Bản web
+  page_title: 'Trình phát web: Phát danh sách M3U ngay trên trình duyệt'
+  page_desc: 'Doubo bản web: mở danh sách phát M3U / M3U8 ngay trên trình duyệt, không cần cài đặt. Duyệt theo nhóm, tìm kiếm, lưu kênh yêu thích, đổi luồng và xem ở chế độ hình trong hình. Danh sách phát chỉ lưu trong trình duyệt của bạn.'
+  playlists: Danh sách phát
+  groups: Nhóm
+  channels: Kênh
+  add_playlist: Thêm danh sách phát
+  remove_playlist: Xóa danh sách phát này
+  confirm_remove: Xóa “%name%”?
+  search: Tìm kênh
+  all: Tất cả
+  favorites: Yêu thích
+  channels_count: '%count% kênh'
+  routes: Luồng
+  route: Luồng %n%
+  select_channel: Chọn một kênh để bắt đầu xem
+  favorite_add: Yêu thích
+  favorite_remove: Đã yêu thích
+  pip: Hình trong hình
+  fullscreen: Toàn màn hình
+  app_hint_title: Kênh này nên xem trên ứng dụng Doubo
+  app_hint_desc: Trình duyệt hạn chế một số luồng trực tiếp. Ứng dụng Doubo phát trực tiếp được, kèm truyền lên TV và phát nền.
+  open_app: Tải ứng dụng Doubo
+  shortcuts: 'Phím tắt: ↑ ↓ đổi kênh · F toàn màn hình · P hình trong hình · M tắt tiếng · / tìm kiếm'
+  empty_title: Xem TV ngay trên trình duyệt
+  empty_desc: Thêm liên kết danh sách phát M3U của bạn, hoặc bắt đầu với một danh sách phát miễn phí từ danh bạ kênh.
+  browse_directory: Xem danh bạ kênh
+  privacy_note: Danh sách phát chỉ lưu trong trình duyệt của bạn và không bao giờ được tải lên.
+  url_label: Liên kết danh sách phát (M3U / M3U8)
+  name_label: Tên (không bắt buộc)
+  from_file: Hoặc nhập từ tệp
+  paste_label: Hoặc dán nội dung danh sách phát
+  add: Thêm
+  cancel: Hủy
+  loading: Đang tải…
+  need_input: Nhập liên kết, chọn tệp hoặc dán danh sách phát.
+  url_blocked: Trang web không thể đọc trực tiếp liên kết này. Hãy tải tệp về rồi dùng “Nhập từ tệp”, hoặc thêm trong ứng dụng Doubo.
+  no_channels: Không tìm thấy kênh nào. Hãy kiểm tra đây có phải danh sách phát M3U.
+  my_playlist: Danh sách phát của tôi
+  watch_web: Xem trên web
+  try_web: Bản web

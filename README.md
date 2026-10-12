@@ -84,6 +84,23 @@ Once DNS resolves, check **Enforce HTTPS** under Settings → Pages. To prevent 
 
 To move to a different domain, update `CNAME` and `url`. To go back to `maweis1981.github.io/streamline-site/`, delete `CNAME` and set `baseurl: "/streamline-site"`.
 
+## Web player
+
+`/web/` (and `/<lang>/web/`) is a browser version of Doubo, built from `web-app/` (TypeScript + Vite, with hls.js bundled, so there are no external CDNs).
+
+- `web-app/src/model.ts` holds the domain model (playlist, channel, route), `m3u.ts` the parser, `player.ts` the playback logic, and `main.ts` the interface.
+- UI strings live in the `web:` block of each `_data/locales/<lang>.yml`; the `webapp` layout passes them to the app as `window.DOUBO_WEB`.
+- Playlists are stored in the visitor's browser (IndexedDB) and are never uploaded.
+- When a route will not play, the player moves to the next one; when none plays, it suggests the app instead of showing an error.
+- The channel directory's country pages link to `/web/?add=<playlist url>&name=<label>`, which imports that playlist on first visit.
+
+The deploy workflow runs `npm ci`, `npm test` and `npm run build` in `web-app/` before Jekyll, writing `assets/web/app.js`, `app.css` and the lazily loaded `hls.js`. To work on it locally:
+
+```sh
+cd web-app && npm install && npm test && npm run build && cd ..
+bundle exec jekyll serve
+```
+
 ## SEO
 
 - Every language has its own URL, with `hreflang` alternates, a canonical link, and sitemap entries (`sitemap.xml`, `robots.txt`).

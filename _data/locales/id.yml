@@ -7,6 +7,7 @@ meta:
   title: Doubo — Aplikasi Pemutar IPTV & M3U Lintas Platform
   description: Doubo adalah pemutar IPTV & M3U native, kini tersedia untuk iPhone, iPad, dan Mac, dengan versi ponsel, tablet, dan TV box Android segera hadir. Impor playlist Anda sendiri, jelajahi per grup, tonton dengan Picture in Picture, dan kirim ke TV. Tanpa saluran bawaan, tanpa pengumpulan data pribadi.
 nav:
+  web: Versi web
   directory: Saluran
   guide: Panduan
   features: Fitur
@@ -307,3 +308,45 @@ directory:
     sports: Olahraga
     travel: Wisata
     weather: Cuaca
+web:
+  nav: Versi web
+  page_title: 'Pemutar Web: Putar Playlist M3U di Browser'
+  page_desc: 'Doubo versi web: buka playlist M3U / M3U8 di browser tanpa instalasi. Jelajahi grup, cari, simpan favorit, ganti jalur, dan tonton dalam Picture in Picture. Playlist tetap tersimpan di browser Anda.'
+  playlists: Playlist
+  groups: Grup
+  channels: Saluran
+  add_playlist: Tambah playlist
+  remove_playlist: Hapus playlist ini
+  confirm_remove: Hapus “%name%”?
+  search: Cari saluran
+  all: Semua
+  favorites: Favorit
+  channels_count: '%count% saluran'
+  routes: Jalur
+  route: Jalur %n%
+  select_channel: Pilih saluran untuk mulai menonton
+  favorite_add: Favorit
+  favorite_remove: Sudah favorit
+  pip: Picture in Picture
+  fullscreen: Layar penuh
+  app_hint_title: Saluran ini lebih baik ditonton di aplikasi Doubo
+  app_hint_desc: Browser membatasi sebagian siaran langsung. Aplikasi Doubo memutarnya langsung, plus mendukung transmisi ke TV dan pemutaran di latar.
+  open_app: Dapatkan aplikasi Doubo
+  shortcuts: 'Pintasan: ↑ ↓ ganti saluran · F layar penuh · P Picture in Picture · M bisukan · / cari'
+  empty_title: Nonton TV langsung di browser
+  empty_desc: Tambahkan tautan playlist M3U milik Anda, atau mulai dengan playlist gratis dari direktori saluran.
+  browse_directory: Jelajahi direktori saluran
+  privacy_note: Playlist hanya disimpan di browser Anda dan tidak pernah diunggah.
+  url_label: Tautan playlist (M3U / M3U8)
+  name_label: Nama (opsional)
+  from_file: Atau impor file
+  paste_label: Atau tempel isi playlist
+  add: Tambah
+  cancel: Batal
+  loading: Memuat…
+  need_input: Isi tautan, pilih file, atau tempel playlist.
+  url_blocked: Tautan ini tidak bisa dibaca langsung oleh halaman web. Unduh filenya lalu gunakan “Impor file”, atau tambahkan di aplikasi Doubo.
+  no_channels: Tidak ada saluran yang ditemukan. Pastikan ini playlist M3U.
+  my_playlist: Playlist saya
+  watch_web: Tonton di web
+  try_web: Versi web

@@ -21,6 +21,8 @@ layout: default
       <p class="muted">{{ s.how }}</p>
       {%- assign pl_path = "countries/" | append: c.code | append: ".m3u" %}
       {% include playlist-link.html path=pl_path scope="country" %}
+      {%- assign pl_url = d.base_url | append: "/" | append: pl_path %}
+      <a class="btn btn-ghost btn-sm dir-web" href="{{ lang_prefix | append: '/web/' | relative_url }}?add={{ pl_url | url_encode }}&amp;name={{ name | url_encode }}" data-track="cta_click" data-track-target="web_player" data-track-location="directory_country">{% include icon.html name="tv" %}<span>{{ t.web.watch_web }}</span></a>
     </div>
 
     <h2 class="dir-subhead">{{ s.channel_list }}</h2>

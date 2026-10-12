@@ -8,3 +8,5 @@ _config.deploy.yml
 _data/directory.json
 playlists/
 */playlists/
+assets/web/
+web-app/node_modules/

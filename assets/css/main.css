@@ -388,3 +388,4 @@ html.js.nav-open .site-header{background:rgba(5,7,15,.96);border-bottom-color:va
 .dir-policy .muted{font-family:var(--font);font-size:14px}
 .dir-policy-links{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:12px}
 .page-hero .eyebrow a{color:inherit;text-underline-offset:4px}
+.dir-web{justify-self:start}.dir-web .icon{width:16px;height:16px}

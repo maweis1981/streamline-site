@@ -1,0 +1,16 @@
+---
+layout: default
+---
+{%- assign t = site.data.locales[page.lang] -%}
+{%- if page.lang == site.default_lang -%}{%- assign lang_prefix = "" -%}{%- else -%}{%- assign lang_prefix = "/" | append: page.lang -%}{%- endif -%}
+<link rel="stylesheet" href="{{ '/assets/web/app.css' | relative_url }}">
+<div id="doubo-web"><noscript><p class="container">{{ t.web.page_desc }}</p></noscript></div>
+<script>
+  window.DOUBO_WEB = {
+    lang: {{ page.lang | jsonify }},
+    appUrl: {{ lang_prefix | append: '/#download' | relative_url | jsonify }},
+    directoryUrl: {{ lang_prefix | append: '/playlists/' | relative_url | jsonify }},
+    strings: {{ t.web | jsonify }}
+  };
+</script>
+<script type="module" src="{{ '/assets/web/app.js' | relative_url }}"></script>

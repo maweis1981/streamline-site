@@ -56,6 +56,7 @@
         <a href="{{ home_url }}#features">{{ t.nav.features }}</a>
         <a href="{{ home_url }}#platforms">{{ t.nav.platforms }}</a>
         <a href="{{ lang_prefix | append: '/guide/' | relative_url }}"{% if page.ref == "guide" %} aria-current="page"{% endif %}>{{ t.nav.guide }}</a>
+        <a href="{{ lang_prefix | append: '/web/' | relative_url }}"{% if page.ref == "web" %} aria-current="page"{% endif %}>{{ t.nav.web }}</a>
         {%- if site.data.directory %}
         <a href="{{ lang_prefix | append: '/playlists/' | relative_url }}"{% if page.layout contains "directory" %} aria-current="page"{% endif %}>{{ t.nav.directory }}</a>
         {%- endif %}
@@ -83,6 +84,7 @@
       <div>
         <h2>{{ t.footer.product }}</h2>
         <a href="{{ home_url }}#features">{{ t.nav.features }}</a>
+        <a href="{{ lang_prefix | append: '/web/' | relative_url }}">{{ t.nav.web }}</a>
         <a href="{{ lang_prefix | append: '/roadmap/' | relative_url }}">{{ t.nav.roadmap }}</a>
         <a href="{{ home_url }}#download">{{ t.nav.download }}</a>
       </div>

@@ -63,6 +63,20 @@ jobs:
             echo "::warning::Channel directory index not available; building without it"
           fi
 
+      # The web player (web-app/) is built into assets/web/ before Jekyll copies it into the site.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web-app/package-lock.json
+
+      - name: Build web player
+        working-directory: web-app
+        run: |
+          npm ci --no-audit --no-fund
+          npm test
+          npm run build
+
       - name: Build
         env:
           JEKYLL_ENV: production

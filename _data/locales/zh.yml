@@ -7,6 +7,7 @@ meta:
   title: 都播 Doubo — 跨平台 IPTV / M3U 播放器
   description: 都播是一款原生 IPTV / M3U 播放器，现已支持 iPhone、iPad 与 Mac，Android 手机、平板与电视盒子版即将推出。导入你自己的播放列表，分组浏览、画中画观看、投屏到电视。不内置任何频道，不收集个人数据。
 nav:
+  web: 网页版
   directory: 频道目录
   guide: 使用指南
   features: 功能
@@ -307,3 +308,45 @@ directory:
     sports: 体育
     travel: 旅游
     weather: 天气
+web:
+  nav: 网页版
+  page_title: 网页版播放器：在浏览器中直接播放 M3U 播放列表
+  page_desc: 都播网页版：无需安装，在浏览器中打开 M3U / M3U8 播放列表，分组浏览、搜索、收藏、多线路切换与画中画。播放列表只保存在你的浏览器里。
+  playlists: 播放列表
+  groups: 分组
+  channels: 频道
+  add_playlist: 添加播放列表
+  remove_playlist: 删除这个播放列表
+  confirm_remove: 确定删除“%name%”？
+  search: 搜索频道
+  all: 全部
+  favorites: 收藏
+  channels_count: '%count% 个频道'
+  routes: 线路
+  route: 线路 %n%
+  select_channel: 从左侧选择一个频道开始播放
+  favorite_add: 收藏
+  favorite_remove: 已收藏
+  pip: 画中画
+  fullscreen: 全屏
+  app_hint_title: 这个频道建议在都播 App 中观看
+  app_hint_desc: 浏览器对部分直播源有限制，都播 App 可以直接播放，还支持投屏和后台播放。
+  open_app: 下载都播 App
+  shortcuts: 快捷键：↑ ↓ 切换频道 · F 全屏 · P 画中画 · M 静音 · / 搜索
+  empty_title: 在浏览器里直接看电视
+  empty_desc: 添加你自己的 M3U 播放列表链接，或从频道目录挑一个免费播放列表开始。
+  browse_directory: 浏览频道目录
+  privacy_note: 播放列表只保存在你的浏览器里，不会上传到任何服务器。
+  url_label: 播放列表链接（M3U / M3U8）
+  name_label: 名称（可选）
+  from_file: 或从文件导入
+  paste_label: 或粘贴播放列表内容
+  add: 添加
+  cancel: 取消
+  loading: 正在读取…
+  need_input: 请填写链接、选择文件或粘贴内容。
+  url_blocked: 这个链接不支持在网页中直接读取。可以下载文件后用“从文件导入”，或在都播 App 中添加。
+  no_channels: 没有在这份内容里找到频道，请确认是 M3U 格式。
+  my_playlist: 我的播放列表
+  watch_web: 在网页播放
+  try_web: 网页版

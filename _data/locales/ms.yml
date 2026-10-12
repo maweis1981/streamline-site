@@ -7,6 +7,7 @@ meta:
   title: Doubo — Pemain IPTV & M3U Merentas Platform
   description: Doubo ialah pemain IPTV & M3U asli, kini untuk iPhone, iPad dan Mac, dengan versi telefon, tablet dan kotak TV Android akan datang. Import senarai main anda sendiri, layari mengikut kumpulan, tonton dalam Gambar dalam Gambar dan hantar ke TV. Tiada saluran terbina, tiada data peribadi dikumpul.
 nav:
+  web: Versi web
   directory: Saluran
   guide: Panduan
   features: Ciri
@@ -307,3 +308,45 @@ directory:
     sports: Sukan
     travel: Pelancongan
     weather: Cuaca
+web:
+  nav: Versi web
+  page_title: 'Pemain Web: Main Senarai Main M3U dalam Pelayar'
+  page_desc: 'Doubo untuk web: buka senarai main M3U / M3U8 dalam pelayar tanpa memasang apa-apa. Layari kumpulan, cari, simpan kegemaran, tukar laluan dan tonton dalam Picture in Picture. Senarai main kekal dalam pelayar anda.'
+  playlists: Senarai main
+  groups: Kumpulan
+  channels: Saluran
+  add_playlist: Tambah senarai main
+  remove_playlist: Buang senarai main ini
+  confirm_remove: Buang “%name%”?
+  search: Cari saluran
+  all: Semua
+  favorites: Kegemaran
+  channels_count: '%count% saluran'
+  routes: Laluan
+  route: Laluan %n%
+  select_channel: Pilih saluran untuk mula menonton
+  favorite_add: Kegemaran
+  favorite_remove: Dalam kegemaran
+  pip: Picture in Picture
+  fullscreen: Skrin penuh
+  app_hint_title: Saluran ini lebih baik ditonton dalam aplikasi Doubo
+  app_hint_desc: Pelayar mengehadkan sesetengah strim langsung. Aplikasi Doubo memainkannya terus, serta menyokong pancaran ke TV dan main balik latar.
+  open_app: Dapatkan aplikasi Doubo
+  shortcuts: 'Pintasan: ↑ ↓ tukar saluran · F skrin penuh · P Picture in Picture · M senyap · / cari'
+  empty_title: Tonton TV terus dalam pelayar
+  empty_desc: Tambah pautan senarai main M3U anda sendiri, atau mula dengan senarai main percuma daripada direktori saluran.
+  browse_directory: Layari direktori saluran
+  privacy_note: Senarai main disimpan dalam pelayar anda sahaja dan tidak dimuat naik.
+  url_label: Pautan senarai main (M3U / M3U8)
+  name_label: Nama (pilihan)
+  from_file: Atau import fail
+  paste_label: Atau tampal senarai main
+  add: Tambah
+  cancel: Batal
+  loading: Memuatkan…
+  need_input: Masukkan pautan, pilih fail atau tampal senarai main.
+  url_blocked: Pautan ini tidak boleh dibaca terus oleh halaman web. Muat turun fail dan gunakan “Import fail”, atau tambahkannya dalam aplikasi Doubo.
+  no_channels: Tiada saluran ditemui. Pastikan ini senarai main M3U.
+  my_playlist: Senarai main saya
+  watch_web: Tonton di web
+  try_web: Versi web
