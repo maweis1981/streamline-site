@@ -11,7 +11,7 @@ links:
 
 # Analytics. Only rendered when JEKYLL_ENV=production, so local previews never send data.
 # Repository variables GTM_ID and GA_MEASUREMENT_ID override these at deploy time.
-# If GA4 is set up *inside* GTM, leave ga_measurement_id empty to avoid double counting.
+# GA4 (G-3TGF00MYWL) is configured inside GTM (see analytics/gtm-container-doubo.json), so ga_measurement_id stays empty to avoid double counting.
 analytics:
   gtm_id: "GTM-MJDCLXML" # Public container ID; the GTM_ID repository variable overrides it.
   ga_measurement_id: ""  # G-XXXXXXXXXX
@@ -28,3 +28,4 @@ exclude:
   - vendor
   - .bundle
   - README.md
+  - analytics

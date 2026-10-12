@@ -26,7 +26,7 @@ After changing a variable, re-run the workflow from the Actions tab.
 
 ## Analytics
 
-The GTM container `GTM-MJDCLXML` is set in `_config.yml`. GA4 should be configured inside that container. A `GTM_ID` repository variable, if set, overrides it.
+The GTM container `GTM-MJDCLXML` is set in `_config.yml`, and GA4 (`G-3TGF00MYWL`) runs inside that container. `analytics/gtm-container-doubo.json` is an importable GTM container (Admin → Import Container → Merge) with the GA4 Google tag, event tags for the four events below, their triggers, and Data Layer Variables. Keep `ga_measurement_id` empty so GA4 isn't loaded twice. A `GTM_ID` repository variable, if set, overrides the container ID.
 
 Analytics tags only render in production builds when an ID is set, so local previews never send data.
 
