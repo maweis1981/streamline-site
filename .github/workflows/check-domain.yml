@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: DNS
         run: |
+          echo "doubo.tv CAA: $(dig +short doubo.tv CAA @1.1.1.1 | tr '\n' ' ')"
+          echo "doubo.tv NS: $(dig +short doubo.tv NS @1.1.1.1 | tr '\n' ' ')"
           for name in doubo.tv www.doubo.tv; do
             for type in A AAAA CNAME; do
               echo "$name $type: $(dig +short "$name" "$type" @1.1.1.1 | tr '\n' ' ')"
@@ -31,6 +33,10 @@ jobs:
             echo "$url -> $(curl -s -o /dev/null -m 15 -w '%{http_code} %{redirect_url}' "$url" || echo unreachable)"
           done
           echo "GTM on homepage: $(curl -s -m 15 https://doubo.tv/ | grep -c GTM-MJDCLXML || true)"
+
+      - name: TLS certificate served
+        run: |
+          echo | openssl s_client -connect doubo.tv:443 -servername doubo.tv 2>/dev/null | openssl x509 -noout -subject -issuer -dates -ext subjectAltName || echo "no certificate"
 
       - name: GitHub Pages status
         env:
