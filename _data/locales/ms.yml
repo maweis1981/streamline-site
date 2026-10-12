@@ -18,6 +18,7 @@ nav:
   download: Muat turun
   tools: Alat M3U
   watch: TV percuma ikut negara
+  dataset: Data
 cta:
   app_store: Muat turun di App Store
   testflight: Sertai beta TestFlight
@@ -524,3 +525,48 @@ watch:
   updated: Dikemas kini %date%
   sources: Sumber
   more_countries: Negara lain
+dataset:
+  nav: Data
+  title: 'Saluran TV Percuma Mengikut Negara: Set Data Terbuka (Dikemas Kini Setiap Hari)'
+  description: Berapa banyak saluran TV langsung percuma yang ada dalam talian bagi setiap negara, dan berapa yang boleh dimainkan dalam pelayar. Data terbuka CC BY 4.0 dengan muat turun CSV dan JSON, dikemas kini setiap hari.
+  eyebrow: Data terbuka
+  h1: Saluran TV percuma mengikut negara
+  lead: Berapa banyak saluran TV langsung yang disediakan penyiar secara percuma dalam talian di setiap negara, dan berapa yang boleh dimainkan terus dalam pelayar web. Dikemas kini setiap hari dan bebas digunakan semula dengan kredit.
+  updated: Data setakat %date%
+  stat_channels: Saluran disenaraikan
+  stat_playable: Boleh dimainkan dalam pelayar
+  stat_countries: Negara dan wilayah
+  table_title: Mengikut negara dan wilayah
+  col_country: Negara atau wilayah
+  col_listed: Saluran disenaraikan
+  col_playable: Boleh dimainkan dalam pelayar
+  col_share: Peratus
+  cat_title: Mengikut kategori
+  col_category: Kategori
+  col_channels: Saluran
+  download_title: Muat turun data
+  dl_countries: Ringkasan negara (CSV)
+  dl_channels: Semua saluran (CSV)
+  dl_json: Ringkasan negara (JSON)
+  download_note: 'Hanya butiran saluran: nama, negara, kategori, bahasa, pemilik dan laman web rasmi. Tiada pautan strim.'
+  cite_title: Cara memetik
+  cite_text: Doubo Public Channel Directory, “Free TV channels by country”, data setakat %date%. %url% (CC BY 4.0)
+  license_text: 'Dilesenkan di bawah CC BY 4.0: salin, kongsi dan adaptasi, termasuk untuk tujuan komersial, selagi anda memberi kredit kepada Doubo dan memaut ke halaman ini. Strim itu sendiri milik penyiarnya.'
+  method_title: Bagaimana angka ini dihasilkan
+  method:
+  - Data dan pautan saluran datang daripada projek sumber terbuka iptv-org dan senarai Free-TV/IPTV, digabungkan dan disemak semula setiap hari.
+  - Satu saluran disenaraikan apabila sekurang-kurangnya satu strimnya disediakan daripada domain laman web rasmi saluran itu, atau CDN penyiaran / platform percuma rasmi dalam senarai dibenarkan, tiada dalam senarai sekatan, dan bertindak balas semasa disemak. Strim bertanda sekatan geografi dikekalkan kerana hanya boleh diuji dari dalam negaranya.
+  - '“Boleh dimainkan dalam pelayar” bermaksud sekurang-kurangnya satu strim turut berfungsi dalam pelayar di doubo.tv: HTTPS, akses silang asal dibenarkan, tiada pengepala permintaan khas dan tiada video HEVC.'
+  - Semakan dijalankan dari pelayan di Amerika Syarikat, jadi saluran yang terhad kepada negara asalnya dikira kurang dalam “Boleh dimainkan dalam pelayar”. Bilangan berubah setiap hari.
+  faq_title: Soalan lazim
+  faq:
+  - q: Negara mana yang mempunyai paling banyak saluran TV percuma dalam talian?
+    a: Dalam set data ini, %country% mempunyai paling banyak, dengan %n% saluran disenaraikan. Jadual di atas menyusun semua negara dan wilayah.
+  - q: Bolehkah saya menggunakan semula data ini?
+    a: Boleh. Ia dilesenkan di bawah CC BY 4.0, jadi anda boleh menyalin, berkongsi dan mengadaptasinya, termasuk untuk tujuan komersial, jika anda memberi kredit kepada Doubo dan memaut ke halaman ini.
+  - q: Adakah “disenaraikan” bermakna saya boleh menonton dari mana-mana?
+    a: Tidak selalu. Penyiar menerbitkan strim ini secara terbuka, tetapi sesetengahnya dihadkan kepada penonton di dalam negara sendiri kerana hak penyiaran.
+  - q: Berapa kerap ia dikemas kini?
+    a: Setiap hari. Tarikh di bahagian atas halaman menunjukkan bila angka dijana kali terakhir.
+  browse: Layari saluran
+  browse_web: Tonton saluran percuma dalam pelayar

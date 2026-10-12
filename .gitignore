@@ -16,3 +16,8 @@ channels/
 */channels/
 _data/channel_slugs.json
 web/vod.json
+
+# Dataset files written by scripts/channels.py at deploy time
+_data/dataset.json
+data/
+*/data/

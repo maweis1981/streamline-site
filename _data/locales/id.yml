@@ -18,6 +18,7 @@ nav:
   download: Unduh
   tools: Alat M3U
   watch: TV gratis per negara
+  dataset: Data
 cta:
   app_store: Unduh di App Store
   testflight: Ikuti beta TestFlight
@@ -524,3 +525,48 @@ watch:
   updated: Diperbarui %date%
   sources: Sumber
   more_countries: Negara lain
+dataset:
+  nav: Data
+  title: 'Saluran TV Gratis per Negara: Dataset Terbuka (Diperbarui Setiap Hari)'
+  description: Berapa banyak saluran TV live gratis yang tersedia online di tiap negara, dan berapa yang bisa diputar di browser. Data terbuka CC BY 4.0 dengan unduhan CSV dan JSON, diperbarui setiap hari.
+  eyebrow: Data terbuka
+  h1: Saluran TV gratis per negara
+  lead: Berapa banyak saluran TV live yang disediakan penyiar secara gratis secara online di tiap negara, dan berapa yang bisa langsung diputar di browser web. Diperbarui setiap hari dan bebas dipakai ulang dengan mencantumkan sumber.
+  updated: Data per %date%
+  stat_channels: Saluran terdaftar
+  stat_playable: Bisa diputar di browser
+  stat_countries: Negara dan wilayah
+  table_title: Per negara dan wilayah
+  col_country: Negara atau wilayah
+  col_listed: Saluran terdaftar
+  col_playable: Bisa diputar di browser
+  col_share: Persentase
+  cat_title: Per kategori
+  col_category: Kategori
+  col_channels: Saluran
+  download_title: Unduh data
+  dl_countries: Ringkasan negara (CSV)
+  dl_channels: Semua saluran (CSV)
+  dl_json: Ringkasan negara (JSON)
+  download_note: 'Hanya detail saluran: nama, negara, kategori, bahasa, pemilik, dan situs resmi. Tanpa tautan stream.'
+  cite_title: Cara mengutip
+  cite_text: Doubo Public Channel Directory, “Free TV channels by country”, data per %date%. %url% (CC BY 4.0)
+  license_text: 'Berlisensi CC BY 4.0: salin, bagikan, dan adaptasi, termasuk untuk komersial, selama Anda mencantumkan Doubo dan menautkan ke halaman ini. Stream-nya sendiri milik penyiar masing-masing.'
+  method_title: Bagaimana angka ini dibuat
+  method:
+  - Data dan tautan saluran berasal dari proyek open source iptv-org dan daftar Free-TV/IPTV, digabung dan diperiksa ulang setiap hari.
+  - Sebuah saluran terdaftar bila setidaknya satu stream-nya disajikan dari domain situs resmi saluran itu, atau dari CDN penyiaran / platform gratis resmi dalam daftar izin, tidak ada di daftar blokir, dan merespons saat diperiksa. Stream bertanda pembatasan wilayah tetap dicantumkan karena hanya bisa diuji dari dalam negaranya.
+  - '“Bisa diputar di browser” berarti setidaknya satu stream juga berfungsi di browser pada doubo.tv: HTTPS, akses lintas asal diizinkan, tanpa header permintaan khusus, dan bukan video HEVC.'
+  - Pemeriksaan berjalan dari server di Amerika Serikat, sehingga saluran yang dibatasi untuk negaranya sendiri terhitung lebih sedikit di “Bisa diputar di browser”. Angka berubah setiap hari.
+  faq_title: Pertanyaan umum
+  faq:
+  - q: Negara mana yang punya saluran TV gratis online terbanyak?
+    a: Dalam dataset ini, %country% terbanyak, dengan %n% saluran terdaftar. Tabel di atas mengurutkan semua negara dan wilayah.
+  - q: Bolehkah data ini dipakai ulang?
+    a: Boleh. Data berlisensi CC BY 4.0, jadi Anda bisa menyalin, membagikan, dan mengadaptasinya, termasuk untuk komersial, bila mencantumkan Doubo dan menautkan ke halaman ini.
+  - q: Apakah “terdaftar” berarti bisa ditonton dari mana saja?
+    a: Tidak selalu. Penyiar membuka stream ini untuk umum, tetapi sebagian dibatasi hanya untuk penonton di negaranya sendiri karena hak siar.
+  - q: Seberapa sering diperbarui?
+    a: Setiap hari. Tanggal di bagian atas halaman menunjukkan kapan angka terakhir dibuat.
+  browse: Jelajahi saluran
+  browse_web: Tonton saluran gratis di browser

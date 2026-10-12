@@ -18,6 +18,7 @@ nav:
   download: Download
   tools: M3U tools
   watch: Free TV by country
+  dataset: Data
 cta:
   app_store: Download on the App Store
   testflight: Join the TestFlight beta
@@ -524,3 +525,48 @@ watch:
   updated: Updated %date%
   sources: Sources
   more_countries: Other countries
+dataset:
+  nav: Data
+  title: 'Free TV Channels by Country: Open Dataset (Updated Daily)'
+  description: How many free live TV channels each country has online, and how many play in a browser. Open data under CC BY 4.0 with CSV and JSON downloads, updated daily.
+  eyebrow: Open data
+  h1: Free TV channels by country
+  lead: How many live TV channels broadcasters make freely available online in each country, and how many of them play right in a web browser. Updated daily and free to reuse with credit.
+  updated: Data as of %date%
+  stat_channels: Channels listed
+  stat_playable: Play in a browser
+  stat_countries: Countries and regions
+  table_title: By country and region
+  col_country: Country or region
+  col_listed: Channels listed
+  col_playable: Play in a browser
+  col_share: Share
+  cat_title: By category
+  col_category: Category
+  col_channels: Channels
+  download_title: Download the data
+  dl_countries: Country summary (CSV)
+  dl_channels: Every channel (CSV)
+  dl_json: Country summary (JSON)
+  download_note: 'Channel details only: names, countries, categories, languages, owners and official websites. No stream links.'
+  cite_title: How to cite
+  cite_text: Doubo Public Channel Directory, “Free TV channels by country”, data as of %date%. %url% (CC BY 4.0)
+  license_text: 'Licensed under CC BY 4.0: copy, share and adapt it, including commercially, as long as you credit Doubo and link to this page. The streams themselves belong to their broadcasters.'
+  method_title: How the numbers are made
+  method:
+  - Channel data and links come from the open-source iptv-org project and the Free-TV/IPTV list, merged and re-checked every day.
+  - A channel is listed when at least one of its streams is served from the channel’s own website domain, or from an allowlisted broadcast CDN or official free platform, is not on a blocklist, and answers when checked. Streams marked geo-blocked are kept because they can only be tested from inside their own country.
+  - '“Play in a browser” means at least one stream also works in a browser on doubo.tv: HTTPS, cross-origin access allowed, no special request headers and no HEVC video.'
+  - Checks run from a server in the United States, so channels restricted to their home country are under-counted in “Play in a browser”. Counts change every day.
+  faq_title: Questions
+  faq:
+  - q: Which country has the most free TV channels online?
+    a: In this dataset, %country% has the most, with %n% channels listed. The table above ranks every country and region.
+  - q: Can I reuse this data?
+    a: Yes. It is licensed under CC BY 4.0, so you can copy, share and adapt it, including commercially, if you credit Doubo and link to this page.
+  - q: Does “listed” mean I can watch from anywhere?
+    a: Not always. Broadcasters publish these streams openly, but some limit them to viewers inside their own country because of broadcast rights.
+  - q: How often is it updated?
+    a: Every day. The date at the top of the page shows when the numbers were last generated.
+  browse: Browse the channels
+  browse_web: Watch free channels in your browser

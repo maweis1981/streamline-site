@@ -9,6 +9,8 @@ layout stays a plain template; pages are not committed (see .gitignore).
 Channels with at least one stream that plays in a browser are indexed; the others get
 noindex so search engines only see pages a visitor can act on right away.
 
+It also writes the dataset behind /data/free-tv-channels/ (_data/dataset.json and data/*.csv|json).
+
 Usage: python scripts/channels.py INDEX_M3U CHANNELS_CSV PLAYABLE_JSON
 """
 
@@ -18,6 +20,7 @@ import re
 import shutil
 import sys
 from collections import defaultdict
+from datetime import datetime, timezone
 from pathlib import Path
 
 import yaml
@@ -61,6 +64,53 @@ def listed_channels(m3u: str) -> dict[str, dict]:
     return found
 
 
+def write_dataset(channels: list[dict], countries: dict) -> None:
+    """Files behind /data/free-tv-channels/: a country summary (for the page, CSV and JSON) and a
+    channel-level CSV. Metadata only: no stream URLs leave this script."""
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    per_country: dict[str, dict] = {}
+    categories: dict[str, int] = defaultdict(int)
+    for c in channels:
+        row = per_country.setdefault(c["country"], {"code": c["country"], "listed": 0, "web_playable": 0})
+        row["listed"] += 1
+        row["web_playable"] += int(c["playable"])
+        for cat in c["categories"]:
+            categories[cat] += 1
+    summary = sorted(per_country.values(), key=lambda r: (-r["listed"], r["code"]))
+    stats = {
+        "generated_at": today,
+        "channels": len(channels),
+        "web_playable": sum(c["playable"] for c in channels),
+        "countries": len(summary),
+        "country_rows": summary,
+        "categories": [{"id": k, "channels": v} for k, v in sorted(categories.items(), key=lambda kv: (-kv[1], kv[0]))],
+    }
+    (SITE / "_data" / "dataset.json").write_text(json.dumps(stats, ensure_ascii=False), encoding="utf-8")
+
+    out = SITE / "data"   # also holds the generated dataset page, so files are overwritten, not the folder
+    out.mkdir(exist_ok=True)
+    names = {code: info["names"]["en"] for code, info in countries.items()}
+    with (out / "free-tv-channels-by-country.csv").open("w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["country_code", "country", "channels_listed", "channels_playable_in_browser", "as_of"])
+        for r in summary:
+            w.writerow([r["code"].upper(), names.get(r["code"], r["code"]), r["listed"], r["web_playable"], today])
+    with (out / "free-tv-channels.csv").open("w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["channel_id", "name", "country_code", "categories", "languages", "network", "owners", "launched", "website", "playable_in_browser", "as_of"])
+        for c in channels:
+            w.writerow([c["id"], c["name"], c["country"].upper(), ";".join(c["categories"]), ";".join(c["languages"]),
+                        c["network"], ";".join(c["owners"]), c["launched"], c["website"], int(c["playable"]), today])
+    (out / "free-tv-channels-by-country.json").write_text(json.dumps({
+        "name": "Free TV channels by country (Doubo Public Channel Directory)",
+        "license": "CC BY 4.0",
+        "attribution": "Doubo Public Channel Directory, https://doubo.tv/data/free-tv-channels/",
+        "as_of": today, "channels_listed": stats["channels"], "channels_playable_in_browser": stats["web_playable"],
+        "countries": [{"code": r["code"].upper(), "name": names.get(r["code"], r["code"]), "channels_listed": r["listed"],
+                       "channels_playable_in_browser": r["web_playable"]} for r in summary],
+    }, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
 def main(m3u_path: str, channels_csv: str, playable_path: str) -> None:
     config = yaml.safe_load((SITE / "_config.yml").read_text(encoding="utf-8"))
     languages, default_lang = config["languages"], config["default_lang"]
@@ -97,6 +147,8 @@ def main(m3u_path: str, channels_csv: str, playable_path: str) -> None:
     by_country = defaultdict(list)
     for c in channels:
         by_country[c["country"]].append(c)
+
+    write_dataset(channels, countries)
 
     # Lets directory pages link channel names to their pages.
     slugs = {f"{c['country']}:{c['name']}": c["slug"] for c in channels}

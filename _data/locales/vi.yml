@@ -18,6 +18,7 @@ nav:
   download: Tải về
   tools: Công cụ M3U
   watch: Xem TV miễn phí theo quốc gia
+  dataset: Dữ liệu
 cta:
   app_store: Tải về trên App Store
   testflight: Tham gia thử nghiệm TestFlight
@@ -524,3 +525,48 @@ watch:
   updated: Cập nhật %date%
   sources: Nguồn
   more_countries: Quốc gia khác
+dataset:
+  nav: Dữ liệu
+  title: 'Kênh truyền hình miễn phí theo quốc gia: Bộ dữ liệu mở (cập nhật hằng ngày)'
+  description: Mỗi quốc gia có bao nhiêu kênh truyền hình trực tiếp miễn phí trên mạng, và bao nhiêu kênh phát được ngay trên trình duyệt. Dữ liệu mở CC BY 4.0, tải về CSV và JSON, cập nhật hằng ngày.
+  eyebrow: Dữ liệu mở
+  h1: Kênh truyền hình miễn phí theo quốc gia
+  lead: Mỗi quốc gia có bao nhiêu kênh truyền hình trực tiếp được đài phát sóng cung cấp miễn phí trên mạng, và bao nhiêu kênh phát được ngay trong trình duyệt web. Cập nhật hằng ngày, được dùng lại tự do khi ghi nguồn.
+  updated: Dữ liệu ngày %date%
+  stat_channels: Kênh được liệt kê
+  stat_playable: Phát được trên trình duyệt
+  stat_countries: Quốc gia và vùng lãnh thổ
+  table_title: Theo quốc gia và vùng lãnh thổ
+  col_country: Quốc gia hoặc vùng
+  col_listed: Kênh được liệt kê
+  col_playable: Phát được trên trình duyệt
+  col_share: Tỷ lệ
+  cat_title: Theo thể loại
+  col_category: Thể loại
+  col_channels: Số kênh
+  download_title: Tải dữ liệu
+  dl_countries: Tổng hợp theo quốc gia (CSV)
+  dl_channels: Tất cả kênh (CSV)
+  dl_json: Tổng hợp theo quốc gia (JSON)
+  download_note: 'Chỉ gồm thông tin kênh: tên, quốc gia, thể loại, ngôn ngữ, đơn vị sở hữu và trang web chính thức. Không có liên kết luồng phát.'
+  cite_title: Cách trích dẫn
+  cite_text: Doubo Public Channel Directory, “Free TV channels by country”, dữ liệu ngày %date%. %url% (CC BY 4.0)
+  license_text: 'Giấy phép CC BY 4.0: được sao chép, chia sẻ và chỉnh sửa, kể cả thương mại, miễn là ghi nguồn Doubo và liên kết tới trang này. Bản thân các luồng phát thuộc về đài phát sóng.'
+  method_title: Số liệu được tạo ra như thế nào
+  method:
+  - Dữ liệu và liên kết kênh lấy từ dự án mã nguồn mở iptv-org và danh sách Free-TV/IPTV, được gộp và kiểm tra lại mỗi ngày.
+  - Một kênh được liệt kê khi có ít nhất một luồng phát từ tên miền trang web chính thức của kênh, hoặc từ CDN phát sóng / nền tảng miễn phí chính thức trong danh sách cho phép, không nằm trong danh sách chặn và có phản hồi khi kiểm tra. Các luồng bị giới hạn khu vực vẫn được giữ lại vì chỉ có thể kiểm tra từ trong nước.
+  - '“Phát được trên trình duyệt” nghĩa là có ít nhất một luồng cũng chạy được trong trình duyệt trên doubo.tv: HTTPS, cho phép truy cập chéo nguồn, không cần tiêu đề yêu cầu đặc biệt và không phải video HEVC.'
+  - Việc kiểm tra chạy từ máy chủ ở Hoa Kỳ nên các kênh chỉ cho xem trong nước sẽ bị tính thiếu ở mục “Phát được trên trình duyệt”. Số liệu thay đổi mỗi ngày.
+  faq_title: Câu hỏi thường gặp
+  faq:
+  - q: Quốc gia nào có nhiều kênh truyền hình miễn phí trên mạng nhất?
+    a: Trong bộ dữ liệu này, %country% có nhiều nhất, với %n% kênh được liệt kê. Bảng phía trên xếp hạng tất cả quốc gia và vùng lãnh thổ.
+  - q: Tôi có thể dùng lại dữ liệu này không?
+    a: Có. Dữ liệu theo giấy phép CC BY 4.0, bạn có thể sao chép, chia sẻ và chỉnh sửa, kể cả thương mại, nếu ghi nguồn Doubo và liên kết tới trang này.
+  - q: “Được liệt kê” có nghĩa là xem được ở mọi nơi không?
+    a: Không phải lúc nào cũng vậy. Các đài công khai những luồng này, nhưng một số chỉ cho khán giả trong nước xem vì bản quyền phát sóng.
+  - q: Cập nhật bao lâu một lần?
+    a: Mỗi ngày. Ngày ở đầu trang cho biết số liệu được tạo lần gần nhất.
+  browse: Xem các kênh
+  browse_web: Xem kênh miễn phí trên trình duyệt

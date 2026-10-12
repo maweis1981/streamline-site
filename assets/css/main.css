@@ -461,3 +461,13 @@ html.js.nav-open .site-header{background:rgba(5,7,15,.96);border-bottom-color:va
 .ar-table td:first-child{white-space:nowrap;font-weight:600}
 .ar-table a{color:var(--teal);text-underline-offset:3px}
 .page-hero .cta-row .icon,.ar-cta .icon{width:16px;height:16px}
+/* Dataset page */
+.ds-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:0 0 32px}
+.ds-stats .card{padding:18px 20px}
+.ds-stats dt{color:var(--text-3);font-size:13px}
+.ds-stats dd{margin:4px 0 0;font-size:32px;font-weight:700}
+.ds-downloads{flex-wrap:wrap}
+.ds-scroll{max-height:560px;overflow:auto}
+.ds-scroll thead th{position:sticky;top:0}
+.ar-table td:not(:first-child),.ar-table th:not(:first-child){text-align:right;font-variant-numeric:tabular-nums}
+.ds-cite{font:13px/1.6 var(--font-mono);color:var(--text-2);overflow-wrap:anywhere}

@@ -66,6 +66,7 @@ jobs:
               curl -fsSL --retry 3 -o "$RUNNER_TEMP/channels.csv" https://raw.githubusercontent.com/iptv-org/database/master/data/channels.csv \
                 && python scripts/channels.py "$RUNNER_TEMP/index.m3u" "$RUNNER_TEMP/channels.csv" web/playable.json \
                 || echo "::warning::channel pages were not generated"
+              python scripts/dataset_pages.py || echo "::warning::dataset pages were not generated"
             fi
           else
             echo "::warning::Channel directory index not available; building without it"

@@ -18,6 +18,7 @@ nav:
   download: 下载
   tools: M3U 工具
   watch: 各国免费看电视
+  dataset: 数据
 cta:
   app_store: App Store 下载
   testflight: 加入 TestFlight 测试
@@ -524,3 +525,48 @@ watch:
   updated: 更新于 %date%
   sources: 资料来源
   more_countries: 其他国家和地区
+dataset:
+  nav: 数据
+  title: 全球免费电视频道数据：各国收录频道数与网页可播放比例（每日更新）
+  description: 每个国家和地区有多少免费公开的电视直播频道，其中多少可以直接在浏览器里播放。CC BY 4.0 开放数据，提供 CSV 和 JSON 下载，每日更新。
+  eyebrow: 开放数据
+  h1: 各国免费电视频道数据
+  lead: 各国电视台免费公开的直播频道有多少，其中多少可以直接在网页浏览器里播放。每日更新，注明出处即可自由使用。
+  updated: 数据日期：%date%
+  stat_channels: 收录频道
+  stat_playable: 浏览器可播放
+  stat_countries: 国家和地区
+  table_title: 按国家和地区
+  col_country: 国家或地区
+  col_listed: 收录频道数
+  col_playable: 浏览器可播放
+  col_share: 占比
+  cat_title: 按分类
+  col_category: 分类
+  col_channels: 频道数
+  download_title: 下载数据
+  dl_countries: 国家汇总（CSV）
+  dl_channels: 全部频道（CSV）
+  dl_json: 国家汇总（JSON）
+  download_note: 仅包含频道信息：名称、国家、分类、语言、运营方和官方网站，不含任何直播链接。
+  cite_title: 如何引用
+  cite_text: 都播公共频道目录，《各国免费电视频道》，数据日期 %date%。%url%（CC BY 4.0）
+  license_text: 采用 CC BY 4.0 许可：可以复制、分享和改编，包括商用，只需注明都播并链接到本页。直播内容本身的权利属于各电视台。
+  method_title: 数据是怎么来的
+  method:
+  - 频道资料和链接来自开源项目 iptv-org 和 Free-TV/IPTV 列表，每天合并并重新检测。
+  - 频道被收录的条件：至少有一条直播流来自频道自己的官方网站域名，或白名单中的正规广播 CDN、官方免费平台；不在屏蔽名单里；检测时有响应。标注为地区限制的直播流因为只能在其所在国家检测，所以予以保留。
+  - “浏览器可播放”指至少有一条直播流也能在 doubo.tv 的浏览器里播放：HTTPS、允许跨域访问、不需要特殊请求头、不是 HEVC 视频。
+  - 检测在美国的服务器上进行，因此仅限本国观看的频道会在“浏览器可播放”中被低估。数字每天都会变化。
+  faq_title: 常见问题
+  faq:
+  - q: 哪个国家的免费在线电视频道最多？
+    a: 在这份数据里，%country% 最多，收录了 %n% 个频道。上面的表格给出了所有国家和地区的排名。
+  - q: 这些数据可以转载或再利用吗？
+    a: 可以。数据采用 CC BY 4.0 许可，注明都播并链接到本页，就可以复制、分享和改编，包括商用。
+  - q: “收录”是不是意味着在任何地方都能看？
+    a: 不一定。电视台公开了这些直播流，但有些出于播出版权只对本国观众开放。
+  - q: 多久更新一次？
+    a: 每天更新。页面顶部的日期就是数字最近一次生成的时间。
+  browse: 浏览频道
+  browse_web: 在浏览器里免费看频道

@@ -1,0 +1,81 @@
+---
+layout: default
+---
+{%- assign t = site.data.locales[page.lang] -%}
+{%- assign s = t.dataset -%}
+{%- assign d = site.data.dataset -%}
+{%- assign dir = site.data.directory -%}
+{%- if page.lang == site.default_lang -%}{%- assign lang_prefix = "" -%}{%- else -%}{%- assign lang_prefix = "/" | append: page.lang -%}{%- endif -%}
+{%- assign top = d.country_rows | first -%}
+{%- assign top_country = dir.countries | where: "code", top.code | first -%}
+{%- assign page_abs = page.url | absolute_url -%}
+<section class="page-hero">
+  <div class="container narrow">
+    <p class="eyebrow">{{ s.eyebrow }}</p>
+    <h1>{{ s.h1 }}</h1>
+    <p class="lead">{{ s.lead }}</p>
+    <p class="muted"><time datetime="{{ d.generated_at }}">{{ s.updated | replace: "%date%", d.generated_at }}</time></p>
+  </div>
+</section>
+<section class="section section-tight">
+  <div class="container narrow ar-body">
+    <dl class="ds-stats">
+      <div class="card"><dt>{{ s.stat_channels }}</dt><dd>{{ d.channels }}</dd></div>
+      <div class="card"><dt>{{ s.stat_playable }}</dt><dd>{{ d.web_playable }}</dd></div>
+      <div class="card"><dt>{{ s.stat_countries }}</dt><dd>{{ d.countries }}</dd></div>
+    </dl>
+
+    <h2>{{ s.download_title }}</h2>
+    <p class="cta-row ds-downloads">
+      <a class="btn btn-primary btn-sm" href="{{ '/data/free-tv-channels-by-country.csv' | relative_url }}" download data-track="cta_click" data-track-target="dataset_csv_countries" data-track-location="dataset">{{ s.dl_countries }}</a>
+      <a class="btn btn-ghost btn-sm" href="{{ '/data/free-tv-channels.csv' | relative_url }}" download data-track="cta_click" data-track-target="dataset_csv_channels" data-track-location="dataset">{{ s.dl_channels }}</a>
+      <a class="btn btn-ghost btn-sm" href="{{ '/data/free-tv-channels-by-country.json' | relative_url }}" download data-track="cta_click" data-track-target="dataset_json" data-track-location="dataset">{{ s.dl_json }}</a>
+    </p>
+    <p class="muted">{{ s.download_note }}</p>
+
+    <h2>{{ s.table_title }}</h2>
+    <div class="ar-table-wrap ds-scroll"><table class="ar-table">
+      <thead><tr><th>{{ s.col_country }}</th><th>{{ s.col_listed }}</th><th>{{ s.col_playable }}</th><th>{{ s.col_share }}</th></tr></thead>
+      <tbody>
+        {%- for r in d.country_rows %}
+        {%- assign c = dir.countries | where: "code", r.code | first %}
+        <tr>
+          <td><a href="{{ lang_prefix | append: '/playlists/' | append: r.code | append: '/' | relative_url }}">{{ c.flag }} {{ c.names[page.lang] | default: r.code }}</a></td>
+          <td>{{ r.listed }}</td>
+          <td>{{ r.web_playable }}</td>
+          <td>{{ r.web_playable | times: 100.0 | divided_by: r.listed | round }}%</td>
+        </tr>
+        {%- endfor %}
+      </tbody>
+    </table></div>
+
+    <h2>{{ s.cat_title }}</h2>
+    <div class="ar-table-wrap"><table class="ar-table">
+      <thead><tr><th>{{ s.col_category }}</th><th>{{ s.col_channels }}</th></tr></thead>
+      <tbody>
+        {%- for cat in d.categories %}
+        <tr><td><a href="{{ lang_prefix | append: '/playlists/category/' | append: cat.id | append: '/' | relative_url }}">{{ t.directory.categories[cat.id] | default: cat.id }}</a></td><td>{{ cat.channels }}</td></tr>
+        {%- endfor %}
+      </tbody>
+    </table></div>
+
+    <h2>{{ s.method_title }}</h2>
+    <ol>{% for m in s.method %}<li>{{ m }}</li>{% endfor %}</ol>
+
+    <h2>{{ s.cite_title }}</h2>
+    <p class="card ds-cite">{{ s.cite_text | replace: "%date%", d.generated_at | replace: "%url%", page_abs }}</p>
+    <p>{{ s.license_text }}</p>
+
+    <h2>{{ s.faq_title }}</h2>
+    <div class="faq">
+      {%- for item in s.faq %}
+      <details><summary>{{ item.q }}</summary><p>{{ item.a | replace: "%country%", top_country.names[page.lang] | replace: "%n%", top.listed }}</p></details>
+      {%- endfor %}
+    </div>
+
+    <p class="cta-row ar-cta">
+      <a class="btn btn-primary btn-sm" href="{{ lang_prefix | append: '/web/' | relative_url }}" data-track="cta_click" data-track-target="web_player" data-track-location="dataset_footer">{% include icon.html name="tv" %}<span>{{ s.browse_web }}</span></a>
+      <a class="btn btn-ghost btn-sm" href="{{ lang_prefix | append: '/playlists/' | relative_url }}">{{ s.browse }}</a>
+    </p>
+  </div>
+</section>
