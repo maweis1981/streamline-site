@@ -46,7 +46,7 @@ mock:
     - name: Muzik Langsung
       group: Muzik
       state: fail
-      reason: Akses ditolak oleh sumber (HTTP 403)
+      reason: "Tidak dapat dimainkan · mungkin disekat mengikut wilayah"
 
 features:
   eyebrow: Ciri

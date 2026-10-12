@@ -46,7 +46,7 @@ mock:
     - name: Live Music
       group: Music
       state: fail
-      reason: Access denied by source (HTTP 403)
+      reason: "Can't play right now · likely region-restricted"
 
 features:
   eyebrow: Features

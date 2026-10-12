@@ -46,7 +46,7 @@ mock:
     - name: 音乐现场
       group: 音乐
       state: fail
-      reason: 源站拒绝访问（HTTP 403）
+      reason: "暂时无法播放 · 可能有地区限制"
 
 features:
   eyebrow: 功能

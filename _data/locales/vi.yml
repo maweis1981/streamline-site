@@ -46,7 +46,7 @@ mock:
     - name: Âm nhạc trực tiếp
       group: Âm nhạc
       state: fail
-      reason: Nguồn từ chối truy cập (HTTP 403)
+      reason: "Chưa phát được · có thể bị giới hạn khu vực"
 
 features:
   eyebrow: Tính năng

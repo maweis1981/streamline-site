@@ -46,7 +46,7 @@ mock:
     - name: ดนตรีสด
       group: เพลง
       state: fail
-      reason: ต้นทางปฏิเสธการเข้าถึง (HTTP 403)
+      reason: "เล่นไม่ได้ในขณะนี้ · อาจถูกจำกัดพื้นที่"
 
 features:
   eyebrow: ฟีเจอร์

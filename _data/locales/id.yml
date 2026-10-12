@@ -46,7 +46,7 @@ mock:
     - name: Musik Live
       group: Musik
       state: fail
-      reason: Akses ditolak oleh sumber (HTTP 403)
+      reason: "Tidak dapat diputar · mungkin dibatasi wilayah"
 
 features:
   eyebrow: Fitur
