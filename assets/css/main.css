@@ -343,3 +343,15 @@ html.js.nav-open .site-header{background:rgba(5,7,15,.96);border-bottom-color:va
   .gradient-text,.btn-primary.is-disabled>span,.no-signal span{color:CanvasText;background:none;filter:none}
   .card,.gborder,.feature-icon,.spotlight,.privacy-band{border:1px solid CanvasText}
 }
+/* Guide */
+.guide-intro{font-size:17px;color:var(--text-2);margin:0 0 28px}
+.guide-steps{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+.guide-step{display:flex;gap:20px;align-items:flex-start;padding:24px 28px}
+.guide-num{flex:none;font:700 28px/1 var(--font-mono),var(--font);background:var(--grad-text);-webkit-background-clip:text;background-clip:text;color:transparent;min-width:44px}
+.guide-step h2{font-size:19px;margin:2px 0 8px}
+.guide-step p{margin:0;color:var(--text-2)}
+.guide-tips{margin-top:28px}
+.guide-tips h2{font-size:17px;margin:0 0 12px}
+.guide-tips ul{margin:0;padding-left:20px;color:var(--text-2);display:grid;gap:8px}
+.guide-cta{margin-top:36px;display:flex;flex-wrap:wrap;align-items:center;gap:20px 28px}
+@media (max-width:560px){.guide-step{gap:14px;padding:20px}.guide-num{font-size:22px;min-width:32px}}

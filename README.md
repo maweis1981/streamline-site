@@ -4,7 +4,7 @@ Source for the official website of **Doubo (都播)**, a native IPTV player for 
 
 **Live site:** https://doubo.tv/ — 简体中文 (`/`), English (`/en/`), Bahasa Melayu (`/ms/`), Bahasa Indonesia (`/id/`), Tiếng Việt (`/vi/`), ไทย (`/th/`)
 
-It's a Jekyll site in six languages (Simplified Chinese by default, plus English, Malay, Indonesian, Vietnamese, and Thai): home, roadmap, support, and privacy policy. The support and privacy pages serve as the App Store Connect *Support URL* and *Privacy Policy URL*.
+It's a Jekyll site in six languages (Simplified Chinese by default, plus English, Malay, Indonesian, Vietnamese, and Thai): home, guide, roadmap, support, and privacy policy. The support and privacy pages serve as the App Store Connect *Support URL* and *Privacy Policy URL*.
 
 ## Deployment
 
@@ -83,3 +83,13 @@ DNS records at the domain registrar:
 Once DNS resolves, check **Enforce HTTPS** under Settings → Pages. To prevent domain takeover, verify `doubo.tv` under your GitHub account's Settings → Pages → *Verified domains*.
 
 To move to a different domain, update `CNAME` and `url`. To go back to `maweis1981.github.io/streamline-site/`, delete `CNAME` and set `baseurl: "/streamline-site"`.
+
+## SEO
+
+- Every language has its own URL, with `hreflang` alternates, a canonical link, and sitemap entries (`sitemap.xml`, `robots.txt`).
+- Titles and descriptions target local search terms ("IPTV / M3U player" plus device names) in each language.
+- JSON-LD (`_includes/structured-data.html`): WebSite, SoftwareApplication, and FAQPage on the home page; BreadcrumbList on inner pages; FAQPage on Support; HowTo on the Guide.
+- Share card: `assets/img/og-card.png` (1200×630, `summary_large_image`).
+- `llms.txt` summarizes the product and links for AI search engines.
+- `app_store_id` in `_config.yml` turns on Safari's smart app banner once the app is live.
+- After deploying, submit `https://doubo.tv/sitemap.xml` in Google Search Console and Bing Webmaster Tools.

@@ -3,6 +3,9 @@ url: "https://doubo.tv"
 baseurl: ""   # Custom domain (see CNAME). Use "/streamline-site" to serve from maweis1981.github.io instead.
 repository_url: "https://github.com/maweis1981/streamline-site"   # Public repo: issues here collect feedback.
 
+# App Store Connect Apple ID. Enables the Safari smart app banner once the app is live.
+app_store_id: "6821588266"
+
 # Store links. Leave empty until the listing is live; the site then shows "Coming soon".
 links:
   app_store: ""

@@ -5,10 +5,11 @@ slogan: "Every channel, one player."
 lang_name: English
 
 meta:
-  title: Doubo — A native IPTV player for iPhone, iPad, and Mac
+  title: Doubo — IPTV & M3U Player for iPhone, iPad, and Mac
   description: Doubo is a native M3U/M3U8 player. Import your own playlists, browse by group, check which channels play, watch in Picture in Picture, and cast to your TV. No bundled channels, no personal data collected.
 
 nav:
+  guide: Guide
   features: Features
   platforms: Platforms
   roadmap: Roadmap
@@ -23,7 +24,7 @@ cta:
   roadmap: See the roadmap
 
 hero:
-  eyebrow: For iPhone · iPad · Mac
+  eyebrow: IPTV & M3U player · iPhone · iPad · Mac
   title: Your playlists,<br><span class="gradient-text">one tap away.</span>
   subtitle: Doubo is a native IPTV player. Import M3U/M3U8, browse by group, save your favorites, and watch in Picture in Picture or on your TV.
   note: Built natively · No bundled channels · Your data stays on your device
@@ -174,10 +175,16 @@ faq:
   items:
     - q: Does Doubo provide TV channels?
       a: No. Doubo is a player; it doesn't bundle or sell channel content. Add playlists you're authorized to use. Recommended lists in the app are third-party public links, and their availability and viewing rights are set by their providers.
+    - q: How do I get started?
+      a: Tap Add, paste an M3U / M3U8 playlist URL you’re authorized to use, or import a .m3u / .m3u8 file from Files. Channels are grouped automatically. See the Guide page for step-by-step instructions.
+    - q: Which formats are supported?
+      a: M3U and M3U8 playlists, with live streams such as HLS (.m3u8) that Apple’s native player supports. You can also open local video files directly.
     - q: Do you collect my data?
       a: The app collects no personal data. Playlists, favorites, and watch history stay on your device. This website uses Google Analytics to understand visits; see the privacy policy.
     - q: What do I need to cast to a TV?
       a: The TV must support DLNA rendering (DMR) and be on the same network. Automatic discovery on iPhone and iPad requires Apple's multicast networking entitlement, which is still pending; Mac isn't affected.
+    - q: Does it work on Apple TV?
+      a: An Apple TV version is planned. Today Doubo runs on iPhone, iPad, and Mac, and you can cast to your living-room TV.
 
 support:
   title: Support
@@ -207,3 +214,28 @@ not_found:
   title: Page not found
   desc: The page you're looking for may have moved or been removed.
   home: Back to home
+
+guide:
+  title: Guide
+  subtitle: 'Get started in three minutes: play M3U / M3U8 playlists on iPhone, iPad, and Mac.'
+  description: 'How to use Doubo: add M3U / M3U8 playlists on iPhone, iPad, and Mac, browse channels, watch in Picture in Picture, and cast to your TV.'
+  intro: Before you start, have an M3U / M3U8 playlist URL or file that you’re authorized to use. Doubo is a player and doesn’t provide any channels.
+  steps:
+    - title: Add a playlist
+      desc: Open Doubo and tap Add. Choose “Add playlist URL” to paste an M3U address, or “Import playlist file” to import a .m3u / .m3u8 file from the Files app.
+    - title: Browse, search, and favorite
+      desc: Channels are grouped by group-title automatically. Search channel or group names at the top, star the channels you watch most, and find recently played channels anytime.
+    - title: Organize channels in one tap
+      desc: Tap “Check channels” and Doubo tests the whole playlist in parallel, so you can show just the channels that are ready to play.
+    - title: Play and Picture in Picture
+      desc: Tap a channel to play. Enjoy Picture in Picture, subtitle tracks, playback speed, and landscape full screen, and keep watching while you use other apps.
+    - title: Cast to your TV
+      desc: Tap the cast icon in the player and choose a DLNA smart TV on the same network to watch on the big screen.
+    - title: Manage multiple playlists
+      desc: Your last 20 playlists are saved on your device. Doubo reopens the one you watched last, and you can switch anytime.
+  tips_title: Tips
+  tips:
+    - Playlists must be in M3U or M3U8 format; channel addresses usually start with http(s)://.
+    - When a channel has several sources, switch between them under Lines.
+    - Playlists, favorites, and history stay on your device, and you can clear them anytime in Settings.
+  cta: More questions? See the FAQ or contact us

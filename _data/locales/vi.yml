@@ -5,10 +5,11 @@ slogan: "Mọi kênh, một trình phát."
 lang_name: Tiếng Việt
 
 meta:
-  title: Doubo — Trình phát IPTV gốc cho iPhone, iPad và Mac
+  title: Doubo — Ứng dụng xem IPTV & trình phát M3U cho iPhone, iPad và Mac
   description: Doubo là trình phát M3U/M3U8 gốc. Nhập danh sách phát của riêng bạn, duyệt theo nhóm, kiểm tra kênh nào phát được, xem bằng Hình trong hình và truyền lên TV. Không kèm sẵn kênh, không thu thập dữ liệu cá nhân.
 
 nav:
+  guide: Hướng dẫn
   features: Tính năng
   platforms: Nền tảng
   roadmap: Lộ trình
@@ -23,7 +24,7 @@ cta:
   roadmap: Xem lộ trình
 
 hero:
-  eyebrow: Dành cho iPhone · iPad · Mac
+  eyebrow: Trình phát IPTV & M3U · iPhone · iPad · Mac
   title: Danh sách phát của bạn,<br><span class="gradient-text">chạm là phát.</span>
   subtitle: Doubo là trình phát IPTV gốc. Nhập M3U/M3U8, duyệt theo nhóm, lưu kênh yêu thích và xem bằng Hình trong hình hoặc trên TV.
   note: Phát triển gốc · Không kèm sẵn kênh · Dữ liệu luôn nằm trên thiết bị của bạn
@@ -174,10 +175,16 @@ faq:
   items:
     - q: Doubo có cung cấp kênh truyền hình không?
       a: Không. Doubo là trình phát; ứng dụng không kèm sẵn hay bán nội dung kênh. Hãy thêm danh sách phát mà bạn được phép sử dụng. Các danh sách đề xuất trong ứng dụng là liên kết công khai của bên thứ ba; khả năng truy cập và quyền xem do nhà cung cấp quyết định.
+    - q: Bắt đầu sử dụng như thế nào?
+      a: Chạm Thêm, dán URL danh sách phát M3U / M3U8 mà bạn được phép sử dụng, hoặc nhập tệp .m3u / .m3u8 từ ứng dụng Tệp. Các kênh sẽ được tự động chia nhóm. Xem trang Hướng dẫn để biết từng bước.
+    - q: Hỗ trợ những định dạng nào?
+      a: Danh sách phát M3U và M3U8, cùng các luồng trực tiếp như HLS (.m3u8) mà trình phát gốc của Apple hỗ trợ. Bạn cũng có thể mở trực tiếp tệp video trên máy.
     - q: Ứng dụng có thu thập dữ liệu của tôi không?
       a: Ứng dụng không thu thập dữ liệu cá nhân. Danh sách phát, mục yêu thích và lịch sử xem luôn nằm trên thiết bị của bạn. Trang web này dùng Google Analytics để hiểu lượt truy cập; xem chính sách quyền riêng tư.
     - q: Cần gì để truyền lên TV?
       a: TV phải hỗ trợ DLNA renderer (DMR) và kết nối cùng mạng. Tự động tìm thiết bị trên iPhone và iPad cần quyền mạng multicast của Apple, hiện vẫn đang chờ cấp; Mac không bị ảnh hưởng.
+    - q: Có dùng được trên Apple TV không?
+      a: Phiên bản Apple TV đang được lên kế hoạch. Hiện Doubo chạy trên iPhone, iPad và Mac, và bạn có thể truyền lên TV phòng khách.
 
 support:
   title: Hỗ trợ
@@ -207,3 +214,28 @@ not_found:
   title: Không tìm thấy trang
   desc: Trang bạn tìm có thể đã được chuyển hoặc xóa.
   home: Về trang chủ
+
+guide:
+  title: Hướng dẫn
+  subtitle: 'Bắt đầu trong ba phút: phát danh sách M3U / M3U8 trên iPhone, iPad và Mac.'
+  description: 'Hướng dẫn dùng Doubo: thêm danh sách phát M3U / M3U8 trên iPhone, iPad và Mac, duyệt kênh, xem bằng Hình trong hình và truyền lên TV.'
+  intro: Trước khi bắt đầu, hãy chuẩn bị URL hoặc tệp danh sách phát M3U / M3U8 mà bạn được phép sử dụng. Doubo là trình phát và không cung cấp kênh nào.
+  steps:
+    - title: Thêm danh sách phát
+      desc: Mở Doubo và chạm Thêm. Chọn “Thêm URL danh sách phát” để dán địa chỉ M3U, hoặc “Nhập tệp danh sách phát” để nhập tệp .m3u / .m3u8 từ ứng dụng Tệp.
+    - title: Duyệt, tìm kiếm và yêu thích
+      desc: Các kênh được tự động chia nhóm theo group-title. Tìm tên kênh hoặc nhóm ở phía trên, gắn sao cho kênh hay xem và mở lại kênh vừa xem bất cứ lúc nào.
+    - title: Sắp xếp kênh chỉ một chạm
+      desc: Chạm “Kiểm tra kênh”, Doubo sẽ kiểm tra song song toàn bộ danh sách để bạn chỉ hiển thị các kênh sẵn sàng phát.
+    - title: Phát và Hình trong hình
+      desc: Chạm vào kênh để phát. Dùng Hình trong hình, phụ đề, tốc độ phát và toàn màn hình khi xoay ngang, vẫn tiếp tục xem khi dùng ứng dụng khác.
+    - title: Truyền lên TV
+      desc: Chạm biểu tượng truyền trong trình phát và chọn smart TV hỗ trợ DLNA cùng mạng để xem trên màn hình lớn.
+    - title: Quản lý nhiều danh sách phát
+      desc: 20 danh sách phát gần nhất được lưu trên thiết bị. Doubo tự mở lại danh sách bạn xem lần trước, và bạn có thể chuyển đổi bất cứ lúc nào.
+  tips_title: Mẹo
+  tips:
+    - Danh sách phát phải ở định dạng M3U hoặc M3U8; địa chỉ kênh thường bắt đầu bằng http(s)://.
+    - Khi một kênh có nhiều nguồn, hãy chuyển đổi ở mục Đường truyền.
+    - Danh sách phát, mục yêu thích và lịch sử luôn nằm trên thiết bị của bạn, có thể xóa bất cứ lúc nào trong Cài đặt.
+  cta: Còn thắc mắc? Xem câu hỏi thường gặp hoặc liên hệ chúng tôi

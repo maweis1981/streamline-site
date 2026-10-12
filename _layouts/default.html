@@ -26,18 +26,20 @@
   <meta property="og:title" content="{{ full_title | escape }}">
   <meta property="og:description" content="{{ description | strip_html | escape }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
-  <meta property="og:image" content="{{ '/assets/img/og-image.png' | absolute_url }}">
+  <meta property="og:image" content="{{ '/assets/img/og-card.png' | absolute_url }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ t.meta.title | escape }}">
   <meta property="og:locale" content="{{ t.og_locale }}">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
+  {%- if site.app_store_id %}
+  <meta name="apple-itunes-app" content="app-id={{ site.app_store_id }}">
+  {%- endif %}
   <link rel="icon" href="{{ '/assets/img/logo.svg' | relative_url }}" type="image/svg+xml">
   <link rel="icon" href="{{ '/assets/img/favicon-32.png' | relative_url }}" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="{{ '/assets/img/icon-256.png' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-  {%- if page.ref == "home" %}
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Doubo","alternateName":"都播","applicationCategory":"MultimediaApplication","operatingSystem":"iOS 17, iPadOS 17, macOS 14","description":{{ t.meta.description | jsonify }},"url":{{ home_url | absolute_url | jsonify }},"image":{{ '/assets/img/icon-256.png' | absolute_url | jsonify }}}
-  </script>
-  {%- endif %}
+  {%- include structured-data.html %}
   <script defer src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </head>
 <body class="page-{{ page.ref | default: 'page' }}">
@@ -53,6 +55,7 @@
       <nav class="site-nav" id="site-nav">
         <a href="{{ home_url }}#features">{{ t.nav.features }}</a>
         <a href="{{ home_url }}#platforms">{{ t.nav.platforms }}</a>
+        <a href="{{ lang_prefix | append: '/guide/' | relative_url }}"{% if page.ref == "guide" %} aria-current="page"{% endif %}>{{ t.nav.guide }}</a>
         <a href="{{ lang_prefix | append: '/roadmap/' | relative_url }}"{% if page.ref == "roadmap" %} aria-current="page"{% endif %}>{{ t.nav.roadmap }}</a>
         <a href="{{ lang_prefix | append: '/support/' | relative_url }}"{% if page.ref == "support" %} aria-current="page"{% endif %}>{{ t.nav.support }}</a>
         {% include language-menu.html %}
@@ -82,6 +85,7 @@
       </div>
       <div>
         <h2>{{ t.footer.resources }}</h2>
+        <a href="{{ lang_prefix | append: '/guide/' | relative_url }}">{{ t.nav.guide }}</a>
         <a href="{{ lang_prefix | append: '/support/' | relative_url }}">{{ t.nav.support }}</a>
         <a href="{{ lang_prefix | append: '/privacy/' | relative_url }}">{{ t.privacy_label }}</a>
         <a href="{{ site.repository_url }}/issues" data-track="cta_click" data-track-target="github_issues" data-track-location="footer">{{ t.footer.feedback }}</a>

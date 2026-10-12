@@ -5,10 +5,11 @@ slogan: "Semua saluran, satu pemain."
 lang_name: Bahasa Melayu
 
 meta:
-  title: Doubo — Pemain IPTV asli untuk iPhone, iPad dan Mac
+  title: Doubo — Pemain IPTV & M3U untuk iPhone, iPad dan Mac
   description: Doubo ialah pemain M3U/M3U8 asli. Import senarai main anda sendiri, layari mengikut kumpulan, semak saluran yang boleh dimainkan, tonton dalam Gambar dalam Gambar dan hantar ke TV. Tiada saluran terbina, tiada data peribadi dikumpul.
 
 nav:
+  guide: Panduan
   features: Ciri
   platforms: Platform
   roadmap: Pelan hala tuju
@@ -23,7 +24,7 @@ cta:
   roadmap: Lihat pelan hala tuju
 
 hero:
-  eyebrow: Untuk iPhone · iPad · Mac
+  eyebrow: Pemain IPTV & M3U · iPhone · iPad · Mac
   title: Senarai main anda,<br><span class="gradient-text">sekali ketik terus main.</span>
   subtitle: Doubo ialah pemain IPTV asli. Import M3U/M3U8, layari mengikut kumpulan, simpan saluran kegemaran, dan tonton dalam Gambar dalam Gambar atau di TV anda.
   note: Dibina secara asli · Tiada saluran terbina · Data anda kekal pada peranti anda
@@ -174,10 +175,16 @@ faq:
   items:
     - q: Adakah Doubo menyediakan saluran TV?
       a: Tidak. Doubo ialah pemain; ia tidak membekalkan atau menjual kandungan saluran. Tambah senarai main yang anda dibenarkan gunakan. Senarai yang disyorkan dalam aplikasi ialah pautan awam pihak ketiga, dan ketersediaan serta hak tontonan ditentukan oleh penyedianya.
+    - q: Bagaimana cara bermula?
+      a: Ketik Tambah, tampal URL senarai main M3U / M3U8 yang anda dibenarkan gunakan, atau import fail .m3u / .m3u8 daripada Fail. Saluran akan dikumpulkan secara automatik. Lihat halaman Panduan untuk langkah demi langkah.
+    - q: Format apa yang disokong?
+      a: Senarai main M3U dan M3U8, dengan strim langsung seperti HLS (.m3u8) yang disokong oleh pemain asli Apple. Anda juga boleh membuka fail video tempatan secara terus.
     - q: Adakah data saya dikumpul?
       a: Aplikasi ini tidak mengumpul data peribadi. Senarai main, kegemaran dan sejarah tontonan kekal pada peranti anda. Laman web ini menggunakan Google Analytics untuk memahami lawatan; lihat dasar privasi.
     - q: Apa yang diperlukan untuk menghantar ke TV?
       a: TV mesti menyokong pemaparan DLNA (DMR) dan berada dalam rangkaian yang sama. Penemuan automatik pada iPhone dan iPad memerlukan kebenaran rangkaian multicast Apple, yang masih dalam proses; Mac tidak terjejas.
+    - q: Adakah ia berfungsi di Apple TV?
+      a: Versi Apple TV sedang dirancang. Buat masa ini Doubo berfungsi di iPhone, iPad dan Mac, dan anda boleh menghantar ke TV di ruang tamu.
 
 support:
   title: Sokongan
@@ -207,3 +214,28 @@ not_found:
   title: Halaman tidak ditemui
   desc: Halaman yang anda cari mungkin telah dialihkan atau dibuang.
   home: Kembali ke laman utama
+
+guide:
+  title: Panduan
+  subtitle: 'Mula dalam tiga minit: mainkan senarai main M3U / M3U8 di iPhone, iPad dan Mac.'
+  description: 'Cara menggunakan Doubo: tambah senarai main M3U / M3U8 di iPhone, iPad dan Mac, layari saluran, tonton dalam Gambar dalam Gambar dan hantar ke TV.'
+  intro: Sebelum bermula, sediakan URL atau fail senarai main M3U / M3U8 yang anda dibenarkan gunakan. Doubo ialah pemain dan tidak menyediakan sebarang saluran.
+  steps:
+    - title: Tambah senarai main
+      desc: Buka Doubo dan ketik Tambah. Pilih “Tambah URL senarai main” untuk menampal alamat M3U, atau “Import fail senarai main” untuk mengimport fail .m3u / .m3u8 daripada aplikasi Fail.
+    - title: Layari, cari dan simpan kegemaran
+      desc: Saluran dikumpulkan mengikut group-title secara automatik. Cari nama saluran atau kumpulan di bahagian atas, tandakan saluran kegemaran dan cari saluran yang baru ditonton bila-bila masa.
+    - title: Susun saluran dengan sekali ketik
+      desc: Ketik “Semak saluran” dan Doubo akan menguji seluruh senarai main secara serentak, supaya anda boleh paparkan hanya saluran yang sedia dimainkan.
+    - title: Main dan Gambar dalam Gambar
+      desc: Ketik saluran untuk main. Nikmati Gambar dalam Gambar, trek sari kata, kelajuan main balik dan skrin penuh landskap, serta terus menonton semasa menggunakan aplikasi lain.
+    - title: Hantar ke TV anda
+      desc: Ketik ikon hantar dalam pemain dan pilih TV pintar DLNA dalam rangkaian yang sama untuk menonton di skrin besar.
+    - title: Urus beberapa senarai main
+      desc: 20 senarai main terakhir disimpan pada peranti anda. Doubo membuka semula senarai yang terakhir ditonton, dan anda boleh menukarnya bila-bila masa.
+  tips_title: Petua
+  tips:
+    - Senarai main mesti dalam format M3U atau M3U8; alamat saluran biasanya bermula dengan http(s)://.
+    - Jika satu saluran mempunyai beberapa sumber, tukar antaranya di bahagian Talian.
+    - Senarai main, kegemaran dan sejarah kekal pada peranti anda, dan boleh dipadam bila-bila masa dalam Tetapan.
+  cta: Ada soalan lagi? Lihat soalan lazim atau hubungi kami
