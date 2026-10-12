@@ -1,0 +1,16 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{%- assign pages = site.pages | where_exp: "p", "p.ref" | where_exp: "p", "p.ref != '404'" -%}
+{%- for p in pages %}
+  <url>
+    <loc>{{ p.url | absolute_url }}</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="{{ '/' | append: p.path_key | absolute_url }}"/>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ '/en/' | append: p.path_key | absolute_url }}"/>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  </url>
+{%- endfor %}
+</urlset>

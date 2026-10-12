@@ -1,0 +1,51 @@
+{%- comment -%}
+  Google Tag Manager + Google Analytics 4 with Consent Mode v2.
+  Rendered only for production builds that have at least one ID configured.
+  Consent defaults are declared before either tag loads, so no analytics cookie
+  is written for visitors who have not consented where consent is required.
+{%- endcomment -%}
+{%- if jekyll.environment == "production" -%}
+{%- assign gtm = site.analytics.gtm_id | default: "" | strip -%}
+{%- assign ga = site.analytics.ga_measurement_id | default: "" | strip -%}
+{%- assign consent = site.analytics.consent | default: "eea" -%}
+{%- if gtm != "" or ga != "" -%}
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.SL_ANALYTICS = { gtm: "{{ gtm }}", ga: "{{ ga }}" };
+  gtag('consent', 'default', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: '{% if consent == "strict" %}denied{% else %}granted{% endif %}',
+    functionality_storage: 'granted',
+    security_storage: 'granted',
+    wait_for_update: 500
+  });
+  {%- if consent != "strict" %}
+  // EEA, UK and Switzerland: analytics stay off until the visitor accepts.
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    region: ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IS','IE','IT','LV','LI','LT','LU','MT','NL','NO','PL','PT','RO','SK','SI','ES','SE','GB','CH']
+  });
+  {%- endif %}
+  try {
+    var choice = localStorage.getItem('sl-consent');
+    if (choice === 'granted' || choice === 'denied') {
+      gtag('consent', 'update', { analytics_storage: choice });
+    }
+  } catch (e) {}
+  dataLayer.push({ page_language: '{{ page.lang }}', page_section: '{{ page.ref | default: "page" }}' });
+</script>
+{%- if gtm != "" %}
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','{{ gtm }}');</script>
+{%- endif %}
+{%- if ga != "" %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ ga }}"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', '{{ ga }}', { content_group: '{{ page.ref | default: "page" }}' });
+</script>
+{%- endif %}
+{%- endif -%}
+{%- endif -%}

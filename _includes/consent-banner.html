@@ -1,0 +1,13 @@
+{%- if jekyll.environment == "production" -%}
+{%- assign gtm = site.analytics.gtm_id | default: "" | strip -%}
+{%- assign ga = site.analytics.ga_measurement_id | default: "" | strip -%}
+{%- if gtm != "" or ga != "" -%}
+<div class="consent" id="consent" role="dialog" aria-live="polite" aria-label="{{ t.consent.manage }}" hidden>
+  <p>{{ t.consent.text }} <a href="{{ lang_prefix | append: '/privacy/' | relative_url }}">{{ t.consent.more }}</a></p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-ghost btn-sm" data-consent="denied">{{ t.consent.decline }}</button>
+    <button type="button" class="btn btn-primary btn-sm" data-consent="granted">{{ t.consent.accept }}</button>
+  </div>
+</div>
+{%- endif -%}
+{%- endif -%}

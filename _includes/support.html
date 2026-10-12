@@ -1,0 +1,25 @@
+{%- assign t = site.data.locales[page.lang] -%}
+<div class="support-grid">
+  <article class="card support-card">
+    <span class="feature-icon">{% include icon.html name="github" %}</span>
+    <h2>{{ t.support.issues_title }}</h2>
+    <p>{{ t.support.issues_desc }}</p>
+    <a class="btn btn-primary" href="{{ site.repository_url }}/issues" data-track="cta_click" data-track-target="github_issues" data-track-location="support">{{ t.support.issues_link }}</a>
+  </article>
+  {%- if site.links.support_email != "" %}
+  <article class="card support-card">
+    <span class="feature-icon">{% include icon.html name="mail" %}</span>
+    <h2>{{ t.support.email_title }}</h2>
+    <p><a class="text-link" href="mailto:{{ site.links.support_email }}" data-track="cta_click" data-track-target="email" data-track-location="support">{{ site.links.support_email }}</a></p>
+  </article>
+  {%- endif %}
+</div>
+<h2 class="faq-title">{{ t.faq.title }}</h2>
+<div class="faq">
+  {%- for item in t.faq.items %}
+  <details data-track-faq="{{ forloop.index }}">
+    <summary>{{ item.q }}</summary>
+    <p>{{ item.a }}</p>
+  </details>
+  {%- endfor %}
+</div>

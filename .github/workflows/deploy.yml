@@ -1,0 +1,66 @@
+name: Build and deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      # Values come from repository variables (Settings → Secrets and variables → Actions → Variables).
+      - name: Write deploy config
+        env:
+          GTM_ID: ${{ vars.GTM_ID }}
+          GA_MEASUREMENT_ID: ${{ vars.GA_MEASUREMENT_ID }}
+          APP_STORE_URL: ${{ vars.APP_STORE_URL }}
+          TESTFLIGHT_URL: ${{ vars.TESTFLIGHT_URL }}
+          SUPPORT_EMAIL: ${{ vars.SUPPORT_EMAIL }}
+        run: |
+          ruby -ryaml -e '
+            base = YAML.load_file("_config.yml")
+            links = base["links"].merge({
+              "app_store" => ENV["APP_STORE_URL"], "testflight" => ENV["TESTFLIGHT_URL"], "support_email" => ENV["SUPPORT_EMAIL"]
+            }.reject { |_, v| v.to_s.strip.empty? })
+            analytics = base["analytics"].merge({
+              "gtm_id" => ENV["GTM_ID"], "ga_measurement_id" => ENV["GA_MEASUREMENT_ID"]
+            }.reject { |_, v| v.to_s.strip.empty? })
+            File.write("_config.deploy.yml", { "links" => links, "analytics" => analytics }.to_yaml)
+          '
+          cat _config.deploy.yml
+
+      - name: Build
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build --config _config.yml,_config.deploy.yml
+
+      # Publishes the built site to the gh-pages branch, which GitHub Pages serves.
+      - name: Deploy to gh-pages
+        if: github.event_name != 'pull_request'
+        working-directory: _site
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          touch .nojekyll
+          git init -q -b gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Deploy ${GITHUB_SHA}"
+          git push -q -f "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" gh-pages

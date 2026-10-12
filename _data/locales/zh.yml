@@ -1,0 +1,213 @@
+html_lang: zh-CN
+og_locale: zh_CN
+lang_name: 中文
+switch_label: English
+
+meta:
+  title: Streamline — 原生 IPTV 播放器，适用于 iPhone、iPad 与 Mac
+  description: Streamline 是一款原生 M3U/M3U8 播放器。导入你自己的播放列表，按分组浏览、检测可播放频道、画中画观看，并投放到电视。不内置任何频道内容，不收集个人数据。
+
+nav:
+  features: 功能
+  platforms: 平台
+  roadmap: 路线图
+  support: 支持
+  privacy: 隐私
+  download: 下载
+
+cta:
+  app_store: App Store 下载
+  testflight: 加入 TestFlight 测试
+  coming_soon: 即将上架 App Store
+  roadmap: 查看路线图
+
+hero:
+  eyebrow: 适用于 iPhone · iPad · Mac
+  title: 你的播放列表，<br><span class="gradient-text">一点就播。</span>
+  subtitle: Streamline 是一款原生 IPTV 播放器。导入 M3U/M3U8，按分组浏览，先检测再播放；播放失败时，告诉你原因。
+  note: 原生开发 · 不内置频道 · 数据只存在你的设备上
+
+mock:
+  playlist: 我的播放列表
+  live: 直播中
+  checked: 已检测 128 / 142 可访问
+  groups: [全部, 新闻, 体育, 纪录片, 音乐]
+  channels:
+    - name: 新闻 24
+      group: 新闻
+      state: playing
+    - name: 体育 HD
+      group: 体育
+      state: ok
+    - name: 自然纪录
+      group: 纪录片
+      state: ok
+    - name: 音乐现场
+      group: 音乐
+      state: fail
+      reason: 源站拒绝访问（HTTP 403）
+
+features:
+  eyebrow: 功能
+  title: 从导入到观看，每一步都更省心
+  subtitle: 只用 Apple 原生框架构建，轻量、流畅、省电。
+  items:
+    - icon: import
+      title: 导入任何 M3U 播放列表
+      desc: 支持 URL 与本地 .m3u / .m3u8 文件，自动解析频道名、分组与台标，并记住最近 20 个播放列表，启动时自动恢复。
+    - icon: grid
+      title: 分组、搜索与收藏
+      desc: 按 group-title 分组浏览，频道名与分组即时搜索；收藏常看频道，最近播放一键回到。
+    - icon: pulse
+      title: 先检测，再播放
+      desc: 并发探测每个频道源，只显示可访问的频道，告别一个个点开试错。
+    - icon: diagnose
+      title: 看得懂的失败原因
+      desc: 区分鉴权（401）、地区或访问限制（403）、源已下架（404）、超时、DNS 与格式不兼容，告诉你下一步该怎么做。
+    - icon: route
+      title: 同名频道一键换线
+      desc: 同一频道在列表中有多个来源时，在“线路”中直接切换，并显示每条线路的检测结果。
+    - icon: pip
+      title: 原生播放体验
+      desc: 基于 AVKit：画中画、字幕轨道、倍速播放、横屏全屏，频道行内显示正在播放的实时画面。
+    - icon: cast
+      title: 投放到电视
+      desc: 支持 DLNA 投屏到同一网络下的智能电视；也可以直接打开本地视频文件播放。
+    - icon: lock
+      title: 隐私优先
+      desc: 播放列表、收藏与历史只保存在本机。App 不内置广告和统计 SDK，也不收集任何个人数据。
+
+how:
+  eyebrow: 三步开始
+  title: 三步就能开始看
+  steps:
+    - title: 添加播放列表
+      desc: 粘贴你有权使用的 M3U 地址，或从“文件”导入。
+    - title: 检测可用频道
+      desc: 一键检测，自动筛出当前网络下可访问的频道。
+    - title: 播放或投屏
+      desc: 点按即播；支持画中画，也可以投放到客厅电视。
+
+platforms:
+  eyebrow: 平台
+  title: 为 Apple 设备原生打造
+  subtitle: 使用 SwiftUI 与 AVFoundation 构建，一套体验覆盖手机、平板与电脑。
+  available: 已支持
+  planned: 规划中
+  items:
+    - name: iPhone
+      detail: iOS 17 及以上
+      status: available
+    - name: iPad
+      detail: iPadOS 17 及以上
+      status: available
+    - name: Mac
+      detail: macOS 14 及以上
+      status: available
+    - name: Apple TV
+      detail: tvOS
+      status: planned
+    - name: CarPlay
+      detail: 音频与浏览
+      status: planned
+
+roadmap_teaser:
+  eyebrow: 路线图
+  title: 接下来会做什么
+  subtitle: 我们的优先级很简单：先让更多频道顺利播放，再逐步加入节目单、回看等功能。
+  link: 查看完整路线图
+
+roadmap:
+  title: 路线图
+  subtitle: 我们按“先提高播放成功率，再扩展功能与平台”的顺序推进。以下为计划方向，不代表承诺的发布日期。
+  updated: 最后更新：
+  updated_date: 2026 年 10 月
+  feedback: 有想要的功能？欢迎在 GitHub 提出建议。
+  feedback_link: 提交建议
+  status:
+    done: 已上线
+    now: 进行中
+    next: 下一步
+    later: 规划中
+  columns:
+    - status: done
+      title: 1.0 基础版
+      items:
+        - title: M3U/M3U8 导入与历史恢复
+          desc: URL 与文件导入，记住最近播放列表。
+        - title: 分组、搜索、收藏、最近播放
+        - title: 并发可播放性检测
+        - title: 播放失败原因诊断
+        - title: 画中画、字幕轨、倍速
+        - title: 同名频道线路切换
+        - title: DLNA 投屏与本地视频
+    - status: now
+      title: 播放成功率
+      items:
+        - title: 更广泛的 HTTP 直播源兼容
+        - title: 后台播放与画中画完善
+        - title: 增强 M3U 解析
+          desc: GBK 等编码、tvg-id、频道级 User-Agent / Referer 请求头。
+        - title: 频道健康状态
+          desc: 区分未检测、可访问、受限、超时、格式不支持，并缓存结果。
+    - status: next
+      title: 稳定与效率
+      items:
+        - title: 多线路聚合与自动切换
+          desc: 当前线路失败时，自动尝试下一条。
+        - title: 远程播放列表缓存与离线打开
+        - title: AirPlay 投放
+        - title: 万级频道列表性能优化
+        - title: 全面本地化（简体中文 / English）
+    - status: later
+      title: 更多内容与平台
+      items:
+        - title: XMLTV 节目单（EPG）
+        - title: 回看（Catch-up）
+          desc: 仅在播放源提供回看参数时可用。
+        - title: iCloud 同步
+          desc: 收藏、播放列表与设置跨设备同步。
+        - title: Xtream Codes 支持
+        - title: Apple TV 与 CarPlay
+        - title: 全局搜索中心
+
+faq:
+  title: 常见问题
+  items:
+    - q: Streamline 提供电视频道吗？
+      a: 不提供。Streamline 是播放器，不内置、不出售任何频道内容。你需要添加自己有权使用的播放列表。App 中的推荐列表均为第三方公开链接，可用性与观看权限由其提供方决定。
+    - q: 为什么有些频道无法播放？
+      a: 直播源可能已失效、需要账号授权、有地区限制，或使用了 Apple 播放器不支持的编码。Streamline 会尽量识别具体原因并显示在频道行上。“检测”功能可以帮你提前筛掉无法访问的频道。
+    - q: 会收集我的数据吗？
+      a: App 不收集个人数据，播放列表、收藏和观看历史只保存在你的设备上。本网站使用 Google Analytics 了解访问情况，详见隐私政策。
+    - q: 投屏到电视需要什么条件？
+      a: 电视需要支持 DLNA 接收（DMR），并与设备连接同一网络。iPhone / iPad 上的自动发现需要 Apple 的多播网络权限，目前仍在申请中；Mac 不受此限制。
+
+support:
+  title: 支持
+  subtitle: 遇到问题或有建议？下面的方式可以帮到你。
+  issues_title: 报告问题或提出建议
+  issues_desc: 在 GitHub Issues 中描述你的设备、系统版本和复现步骤。请不要公开含有令牌或密码的播放列表地址。
+  issues_link: 前往 GitHub Issues
+  email_title: 邮件联系
+
+privacy_label: 隐私政策
+
+consent:
+  text: 我们使用 Google Analytics 统计网站访问情况，以改进本网站。你可以选择是否允许使用统计 Cookie，并可随时在页脚修改。
+  accept: 同意
+  decline: 拒绝
+  more: 了解更多
+  manage: Cookie 设置
+
+footer:
+  tagline: 原生 IPTV 播放器，适用于 iPhone、iPad 与 Mac。
+  disclaimer: Streamline 不提供任何频道内容。请仅播放你有权访问的内容。Apple、iPhone、iPad、Mac、Apple TV、AirPlay 与 CarPlay 是 Apple Inc. 的商标。
+  product: 产品
+  resources: 资源
+  feedback: 反馈建议
+
+not_found:
+  title: 页面不存在
+  desc: 你访问的页面可能已移动或删除。
+  home: 返回首页

@@ -1,0 +1,20 @@
+---
+layout: default
+lang: zh
+ref: "404"
+path_key: ""
+permalink: /404.html
+title: 页面不存在 / Page not found
+---
+{%- assign zh = site.data.locales.zh -%}{%- assign en = site.data.locales.en -%}
+<section class="page-hero section">
+  <div class="container narrow center">
+    <p class="eyebrow">404</p>
+    <h1>{{ zh.not_found.title }}</h1>
+    <p class="lead">{{ zh.not_found.desc }}<br>{{ en.not_found.desc }}</p>
+    <div class="cta-row" style="justify-content:center;margin-top:32px">
+      <a class="btn btn-primary" href="{{ '/' | relative_url }}">{{ zh.not_found.home }}</a>
+      <a class="btn btn-ghost" href="{{ '/en/' | relative_url }}">{{ en.not_found.home }}</a>
+    </div>
+  </div>
+</section>
