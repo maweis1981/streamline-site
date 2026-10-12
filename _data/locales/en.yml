@@ -1,13 +1,11 @@
 html_lang: en
 og_locale: en_US
 brand: Doubo
-slogan: "Every channel, one player."
+slogan: Every channel, one player.
 lang_name: English
-
 meta:
-  title: Doubo — IPTV & M3U Player for iPhone, iPad, and Mac
-  description: Doubo is a native M3U/M3U8 player. Import your own playlists, browse by group, check which channels play, watch in Picture in Picture, and cast to your TV. No bundled channels, no personal data collected.
-
+  title: Doubo — Cross-Platform IPTV & M3U Player
+  description: Doubo is a native IPTV & M3U player, available for iPhone, iPad, and Mac, with Android phones, tablets, and TV boxes coming soon. Import your own playlists, browse by group, watch in Picture in Picture, and cast to your TV. No bundled channels, no personal data collected.
 nav:
   guide: Guide
   features: Features
@@ -16,110 +14,118 @@ nav:
   support: Support
   privacy: Privacy
   download: Download
-
 cta:
   app_store: Download on the App Store
   testflight: Join the TestFlight beta
   coming_soon: Coming soon to the App Store
   roadmap: See the roadmap
-
+  google_play: Google Play — coming soon
 hero:
-  eyebrow: IPTV & M3U player · iPhone · iPad · Mac
+  eyebrow: IPTV & M3U player · iOS · macOS · Android coming soon
   title: Your playlists,<br><span class="gradient-text">one tap away.</span>
   subtitle: Doubo is a native IPTV player. Import M3U/M3U8, browse by group, save your favorites, and watch in Picture in Picture or on your TV.
   note: Built natively · No bundled channels · Your data stays on your device
-
 mock:
   playlist: My Playlist
   live: Live
-  casting: "Casting to TV"
+  casting: Casting to TV
   checked: 142 channels · 5 groups
-  groups: [All, News, Sports, Docs, Music]
+  groups:
+  - All
+  - News
+  - Sports
+  - Docs
+  - Music
   channels:
-    - name: News 24
-      group: News
-      state: playing
-    - name: Sports HD
-      group: Sports
-      state: ok
-    - name: Nature Docs
-      group: Documentary
-      state: ok
-    - name: Live Music
-      group: Music
-      state: ok
-
+  - name: News 24
+    group: News
+    state: playing
+  - name: Sports HD
+    group: Sports
+    state: ok
+  - name: Nature Docs
+    group: Documentary
+    state: ok
+  - name: Live Music
+    group: Music
+    state: ok
 features:
   eyebrow: Features
   title: Smooth from import to watching
-  subtitle: Built only with Apple frameworks, so it stays light, smooth, and easy on your battery.
+  subtitle: Built natively, so it stays light, smooth, and easy on your battery.
   items:
-    - icon: import
-      title: Import any M3U playlist
-      desc: Add a URL or a local .m3u / .m3u8 file. Channel names, groups, and logos are parsed automatically, and your last 20 playlists are remembered and restored at launch.
-    - icon: grid
-      title: Groups, search, and favorites
-      desc: Browse by group-title, search channel names and groups instantly, star the channels you watch, and jump back through recently played.
-    - icon: pulse
-      title: Check every channel at once
-      desc: Doubo tests your whole playlist in parallel and lines up the channels that are ready to play, so you can just press play.
-    - icon: route
-      title: Switch lines in one tap
-      desc: When a channel has several sources, switch between them under Lines and pick the smoothest one anytime.
-    - icon: pip
-      title: A native playback experience
-      desc: Built on AVKit, with Picture in Picture, subtitle tracks, playback speed, and landscape full screen. The playing channel's row shows a live frame.
-    - icon: cast
-      title: Cast to your TV
-      desc: Cast to DLNA smart TVs on the same network, or open a local video file to play it directly.
-    - icon: lock
-      title: Privacy first
-      desc: Playlists, favorites, and history stay on your device. The app has no ad or analytics SDKs and collects no personal data.
-
+  - icon: import
+    title: Import any M3U playlist
+    desc: Add a URL or a local .m3u / .m3u8 file. Channel names, groups, and logos are parsed automatically, and your last 20 playlists are remembered and restored at launch.
+  - icon: grid
+    title: Groups, search, and favorites
+    desc: Browse by group-title, search channel names and groups instantly, star the channels you watch, and jump back through recently played.
+  - icon: pulse
+    title: Check every channel at once
+    desc: Doubo tests your whole playlist in parallel and lines up the channels that are ready to play, so you can just press play.
+  - icon: route
+    title: Switch lines in one tap
+    desc: When a channel has several sources, switch between them under Lines and pick the smoothest one anytime.
+  - icon: pip
+    title: A native playback experience
+    desc: Built on AVKit, with Picture in Picture, subtitle tracks, playback speed, and landscape full screen. The playing channel's row shows a live frame.
+  - icon: cast
+    title: Cast to your TV
+    desc: Cast to DLNA smart TVs on the same network, or open a local video file to play it directly.
+  - icon: lock
+    title: Privacy first
+    desc: Playlists, favorites, and history stay on your device. The app has no ad or analytics SDKs and collects no personal data.
 how:
   eyebrow: Get started
   title: Watching in three steps
   steps:
-    - title: Add a playlist
-      desc: Paste an M3U URL you're authorized to use, or import one from Files.
-    - title: Organize channels
-      desc: One tap lines up the channels that are ready to play.
-    - title: Play or cast
-      desc: Tap to play, keep watching in Picture in Picture, or send it to the living-room TV.
-
+  - title: Add a playlist
+    desc: Paste an M3U URL you're authorized to use, or import one from Files.
+  - title: Organize channels
+    desc: One tap lines up the channels that are ready to play.
+  - title: Play or cast
+    desc: Tap to play, keep watching in Picture in Picture, or send it to the living-room TV.
 platforms:
   eyebrow: Platforms
-  title: Built natively for Apple devices
-  subtitle: SwiftUI and AVFoundation deliver one experience across phone, tablet, and desktop.
+  title: Phone, tablet, computer, and TV — one Doubo
+  subtitle: Available now on iPhone, iPad, and Mac. Android phones, tablets, and Android TV / TV boxes are coming soon.
   available: Available
   planned: Planned
   items:
-    - name: iPhone
-      detail: iOS 17 or later
-      status: available
-    - name: iPad
-      detail: iPadOS 17 or later
-      status: available
-    - name: Mac
-      detail: macOS 14 or later
-      status: available
-    - name: Apple TV
-      detail: tvOS
-      status: planned
-    - name: CarPlay
-      detail: Audio and browsing
-      status: planned
-
+  - name: iPhone
+    detail: iOS 17 or later
+    status: available
+    icon: phone
+  - name: iPad
+    detail: iPadOS 17 or later
+    status: available
+    icon: tablet
+  - name: Mac
+    detail: macOS 14 or later
+    status: available
+    icon: laptop
+  - name: Android
+    detail: Phones & tablets
+    status: soon
+    icon: android
+  - name: Android TV
+    detail: TVs & TV boxes
+    status: soon
+    icon: tv
+  - name: Apple TV
+    detail: tvOS
+    status: planned
+    icon: tv
+  soon: Coming soon
 roadmap_teaser:
   eyebrow: Roadmap
   title: What's next
   subtitle: Our priority is simple. First, make playback even smoother and more stable. Then add the program guide, catch-up, and more.
   link: See the full roadmap
-
 roadmap:
   title: Roadmap
   subtitle: We focus on a smooth, stable playback experience first, then expand features and platforms. This is our planned direction, not a promise of release dates.
-  updated: "Last updated: "
+  updated: 'Last updated: '
   updated_date: October 2026
   feedback: Missing something? Suggest it on GitHub.
   feedback_link: Suggest a feature
@@ -129,63 +135,65 @@ roadmap:
     next: Next
     later: Later
   columns:
-    - status: done
-      title: 1.0 Foundation
-      items:
-        - title: M3U/M3U8 import and history restore
-          desc: Import from a URL or file; recent playlists are remembered.
-        - title: Groups, search, favorites, recently played
-        - title: Parallel availability checks
-        - title: Picture in Picture, subtitles, playback speed
-        - title: Switch between same-name channel lines
-        - title: DLNA casting and local video
-    - status: now
-      title: Smoother playback
-      items:
-        - title: Broader HTTP stream compatibility
-        - title: Background audio and Picture in Picture polish
-        - title: Richer M3U parsing
-          desc: GBK and other encodings, tvg-id, per-channel User-Agent / Referer headers.
-        - title: Channel health status
-          desc: Shows each channel’s live status, with cached results.
-    - status: next
-      title: Reliability and speed
-      items:
-        - title: Multi-line channels with smart switching
-          desc: Automatically picks the smoothest line.
-        - title: Cached remote playlists and offline open
-        - title: AirPlay
-        - title: Performance for 10,000+ channel lists
-        - title: App localization
-          desc: English, Simplified Chinese, Bahasa Melayu, Bahasa Indonesia, Tiếng Việt, and Thai.
-    - status: later
-      title: More content and platforms
-      items:
-        - title: XMLTV program guide (EPG)
-        - title: Catch-up
-          desc: Available only when the stream source provides catch-up parameters.
-        - title: iCloud sync
-          desc: Favorites, playlists, and settings across devices.
-        - title: Xtream Codes support
-        - title: Apple TV and CarPlay
-        - title: Global search
-
+  - status: done
+    title: 1.0 Foundation
+    items:
+    - title: M3U/M3U8 import and history restore
+      desc: Import from a URL or file; recent playlists are remembered.
+    - title: Groups, search, favorites, recently played
+    - title: Parallel availability checks
+    - title: Picture in Picture, subtitles, playback speed
+    - title: Switch between same-name channel lines
+    - title: DLNA casting and local video
+  - status: now
+    title: Smoother playback
+    items:
+    - title: Broader HTTP stream compatibility
+    - title: Background audio and Picture in Picture polish
+    - title: Richer M3U parsing
+      desc: GBK and other encodings, tvg-id, per-channel User-Agent / Referer headers.
+    - title: Channel health status
+      desc: Shows each channel’s live status, with cached results.
+  - status: next
+    title: Reliability and speed
+    items:
+    - title: Android app
+      desc: Android phones, tablets, and Android TV / TV boxes.
+    - title: Multi-line channels with smart switching
+      desc: Automatically picks the smoothest line.
+    - title: Cached remote playlists and offline open
+    - title: AirPlay
+    - title: Performance for 10,000+ channel lists
+    - title: App localization
+      desc: English, Simplified Chinese, Bahasa Melayu, Bahasa Indonesia, Tiếng Việt, and Thai.
+  - status: later
+    title: More content and platforms
+    items:
+    - title: XMLTV program guide (EPG)
+    - title: Catch-up
+      desc: Available only when the stream source provides catch-up parameters.
+    - title: iCloud sync
+      desc: Favorites, playlists, and settings across devices.
+    - title: Xtream Codes support
+    - title: Apple TV and CarPlay
+    - title: Global search
 faq:
   title: FAQ
   items:
-    - q: Does Doubo provide TV channels?
-      a: No. Doubo is a player; it doesn't bundle or sell channel content. Add playlists you're authorized to use. Recommended lists in the app are third-party public links, and their availability and viewing rights are set by their providers.
-    - q: How do I get started?
-      a: Tap Add, paste an M3U / M3U8 playlist URL you’re authorized to use, or import a .m3u / .m3u8 file from Files. Channels are grouped automatically. See the Guide page for step-by-step instructions.
-    - q: Which formats are supported?
-      a: M3U and M3U8 playlists, with live streams such as HLS (.m3u8) that Apple’s native player supports. You can also open local video files directly.
-    - q: Do you collect my data?
-      a: The app collects no personal data. Playlists, favorites, and watch history stay on your device. This website uses Google Analytics to understand visits; see the privacy policy.
-    - q: What do I need to cast to a TV?
-      a: The TV must support DLNA rendering (DMR) and be on the same network. Automatic discovery on iPhone and iPad requires Apple's multicast networking entitlement, which is still pending; Mac isn't affected.
-    - q: Does it work on Apple TV?
-      a: An Apple TV version is planned. Today Doubo runs on iPhone, iPad, and Mac, and you can cast to your living-room TV.
-
+  - q: Does Doubo provide TV channels?
+    a: No. Doubo is a player; it doesn't bundle or sell channel content. Add playlists you're authorized to use. Recommended lists in the app are third-party public links, and their availability and viewing rights are set by their providers.
+  - q: How do I get started?
+    a: Tap Add, paste an M3U / M3U8 playlist URL you’re authorized to use, or import a .m3u / .m3u8 file from Files. Channels are grouped automatically. See the Guide page for step-by-step instructions.
+  - q: Which formats are supported?
+    a: M3U and M3U8 playlists, with live streams such as HLS (.m3u8) that Apple’s native player supports. You can also open local video files directly.
+  - q: Do you collect my data?
+    a: The app collects no personal data. Playlists, favorites, and watch history stay on your device. This website uses Google Analytics to understand visits; see the privacy policy.
+  - q: What do I need to cast to a TV?
+    a: The TV must support DLNA rendering (DMR) and be on the same network. Automatic discovery on iPhone and iPad requires Apple's multicast networking entitlement, which is still pending; Mac isn't affected.
+  - q: Is there an Android version?
+    a: It’s on the way. Doubo for Android will support phones, tablets, and Android TV / TV boxes, and we’ll announce it here as soon as it’s available.
+  - q: Does it work on Apple TV?
+    a: An Apple TV version is planned. Today Doubo runs on iPhone, iPad, and Mac, and you can cast to your living-room TV.
 support:
   title: Support
   subtitle: Running into a problem or have an idea? Here's how to reach us.
@@ -193,49 +201,44 @@ support:
   issues_desc: Open a GitHub issue with your device, OS version, and steps to reproduce. Please don't post playlist URLs that contain tokens or passwords.
   issues_link: Go to GitHub Issues
   email_title: Email
-
 privacy_label: Privacy Policy
-
 consent:
   text: We use Google Analytics to understand how this website is used. Choose whether to allow analytics cookies; you can change this anytime in the footer.
   accept: Accept
   decline: Decline
   more: Learn more
   manage: Cookie settings
-
 footer:
-  tagline: A native IPTV player for iPhone, iPad, and Mac.
+  tagline: A native IPTV & M3U player for iPhone, iPad, and Mac. Android coming soon.
   disclaimer: Doubo does not provide any channel content. Only play content you're authorized to access. Apple, iPhone, iPad, Mac, Apple TV, AirPlay, and CarPlay are trademarks of Apple Inc.
   product: Product
   resources: Resources
   feedback: Feedback
-
 not_found:
   title: Page not found
   desc: The page you're looking for may have moved or been removed.
   home: Back to home
-
 guide:
   title: Guide
   subtitle: 'Get started in three minutes: play M3U / M3U8 playlists on iPhone, iPad, and Mac.'
   description: 'How to use Doubo: add M3U / M3U8 playlists on iPhone, iPad, and Mac, browse channels, watch in Picture in Picture, and cast to your TV.'
   intro: Before you start, have an M3U / M3U8 playlist URL or file that you’re authorized to use. Doubo is a player and doesn’t provide any channels.
   steps:
-    - title: Add a playlist
-      desc: Open Doubo and tap Add. Choose “Add playlist URL” to paste an M3U address, or “Import playlist file” to import a .m3u / .m3u8 file from the Files app.
-    - title: Browse, search, and favorite
-      desc: Channels are grouped by group-title automatically. Search channel or group names at the top, star the channels you watch most, and find recently played channels anytime.
-    - title: Organize channels in one tap
-      desc: Tap “Check channels” and Doubo tests the whole playlist in parallel, so you can show just the channels that are ready to play.
-    - title: Play and Picture in Picture
-      desc: Tap a channel to play. Enjoy Picture in Picture, subtitle tracks, playback speed, and landscape full screen, and keep watching while you use other apps.
-    - title: Cast to your TV
-      desc: Tap the cast icon in the player and choose a DLNA smart TV on the same network to watch on the big screen.
-    - title: Manage multiple playlists
-      desc: Your last 20 playlists are saved on your device. Doubo reopens the one you watched last, and you can switch anytime.
+  - title: Add a playlist
+    desc: Open Doubo and tap Add. Choose “Add playlist URL” to paste an M3U address, or “Import playlist file” to import a .m3u / .m3u8 file from the Files app.
+  - title: Browse, search, and favorite
+    desc: Channels are grouped by group-title automatically. Search channel or group names at the top, star the channels you watch most, and find recently played channels anytime.
+  - title: Organize channels in one tap
+    desc: Tap “Check channels” and Doubo tests the whole playlist in parallel, so you can show just the channels that are ready to play.
+  - title: Play and Picture in Picture
+    desc: Tap a channel to play. Enjoy Picture in Picture, subtitle tracks, playback speed, and landscape full screen, and keep watching while you use other apps.
+  - title: Cast to your TV
+    desc: Tap the cast icon in the player and choose a DLNA smart TV on the same network to watch on the big screen.
+  - title: Manage multiple playlists
+    desc: Your last 20 playlists are saved on your device. Doubo reopens the one you watched last, and you can switch anytime.
   tips_title: Tips
   tips:
-    - Playlists must be in M3U or M3U8 format; channel addresses usually start with http(s)://.
-    - When a channel has several sources, switch between them under Lines.
-    - Playlists, favorites, and history stay on your device, and you can clear them anytime in Settings.
+  - Playlists must be in M3U or M3U8 format; channel addresses usually start with http(s)://.
+  - When a channel has several sources, switch between them under Lines.
+  - Playlists, favorites, and history stay on your device, and you can clear them anytime in Settings.
   cta: More questions? See the FAQ or contact us

@@ -175,14 +175,12 @@ layout: default
       <p class="lead">{{ t.platforms.subtitle }}</p>
     </header>
     <ul class="platforms">
-      {%- assign platform_icons = "phone,tablet,laptop,tv,car" | split: "," -%}
       {%- for p in t.platforms.items %}
       <li class="platform is-{{ p.status }} reveal" style="--i:{{ forloop.index0 }}">
-        {%- assign platform_icon = platform_icons[forloop.index0] %}
-        <span class="platform-icon">{% include icon.html name=platform_icon %}</span>
+        <span class="platform-icon">{% include icon.html name=p.icon %}</span>
         <strong>{{ p.name }}</strong>
         <span>{{ p.detail }}</span>
-        <em class="badge badge-{{ p.status }}">{% if p.status == "available" %}{{ t.platforms.available }}{% else %}{{ t.platforms.planned }}{% endif %}</em>
+        <em class="badge badge-{{ p.status }}">{% if p.status == "available" %}{{ t.platforms.available }}{% elsif p.status == "soon" %}{{ t.platforms.soon }}{% else %}{{ t.platforms.planned }}{% endif %}</em>
       </li>
       {%- endfor %}
     </ul>

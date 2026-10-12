@@ -1,13 +1,11 @@
 html_lang: id
 og_locale: id_ID
 brand: Doubo
-slogan: "Semua saluran, satu pemutar."
+slogan: Semua saluran, satu pemutar.
 lang_name: Bahasa Indonesia
-
 meta:
-  title: Doubo — Aplikasi Pemutar IPTV & M3U untuk iPhone, iPad, dan Mac
-  description: Doubo adalah pemutar M3U/M3U8 native. Impor playlist Anda sendiri, jelajahi per grup, periksa saluran yang bisa diputar, tonton dengan Picture in Picture, dan kirim ke TV. Tanpa saluran bawaan, tanpa pengumpulan data pribadi.
-
+  title: Doubo — Aplikasi Pemutar IPTV & M3U Lintas Platform
+  description: Doubo adalah pemutar IPTV & M3U native, kini tersedia untuk iPhone, iPad, dan Mac, dengan versi ponsel, tablet, dan TV box Android segera hadir. Impor playlist Anda sendiri, jelajahi per grup, tonton dengan Picture in Picture, dan kirim ke TV. Tanpa saluran bawaan, tanpa pengumpulan data pribadi.
 nav:
   guide: Panduan
   features: Fitur
@@ -16,110 +14,118 @@ nav:
   support: Dukungan
   privacy: Privasi
   download: Unduh
-
 cta:
   app_store: Unduh di App Store
   testflight: Ikuti beta TestFlight
   coming_soon: Segera hadir di App Store
   roadmap: Lihat peta jalan
-
+  google_play: Google Play — segera hadir
 hero:
-  eyebrow: Pemutar IPTV & M3U · iPhone · iPad · Mac
+  eyebrow: Pemutar IPTV & M3U · iOS · macOS · Android segera hadir
   title: Playlist Anda,<br><span class="gradient-text">sekali ketuk langsung putar.</span>
   subtitle: Doubo adalah pemutar IPTV native. Impor M3U/M3U8, jelajahi per grup, simpan saluran favorit, dan tonton dengan Picture in Picture atau di TV Anda.
   note: Dibuat secara native · Tanpa saluran bawaan · Data Anda tetap di perangkat Anda
-
 mock:
   playlist: Playlist Saya
   live: Langsung
-  casting: "Mentransmisikan ke TV"
+  casting: Mentransmisikan ke TV
   checked: 142 saluran · 5 grup
-  groups: [Semua, Berita, Olahraga, Dokumenter, Musik]
+  groups:
+  - Semua
+  - Berita
+  - Olahraga
+  - Dokumenter
+  - Musik
   channels:
-    - name: Berita 24
-      group: Berita
-      state: playing
-    - name: Olahraga HD
-      group: Olahraga
-      state: ok
-    - name: Dokumenter Alam
-      group: Dokumenter
-      state: ok
-    - name: Musik Live
-      group: Musik
-      state: ok
-
+  - name: Berita 24
+    group: Berita
+    state: playing
+  - name: Olahraga HD
+    group: Olahraga
+    state: ok
+  - name: Dokumenter Alam
+    group: Dokumenter
+    state: ok
+  - name: Musik Live
+    group: Musik
+    state: ok
 features:
   eyebrow: Fitur
   title: Mulus dari impor sampai menonton
-  subtitle: Dibangun hanya dengan framework Apple, sehingga ringan, mulus, dan hemat baterai.
+  subtitle: Dibuat secara native, sehingga ringan, mulus, dan hemat baterai.
   items:
-    - icon: import
-      title: Impor playlist M3U apa pun
-      desc: Tambahkan URL atau file .m3u / .m3u8 lokal. Nama saluran, grup, dan logo diurai secara otomatis, dan 20 playlist terakhir diingat serta dipulihkan saat aplikasi dibuka.
-    - icon: grid
-      title: Grup, pencarian, dan favorit
-      desc: Jelajahi per group-title, cari nama saluran dan grup secara instan, tandai saluran favorit, dan kembali ke saluran yang baru ditonton.
-    - icon: pulse
-      title: Periksa semua saluran sekaligus
-      desc: Doubo menguji seluruh playlist secara paralel dan menyusun saluran yang siap diputar, jadi Anda tinggal tekan putar.
-    - icon: route
-      title: Ganti jalur dengan sekali ketuk
-      desc: Jika satu saluran punya beberapa sumber, ganti di antaranya pada bagian Jalur dan pilih yang paling lancar kapan saja.
-    - icon: pip
-      title: Pengalaman pemutaran native
-      desc: Dibangun di atas AVKit, dengan Picture in Picture, trek subtitle, kecepatan putar, dan layar penuh lanskap. Baris saluran yang sedang diputar menampilkan cuplikan langsung.
-    - icon: cast
-      title: Kirim ke TV Anda
-      desc: Kirim ke smart TV DLNA di jaringan yang sama, atau buka file video lokal untuk diputar langsung.
-    - icon: lock
-      title: Privasi yang utama
-      desc: Playlist, favorit, dan riwayat tetap di perangkat Anda. Aplikasi ini tidak memiliki SDK iklan atau analitik dan tidak mengumpulkan data pribadi apa pun.
-
+  - icon: import
+    title: Impor playlist M3U apa pun
+    desc: Tambahkan URL atau file .m3u / .m3u8 lokal. Nama saluran, grup, dan logo diurai secara otomatis, dan 20 playlist terakhir diingat serta dipulihkan saat aplikasi dibuka.
+  - icon: grid
+    title: Grup, pencarian, dan favorit
+    desc: Jelajahi per group-title, cari nama saluran dan grup secara instan, tandai saluran favorit, dan kembali ke saluran yang baru ditonton.
+  - icon: pulse
+    title: Periksa semua saluran sekaligus
+    desc: Doubo menguji seluruh playlist secara paralel dan menyusun saluran yang siap diputar, jadi Anda tinggal tekan putar.
+  - icon: route
+    title: Ganti jalur dengan sekali ketuk
+    desc: Jika satu saluran punya beberapa sumber, ganti di antaranya pada bagian Jalur dan pilih yang paling lancar kapan saja.
+  - icon: pip
+    title: Pengalaman pemutaran native
+    desc: Dibangun di atas AVKit, dengan Picture in Picture, trek subtitle, kecepatan putar, dan layar penuh lanskap. Baris saluran yang sedang diputar menampilkan cuplikan langsung.
+  - icon: cast
+    title: Kirim ke TV Anda
+    desc: Kirim ke smart TV DLNA di jaringan yang sama, atau buka file video lokal untuk diputar langsung.
+  - icon: lock
+    title: Privasi yang utama
+    desc: Playlist, favorit, dan riwayat tetap di perangkat Anda. Aplikasi ini tidak memiliki SDK iklan atau analitik dan tidak mengumpulkan data pribadi apa pun.
 how:
   eyebrow: Mulai
   title: Menonton dalam tiga langkah
   steps:
-    - title: Tambahkan playlist
-      desc: Tempel URL M3U yang berhak Anda gunakan, atau impor dari aplikasi File.
-    - title: Rapikan saluran
-      desc: Sekali ketuk untuk menyusun saluran yang siap diputar.
-    - title: Putar atau kirim ke TV
-      desc: Ketuk untuk memutar, lanjutkan menonton dengan Picture in Picture, atau kirim ke TV di ruang keluarga.
-
+  - title: Tambahkan playlist
+    desc: Tempel URL M3U yang berhak Anda gunakan, atau impor dari aplikasi File.
+  - title: Rapikan saluran
+    desc: Sekali ketuk untuk menyusun saluran yang siap diputar.
+  - title: Putar atau kirim ke TV
+    desc: Ketuk untuk memutar, lanjutkan menonton dengan Picture in Picture, atau kirim ke TV di ruang keluarga.
 platforms:
   eyebrow: Platform
-  title: Dibuat native untuk perangkat Apple
-  subtitle: SwiftUI dan AVFoundation menghadirkan satu pengalaman di ponsel, tablet, dan komputer.
+  title: Ponsel, tablet, komputer, dan TV — satu Doubo
+  subtitle: Kini tersedia di iPhone, iPad, dan Mac. Ponsel, tablet, dan Android TV / TV box Android segera hadir.
   available: Tersedia
   planned: Direncanakan
   items:
-    - name: iPhone
-      detail: iOS 17 atau lebih baru
-      status: available
-    - name: iPad
-      detail: iPadOS 17 atau lebih baru
-      status: available
-    - name: Mac
-      detail: macOS 14 atau lebih baru
-      status: available
-    - name: Apple TV
-      detail: tvOS
-      status: planned
-    - name: CarPlay
-      detail: Audio dan penjelajahan
-      status: planned
-
+  - name: iPhone
+    detail: iOS 17 atau lebih baru
+    status: available
+    icon: phone
+  - name: iPad
+    detail: iPadOS 17 atau lebih baru
+    status: available
+    icon: tablet
+  - name: Mac
+    detail: macOS 14 atau lebih baru
+    status: available
+    icon: laptop
+  - name: Android
+    detail: Ponsel & tablet
+    status: soon
+    icon: android
+  - name: Android TV
+    detail: TV & TV box
+    status: soon
+    icon: tv
+  - name: Apple TV
+    detail: tvOS
+    status: planned
+    icon: tv
+  soon: Segera hadir
 roadmap_teaser:
   eyebrow: Peta jalan
   title: Yang akan datang
   subtitle: Prioritas kami sederhana. Pertama, membuat pemutaran lebih lancar dan stabil. Lalu menambahkan panduan acara, tayangan ulang, dan lainnya.
   link: Lihat peta jalan lengkap
-
 roadmap:
   title: Peta jalan
   subtitle: Kami mengutamakan pengalaman pemutaran yang lancar dan stabil, lalu memperluas fitur dan platform. Ini adalah arah yang direncanakan, bukan janji tanggal rilis.
-  updated: "Terakhir diperbarui: "
+  updated: 'Terakhir diperbarui: '
   updated_date: Oktober 2026
   feedback: Ada usulan? Sampaikan di GitHub.
   feedback_link: Usulkan fitur
@@ -129,63 +135,65 @@ roadmap:
     next: Berikutnya
     later: Nanti
   columns:
-    - status: done
-      title: Fondasi 1.0
-      items:
-        - title: Impor M3U/M3U8 dan pemulihan riwayat
-          desc: Impor dari URL atau file; playlist terakhir diingat.
-        - title: Grup, pencarian, favorit, baru ditonton
-        - title: Pemeriksaan ketersediaan paralel
-        - title: Picture in Picture, subtitle, kecepatan putar
-        - title: Ganti jalur untuk saluran bernama sama
-        - title: Transmisi DLNA dan video lokal
-    - status: now
-      title: Pemutaran lebih lancar
-      items:
-        - title: Kompatibilitas siaran HTTP yang lebih luas
-        - title: Penyempurnaan audio latar dan Picture in Picture
-        - title: Penguraian M3U yang lebih lengkap
-          desc: Encoding GBK dan lainnya, tvg-id, header User-Agent / Referer per saluran.
-        - title: Status kesehatan saluran
-          desc: Menampilkan status terkini setiap saluran, dengan hasil tersimpan.
-    - status: next
-      title: Keandalan dan kecepatan
-      items:
-        - title: Saluran multi-jalur dengan peralihan otomatis
-          desc: Otomatis memilih jalur yang paling lancar.
-        - title: Playlist jarak jauh tersimpan dan bisa dibuka offline
-        - title: AirPlay
-        - title: Performa untuk daftar lebih dari 10.000 saluran
-        - title: Aplikasi multibahasa
-          desc: English, Mandarin Sederhana, Bahasa Melayu, Bahasa Indonesia, Tiếng Việt, dan Thai.
-    - status: later
-      title: Lebih banyak konten dan platform
-      items:
-        - title: Panduan acara XMLTV (EPG)
-        - title: Tayangan ulang (Catch-up)
-          desc: Hanya tersedia jika sumber siaran menyediakan parameter tayangan ulang.
-        - title: Sinkronisasi iCloud
-          desc: Favorit, playlist, dan pengaturan di semua perangkat.
-        - title: Dukungan Xtream Codes
-        - title: Apple TV dan CarPlay
-        - title: Pencarian global
-
+  - status: done
+    title: Fondasi 1.0
+    items:
+    - title: Impor M3U/M3U8 dan pemulihan riwayat
+      desc: Impor dari URL atau file; playlist terakhir diingat.
+    - title: Grup, pencarian, favorit, baru ditonton
+    - title: Pemeriksaan ketersediaan paralel
+    - title: Picture in Picture, subtitle, kecepatan putar
+    - title: Ganti jalur untuk saluran bernama sama
+    - title: Transmisi DLNA dan video lokal
+  - status: now
+    title: Pemutaran lebih lancar
+    items:
+    - title: Kompatibilitas siaran HTTP yang lebih luas
+    - title: Penyempurnaan audio latar dan Picture in Picture
+    - title: Penguraian M3U yang lebih lengkap
+      desc: Encoding GBK dan lainnya, tvg-id, header User-Agent / Referer per saluran.
+    - title: Status kesehatan saluran
+      desc: Menampilkan status terkini setiap saluran, dengan hasil tersimpan.
+  - status: next
+    title: Keandalan dan kecepatan
+    items:
+    - title: Aplikasi Android
+      desc: Ponsel, tablet, dan Android TV / TV box Android.
+    - title: Saluran multi-jalur dengan peralihan otomatis
+      desc: Otomatis memilih jalur yang paling lancar.
+    - title: Playlist jarak jauh tersimpan dan bisa dibuka offline
+    - title: AirPlay
+    - title: Performa untuk daftar lebih dari 10.000 saluran
+    - title: Aplikasi multibahasa
+      desc: English, Mandarin Sederhana, Bahasa Melayu, Bahasa Indonesia, Tiếng Việt, dan Thai.
+  - status: later
+    title: Lebih banyak konten dan platform
+    items:
+    - title: Panduan acara XMLTV (EPG)
+    - title: Tayangan ulang (Catch-up)
+      desc: Hanya tersedia jika sumber siaran menyediakan parameter tayangan ulang.
+    - title: Sinkronisasi iCloud
+      desc: Favorit, playlist, dan pengaturan di semua perangkat.
+    - title: Dukungan Xtream Codes
+    - title: Apple TV dan CarPlay
+    - title: Pencarian global
 faq:
   title: Pertanyaan umum
   items:
-    - q: Apakah Doubo menyediakan saluran TV?
-      a: Tidak. Doubo adalah pemutar; aplikasi ini tidak menyertakan atau menjual konten saluran. Tambahkan playlist yang berhak Anda gunakan. Daftar rekomendasi di aplikasi adalah tautan publik pihak ketiga, dan ketersediaan serta hak tontonnya ditentukan oleh penyedianya.
-    - q: Bagaimana cara memulai?
-      a: Ketuk Tambah, tempel URL playlist M3U / M3U8 yang berhak Anda gunakan, atau impor file .m3u / .m3u8 dari aplikasi File. Saluran akan dikelompokkan secara otomatis. Lihat halaman Panduan untuk langkah lengkapnya.
-    - q: Format apa saja yang didukung?
-      a: Playlist M3U dan M3U8, dengan siaran langsung seperti HLS (.m3u8) yang didukung pemutar bawaan Apple. Anda juga bisa membuka file video lokal secara langsung.
-    - q: Apakah data saya dikumpulkan?
-      a: Aplikasi ini tidak mengumpulkan data pribadi. Playlist, favorit, dan riwayat tontonan tetap di perangkat Anda. Situs web ini menggunakan Google Analytics untuk memahami kunjungan; lihat kebijakan privasi.
-    - q: Apa yang dibutuhkan untuk mengirim ke TV?
-      a: TV harus mendukung DLNA renderer (DMR) dan berada di jaringan yang sama. Penemuan otomatis di iPhone dan iPad memerlukan izin jaringan multicast dari Apple, yang masih dalam proses; Mac tidak terpengaruh.
-    - q: Apakah bisa digunakan di Apple TV?
-      a: Versi Apple TV sedang direncanakan. Saat ini Doubo berjalan di iPhone, iPad, dan Mac, dan Anda bisa mengirim siaran ke TV di ruang keluarga.
-
+  - q: Apakah Doubo menyediakan saluran TV?
+    a: Tidak. Doubo adalah pemutar; aplikasi ini tidak menyertakan atau menjual konten saluran. Tambahkan playlist yang berhak Anda gunakan. Daftar rekomendasi di aplikasi adalah tautan publik pihak ketiga, dan ketersediaan serta hak tontonnya ditentukan oleh penyedianya.
+  - q: Bagaimana cara memulai?
+    a: Ketuk Tambah, tempel URL playlist M3U / M3U8 yang berhak Anda gunakan, atau impor file .m3u / .m3u8 dari aplikasi File. Saluran akan dikelompokkan secara otomatis. Lihat halaman Panduan untuk langkah lengkapnya.
+  - q: Format apa saja yang didukung?
+    a: Playlist M3U dan M3U8, dengan siaran langsung seperti HLS (.m3u8) yang didukung pemutar bawaan Apple. Anda juga bisa membuka file video lokal secara langsung.
+  - q: Apakah data saya dikumpulkan?
+    a: Aplikasi ini tidak mengumpulkan data pribadi. Playlist, favorit, dan riwayat tontonan tetap di perangkat Anda. Situs web ini menggunakan Google Analytics untuk memahami kunjungan; lihat kebijakan privasi.
+  - q: Apa yang dibutuhkan untuk mengirim ke TV?
+    a: TV harus mendukung DLNA renderer (DMR) dan berada di jaringan yang sama. Penemuan otomatis di iPhone dan iPad memerlukan izin jaringan multicast dari Apple, yang masih dalam proses; Mac tidak terpengaruh.
+  - q: Apakah ada versi Android?
+    a: Sedang dalam perjalanan. Doubo untuk Android akan mendukung ponsel, tablet, dan Android TV / TV box, dan kami akan mengumumkannya di sini begitu tersedia.
+  - q: Apakah bisa digunakan di Apple TV?
+    a: Versi Apple TV sedang direncanakan. Saat ini Doubo berjalan di iPhone, iPad, dan Mac, dan Anda bisa mengirim siaran ke TV di ruang keluarga.
 support:
   title: Dukungan
   subtitle: Mengalami masalah atau punya ide? Begini cara menghubungi kami.
@@ -193,49 +201,44 @@ support:
   issues_desc: Buat issue di GitHub dengan menyertakan perangkat, versi sistem, dan langkah untuk mereproduksi masalah. Jangan bagikan URL playlist yang berisi token atau kata sandi.
   issues_link: Buka GitHub Issues
   email_title: Email
-
 privacy_label: Kebijakan Privasi
-
 consent:
   text: Kami menggunakan Google Analytics untuk memahami cara situs web ini digunakan. Pilih apakah Anda mengizinkan cookie analitik; Anda dapat mengubahnya kapan saja di bagian bawah halaman.
   accept: Terima
   decline: Tolak
   more: Selengkapnya
   manage: Pengaturan cookie
-
 footer:
-  tagline: Pemutar IPTV native untuk iPhone, iPad, dan Mac.
+  tagline: Pemutar IPTV & M3U native untuk iPhone, iPad, dan Mac. Android segera hadir.
   disclaimer: Doubo tidak menyediakan konten saluran apa pun. Putar hanya konten yang berhak Anda akses. Apple, iPhone, iPad, Mac, Apple TV, AirPlay, dan CarPlay adalah merek dagang Apple Inc.
   product: Produk
   resources: Sumber daya
   feedback: Masukan
-
 not_found:
   title: Halaman tidak ditemukan
   desc: Halaman yang Anda cari mungkin telah dipindahkan atau dihapus.
   home: Kembali ke beranda
-
 guide:
   title: Panduan
   subtitle: 'Mulai dalam tiga menit: putar playlist M3U / M3U8 di iPhone, iPad, dan Mac.'
   description: 'Cara menggunakan Doubo: tambahkan playlist M3U / M3U8 di iPhone, iPad, dan Mac, jelajahi saluran, tonton dengan Picture in Picture, dan kirim ke TV.'
   intro: Sebelum memulai, siapkan URL atau file playlist M3U / M3U8 yang berhak Anda gunakan. Doubo adalah pemutar dan tidak menyediakan saluran apa pun.
   steps:
-    - title: Tambahkan playlist
-      desc: Buka Doubo dan ketuk Tambah. Pilih “Tambah URL playlist” untuk menempel alamat M3U, atau “Impor file playlist” untuk mengimpor file .m3u / .m3u8 dari aplikasi File.
-    - title: Jelajahi, cari, dan simpan favorit
-      desc: Saluran dikelompokkan berdasarkan group-title secara otomatis. Cari nama saluran atau grup di bagian atas, tandai saluran yang sering ditonton, dan temukan saluran yang baru diputar kapan saja.
-    - title: Rapikan saluran dengan sekali ketuk
-      desc: Ketuk “Periksa saluran” dan Doubo akan menguji seluruh playlist secara paralel, sehingga Anda bisa menampilkan hanya saluran yang siap diputar.
-    - title: Putar dan Picture in Picture
-      desc: Ketuk saluran untuk memutar. Nikmati Picture in Picture, trek subtitle, kecepatan putar, dan layar penuh lanskap, serta tetap menonton saat memakai aplikasi lain.
-    - title: Kirim ke TV Anda
-      desc: Ketuk ikon transmisi di pemutar dan pilih smart TV DLNA di jaringan yang sama untuk menonton di layar besar.
-    - title: Kelola beberapa playlist
-      desc: 20 playlist terakhir disimpan di perangkat Anda. Doubo membuka kembali playlist yang terakhir ditonton, dan Anda bisa beralih kapan saja.
+  - title: Tambahkan playlist
+    desc: Buka Doubo dan ketuk Tambah. Pilih “Tambah URL playlist” untuk menempel alamat M3U, atau “Impor file playlist” untuk mengimpor file .m3u / .m3u8 dari aplikasi File.
+  - title: Jelajahi, cari, dan simpan favorit
+    desc: Saluran dikelompokkan berdasarkan group-title secara otomatis. Cari nama saluran atau grup di bagian atas, tandai saluran yang sering ditonton, dan temukan saluran yang baru diputar kapan saja.
+  - title: Rapikan saluran dengan sekali ketuk
+    desc: Ketuk “Periksa saluran” dan Doubo akan menguji seluruh playlist secara paralel, sehingga Anda bisa menampilkan hanya saluran yang siap diputar.
+  - title: Putar dan Picture in Picture
+    desc: Ketuk saluran untuk memutar. Nikmati Picture in Picture, trek subtitle, kecepatan putar, dan layar penuh lanskap, serta tetap menonton saat memakai aplikasi lain.
+  - title: Kirim ke TV Anda
+    desc: Ketuk ikon transmisi di pemutar dan pilih smart TV DLNA di jaringan yang sama untuk menonton di layar besar.
+  - title: Kelola beberapa playlist
+    desc: 20 playlist terakhir disimpan di perangkat Anda. Doubo membuka kembali playlist yang terakhir ditonton, dan Anda bisa beralih kapan saja.
   tips_title: Tips
   tips:
-    - Playlist harus berformat M3U atau M3U8; alamat saluran biasanya diawali http(s)://.
-    - Jika satu saluran punya beberapa sumber, ganti di antaranya pada bagian Jalur.
-    - Playlist, favorit, dan riwayat tetap di perangkat Anda, dan bisa dihapus kapan saja di Pengaturan.
+  - Playlist harus berformat M3U atau M3U8; alamat saluran biasanya diawali http(s)://.
+  - Jika satu saluran punya beberapa sumber, ganti di antaranya pada bagian Jalur.
+  - Playlist, favorit, dan riwayat tetap di perangkat Anda, dan bisa dihapus kapan saja di Pengaturan.
   cta: Masih ada pertanyaan? Lihat pertanyaan umum atau hubungi kami

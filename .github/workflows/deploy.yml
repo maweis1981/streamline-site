@@ -31,12 +31,13 @@ jobs:
           GA_MEASUREMENT_ID: ${{ vars.GA_MEASUREMENT_ID }}
           APP_STORE_URL: ${{ vars.APP_STORE_URL }}
           TESTFLIGHT_URL: ${{ vars.TESTFLIGHT_URL }}
+          GOOGLE_PLAY_URL: ${{ vars.GOOGLE_PLAY_URL }}
           SUPPORT_EMAIL: ${{ vars.SUPPORT_EMAIL }}
         run: |
           ruby -ryaml -e '
             base = YAML.load_file("_config.yml")
             links = base["links"].merge({
-              "app_store" => ENV["APP_STORE_URL"], "testflight" => ENV["TESTFLIGHT_URL"], "support_email" => ENV["SUPPORT_EMAIL"]
+              "app_store" => ENV["APP_STORE_URL"], "testflight" => ENV["TESTFLIGHT_URL"], "google_play" => ENV["GOOGLE_PLAY_URL"], "support_email" => ENV["SUPPORT_EMAIL"]
             }.reject { |_, v| v.to_s.strip.empty? })
             analytics = base["analytics"].merge({
               "gtm_id" => ENV["GTM_ID"], "ga_measurement_id" => ENV["GA_MEASUREMENT_ID"]

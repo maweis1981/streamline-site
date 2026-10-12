@@ -1,13 +1,11 @@
 html_lang: vi
 og_locale: vi_VN
 brand: Doubo
-slogan: "Mọi kênh, một trình phát."
+slogan: Mọi kênh, một trình phát.
 lang_name: Tiếng Việt
-
 meta:
-  title: Doubo — Ứng dụng xem IPTV & trình phát M3U cho iPhone, iPad và Mac
-  description: Doubo là trình phát M3U/M3U8 gốc. Nhập danh sách phát của riêng bạn, duyệt theo nhóm, kiểm tra kênh nào phát được, xem bằng Hình trong hình và truyền lên TV. Không kèm sẵn kênh, không thu thập dữ liệu cá nhân.
-
+  title: Doubo — Ứng dụng xem IPTV & trình phát M3U đa nền tảng
+  description: Doubo là trình phát IPTV & M3U gốc, hiện có trên iPhone, iPad và Mac; phiên bản cho điện thoại, máy tính bảng và TV box Android sắp ra mắt. Nhập danh sách phát của riêng bạn, duyệt theo nhóm, xem bằng Hình trong hình và truyền lên TV. Không kèm sẵn kênh, không thu thập dữ liệu cá nhân.
 nav:
   guide: Hướng dẫn
   features: Tính năng
@@ -16,110 +14,118 @@ nav:
   support: Hỗ trợ
   privacy: Quyền riêng tư
   download: Tải về
-
 cta:
   app_store: Tải về trên App Store
   testflight: Tham gia thử nghiệm TestFlight
   coming_soon: Sắp có trên App Store
   roadmap: Xem lộ trình
-
+  google_play: Google Play — sắp ra mắt
 hero:
-  eyebrow: Trình phát IPTV & M3U · iPhone · iPad · Mac
+  eyebrow: Trình phát IPTV & M3U · iOS · macOS · Android sắp ra mắt
   title: Danh sách phát của bạn,<br><span class="gradient-text">chạm là phát.</span>
   subtitle: Doubo là trình phát IPTV gốc. Nhập M3U/M3U8, duyệt theo nhóm, lưu kênh yêu thích và xem bằng Hình trong hình hoặc trên TV.
   note: Phát triển gốc · Không kèm sẵn kênh · Dữ liệu luôn nằm trên thiết bị của bạn
-
 mock:
   playlist: Danh sách của tôi
   live: Trực tiếp
-  casting: "Đang truyền lên TV"
+  casting: Đang truyền lên TV
   checked: 142 kênh · 5 nhóm
-  groups: [Tất cả, Tin tức, Thể thao, Tài liệu, Âm nhạc]
+  groups:
+  - Tất cả
+  - Tin tức
+  - Thể thao
+  - Tài liệu
+  - Âm nhạc
   channels:
-    - name: Tin tức 24
-      group: Tin tức
-      state: playing
-    - name: Thể thao HD
-      group: Thể thao
-      state: ok
-    - name: Thế giới tự nhiên
-      group: Tài liệu
-      state: ok
-    - name: Âm nhạc trực tiếp
-      group: Âm nhạc
-      state: ok
-
+  - name: Tin tức 24
+    group: Tin tức
+    state: playing
+  - name: Thể thao HD
+    group: Thể thao
+    state: ok
+  - name: Thế giới tự nhiên
+    group: Tài liệu
+    state: ok
+  - name: Âm nhạc trực tiếp
+    group: Âm nhạc
+    state: ok
 features:
   eyebrow: Tính năng
   title: Mượt mà từ lúc nhập đến lúc xem
-  subtitle: Chỉ dùng các framework của Apple nên nhẹ, mượt và tiết kiệm pin.
+  subtitle: Phát triển gốc nên nhẹ, mượt và tiết kiệm pin.
   items:
-    - icon: import
-      title: Nhập mọi danh sách phát M3U
-      desc: Thêm URL hoặc tệp .m3u / .m3u8 trên máy. Tên kênh, nhóm và logo được phân tích tự động; 20 danh sách gần nhất được ghi nhớ và khôi phục khi mở ứng dụng.
-    - icon: grid
-      title: Nhóm, tìm kiếm và yêu thích
-      desc: Duyệt theo group-title, tìm tên kênh và nhóm tức thì, đánh dấu kênh yêu thích và quay lại kênh vừa xem.
-    - icon: pulse
-      title: Kiểm tra mọi kênh cùng lúc
-      desc: Doubo kiểm tra song song toàn bộ danh sách phát và sắp xếp sẵn các kênh sẵn sàng phát, bạn chỉ việc bấm xem.
-    - icon: route
-      title: Đổi đường truyền chỉ một chạm
-      desc: Khi một kênh có nhiều nguồn, chuyển đổi giữa chúng ở mục Đường truyền và chọn nguồn mượt nhất bất cứ lúc nào.
-    - icon: pip
-      title: Trải nghiệm phát gốc
-      desc: Xây dựng trên AVKit, có Hình trong hình, chọn phụ đề, tốc độ phát và toàn màn hình khi xoay ngang. Dòng kênh đang phát hiển thị hình ảnh trực tiếp.
-    - icon: cast
-      title: Truyền lên TV
-      desc: Truyền tới smart TV hỗ trợ DLNA trong cùng mạng, hoặc mở tệp video trên máy để phát trực tiếp.
-    - icon: lock
-      title: Ưu tiên quyền riêng tư
-      desc: Danh sách phát, mục yêu thích và lịch sử luôn nằm trên thiết bị. Ứng dụng không có SDK quảng cáo hay phân tích và không thu thập dữ liệu cá nhân.
-
+  - icon: import
+    title: Nhập mọi danh sách phát M3U
+    desc: Thêm URL hoặc tệp .m3u / .m3u8 trên máy. Tên kênh, nhóm và logo được phân tích tự động; 20 danh sách gần nhất được ghi nhớ và khôi phục khi mở ứng dụng.
+  - icon: grid
+    title: Nhóm, tìm kiếm và yêu thích
+    desc: Duyệt theo group-title, tìm tên kênh và nhóm tức thì, đánh dấu kênh yêu thích và quay lại kênh vừa xem.
+  - icon: pulse
+    title: Kiểm tra mọi kênh cùng lúc
+    desc: Doubo kiểm tra song song toàn bộ danh sách phát và sắp xếp sẵn các kênh sẵn sàng phát, bạn chỉ việc bấm xem.
+  - icon: route
+    title: Đổi đường truyền chỉ một chạm
+    desc: Khi một kênh có nhiều nguồn, chuyển đổi giữa chúng ở mục Đường truyền và chọn nguồn mượt nhất bất cứ lúc nào.
+  - icon: pip
+    title: Trải nghiệm phát gốc
+    desc: Xây dựng trên AVKit, có Hình trong hình, chọn phụ đề, tốc độ phát và toàn màn hình khi xoay ngang. Dòng kênh đang phát hiển thị hình ảnh trực tiếp.
+  - icon: cast
+    title: Truyền lên TV
+    desc: Truyền tới smart TV hỗ trợ DLNA trong cùng mạng, hoặc mở tệp video trên máy để phát trực tiếp.
+  - icon: lock
+    title: Ưu tiên quyền riêng tư
+    desc: Danh sách phát, mục yêu thích và lịch sử luôn nằm trên thiết bị. Ứng dụng không có SDK quảng cáo hay phân tích và không thu thập dữ liệu cá nhân.
 how:
   eyebrow: Bắt đầu
   title: Xem chỉ với ba bước
   steps:
-    - title: Thêm danh sách phát
-      desc: Dán URL M3U mà bạn được phép sử dụng, hoặc nhập từ ứng dụng Tệp.
-    - title: Sắp xếp kênh
-      desc: Một chạm để sắp xếp sẵn các kênh sẵn sàng phát.
-    - title: Phát hoặc truyền lên TV
-      desc: Chạm để phát, tiếp tục xem bằng Hình trong hình, hoặc truyền lên TV phòng khách.
-
+  - title: Thêm danh sách phát
+    desc: Dán URL M3U mà bạn được phép sử dụng, hoặc nhập từ ứng dụng Tệp.
+  - title: Sắp xếp kênh
+    desc: Một chạm để sắp xếp sẵn các kênh sẵn sàng phát.
+  - title: Phát hoặc truyền lên TV
+    desc: Chạm để phát, tiếp tục xem bằng Hình trong hình, hoặc truyền lên TV phòng khách.
 platforms:
   eyebrow: Nền tảng
-  title: Phát triển gốc cho thiết bị Apple
-  subtitle: SwiftUI và AVFoundation mang lại trải nghiệm thống nhất trên điện thoại, máy tính bảng và máy tính.
+  title: Điện thoại, máy tính bảng, máy tính và TV — một Doubo
+  subtitle: Hiện có trên iPhone, iPad và Mac. Điện thoại, máy tính bảng và Android TV / TV box Android sắp ra mắt.
   available: Đã hỗ trợ
   planned: Dự kiến
   items:
-    - name: iPhone
-      detail: iOS 17 trở lên
-      status: available
-    - name: iPad
-      detail: iPadOS 17 trở lên
-      status: available
-    - name: Mac
-      detail: macOS 14 trở lên
-      status: available
-    - name: Apple TV
-      detail: tvOS
-      status: planned
-    - name: CarPlay
-      detail: Âm thanh và duyệt kênh
-      status: planned
-
+  - name: iPhone
+    detail: iOS 17 trở lên
+    status: available
+    icon: phone
+  - name: iPad
+    detail: iPadOS 17 trở lên
+    status: available
+    icon: tablet
+  - name: Mac
+    detail: macOS 14 trở lên
+    status: available
+    icon: laptop
+  - name: Android
+    detail: Điện thoại & máy tính bảng
+    status: soon
+    icon: android
+  - name: Android TV
+    detail: TV & TV box
+    status: soon
+    icon: tv
+  - name: Apple TV
+    detail: tvOS
+    status: planned
+    icon: tv
+  soon: Sắp ra mắt
 roadmap_teaser:
   eyebrow: Lộ trình
   title: Sắp tới có gì
   subtitle: Ưu tiên của chúng tôi rất đơn giản. Trước hết, giúp việc phát mượt và ổn định hơn nữa. Sau đó bổ sung lịch phát sóng, xem lại và nhiều hơn nữa.
   link: Xem toàn bộ lộ trình
-
 roadmap:
   title: Lộ trình
   subtitle: Chúng tôi ưu tiên trải nghiệm phát mượt mà, ổn định trước, sau đó mở rộng tính năng và nền tảng. Đây là định hướng dự kiến, không phải cam kết về ngày phát hành.
-  updated: "Cập nhật lần cuối: "
+  updated: 'Cập nhật lần cuối: '
   updated_date: tháng 10 năm 2026
   feedback: Bạn muốn có tính năng nào? Hãy góp ý trên GitHub.
   feedback_link: Đề xuất tính năng
@@ -129,63 +135,65 @@ roadmap:
     next: Tiếp theo
     later: Dự kiến
   columns:
-    - status: done
-      title: Nền tảng 1.0
-      items:
-        - title: Nhập M3U/M3U8 và khôi phục lịch sử
-          desc: Nhập từ URL hoặc tệp; ghi nhớ các danh sách gần đây.
-        - title: Nhóm, tìm kiếm, yêu thích, vừa xem
-        - title: Kiểm tra khả dụng song song
-        - title: Hình trong hình, phụ đề, tốc độ phát
-        - title: Chuyển đường truyền cho kênh trùng tên
-        - title: Truyền DLNA và phát video trên máy
-    - status: now
-      title: Phát mượt mà hơn
-      items:
-        - title: Tương thích rộng hơn với luồng HTTP
-        - title: Hoàn thiện phát nền và Hình trong hình
-        - title: Phân tích M3U đầy đủ hơn
-          desc: Mã hóa GBK và các mã khác, tvg-id, header User-Agent / Referer theo từng kênh.
-        - title: Trạng thái sức khỏe kênh
-          desc: Hiển thị trạng thái hiện tại của từng kênh, có lưu kết quả.
-    - status: next
-      title: Ổn định và tốc độ
-      items:
-        - title: Kênh nhiều đường truyền, tự động chọn nguồn mượt nhất
-          desc: Tự động chọn đường truyền mượt nhất.
-        - title: Lưu danh sách phát từ xa và mở khi ngoại tuyến
-        - title: AirPlay
-        - title: Hiệu năng cho danh sách trên 10.000 kênh
-        - title: Ứng dụng đa ngôn ngữ
-          desc: English, tiếng Trung giản thể, Bahasa Melayu, Bahasa Indonesia, Tiếng Việt và tiếng Thái.
-    - status: later
-      title: Thêm nội dung và nền tảng
-      items:
-        - title: Lịch phát sóng XMLTV (EPG)
-        - title: Xem lại (Catch-up)
-          desc: Chỉ khả dụng khi nguồn phát cung cấp tham số xem lại.
-        - title: Đồng bộ iCloud
-          desc: Yêu thích, danh sách phát và cài đặt trên mọi thiết bị.
-        - title: Hỗ trợ Xtream Codes
-        - title: Apple TV và CarPlay
-        - title: Tìm kiếm toàn cục
-
+  - status: done
+    title: Nền tảng 1.0
+    items:
+    - title: Nhập M3U/M3U8 và khôi phục lịch sử
+      desc: Nhập từ URL hoặc tệp; ghi nhớ các danh sách gần đây.
+    - title: Nhóm, tìm kiếm, yêu thích, vừa xem
+    - title: Kiểm tra khả dụng song song
+    - title: Hình trong hình, phụ đề, tốc độ phát
+    - title: Chuyển đường truyền cho kênh trùng tên
+    - title: Truyền DLNA và phát video trên máy
+  - status: now
+    title: Phát mượt mà hơn
+    items:
+    - title: Tương thích rộng hơn với luồng HTTP
+    - title: Hoàn thiện phát nền và Hình trong hình
+    - title: Phân tích M3U đầy đủ hơn
+      desc: Mã hóa GBK và các mã khác, tvg-id, header User-Agent / Referer theo từng kênh.
+    - title: Trạng thái sức khỏe kênh
+      desc: Hiển thị trạng thái hiện tại của từng kênh, có lưu kết quả.
+  - status: next
+    title: Ổn định và tốc độ
+    items:
+    - title: Ứng dụng Android
+      desc: Điện thoại, máy tính bảng và Android TV / TV box Android.
+    - title: Kênh nhiều đường truyền, tự động chọn nguồn mượt nhất
+      desc: Tự động chọn đường truyền mượt nhất.
+    - title: Lưu danh sách phát từ xa và mở khi ngoại tuyến
+    - title: AirPlay
+    - title: Hiệu năng cho danh sách trên 10.000 kênh
+    - title: Ứng dụng đa ngôn ngữ
+      desc: English, tiếng Trung giản thể, Bahasa Melayu, Bahasa Indonesia, Tiếng Việt và tiếng Thái.
+  - status: later
+    title: Thêm nội dung và nền tảng
+    items:
+    - title: Lịch phát sóng XMLTV (EPG)
+    - title: Xem lại (Catch-up)
+      desc: Chỉ khả dụng khi nguồn phát cung cấp tham số xem lại.
+    - title: Đồng bộ iCloud
+      desc: Yêu thích, danh sách phát và cài đặt trên mọi thiết bị.
+    - title: Hỗ trợ Xtream Codes
+    - title: Apple TV và CarPlay
+    - title: Tìm kiếm toàn cục
 faq:
   title: Câu hỏi thường gặp
   items:
-    - q: Doubo có cung cấp kênh truyền hình không?
-      a: Không. Doubo là trình phát; ứng dụng không kèm sẵn hay bán nội dung kênh. Hãy thêm danh sách phát mà bạn được phép sử dụng. Các danh sách đề xuất trong ứng dụng là liên kết công khai của bên thứ ba; khả năng truy cập và quyền xem do nhà cung cấp quyết định.
-    - q: Bắt đầu sử dụng như thế nào?
-      a: Chạm Thêm, dán URL danh sách phát M3U / M3U8 mà bạn được phép sử dụng, hoặc nhập tệp .m3u / .m3u8 từ ứng dụng Tệp. Các kênh sẽ được tự động chia nhóm. Xem trang Hướng dẫn để biết từng bước.
-    - q: Hỗ trợ những định dạng nào?
-      a: Danh sách phát M3U và M3U8, cùng các luồng trực tiếp như HLS (.m3u8) mà trình phát gốc của Apple hỗ trợ. Bạn cũng có thể mở trực tiếp tệp video trên máy.
-    - q: Ứng dụng có thu thập dữ liệu của tôi không?
-      a: Ứng dụng không thu thập dữ liệu cá nhân. Danh sách phát, mục yêu thích và lịch sử xem luôn nằm trên thiết bị của bạn. Trang web này dùng Google Analytics để hiểu lượt truy cập; xem chính sách quyền riêng tư.
-    - q: Cần gì để truyền lên TV?
-      a: TV phải hỗ trợ DLNA renderer (DMR) và kết nối cùng mạng. Tự động tìm thiết bị trên iPhone và iPad cần quyền mạng multicast của Apple, hiện vẫn đang chờ cấp; Mac không bị ảnh hưởng.
-    - q: Có dùng được trên Apple TV không?
-      a: Phiên bản Apple TV đang được lên kế hoạch. Hiện Doubo chạy trên iPhone, iPad và Mac, và bạn có thể truyền lên TV phòng khách.
-
+  - q: Doubo có cung cấp kênh truyền hình không?
+    a: Không. Doubo là trình phát; ứng dụng không kèm sẵn hay bán nội dung kênh. Hãy thêm danh sách phát mà bạn được phép sử dụng. Các danh sách đề xuất trong ứng dụng là liên kết công khai của bên thứ ba; khả năng truy cập và quyền xem do nhà cung cấp quyết định.
+  - q: Bắt đầu sử dụng như thế nào?
+    a: Chạm Thêm, dán URL danh sách phát M3U / M3U8 mà bạn được phép sử dụng, hoặc nhập tệp .m3u / .m3u8 từ ứng dụng Tệp. Các kênh sẽ được tự động chia nhóm. Xem trang Hướng dẫn để biết từng bước.
+  - q: Hỗ trợ những định dạng nào?
+    a: Danh sách phát M3U và M3U8, cùng các luồng trực tiếp như HLS (.m3u8) mà trình phát gốc của Apple hỗ trợ. Bạn cũng có thể mở trực tiếp tệp video trên máy.
+  - q: Ứng dụng có thu thập dữ liệu của tôi không?
+    a: Ứng dụng không thu thập dữ liệu cá nhân. Danh sách phát, mục yêu thích và lịch sử xem luôn nằm trên thiết bị của bạn. Trang web này dùng Google Analytics để hiểu lượt truy cập; xem chính sách quyền riêng tư.
+  - q: Cần gì để truyền lên TV?
+    a: TV phải hỗ trợ DLNA renderer (DMR) và kết nối cùng mạng. Tự động tìm thiết bị trên iPhone và iPad cần quyền mạng multicast của Apple, hiện vẫn đang chờ cấp; Mac không bị ảnh hưởng.
+  - q: Có phiên bản Android không?
+    a: Sắp có. Doubo cho Android sẽ hỗ trợ điện thoại, máy tính bảng và Android TV / TV box, và chúng tôi sẽ thông báo tại đây ngay khi ra mắt.
+  - q: Có dùng được trên Apple TV không?
+    a: Phiên bản Apple TV đang được lên kế hoạch. Hiện Doubo chạy trên iPhone, iPad và Mac, và bạn có thể truyền lên TV phòng khách.
 support:
   title: Hỗ trợ
   subtitle: Gặp sự cố hoặc có ý tưởng? Đây là cách liên hệ với chúng tôi.
@@ -193,49 +201,44 @@ support:
   issues_desc: Tạo issue trên GitHub, ghi rõ thiết bị, phiên bản hệ điều hành và các bước tái hiện lỗi. Vui lòng không đăng URL danh sách phát có chứa token hoặc mật khẩu.
   issues_link: Đến GitHub Issues
   email_title: Email
-
 privacy_label: Chính sách quyền riêng tư
-
 consent:
   text: Chúng tôi dùng Google Analytics để hiểu cách trang web này được sử dụng. Bạn có thể chọn cho phép cookie phân tích hay không và thay đổi bất cứ lúc nào ở cuối trang.
   accept: Đồng ý
   decline: Từ chối
   more: Tìm hiểu thêm
   manage: Cài đặt cookie
-
 footer:
-  tagline: Trình phát IPTV gốc cho iPhone, iPad và Mac.
+  tagline: Trình phát IPTV & M3U gốc cho iPhone, iPad và Mac. Android sắp ra mắt.
   disclaimer: Doubo không cung cấp bất kỳ nội dung kênh nào. Chỉ phát nội dung bạn được phép truy cập. Apple, iPhone, iPad, Mac, Apple TV, AirPlay và CarPlay là nhãn hiệu của Apple Inc.
   product: Sản phẩm
   resources: Tài nguyên
   feedback: Góp ý
-
 not_found:
   title: Không tìm thấy trang
   desc: Trang bạn tìm có thể đã được chuyển hoặc xóa.
   home: Về trang chủ
-
 guide:
   title: Hướng dẫn
   subtitle: 'Bắt đầu trong ba phút: phát danh sách M3U / M3U8 trên iPhone, iPad và Mac.'
   description: 'Hướng dẫn dùng Doubo: thêm danh sách phát M3U / M3U8 trên iPhone, iPad và Mac, duyệt kênh, xem bằng Hình trong hình và truyền lên TV.'
   intro: Trước khi bắt đầu, hãy chuẩn bị URL hoặc tệp danh sách phát M3U / M3U8 mà bạn được phép sử dụng. Doubo là trình phát và không cung cấp kênh nào.
   steps:
-    - title: Thêm danh sách phát
-      desc: Mở Doubo và chạm Thêm. Chọn “Thêm URL danh sách phát” để dán địa chỉ M3U, hoặc “Nhập tệp danh sách phát” để nhập tệp .m3u / .m3u8 từ ứng dụng Tệp.
-    - title: Duyệt, tìm kiếm và yêu thích
-      desc: Các kênh được tự động chia nhóm theo group-title. Tìm tên kênh hoặc nhóm ở phía trên, gắn sao cho kênh hay xem và mở lại kênh vừa xem bất cứ lúc nào.
-    - title: Sắp xếp kênh chỉ một chạm
-      desc: Chạm “Kiểm tra kênh”, Doubo sẽ kiểm tra song song toàn bộ danh sách để bạn chỉ hiển thị các kênh sẵn sàng phát.
-    - title: Phát và Hình trong hình
-      desc: Chạm vào kênh để phát. Dùng Hình trong hình, phụ đề, tốc độ phát và toàn màn hình khi xoay ngang, vẫn tiếp tục xem khi dùng ứng dụng khác.
-    - title: Truyền lên TV
-      desc: Chạm biểu tượng truyền trong trình phát và chọn smart TV hỗ trợ DLNA cùng mạng để xem trên màn hình lớn.
-    - title: Quản lý nhiều danh sách phát
-      desc: 20 danh sách phát gần nhất được lưu trên thiết bị. Doubo tự mở lại danh sách bạn xem lần trước, và bạn có thể chuyển đổi bất cứ lúc nào.
+  - title: Thêm danh sách phát
+    desc: Mở Doubo và chạm Thêm. Chọn “Thêm URL danh sách phát” để dán địa chỉ M3U, hoặc “Nhập tệp danh sách phát” để nhập tệp .m3u / .m3u8 từ ứng dụng Tệp.
+  - title: Duyệt, tìm kiếm và yêu thích
+    desc: Các kênh được tự động chia nhóm theo group-title. Tìm tên kênh hoặc nhóm ở phía trên, gắn sao cho kênh hay xem và mở lại kênh vừa xem bất cứ lúc nào.
+  - title: Sắp xếp kênh chỉ một chạm
+    desc: Chạm “Kiểm tra kênh”, Doubo sẽ kiểm tra song song toàn bộ danh sách để bạn chỉ hiển thị các kênh sẵn sàng phát.
+  - title: Phát và Hình trong hình
+    desc: Chạm vào kênh để phát. Dùng Hình trong hình, phụ đề, tốc độ phát và toàn màn hình khi xoay ngang, vẫn tiếp tục xem khi dùng ứng dụng khác.
+  - title: Truyền lên TV
+    desc: Chạm biểu tượng truyền trong trình phát và chọn smart TV hỗ trợ DLNA cùng mạng để xem trên màn hình lớn.
+  - title: Quản lý nhiều danh sách phát
+    desc: 20 danh sách phát gần nhất được lưu trên thiết bị. Doubo tự mở lại danh sách bạn xem lần trước, và bạn có thể chuyển đổi bất cứ lúc nào.
   tips_title: Mẹo
   tips:
-    - Danh sách phát phải ở định dạng M3U hoặc M3U8; địa chỉ kênh thường bắt đầu bằng http(s)://.
-    - Khi một kênh có nhiều nguồn, hãy chuyển đổi ở mục Đường truyền.
-    - Danh sách phát, mục yêu thích và lịch sử luôn nằm trên thiết bị của bạn, có thể xóa bất cứ lúc nào trong Cài đặt.
+  - Danh sách phát phải ở định dạng M3U hoặc M3U8; địa chỉ kênh thường bắt đầu bằng http(s)://.
+  - Khi một kênh có nhiều nguồn, hãy chuyển đổi ở mục Đường truyền.
+  - Danh sách phát, mục yêu thích và lịch sử luôn nằm trên thiết bị của bạn, có thể xóa bất cứ lúc nào trong Cài đặt.
   cta: Còn thắc mắc? Xem câu hỏi thường gặp hoặc liên hệ chúng tôi

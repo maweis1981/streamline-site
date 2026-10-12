@@ -211,26 +211,24 @@
 /* Platforms */
 .platforms{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .platform{display:flex;flex-direction:column;align-items:center;text-align:center;padding:24px 12px;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface)}
-.platform:nth-child(3){grid-column:1/-1}
 .platform-icon{position:relative;display:grid;place-items:center;color:var(--text)}
 .platform-icon::before{content:"";position:absolute;left:50%;bottom:-12px;width:120px;height:24px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(89,241,209,.35),transparent)}
 .platform .icon{position:relative;width:44px;height:44px;stroke-width:1.4}
 .platform strong{font-size:19px;font-weight:650;margin-top:20px;line-height:1.3}
 .platform>span:not(.platform-icon){font-size:14px;color:var(--text-3);margin-top:2px}
 .platform .badge{margin-top:14px}
+.platform.is-soon .badge{--c:var(--teal);background:rgba(89,241,209,.12)}
 .platform.is-planned{background:transparent;border:1px dashed var(--line-strong)}
 .platform.is-planned .icon{opacity:.5}
 .platform.is-planned .platform-icon::before{display:none}
 @media (min-width:768px){
   .platforms{grid-template-columns:repeat(6,1fr)}
   .platform{grid-column:span 2;padding:32px 16px 24px}
-  .platform:nth-child(3){grid-column:span 2}
-  .platform.is-planned{grid-column:span 3}
   .platform .icon{width:56px;height:56px}
 }
 @media (min-width:1080px){
-  .platforms{grid-template-columns:repeat(5,1fr)}
-  .platform,.platform:nth-child(3),.platform.is-planned{grid-column:auto}
+  .platforms{grid-template-columns:repeat(6,1fr)}
+  .platform{grid-column:auto}
 }
 
 /* Roadmap teaser: season rail */

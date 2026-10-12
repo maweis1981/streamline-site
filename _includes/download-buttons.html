@@ -7,5 +7,10 @@
   {%- else %}
   <span class="btn btn-primary is-disabled" aria-disabled="true">{% include icon.html name="apple" %}<span>{{ t.cta.coming_soon }}</span></span>
   {%- endif %}
+  {%- if site.links.google_play != "" %}
+  <a class="btn btn-primary" href="{{ site.links.google_play }}" data-track="cta_click" data-track-target="google_play" data-track-location="{{ location }}">{% include icon.html name="android" %}<span>{{ t.cta.google_play_live | default: "Google Play" }}</span></a>
+  {%- else %}
+  <span class="btn btn-primary is-disabled" aria-disabled="true">{% include icon.html name="android" %}<span>{{ t.cta.google_play }}</span></span>
+  {%- endif %}
   <a class="btn btn-ghost" href="{{ lang_prefix | append: '/roadmap/' | relative_url }}" data-track="cta_click" data-track-target="roadmap" data-track-location="{{ location }}"><span>{{ t.cta.roadmap }}</span>{% include icon.html name="arrow" %}</a>
 </div>

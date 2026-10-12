@@ -1,13 +1,11 @@
 html_lang: ms
 og_locale: ms_MY
 brand: Doubo
-slogan: "Semua saluran, satu pemain."
+slogan: Semua saluran, satu pemain.
 lang_name: Bahasa Melayu
-
 meta:
-  title: Doubo — Pemain IPTV & M3U untuk iPhone, iPad dan Mac
-  description: Doubo ialah pemain M3U/M3U8 asli. Import senarai main anda sendiri, layari mengikut kumpulan, semak saluran yang boleh dimainkan, tonton dalam Gambar dalam Gambar dan hantar ke TV. Tiada saluran terbina, tiada data peribadi dikumpul.
-
+  title: Doubo — Pemain IPTV & M3U Merentas Platform
+  description: Doubo ialah pemain IPTV & M3U asli, kini untuk iPhone, iPad dan Mac, dengan versi telefon, tablet dan kotak TV Android akan datang. Import senarai main anda sendiri, layari mengikut kumpulan, tonton dalam Gambar dalam Gambar dan hantar ke TV. Tiada saluran terbina, tiada data peribadi dikumpul.
 nav:
   guide: Panduan
   features: Ciri
@@ -16,110 +14,118 @@ nav:
   support: Sokongan
   privacy: Privasi
   download: Muat turun
-
 cta:
   app_store: Muat turun di App Store
   testflight: Sertai beta TestFlight
   coming_soon: Akan datang ke App Store
   roadmap: Lihat pelan hala tuju
-
+  google_play: Google Play — akan datang
 hero:
-  eyebrow: Pemain IPTV & M3U · iPhone · iPad · Mac
+  eyebrow: Pemain IPTV & M3U · iOS · macOS · Android akan datang
   title: Senarai main anda,<br><span class="gradient-text">sekali ketik terus main.</span>
   subtitle: Doubo ialah pemain IPTV asli. Import M3U/M3U8, layari mengikut kumpulan, simpan saluran kegemaran, dan tonton dalam Gambar dalam Gambar atau di TV anda.
   note: Dibina secara asli · Tiada saluran terbina · Data anda kekal pada peranti anda
-
 mock:
   playlist: Senarai Main Saya
   live: Langsung
-  casting: "Menghantar ke TV"
+  casting: Menghantar ke TV
   checked: 142 saluran · 5 kumpulan
-  groups: [Semua, Berita, Sukan, Dokumentari, Muzik]
+  groups:
+  - Semua
+  - Berita
+  - Sukan
+  - Dokumentari
+  - Muzik
   channels:
-    - name: Berita 24
-      group: Berita
-      state: playing
-    - name: Sukan HD
-      group: Sukan
-      state: ok
-    - name: Dokumentari Alam
-      group: Dokumentari
-      state: ok
-    - name: Muzik Langsung
-      group: Muzik
-      state: ok
-
+  - name: Berita 24
+    group: Berita
+    state: playing
+  - name: Sukan HD
+    group: Sukan
+    state: ok
+  - name: Dokumentari Alam
+    group: Dokumentari
+    state: ok
+  - name: Muzik Langsung
+    group: Muzik
+    state: ok
 features:
   eyebrow: Ciri
   title: Lancar dari import hingga menonton
-  subtitle: Dibina hanya dengan rangka kerja Apple, jadi ia ringan, lancar dan jimat bateri.
+  subtitle: Dibina secara asli, jadi ia ringan, lancar dan jimat bateri.
   items:
-    - icon: import
-      title: Import mana-mana senarai main M3U
-      desc: Tambah URL atau fail .m3u / .m3u8 tempatan. Nama saluran, kumpulan dan logo dihuraikan secara automatik, dan 20 senarai main terakhir diingati serta dipulihkan semasa aplikasi dibuka.
-    - icon: grid
-      title: Kumpulan, carian dan kegemaran
-      desc: Layari mengikut group-title, cari nama saluran dan kumpulan serta-merta, tandakan saluran kegemaran dan kembali ke saluran yang baru ditonton.
-    - icon: pulse
-      title: Semak semua saluran sekaligus
-      desc: Doubo menguji seluruh senarai main secara serentak dan menyusun saluran yang sedia dimainkan, jadi anda hanya perlu tekan main.
-    - icon: route
-      title: Tukar talian dengan sekali ketik
-      desc: Jika satu saluran mempunyai beberapa sumber, tukar antaranya di bahagian Talian dan pilih yang paling lancar pada bila-bila masa.
-    - icon: pip
-      title: Pengalaman main balik asli
-      desc: Dibina atas AVKit, dengan Gambar dalam Gambar, trek sari kata, kelajuan main balik dan skrin penuh landskap. Baris saluran yang sedang dimainkan memaparkan bingkai langsung.
-    - icon: cast
-      title: Hantar ke TV anda
-      desc: Hantar ke TV pintar DLNA dalam rangkaian yang sama, atau buka fail video tempatan untuk dimainkan terus.
-    - icon: lock
-      title: Privasi diutamakan
-      desc: Senarai main, kegemaran dan sejarah kekal pada peranti anda. Aplikasi ini tiada SDK iklan atau analitik dan tidak mengumpul sebarang data peribadi.
-
+  - icon: import
+    title: Import mana-mana senarai main M3U
+    desc: Tambah URL atau fail .m3u / .m3u8 tempatan. Nama saluran, kumpulan dan logo dihuraikan secara automatik, dan 20 senarai main terakhir diingati serta dipulihkan semasa aplikasi dibuka.
+  - icon: grid
+    title: Kumpulan, carian dan kegemaran
+    desc: Layari mengikut group-title, cari nama saluran dan kumpulan serta-merta, tandakan saluran kegemaran dan kembali ke saluran yang baru ditonton.
+  - icon: pulse
+    title: Semak semua saluran sekaligus
+    desc: Doubo menguji seluruh senarai main secara serentak dan menyusun saluran yang sedia dimainkan, jadi anda hanya perlu tekan main.
+  - icon: route
+    title: Tukar talian dengan sekali ketik
+    desc: Jika satu saluran mempunyai beberapa sumber, tukar antaranya di bahagian Talian dan pilih yang paling lancar pada bila-bila masa.
+  - icon: pip
+    title: Pengalaman main balik asli
+    desc: Dibina atas AVKit, dengan Gambar dalam Gambar, trek sari kata, kelajuan main balik dan skrin penuh landskap. Baris saluran yang sedang dimainkan memaparkan bingkai langsung.
+  - icon: cast
+    title: Hantar ke TV anda
+    desc: Hantar ke TV pintar DLNA dalam rangkaian yang sama, atau buka fail video tempatan untuk dimainkan terus.
+  - icon: lock
+    title: Privasi diutamakan
+    desc: Senarai main, kegemaran dan sejarah kekal pada peranti anda. Aplikasi ini tiada SDK iklan atau analitik dan tidak mengumpul sebarang data peribadi.
 how:
   eyebrow: Mula
   title: Tonton dalam tiga langkah
   steps:
-    - title: Tambah senarai main
-      desc: Tampal URL M3U yang anda dibenarkan gunakan, atau import daripada Fail.
-    - title: Susun saluran
-      desc: Sekali ketik untuk menyusun saluran yang sedia dimainkan.
-    - title: Main atau hantar ke TV
-      desc: Ketik untuk main, teruskan menonton dalam Gambar dalam Gambar, atau hantar ke TV di ruang tamu.
-
+  - title: Tambah senarai main
+    desc: Tampal URL M3U yang anda dibenarkan gunakan, atau import daripada Fail.
+  - title: Susun saluran
+    desc: Sekali ketik untuk menyusun saluran yang sedia dimainkan.
+  - title: Main atau hantar ke TV
+    desc: Ketik untuk main, teruskan menonton dalam Gambar dalam Gambar, atau hantar ke TV di ruang tamu.
 platforms:
   eyebrow: Platform
-  title: Dibina secara asli untuk peranti Apple
-  subtitle: SwiftUI dan AVFoundation memberikan satu pengalaman merentas telefon, tablet dan komputer.
+  title: Telefon, tablet, komputer dan TV — satu Doubo
+  subtitle: Kini tersedia di iPhone, iPad dan Mac. Telefon, tablet dan Android TV / kotak TV Android akan datang.
   available: Tersedia
   planned: Dirancang
   items:
-    - name: iPhone
-      detail: iOS 17 atau lebih baharu
-      status: available
-    - name: iPad
-      detail: iPadOS 17 atau lebih baharu
-      status: available
-    - name: Mac
-      detail: macOS 14 atau lebih baharu
-      status: available
-    - name: Apple TV
-      detail: tvOS
-      status: planned
-    - name: CarPlay
-      detail: Audio dan pelayaran
-      status: planned
-
+  - name: iPhone
+    detail: iOS 17 atau lebih baharu
+    status: available
+    icon: phone
+  - name: iPad
+    detail: iPadOS 17 atau lebih baharu
+    status: available
+    icon: tablet
+  - name: Mac
+    detail: macOS 14 atau lebih baharu
+    status: available
+    icon: laptop
+  - name: Android
+    detail: Telefon & tablet
+    status: soon
+    icon: android
+  - name: Android TV
+    detail: TV & kotak TV
+    status: soon
+    icon: tv
+  - name: Apple TV
+    detail: tvOS
+    status: planned
+    icon: tv
+  soon: Akan datang
 roadmap_teaser:
   eyebrow: Pelan hala tuju
   title: Apa seterusnya
   subtitle: Keutamaan kami mudah. Pertama, jadikan main balik lebih lancar dan stabil. Kemudian tambah panduan program, tonton semula dan banyak lagi.
   link: Lihat pelan hala tuju penuh
-
 roadmap:
   title: Pelan hala tuju
   subtitle: Kami mengutamakan pengalaman main balik yang lancar dan stabil, kemudian mengembangkan ciri dan platform. Ini hala tuju yang dirancang, bukan janji tarikh keluaran.
-  updated: "Kemas kini terakhir: "
+  updated: 'Kemas kini terakhir: '
   updated_date: Oktober 2026
   feedback: Ada cadangan? Kongsikan di GitHub.
   feedback_link: Cadangkan ciri
@@ -129,63 +135,65 @@ roadmap:
     next: Seterusnya
     later: Akan datang
   columns:
-    - status: done
-      title: Asas 1.0
-      items:
-        - title: Import M3U/M3U8 dan pemulihan sejarah
-          desc: Import daripada URL atau fail; senarai main terkini diingati.
-        - title: Kumpulan, carian, kegemaran, baru ditonton
-        - title: Semakan ketersediaan serentak
-        - title: Gambar dalam Gambar, sari kata, kelajuan main balik
-        - title: Tukar antara talian saluran yang sama nama
-        - title: Penghantaran DLNA dan video tempatan
-    - status: now
-      title: Main balik lebih lancar
-      items:
-        - title: Keserasian strim HTTP yang lebih luas
-        - title: Audio latar belakang dan Gambar dalam Gambar yang lebih baik
-        - title: Penghuraian M3U yang lebih kaya
-          desc: Pengekodan GBK dan lain-lain, tvg-id, pengepala User-Agent / Referer setiap saluran.
-        - title: Status kesihatan saluran
-          desc: Memaparkan status semasa setiap saluran, dengan keputusan disimpan.
-    - status: next
-      title: Kebolehpercayaan dan kelajuan
-      items:
-        - title: Saluran berbilang talian dengan pertukaran automatik
-          desc: Memilih talian paling lancar secara automatik.
-        - title: Senarai main jauh disimpan dan boleh dibuka luar talian
-        - title: AirPlay
-        - title: Prestasi untuk senarai melebihi 10,000 saluran
-        - title: Aplikasi berbilang bahasa
-          desc: English, Bahasa Cina Ringkas, Bahasa Melayu, Bahasa Indonesia, Tiếng Việt dan Thai.
-    - status: later
-      title: Lebih banyak kandungan dan platform
-      items:
-        - title: Panduan program XMLTV (EPG)
-        - title: Tonton semula (Catch-up)
-          desc: Hanya tersedia jika sumber strim menyediakan parameter tonton semula.
-        - title: Penyegerakan iCloud
-          desc: Kegemaran, senarai main dan tetapan merentas peranti.
-        - title: Sokongan Xtream Codes
-        - title: Apple TV dan CarPlay
-        - title: Carian global
-
+  - status: done
+    title: Asas 1.0
+    items:
+    - title: Import M3U/M3U8 dan pemulihan sejarah
+      desc: Import daripada URL atau fail; senarai main terkini diingati.
+    - title: Kumpulan, carian, kegemaran, baru ditonton
+    - title: Semakan ketersediaan serentak
+    - title: Gambar dalam Gambar, sari kata, kelajuan main balik
+    - title: Tukar antara talian saluran yang sama nama
+    - title: Penghantaran DLNA dan video tempatan
+  - status: now
+    title: Main balik lebih lancar
+    items:
+    - title: Keserasian strim HTTP yang lebih luas
+    - title: Audio latar belakang dan Gambar dalam Gambar yang lebih baik
+    - title: Penghuraian M3U yang lebih kaya
+      desc: Pengekodan GBK dan lain-lain, tvg-id, pengepala User-Agent / Referer setiap saluran.
+    - title: Status kesihatan saluran
+      desc: Memaparkan status semasa setiap saluran, dengan keputusan disimpan.
+  - status: next
+    title: Kebolehpercayaan dan kelajuan
+    items:
+    - title: Aplikasi Android
+      desc: Telefon, tablet dan Android TV / kotak TV Android.
+    - title: Saluran berbilang talian dengan pertukaran automatik
+      desc: Memilih talian paling lancar secara automatik.
+    - title: Senarai main jauh disimpan dan boleh dibuka luar talian
+    - title: AirPlay
+    - title: Prestasi untuk senarai melebihi 10,000 saluran
+    - title: Aplikasi berbilang bahasa
+      desc: English, Bahasa Cina Ringkas, Bahasa Melayu, Bahasa Indonesia, Tiếng Việt dan Thai.
+  - status: later
+    title: Lebih banyak kandungan dan platform
+    items:
+    - title: Panduan program XMLTV (EPG)
+    - title: Tonton semula (Catch-up)
+      desc: Hanya tersedia jika sumber strim menyediakan parameter tonton semula.
+    - title: Penyegerakan iCloud
+      desc: Kegemaran, senarai main dan tetapan merentas peranti.
+    - title: Sokongan Xtream Codes
+    - title: Apple TV dan CarPlay
+    - title: Carian global
 faq:
   title: Soalan lazim
   items:
-    - q: Adakah Doubo menyediakan saluran TV?
-      a: Tidak. Doubo ialah pemain; ia tidak membekalkan atau menjual kandungan saluran. Tambah senarai main yang anda dibenarkan gunakan. Senarai yang disyorkan dalam aplikasi ialah pautan awam pihak ketiga, dan ketersediaan serta hak tontonan ditentukan oleh penyedianya.
-    - q: Bagaimana cara bermula?
-      a: Ketik Tambah, tampal URL senarai main M3U / M3U8 yang anda dibenarkan gunakan, atau import fail .m3u / .m3u8 daripada Fail. Saluran akan dikumpulkan secara automatik. Lihat halaman Panduan untuk langkah demi langkah.
-    - q: Format apa yang disokong?
-      a: Senarai main M3U dan M3U8, dengan strim langsung seperti HLS (.m3u8) yang disokong oleh pemain asli Apple. Anda juga boleh membuka fail video tempatan secara terus.
-    - q: Adakah data saya dikumpul?
-      a: Aplikasi ini tidak mengumpul data peribadi. Senarai main, kegemaran dan sejarah tontonan kekal pada peranti anda. Laman web ini menggunakan Google Analytics untuk memahami lawatan; lihat dasar privasi.
-    - q: Apa yang diperlukan untuk menghantar ke TV?
-      a: TV mesti menyokong pemaparan DLNA (DMR) dan berada dalam rangkaian yang sama. Penemuan automatik pada iPhone dan iPad memerlukan kebenaran rangkaian multicast Apple, yang masih dalam proses; Mac tidak terjejas.
-    - q: Adakah ia berfungsi di Apple TV?
-      a: Versi Apple TV sedang dirancang. Buat masa ini Doubo berfungsi di iPhone, iPad dan Mac, dan anda boleh menghantar ke TV di ruang tamu.
-
+  - q: Adakah Doubo menyediakan saluran TV?
+    a: Tidak. Doubo ialah pemain; ia tidak membekalkan atau menjual kandungan saluran. Tambah senarai main yang anda dibenarkan gunakan. Senarai yang disyorkan dalam aplikasi ialah pautan awam pihak ketiga, dan ketersediaan serta hak tontonan ditentukan oleh penyedianya.
+  - q: Bagaimana cara bermula?
+    a: Ketik Tambah, tampal URL senarai main M3U / M3U8 yang anda dibenarkan gunakan, atau import fail .m3u / .m3u8 daripada Fail. Saluran akan dikumpulkan secara automatik. Lihat halaman Panduan untuk langkah demi langkah.
+  - q: Format apa yang disokong?
+    a: Senarai main M3U dan M3U8, dengan strim langsung seperti HLS (.m3u8) yang disokong oleh pemain asli Apple. Anda juga boleh membuka fail video tempatan secara terus.
+  - q: Adakah data saya dikumpul?
+    a: Aplikasi ini tidak mengumpul data peribadi. Senarai main, kegemaran dan sejarah tontonan kekal pada peranti anda. Laman web ini menggunakan Google Analytics untuk memahami lawatan; lihat dasar privasi.
+  - q: Apa yang diperlukan untuk menghantar ke TV?
+    a: TV mesti menyokong pemaparan DLNA (DMR) dan berada dalam rangkaian yang sama. Penemuan automatik pada iPhone dan iPad memerlukan kebenaran rangkaian multicast Apple, yang masih dalam proses; Mac tidak terjejas.
+  - q: Adakah versi Android?
+    a: Ia sedang dalam perjalanan. Doubo untuk Android akan menyokong telefon, tablet dan Android TV / kotak TV, dan kami akan mengumumkannya di sini sebaik sahaja tersedia.
+  - q: Adakah ia berfungsi di Apple TV?
+    a: Versi Apple TV sedang dirancang. Buat masa ini Doubo berfungsi di iPhone, iPad dan Mac, dan anda boleh menghantar ke TV di ruang tamu.
 support:
   title: Sokongan
   subtitle: Menghadapi masalah atau ada idea? Begini cara menghubungi kami.
@@ -193,49 +201,44 @@ support:
   issues_desc: Buka isu di GitHub dengan maklumat peranti, versi sistem dan langkah untuk menghasilkan semula masalah. Jangan kongsi URL senarai main yang mengandungi token atau kata laluan.
   issues_link: Pergi ke GitHub Issues
   email_title: E-mel
-
 privacy_label: Dasar Privasi
-
 consent:
   text: Kami menggunakan Google Analytics untuk memahami cara laman web ini digunakan. Pilih sama ada membenarkan kuki analitik; anda boleh mengubahnya bila-bila masa di bahagian bawah halaman.
   accept: Terima
   decline: Tolak
   more: Ketahui lanjut
   manage: Tetapan kuki
-
 footer:
-  tagline: Pemain IPTV asli untuk iPhone, iPad dan Mac.
+  tagline: Pemain IPTV & M3U asli untuk iPhone, iPad dan Mac. Android akan datang.
   disclaimer: Doubo tidak menyediakan sebarang kandungan saluran. Mainkan hanya kandungan yang anda dibenarkan akses. Apple, iPhone, iPad, Mac, Apple TV, AirPlay dan CarPlay ialah tanda dagangan Apple Inc.
   product: Produk
   resources: Sumber
   feedback: Maklum balas
-
 not_found:
   title: Halaman tidak ditemui
   desc: Halaman yang anda cari mungkin telah dialihkan atau dibuang.
   home: Kembali ke laman utama
-
 guide:
   title: Panduan
   subtitle: 'Mula dalam tiga minit: mainkan senarai main M3U / M3U8 di iPhone, iPad dan Mac.'
   description: 'Cara menggunakan Doubo: tambah senarai main M3U / M3U8 di iPhone, iPad dan Mac, layari saluran, tonton dalam Gambar dalam Gambar dan hantar ke TV.'
   intro: Sebelum bermula, sediakan URL atau fail senarai main M3U / M3U8 yang anda dibenarkan gunakan. Doubo ialah pemain dan tidak menyediakan sebarang saluran.
   steps:
-    - title: Tambah senarai main
-      desc: Buka Doubo dan ketik Tambah. Pilih “Tambah URL senarai main” untuk menampal alamat M3U, atau “Import fail senarai main” untuk mengimport fail .m3u / .m3u8 daripada aplikasi Fail.
-    - title: Layari, cari dan simpan kegemaran
-      desc: Saluran dikumpulkan mengikut group-title secara automatik. Cari nama saluran atau kumpulan di bahagian atas, tandakan saluran kegemaran dan cari saluran yang baru ditonton bila-bila masa.
-    - title: Susun saluran dengan sekali ketik
-      desc: Ketik “Semak saluran” dan Doubo akan menguji seluruh senarai main secara serentak, supaya anda boleh paparkan hanya saluran yang sedia dimainkan.
-    - title: Main dan Gambar dalam Gambar
-      desc: Ketik saluran untuk main. Nikmati Gambar dalam Gambar, trek sari kata, kelajuan main balik dan skrin penuh landskap, serta terus menonton semasa menggunakan aplikasi lain.
-    - title: Hantar ke TV anda
-      desc: Ketik ikon hantar dalam pemain dan pilih TV pintar DLNA dalam rangkaian yang sama untuk menonton di skrin besar.
-    - title: Urus beberapa senarai main
-      desc: 20 senarai main terakhir disimpan pada peranti anda. Doubo membuka semula senarai yang terakhir ditonton, dan anda boleh menukarnya bila-bila masa.
+  - title: Tambah senarai main
+    desc: Buka Doubo dan ketik Tambah. Pilih “Tambah URL senarai main” untuk menampal alamat M3U, atau “Import fail senarai main” untuk mengimport fail .m3u / .m3u8 daripada aplikasi Fail.
+  - title: Layari, cari dan simpan kegemaran
+    desc: Saluran dikumpulkan mengikut group-title secara automatik. Cari nama saluran atau kumpulan di bahagian atas, tandakan saluran kegemaran dan cari saluran yang baru ditonton bila-bila masa.
+  - title: Susun saluran dengan sekali ketik
+    desc: Ketik “Semak saluran” dan Doubo akan menguji seluruh senarai main secara serentak, supaya anda boleh paparkan hanya saluran yang sedia dimainkan.
+  - title: Main dan Gambar dalam Gambar
+    desc: Ketik saluran untuk main. Nikmati Gambar dalam Gambar, trek sari kata, kelajuan main balik dan skrin penuh landskap, serta terus menonton semasa menggunakan aplikasi lain.
+  - title: Hantar ke TV anda
+    desc: Ketik ikon hantar dalam pemain dan pilih TV pintar DLNA dalam rangkaian yang sama untuk menonton di skrin besar.
+  - title: Urus beberapa senarai main
+    desc: 20 senarai main terakhir disimpan pada peranti anda. Doubo membuka semula senarai yang terakhir ditonton, dan anda boleh menukarnya bila-bila masa.
   tips_title: Petua
   tips:
-    - Senarai main mesti dalam format M3U atau M3U8; alamat saluran biasanya bermula dengan http(s)://.
-    - Jika satu saluran mempunyai beberapa sumber, tukar antaranya di bahagian Talian.
-    - Senarai main, kegemaran dan sejarah kekal pada peranti anda, dan boleh dipadam bila-bila masa dalam Tetapan.
+  - Senarai main mesti dalam format M3U atau M3U8; alamat saluran biasanya bermula dengan http(s)://.
+  - Jika satu saluran mempunyai beberapa sumber, tukar antaranya di bahagian Talian.
+  - Senarai main, kegemaran dan sejarah kekal pada peranti anda, dan boleh dipadam bila-bila masa dalam Tetapan.
   cta: Ada soalan lagi? Lihat soalan lazim atau hubungi kami
