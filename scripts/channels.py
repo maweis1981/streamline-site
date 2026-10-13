@@ -153,6 +153,9 @@ def main(m3u_path: str, channels_csv: str, playable_path: str) -> None:
     # Lets directory pages link channel names to their pages.
     slugs = {f"{c['country']}:{c['name']}": c["slug"] for c in channels}
     (SITE / "_data" / "channel_slugs.json").write_text(json.dumps(slugs, ensure_ascii=False), encoding="utf-8")
+    # ...and show each channel's logo next to its name.
+    logos = {f"{c['country']}:{c['name']}": c["logo"] for c in channels if c["logo"].startswith("https://")}
+    (SITE / "_data" / "channel_logos.json").write_text(json.dumps(logos, ensure_ascii=False), encoding="utf-8")
 
     for lang in languages:
         s = locales[lang]["channel"]
@@ -210,7 +213,7 @@ def main(m3u_path: str, channels_csv: str, playable_path: str) -> None:
                     "lead": fill(s["lead_playable" if c["playable"] else "lead_other"], **v),
                     "summary": " ".join(summary), "facts": facts, "faq": faq,
                     "related_title": fill(s["related"], **v),
-                    "related": [{"slug": p["slug"], "name": p["name"]} for p in peers[:RELATED]],
+                    "related": [{"slug": p["slug"], "name": p["name"], "logo": p["logo"]} for p in peers[:RELATED]],
                 },
             }), encoding="utf-8")
     indexed = sum(c["playable"] for c in channels)

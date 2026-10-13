@@ -384,6 +384,9 @@ web:
   free_channels: ช่องฟรี
   all_countries: ทุกประเทศและดินแดน
   load_more: แสดงช่องเพิ่มเติม
+  more_channels: ช่องอื่น ๆ
+  more_videos: วิดีโออื่น ๆ
+  browse_search: ค้นหาช่อง
   back: กลับ
   prev_channel: ช่องก่อนหน้า
   next_channel: ช่องถัดไป

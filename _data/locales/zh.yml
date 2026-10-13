@@ -384,6 +384,9 @@ web:
   free_channels: 免费频道
   all_countries: 全部国家和地区
   load_more: 显示更多频道
+  more_channels: 更多频道
+  more_videos: 更多视频
+  browse_search: 搜索频道
   back: 返回
   prev_channel: 上一个频道
   next_channel: 下一个频道

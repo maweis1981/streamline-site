@@ -29,8 +29,8 @@ layout: default
     <ul class="dir-channels">
       {%- for ch in cat.list %}
       {%- assign country = d.countries | where: "code", ch.country | first %}
-      {%- assign ch_key = ch.country | append: ":" | append: ch.name %}{% assign ch_slug = site.data.channel_slugs[ch_key] %}
-      <li>{% if ch_slug %}<a class="dir-name" href="{{ lang_prefix | append: '/channels/' | append: ch_slug | append: '/' | relative_url }}">{{ ch.name }}</a>{% else %}<span class="dir-name">{{ ch.name }}</span>{% endif %} <a class="badge" href="{{ lang_prefix | append: '/playlists/' | append: ch.country | append: '/' | relative_url }}">{{ country.flag }} {{ country.names[page.lang] }}</a></li>
+      {%- assign ch_key = ch.country | append: ":" | append: ch.name %}{% assign ch_slug = site.data.channel_slugs[ch_key] %}{% assign ch_logo = site.data.channel_logos[ch_key] %}
+      <li>{% include channel-logo.html logo=ch_logo name=ch.name size="sm" %}{% if ch_slug %}<a class="dir-name" href="{{ lang_prefix | append: '/channels/' | append: ch_slug | append: '/' | relative_url }}">{{ ch.name }}</a>{% else %}<span class="dir-name">{{ ch.name }}</span>{% endif %} <a class="badge" href="{{ lang_prefix | append: '/playlists/' | append: ch.country | append: '/' | relative_url }}">{{ country.flag }} {{ country.names[page.lang] }}</a></li>
       {%- endfor %}
     </ul>
 

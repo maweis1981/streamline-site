@@ -384,6 +384,9 @@ web:
   free_channels: Kênh miễn phí
   all_countries: Tất cả quốc gia và vùng
   load_more: Hiện thêm kênh
+  more_channels: Kênh khác
+  more_videos: Video khác
+  browse_search: Tìm kênh
   back: Quay lại
   prev_channel: Kênh trước
   next_channel: Kênh tiếp theo

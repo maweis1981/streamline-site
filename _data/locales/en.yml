@@ -384,6 +384,9 @@ web:
   free_channels: Free channels
   all_countries: All countries and regions
   load_more: Show more channels
+  more_channels: More channels
+  more_videos: More videos
+  browse_search: Search channels
   back: Back
   prev_channel: Previous channel
   next_channel: Next channel

@@ -51,8 +51,8 @@ layout: default
 
     {%- if c.related.size > 0 %}
     <h2 class="dg-head">{{ c.related_title }}</h2>
-    <ul class="ch-related">
-      {%- for r in c.related %}<li><a href="{{ lang_prefix | append: '/channels/' | append: r.slug | append: '/' | relative_url }}">{{ r.name }}</a></li>{% endfor %}
+    <ul class="ch-related ch-cards">
+      {%- for r in c.related %}<li><a href="{{ lang_prefix | append: '/channels/' | append: r.slug | append: '/' | relative_url }}">{% include channel-logo.html logo=r.logo name=r.name %}<span>{{ r.name }}</span></a></li>{% endfor %}
     </ul>
     {%- endif %}
     <p class="muted">{{ s.source }}</p>

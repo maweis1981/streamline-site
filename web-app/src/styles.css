@@ -57,13 +57,15 @@ body.dw-theater-open{overflow:hidden}
 .dw-empty h2{font-size:var(--fs-h3-lg)}
 .dw-empty p{color:var(--text-2)}
 
-.dw-theater{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;gap:12px;padding:12px clamp(12px,2vw,24px) 16px;background:#02040A;overflow:auto}
+.dw-theater{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;gap:12px;padding:12px clamp(12px,2vw,24px) 16px;background:#02040A;overflow:hidden}
 .dw-theater[hidden]{display:none}
 .dw-theater-bar{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
 .dw-now-title{flex:1;display:flex;align-items:baseline;gap:12px;min-width:0}
 .dw-now-name{font-size:20px;line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .dw-now-group{color:var(--text-3);font-size:14px;white-space:nowrap}
 .dw-now-actions{display:flex;flex-wrap:wrap;gap:8px}
+.dw-theater-main{flex:1;min-height:0;display:flex;gap:16px}
+.dw-stage{flex:1;min-width:0;display:flex;flex-direction:column;gap:12px;overflow:auto}
 .dw-video-wrap{position:relative;flex:1;min-height:200px;border-radius:var(--r-md);background:#000;overflow:hidden}
 .dw-video{position:absolute;inset:0;width:100%;height:100%;background:#000}
 .dw-overlay{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:12px;padding:24px;text-align:center;background:radial-gradient(600px circle at 50% 40%,rgba(68,139,255,.14),transparent 60%),#04060C}
@@ -95,13 +97,39 @@ body.dw-theater-open{overflow:hidden}
 .web-features p{color:var(--text-2);font-size:15px}
 .web-links{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:24px}
 
+/* More channels beside the player (a column below the video on phones) */
+.dw-browse{flex:none;width:340px;display:flex;flex-direction:column;min-height:0;overflow:auto;border-left:1px solid var(--line);padding-left:16px;overscroll-behavior:contain}
+.dw-browse-head{position:sticky;top:0;z-index:1;display:grid;gap:10px;padding-bottom:10px;background:#02040A}
+.dw-browse-head h2{font-size:16px}
+.dw-browse-search{padding:8px 12px;border-radius:var(--r-pill);border:1px solid var(--line-strong);background:var(--bg-2);color:var(--text);font:inherit;font-size:14px;min-width:0}
+.dw-browse-search[hidden]{display:none}
+.dw-browse-list{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.dw-browse-item{display:flex;align-items:center;gap:12px;width:100%;padding:6px;border:0;border-radius:var(--r-sm);background:none;color:inherit;font:inherit;text-align:left;cursor:pointer}
+.dw-browse-item:hover,.dw-browse-item:focus-visible{background:var(--surface)}
+.dw-browse-item[aria-current="true"]{background:rgba(89,241,209,.08);box-shadow:inset 3px 0 0 var(--teal)}
+.dw-browse-thumb{position:relative;flex:none;display:grid;place-items:center;width:64px;height:40px;border-radius:6px;background:var(--surface);border:1px solid var(--line);overflow:hidden}
+.dw-browse-thumb.is-wide{width:96px;height:54px}
+.dw-browse-thumb b{color:var(--text-3);font-size:13px}
+.dw-browse-thumb img{position:absolute;inset:0;margin:auto;max-width:84%;max-height:76%;object-fit:contain;background:var(--surface)}
+.dw-browse-thumb.is-wide img{max-width:100%;max-height:100%;width:100%;height:100%;object-fit:cover}
+.dw-browse-text{display:grid;min-width:0}
+.dw-browse-name{font-size:14px;font-weight:600;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dw-browse-meta{font-size:12px;color:var(--text-3);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dw-browse-end{height:1px;flex:none}
+@media (max-width:1023.98px){
+  .dw-theater-main{flex-direction:column;gap:12px}
+  .dw-stage{flex:none;overflow:visible}
+  .dw-video-wrap{flex:none;aspect-ratio:16/9;max-height:56vh;min-height:0}
+  .dw-browse{flex:1;width:auto;border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:10px}
+}
+
 @media (max-width:639.98px){
   .dw{padding-top:8px}
   .dw-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
   .dw-tile-name{font-size:13px}
   .dw-hint{display:none}
   .dw-theater{padding:8px 0 12px}
-  .dw-theater-bar,.dw-routes{padding:0 12px}
+  .dw-theater-bar,.dw-routes,.dw-attrib,.dw-browse{padding-left:12px;padding-right:12px}
   .dw-video-wrap{flex:none;aspect-ratio:16/9;border-radius:0;min-height:0}
   .dw-now-actions .dw-btn{padding:7px 11px;font-size:13px}
 }

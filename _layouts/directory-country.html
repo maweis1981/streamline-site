@@ -27,8 +27,8 @@ layout: default
     <h2 class="dir-subhead">{{ s.channel_list }}</h2>
     <ul class="dir-channels">
       {%- for ch in c.channels %}
-      {%- assign ch_key = c.code | append: ":" | append: ch.name %}{% assign ch_slug = site.data.channel_slugs[ch_key] %}
-      <li>{% if ch_slug %}<a class="dir-name" href="{{ lang_prefix | append: '/channels/' | append: ch_slug | append: '/' | relative_url }}">{{ ch.name }}</a>{% else %}<span class="dir-name">{{ ch.name }}</span>{% endif %}{% for cat in ch.categories %} <span class="badge">{{ s.categories[cat] | default: cat }}</span>{% endfor %}</li>
+      {%- assign ch_key = c.code | append: ":" | append: ch.name %}{% assign ch_slug = site.data.channel_slugs[ch_key] %}{% assign ch_logo = site.data.channel_logos[ch_key] %}
+      <li>{% include channel-logo.html logo=ch_logo name=ch.name size="sm" %}{% if ch_slug %}<a class="dir-name" href="{{ lang_prefix | append: '/channels/' | append: ch_slug | append: '/' | relative_url }}">{{ ch.name }}</a>{% else %}<span class="dir-name">{{ ch.name }}</span>{% endif %}{% for cat in ch.categories %} <span class="badge">{{ s.categories[cat] | default: cat }}</span>{% endfor %}</li>
       {%- endfor %}
     </ul>
 

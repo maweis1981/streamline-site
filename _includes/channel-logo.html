@@ -1,0 +1,2 @@
+{%- comment -%} A channel's logo with its initials underneath, for when the image is missing or fails. Params: logo, name, size ("sm" or empty). {%- endcomment -%}
+<span class="ch-mark{% if include.size %} ch-mark-{{ include.size }}{% endif %}" aria-hidden="true"><b>{{ include.name | slice: 0, 2 }}</b>{% if include.logo %}<img src="{{ include.logo }}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()">{% endif %}</span>

@@ -425,6 +425,18 @@ html.js.nav-open .site-header{background:rgba(5,7,15,.96);border-bottom-color:va
 .ch-related{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
 .ch-related a{display:inline-block;padding:7px 14px;border-radius:var(--r-pill);border:1px solid var(--line-strong);color:var(--text-2);text-decoration:none;font-size:14px}
 .ch-related a:hover{color:var(--teal);border-color:var(--teal)}
+/* Channel logos next to names; the initials show when there is no logo or it fails to load. */
+.ch-mark{position:relative;flex:none;display:grid;place-items:center;width:64px;height:44px;border-radius:var(--r-sm);background:var(--surface);border:1px solid var(--line);overflow:hidden}
+.ch-mark b{color:var(--text-3);font-size:15px;font-weight:700}
+.ch-mark img{position:absolute;inset:0;margin:auto;max-width:82%;max-height:74%;object-fit:contain;background:var(--surface)}
+.ch-mark-sm{width:40px;height:28px;border-radius:6px}
+.ch-mark-sm b{font-size:11px}
+.ch-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.ch-cards a,.ch-cards li>span{display:flex;align-items:center;gap:12px;height:100%;padding:8px 12px 8px 8px;border-radius:var(--r-md);border:1px solid var(--line);color:var(--text);font-size:14px;font-weight:500;text-decoration:none}
+.ch-cards a:hover{border-color:var(--teal);color:var(--teal)}
+.ch-cards a>span:last-child,.ch-cards li>span>span:last-child{overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.dir-channels .ch-mark{margin-right:4px}
+@media (max-width:559.98px){.ch-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.ch-cards .ch-mark{width:48px;height:34px}}
 @media (max-width:559.98px){.ch-hero{grid-template-columns:1fr}.ch-logo{width:96px;height:64px}}
 .dir-channels a.dir-name{color:var(--text);text-decoration:none}.dir-channels a.dir-name:hover{color:var(--teal)}
 /* Free TV by country articles */
@@ -432,7 +444,7 @@ html.js.nav-open .site-header{background:rgba(5,7,15,.96);border-bottom-color:va
 .wt-quick ol{padding-left:1.3em;display:grid;gap:8px;color:var(--text-2)}
 .wt-quick a{color:var(--teal);text-underline-offset:3px}
 .wt-channels{margin:16px 0}
-.wt-channels span{display:inline-block;padding:7px 14px;border-radius:var(--r-pill);border:1px solid var(--line);color:var(--text-3);font-size:14px}
+.wt-channels li>span{color:var(--text-3)}
 .wt-cta .icon{width:16px;height:16px}
 .wt-services{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
 .wt-service h3{font-size:18px;margin-bottom:4px}

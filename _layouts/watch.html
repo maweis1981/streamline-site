@@ -32,10 +32,11 @@ layout: default
     {%- if dc %}
     <h2 class="dg-head">{{ s.online_title }}</h2>
     <p>{{ s.online_desc | replace: "%country%", name }}</p>
-    <ul class="ch-related wt-channels">
+    <ul class="ch-related ch-cards wt-channels">
       {%- for ch in dc.channels limit: 18 %}
       {%- assign ch_key = page.code | append: ":" | append: ch.name %}{% assign ch_slug = site.data.channel_slugs[ch_key] %}
-      <li>{% if ch_slug %}<a href="{{ lang_prefix | append: '/channels/' | append: ch_slug | append: '/' | relative_url }}">{{ ch.name }}</a>{% else %}<span>{{ ch.name }}</span>{% endif %}</li>
+      {%- assign ch_logo = site.data.channel_logos[ch_key] %}
+      <li>{% if ch_slug %}<a href="{{ lang_prefix | append: '/channels/' | append: ch_slug | append: '/' | relative_url }}">{% include channel-logo.html logo=ch_logo name=ch.name %}<span>{{ ch.name }}</span></a>{% else %}<span>{% include channel-logo.html logo=ch_logo name=ch.name %}<span>{{ ch.name }}</span></span>{% endif %}</li>
       {%- endfor %}
     </ul>
     <p class="cta-row wt-cta">

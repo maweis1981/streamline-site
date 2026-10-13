@@ -99,6 +99,8 @@ root.innerHTML = `
         <button type="button" class="dw-btn" data-action="fullscreen">${t("fullscreen")}</button>
       </div>
     </div>
+    <div class="dw-theater-main">
+    <div class="dw-stage">
     <div class="dw-video-wrap">
       <video class="dw-video" controls playsinline autoplay></video>
       <div class="dw-embed" hidden></div>
@@ -115,6 +117,16 @@ root.innerHTML = `
     <div class="dw-routes" role="group" aria-label="${t("routes")}"></div>
     <p class="dw-attrib" hidden></p>
     <p class="dw-hint">${t("shortcuts")}</p>
+    </div>
+    <aside class="dw-browse" aria-labelledby="dw-browse-title">
+      <div class="dw-browse-head">
+        <h2 id="dw-browse-title"></h2>
+        <input class="dw-browse-search" type="search" placeholder="${t("browse_search")}" aria-label="${t("browse_search")}">
+      </div>
+      <ul class="dw-browse-list"></ul>
+      <div class="dw-browse-end" aria-hidden="true"></div>
+    </aside>
+    </div>
   </div>
   <dialog class="dw-dialog">
     <form method="dialog" class="dw-form">
@@ -153,6 +165,11 @@ const els = {
   pip: $<HTMLButtonElement>('[data-action="pip"]'),
   routes: $<HTMLDivElement>(".dw-routes"),
   embed: $<HTMLDivElement>(".dw-embed"),
+  browse: $<HTMLElement>(".dw-browse"),
+  browseTitle: $<HTMLHeadingElement>("#dw-browse-title"),
+  browseSearch: $<HTMLInputElement>(".dw-browse-search"),
+  browseList: $<HTMLUListElement>(".dw-browse-list"),
+  browseEnd: $<HTMLDivElement>(".dw-browse-end"),
   attrib: $<HTMLParagraphElement>(".dw-attrib"),
   prev: $<HTMLButtonElement>('[data-action="prev"]'),
   share: $<HTMLButtonElement>('[data-action="share"]'),
@@ -411,6 +428,78 @@ function renderTheater(): void {
   els.pip.hidden = !document.pictureInPictureEnabled;
 }
 
+// "More channels" beside the player: switch channel without leaving the theater. Lists the
+// channels of the current wall (same source and filters), the playing channel's category first
+// when no filter is set; on-demand videos list their section.
+const BROWSE_PAGE = 60;
+let browseItems: ({ playlistId: string; channel: Channel } | { vod: VodItem })[] = [];
+let browseShown = 0;
+let browseKey = "";
+
+function browseCandidates(): typeof browseItems {
+  const q = els.browseSearch.value.trim().toLowerCase();
+  if (state.vodPlaying) {
+    const section = state.vod.find((v) => v.id === state.vodPlaying!.kind);
+    return (section ? vodItems(section, "", q) : []).map((vod) => ({ vod }));
+  }
+  let items = visible();
+  if (q) items = items.filter(({ channel: c }) => c.name.toLowerCase().includes(q) || categoryName(c.group).toLowerCase().includes(q));
+  const group = state.playing?.channel.group;
+  if (!state.group && !state.query && group) items = [...items.filter((x) => x.channel.group === group), ...items.filter((x) => x.channel.group !== group)];
+  return items;
+}
+
+function renderBrowse(): void {
+  // Rebuild only when the list itself changes; switching channel just moves the highlight.
+  const key = `${state.vodPlaying ? `vod:${state.vodPlaying.kind}:${state.vod.find((v) => v.id === state.vodPlaying!.kind)?.items.length}` : `live:${state.source}:${state.group}:${state.country}:${state.query}:${state.playing?.channel.group ?? ""}`}|${els.browseSearch.value}`;
+  els.browseTitle.textContent = t(state.vodPlaying ? "more_videos" : "more_channels");
+  els.browseSearch.hidden = !!state.vodPlaying;
+  if (key !== browseKey) {
+    browseKey = key;
+    browseItems = browseCandidates();
+    browseShown = 0;
+    els.browseList.innerHTML = "";
+    els.browse.scrollTop = 0;
+    appendBrowse();
+  }
+  markBrowseCurrent();
+}
+
+function appendBrowse(): void {
+  const html = browseItems.slice(browseShown, browseShown + BROWSE_PAGE).map((x) => {
+    if ("vod" in x) {
+      const v = x.vod;
+      return `<li><button type="button" class="dw-browse-item" data-vod="${esc(v.id)}">
+        <span class="dw-browse-thumb is-wide"><img src="${esc(v.thumb)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"></span>
+        <span class="dw-browse-text"><span class="dw-browse-name">${esc(v.title)}</span><span class="dw-browse-meta">${esc([v.channel, v.year].filter(Boolean).join(" · "))}</span></span>
+      </button></li>`;
+    }
+    const c = x.channel;
+    return `<li><button type="button" class="dw-browse-item" data-key="${esc(c.key)}" data-owner="${esc(x.playlistId)}">
+      <span class="dw-browse-thumb"><b>${esc(c.name.slice(0, 2))}</b>${c.logo ? `<img src="${esc(c.logo)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">` : ""}</span>
+      <span class="dw-browse-text"><span class="dw-browse-name">${esc(c.name)}</span><span class="dw-browse-meta">${esc([c.country ? countryName(c.country) : "", categoryName(c.group)].filter(Boolean).join(" · "))}</span></span>
+    </button></li>`;
+  }).join("");
+  els.browseList.insertAdjacentHTML("beforeend", html);
+  browseShown += BROWSE_PAGE;
+}
+
+function markBrowseCurrent(): void {
+  for (const b of els.browseList.querySelectorAll<HTMLElement>(".dw-browse-item")) {
+    const current = state.vodPlaying ? b.dataset.vod === state.vodPlaying.id
+      : !!state.playing && b.dataset.key === state.playing.channel.key && b.dataset.owner === state.playing.playlistId;
+    if (current) b.setAttribute("aria-current", "true");
+    else b.removeAttribute("aria-current");
+  }
+}
+
+new IntersectionObserver((entries) => {
+  if (entries.some((e) => e.isIntersecting) && browseShown < browseItems.length && !els.theater.hidden) {
+    appendBrowse();
+    markBrowseCurrent();
+  }
+}, { root: els.browse, rootMargin: "400px" }).observe(els.browseEnd);
+
 function renderRoutes(activeIndex: number): void {
   const c = state.playing?.channel;
   const usable = c ? webRoutes(c) : [];
@@ -569,6 +658,7 @@ function openVod(item: VodItem): void {
     els.attrib.innerHTML = `${esc(licence)} · <a href="${esc(item.page ?? "")}" target="_blank" rel="noopener">${esc(t("open_on_archive"))}</a>`;
     player.play({ key: item.id, name: item.title, group: "", routes: [{ url: item.src, label: "" }] });
   }
+  renderBrowse();
   remember({ k: "vod", id: item.id, at: Date.now() });
   syncAddress();
   track("web_vod_play", { section: item.kind ?? "", source: item.video ? "youtube" : "archive" });
@@ -670,6 +760,7 @@ function open(playlistId: string, channel: Channel): void {
   document.body.classList.add("dw-theater-open");
   renderTheater();
   player.play(channel, liveRoute.get(favoriteId(playlistId, channel.key)) ?? webRoutes(channel)[0] ?? 0);
+  renderBrowse();
   remember({ k: "live", p: playlistId, c: channel.key, at: Date.now() });
   syncAddress();
   track("web_play", { channel_group: channel.group || "(none)", source: playlistId === FREE ? "free" : "own" });
@@ -911,6 +1002,11 @@ els.country.addEventListener("change", () => {
   state.shown = PAGE_SIZE;
   renderBar();
   renderGrid();
+});
+let browseTimer = 0;
+els.browseSearch.addEventListener("input", () => {
+  clearTimeout(browseTimer);
+  browseTimer = window.setTimeout(renderBrowse, 200);
 });
 let searchTimer = 0;
 els.search.addEventListener("input", () => {

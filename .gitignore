@@ -15,6 +15,7 @@ __pycache__/
 channels/
 */channels/
 _data/channel_slugs.json
+_data/channel_logos.json
 web/vod.json
 
 # Dataset files written by scripts/channels.py at deploy time
