@@ -3,7 +3,9 @@
 Reads _data/vod/sources.yml. Internet Archive sections keep only items whose metadata
 has a public-domain or Creative Commons licence URL and an MP4 file a browser can play.
 YouTube sections resolve each official channel handle to its channel id and read the
-channel's public feed (latest uploads), so nothing needs an API key.
+channel's public feed (latest uploads), so nothing needs an API key. A video that its
+owner limits to some countries keeps that list ("regions"), and the file carries a time
+zone -> country table so the player can leave out what would not play for the visitor.
 
 Usage: python scripts/vod.py OUT_JSON
 """
@@ -24,6 +26,8 @@ SITE = Path(__file__).resolve().parent.parent
 UA = {"User-Agent": "Mozilla/5.0 (Doubo on-demand collector; +https://doubo.tv)", "Accept-Language": "en"}
 MP4_FORMATS = ["h.264 HD", "h.264", "MPEG4", "512Kb MPEG4", "h.264 IA"]
 # Public domain is not the same as suitable: keep exploitation and adult titles out.
+# A list this long means "everywhere" (YouTube lists ~249 codes for unrestricted videos).
+WORLDWIDE = 240
 BLOCKED_WORDS = re.compile(r"\b(sex|sexual|nude|nudity|erotic|adult|stag|burlesque|strip|marihuana|marijuana|reefer|cocaine|narcotic)\b", re.I)
 
 
@@ -98,6 +102,40 @@ def embeddable(video: str) -> bool:
         return False
 
 
+def regions(video: str) -> list[str] | None:
+    """Countries the video may be watched in, when the owner limits it; None when it plays everywhere.
+
+    Read from the watch page's player data (microformat.availableCountries)."""
+    try:
+        html = get(f"https://www.youtube.com/watch?v={video}&hl=en", timeout=20).decode("utf-8", errors="replace")
+    except Exception:
+        return None
+    m = re.search(r'"availableCountries":\[([^\]]*)\]', html)
+    if not m:
+        return None
+    countries = sorted(set(re.findall(r'"([A-Z]{2})"', m.group(1))))
+    return countries if 0 < len(countries) < WORLDWIDE else None
+
+
+def timezone_countries() -> dict[str, str]:
+    """IANA time zone (including old aliases browsers still report, like Asia/Calcutta) -> country code."""
+    zoneinfo = Path("/usr/share/zoneinfo")
+    zones: dict[str, str] = {}
+    try:
+        for line in (zoneinfo / "zone.tab").read_text(encoding="utf-8").splitlines():
+            if line and not line.startswith("#"):
+                code, _, zone = line.split("\t")[:3]
+                zones[zone] = code
+        for line in (zoneinfo / "tzdata.zi").read_text(encoding="utf-8").splitlines():
+            if line.startswith("L "):
+                _, target, alias = line.split()
+                if target in zones and alias not in zones:
+                    zones[alias] = zones[target]
+    except OSError:
+        pass
+    return zones
+
+
 def youtube_channel(ch: dict) -> list[dict]:
     cid = ch.get("id") or channel_id(ch["handle"])
     if not cid:
@@ -121,8 +159,12 @@ def youtube_channel(ch: dict) -> list[dict]:
         })
     with concurrent.futures.ThreadPoolExecutor(8) as pool:
         allowed = list(pool.map(lambda i: embeddable(i["video"]), items))
-    items = [i for i, ok in zip(items, allowed) if ok]
-    print(f"  @{ch['handle']}: {cid}, {len(items)} embeddable videos")
+        items = [i for i, ok in zip(items, allowed) if ok]
+        for item, where in zip(items, pool.map(lambda i: regions(i["video"]), items)):
+            if where:
+                item["regions"] = where
+    limited = sum("regions" in i for i in items)
+    print(f"  @{ch['handle']}: {cid}, {len(items)} embeddable videos ({limited} limited to some countries)")
     return items
 
 
@@ -147,8 +189,10 @@ def main(out_path: str) -> None:
             sections.append({"id": sec["id"], "kind": sec["kind"], "items": unique})
     out = Path(out_path)
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps({"generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "sections": sections},
-                              ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    data = {"generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "sections": sections}
+    if any("regions" in i for s in sections for i in s["items"]):
+        data["tz"] = timezone_countries()
+    out.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     print(f"wrote {out} with {sum(len(s['items']) for s in sections)} items")
 
 

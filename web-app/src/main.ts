@@ -6,7 +6,7 @@ import type { Channel, Playlist, PlaylistSource } from "./model";
 import { favoriteId } from "./model";
 import { Player } from "./player";
 import { PreviewWall, webRoutes } from "./preview";
-import { type VodItem, type VodSection, loadVod, vodItems, vodTile } from "./vod";
+import { type VodItem, type VodSection, loadVod, removeVod, vodItems, vodTile } from "./vod";
 import { castKind, castTo, showAirPlayPicker, stopCasting } from "./cast";
 import { deletePlaylist, loadPlaylists, readPref, savePlaylist, writePref } from "./store";
 
@@ -535,7 +535,10 @@ function setTheaterMode(vod: VodItem | null): void {
   const embed = !!vod?.video;
   els.video.hidden = embed;
   els.embed.hidden = !embed;
-  if (!embed) els.embed.innerHTML = "";
+  if (!embed) {
+    unwatchEmbed();
+    els.embed.innerHTML = "";
+  }
   for (const b of [els.prev, els.next, els.favorite]) b.hidden = !!vod;
   els.pip.hidden = embed || !document.pictureInPictureEnabled;
   els.fullscreen.hidden = embed;
@@ -556,7 +559,10 @@ function openVod(item: VodItem): void {
   els.nowName.textContent = item.title;
   els.nowGroup.textContent = item.channel ?? item.year ?? "";
   if (item.video) {
-    els.embed.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(item.video)}?autoplay=1&rel=0&playsinline=1" title="${esc(item.title)}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+    const params = new URLSearchParams({ autoplay: "1", rel: "0", playsinline: "1", enablejsapi: "1", origin: location.origin });
+    els.embed.classList.remove("is-ready");
+    els.embed.innerHTML = `<iframe src="${YT_ORIGIN}/embed/${encodeURIComponent(item.video)}?${params}" title="${esc(item.title)}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+    watchEmbed(item);
     els.attrib.innerHTML = `${esc(t("vod_from_youtube", { channel: item.channel ?? "" }))} · <a href="https://www.youtube.com/watch?v=${encodeURIComponent(item.video)}" target="_blank" rel="noopener">${esc(t("open_on_youtube"))}</a>`;
   } else if (item.src) {
     const licence = /publicdomain/.test(item.licence ?? "") ? t("licence_pd") : t("licence_cc");
@@ -566,6 +572,85 @@ function openVod(item: VodItem): void {
   remember({ k: "vod", id: item.id, at: Date.now() });
   syncAddress();
   track("web_vod_play", { section: item.kind ?? "", source: item.video ? "youtube" : "archive" });
+}
+
+// YouTube's embed shows its own error page when a video can't play here (most often an owner's
+// country limit). The embed stays transparent until it reports a working player; if it reports an
+// error instead, the video is dropped for this visitor and the next one in the section plays.
+const YT_ORIGIN = "https://www.youtube-nocookie.com";
+const YT_REVEAL_AFTER_READY_MS = 1200;
+const YT_REVEAL_MAX_MS = 5000;
+const YT_MAX_SKIPS = 5;
+let embedWatch: { item: VodItem; timers: number[]; skips: number } | null = null;
+
+function watchEmbed(item: VodItem): void {
+  unwatchEmbed();
+  const watch = { item, timers: [] as number[], skips: 0 };
+  embedWatch = watch;
+  const frame = els.embed.querySelector("iframe")!;
+  const send = (data: object) => frame.contentWindow?.postMessage(JSON.stringify({ ...data, id: 1, channel: "widget" }), YT_ORIGIN);
+  frame.addEventListener("load", () => {
+    // The same handshake YouTube's iframe API uses: keep saying "listening" until the player answers.
+    const hello = window.setInterval(() => {
+      send({ event: "listening" });
+      send({ event: "command", func: "addEventListener", args: ["onError"] });
+      send({ event: "command", func: "addEventListener", args: ["onStateChange"] });
+    }, 250);
+    watch.timers.push(hello);
+  });
+  watch.timers.push(window.setTimeout(revealEmbed, YT_REVEAL_MAX_MS));
+}
+
+function unwatchEmbed(): void {
+  for (const id of embedWatch?.timers ?? []) {
+    clearInterval(id);
+    clearTimeout(id);
+  }
+  embedWatch = null;
+}
+
+function revealEmbed(): void {
+  els.embed.classList.add("is-ready");
+  for (const id of embedWatch?.timers ?? []) clearInterval(id);
+}
+
+window.addEventListener("message", (e) => {
+  const frame = els.embed.querySelector("iframe");
+  if (!embedWatch || !frame || e.source !== frame.contentWindow || !/^https:\/\/www\.youtube(-nocookie)?\.com$/.test(e.origin)) return;
+  let data: { event?: string; info?: unknown };
+  try {
+    data = typeof e.data === "string" ? JSON.parse(e.data) : e.data;
+  } catch {
+    return;
+  }
+  const watch = embedWatch;
+  if (data.event === "onError") skipVod(watch.item, watch.skips);
+  else if (data.event === "onReady") watch.timers.push(window.setTimeout(revealEmbed, YT_REVEAL_AFTER_READY_MS));
+  else if (data.event === "onStateChange" && (data.info === 1 || data.info === 3)) revealEmbed();
+  else if (data.event === "infoDelivery") {
+    const playerState = (data.info as { playerState?: number } | null)?.playerState;
+    if (playerState === 1 || playerState === 3) revealEmbed();
+  }
+});
+
+/** The video won't play for this visitor: forget it here and move on to the next one quietly. */
+function skipVod(item: VodItem, skips: number): void {
+  const section = state.vod.find((v) => v.id === item.kind);
+  const at = section ? section.items.indexOf(item) : -1;
+  state.dead[item.id] = Date.now();
+  writePref("dead", state.dead);
+  state.vod = removeVod(state.vod, item.id);
+  track("web_play_unavailable", { kind: "vod" });
+  const next = section && at >= 0 ? section.items[at] ?? section.items[0] : undefined;
+  if (next && skips < YT_MAX_SKIPS) {
+    openVod(next);
+    if (embedWatch) embedWatch.skips = skips + 1;
+  } else {
+    close();
+  }
+  if (isVod(state.source) && !state.vod.some((v) => VOD + v.id === state.source)) state.source = FREE;
+  renderBar();
+  renderGrid();
 }
 
 function open(playlistId: string, channel: Channel): void {
@@ -854,7 +939,7 @@ document.addEventListener("keydown", (e) => {
   if (state.source !== FREE && state.source !== FAVORITES && !isVod(state.source) && !state.playlists.some((p) => p.id === state.source)) state.source = FREE;
   renderBar();
   renderGrid();
-  [, state.vod] = await Promise.all([loadFree(), loadVod(config.vodUrl)]);
+  [, state.vod] = await Promise.all([loadFree(), loadVod(config.vodUrl, new Set(Object.keys(state.dead)))]);
   if (isVod(state.source) && !state.vod.some((v) => VOD + v.id === state.source)) state.source = FREE;
   render();
   await applyQuery();

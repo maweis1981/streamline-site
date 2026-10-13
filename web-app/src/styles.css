@@ -134,3 +134,7 @@ body.dw-theater-open{overflow:hidden}
 /* Casting */
 .dw-casting{z-index:2}
 .dw-casting-label{color:var(--text);font-size:18px;font-weight:600}
+
+/* The YouTube embed stays invisible until it reports a working player (see watchEmbed in main.ts). */
+.dw-embed iframe{opacity:0;transition:opacity .3s}
+.dw-embed.is-ready iframe{opacity:1}

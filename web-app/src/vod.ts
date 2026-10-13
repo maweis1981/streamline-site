@@ -15,6 +15,7 @@ export interface VodItem {
   channel?: string;
   published?: string;
   kind?: string;
+  regions?: string[]; // countries the owner allows, when limited
 }
 
 export interface VodSection {
@@ -23,16 +24,39 @@ export interface VodSection {
   items: VodItem[];
 }
 
-export async function loadVod(url: string): Promise<VodSection[]> {
+/** Sections with only what should play here: no videos limited to other countries, none that failed before. */
+export async function loadVod(url: string, unavailable: Set<string>): Promise<VodSection[]> {
   try {
     const res = await fetch(url);
     if (!res.ok) return [];
-    const data = (await res.json()) as { sections: VodSection[] };
-    for (const s of data.sections) for (const i of s.items) i.kind = s.id;
-    return data.sections;
+    const data = (await res.json()) as { sections: VodSection[]; tz?: Record<string, string> };
+    const country = visitorCountry(data.tz ?? {});
+    for (const s of data.sections) {
+      s.items = s.items.filter((i) => !unavailable.has(i.id) && (!country || !i.regions || i.regions.includes(country)));
+      for (const i of s.items) i.kind = s.id;
+    }
+    return data.sections.filter((s) => s.items.length);
   } catch {
     return [];
   }
+}
+
+/** Best guess at the visitor's country without asking a server: the device time zone, then the language region. */
+export function visitorCountry(tz: Record<string, string>): string {
+  try {
+    const zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    if (zone && tz[zone]) return tz[zone];
+  } catch {
+    /* no Intl time zone support */
+  }
+  const region = /^[a-z]{2,3}-([A-Z]{2})\b/.exec(navigator.language ?? "");
+  return region ? region[1] : "";
+}
+
+/** Drop one item everywhere (after YouTube refused to play it here). */
+export function removeVod(sections: VodSection[], id: string): VodSection[] {
+  for (const s of sections) s.items = s.items.filter((i) => i.id !== id);
+  return sections.filter((s) => s.items.length);
 }
 
 export function vodItems(section: VodSection, channel: string, query: string): VodItem[] {
