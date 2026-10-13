@@ -581,6 +581,8 @@ const YT_ORIGIN = "https://www.youtube-nocookie.com";
 const YT_REVEAL_AFTER_READY_MS = 1200;
 const YT_REVEAL_MAX_MS = 5000;
 const YT_MAX_SKIPS = 5;
+const YT_CHANNEL_FAILURES = 3;
+const channelFailures: Record<string, number> = {};
 let embedWatch: { item: VodItem; timers: number[]; skips: number } | null = null;
 
 function watchEmbed(item: VodItem): void {
@@ -633,15 +635,21 @@ window.addEventListener("message", (e) => {
   }
 });
 
-/** The video won't play for this visitor: forget it here and move on to the next one quietly. */
+/** The video won't play for this visitor: forget it here and move on to the next one quietly.
+ *  A channel that keeps failing (an owner limiting most uploads to other countries) goes too. */
 function skipVod(item: VodItem, skips: number): void {
   const section = state.vod.find((v) => v.id === item.kind);
   const at = section ? section.items.indexOf(item) : -1;
   state.dead[item.id] = Date.now();
-  writePref("dead", state.dead);
   state.vod = removeVod(state.vod, item.id);
+  const channel = item.channel_id ? `ch:${item.channel_id}` : "";
+  if (channel && (channelFailures[channel] = (channelFailures[channel] ?? 0) + 1) >= YT_CHANNEL_FAILURES) {
+    state.dead[channel] = Date.now();
+    for (const other of state.vod.flatMap((v) => v.items).filter((i) => i.channel_id === item.channel_id)) state.vod = removeVod(state.vod, other.id);
+  }
+  writePref("dead", state.dead);
   track("web_play_unavailable", { kind: "vod" });
-  const next = section && at >= 0 ? section.items[at] ?? section.items[0] : undefined;
+  const next = section && at >= 0 ? (section.items[at] ?? section.items[0]) : undefined;
   if (next && skips < YT_MAX_SKIPS) {
     openVod(next);
     if (embedWatch) embedWatch.skips = skips + 1;

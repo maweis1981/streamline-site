@@ -13,6 +13,7 @@ export interface VodItem {
   page?: string;
   video?: string;     // YouTube video id
   channel?: string;
+  channel_id?: string;
   published?: string;
   kind?: string;
   regions?: string[]; // countries the owner allows, when limited
@@ -32,7 +33,7 @@ export async function loadVod(url: string, unavailable: Set<string>): Promise<Vo
     const data = (await res.json()) as { sections: VodSection[]; tz?: Record<string, string> };
     const country = visitorCountry(data.tz ?? {});
     for (const s of data.sections) {
-      s.items = s.items.filter((i) => !unavailable.has(i.id) && (!country || !i.regions || i.regions.includes(country)));
+      s.items = s.items.filter((i) => !unavailable.has(i.id) && !unavailable.has(`ch:${i.channel_id}`) && (!country || !i.regions || i.regions.includes(country)));
       for (const i of s.items) i.kind = s.id;
     }
     return data.sections.filter((s) => s.items.length);

@@ -14,6 +14,7 @@ import concurrent.futures
 import json
 import re
 import sys
+import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -26,14 +27,22 @@ SITE = Path(__file__).resolve().parent.parent
 UA = {"User-Agent": "Mozilla/5.0 (Doubo on-demand collector; +https://doubo.tv)", "Accept-Language": "en"}
 MP4_FORMATS = ["h.264 HD", "h.264", "MPEG4", "512Kb MPEG4", "h.264 IA"]
 # Public domain is not the same as suitable: keep exploitation and adult titles out.
+PREVIOUS = "https://doubo.tv/web/vod.json"
 # A list this long means "everywhere" (YouTube lists ~249 codes for unrestricted videos).
 WORLDWIDE = 240
 BLOCKED_WORDS = re.compile(r"\b(sex|sexual|nude|nudity|erotic|adult|stag|burlesque|strip|marihuana|marijuana|reefer|cocaine|narcotic)\b", re.I)
 
 
-def get(url: str, timeout: int = 30) -> bytes:
-    with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=timeout) as r:
-        return r.read()
+def get(url: str, timeout: int = 30, tries: int = 1) -> bytes:
+    for attempt in range(tries):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=timeout) as r:
+                return r.read()
+        except Exception:
+            if attempt == tries - 1:
+                raise
+            time.sleep(2 * (attempt + 1))
+    raise AssertionError("unreachable")
 
 
 def clean(text: str, limit: int = 280) -> str:
@@ -136,12 +145,16 @@ def timezone_countries() -> dict[str, str]:
     return zones
 
 
-def youtube_channel(ch: dict) -> list[dict]:
+def youtube_channel(ch: dict) -> list[dict] | None:
     cid = ch.get("id") or channel_id(ch["handle"])
     if not cid:
         print(f"  no channel id for @{ch['handle']}")
-        return []
-    feed = ET.fromstring(get(f"https://www.youtube.com/feeds/videos.xml?channel_id={cid}"))
+        return None
+    # The uploads-playlist feed answers more reliably than the channel feed, which often returns 404/500.
+    try:
+        feed = ET.fromstring(get(f"https://www.youtube.com/feeds/videos.xml?playlist_id=UU{cid[2:]}", tries=3))
+    except Exception:
+        feed = ET.fromstring(get(f"https://www.youtube.com/feeds/videos.xml?channel_id={cid}", tries=3))
     ns = {"a": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015", "media": "http://search.yahoo.com/mrss/"}
     items = []
     for entry in feed.findall("a:entry", ns):
@@ -168,15 +181,36 @@ def youtube_channel(ch: dict) -> list[dict]:
     return items
 
 
+def previous_items() -> dict[str, list[dict]]:
+    """Channel name -> items in the list that is live now, so one failed feed doesn't empty a row."""
+    try:
+        data = json.loads(get(PREVIOUS, tries=2))
+    except Exception:
+        return {}
+    by_channel: dict[str, list[dict]] = {}
+    for sec in data.get("sections", []):
+        for item in sec["items"]:
+            if item.get("channel"):
+                by_channel.setdefault(item["channel"], []).append(item)
+    return by_channel
+
+
 def main(out_path: str) -> None:
     config = yaml.safe_load((SITE / "_data/vod/sources.yml").read_text(encoding="utf-8"))
+    previous = previous_items()
     sections = []
     for sec in config["sections"]:
         print(f"section {sec['id']}")
         if sec["kind"] == "archive":
             items = _safe(archive_section, sec["query"], sec.get("rows", 50), sec.get("title_starts")) or []
         else:
-            items = [i for ch in sec["channels"] for i in (_safe(youtube_channel, ch) or [])]
+            items = []
+            for ch in sec["channels"]:
+                found = _safe(youtube_channel, ch)
+                if found is None and previous.get(ch["name"]):
+                    found = previous[ch["name"]]
+                    print(f"  @{ch['handle']}: kept {len(found)} videos from the live list")
+                items += found or []
         # The same film is often uploaded several times; keep the first (most downloaded) copy.
         seen, unique = set(), []
         for i in items:
