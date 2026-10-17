@@ -1,0 +1,43 @@
+# Doubo (都播)
+
+> Doubo is a native IPTV & M3U player for iPhone, iPad, and Mac (Android coming soon). Import your own playlists, browse by group, watch in Picture in Picture, cast to your TV, and control the TV with the built-in universal remote for Roku, Samsung, LG and DLNA. Catch-up, multi-quality HLS, dual audio, per-channel headers and Xtream Codes supported. No bundled channels, no personal data collected.
+
+Doubo is a native IPTV / M3U playlist player, available for iPhone, iPad, and Mac (SwiftUI and AVKit), with Android phones, tablets, and Android TV / TV boxes coming soon. It plays M3U / M3U8 playlists that users add themselves (by URL or file); it does not bundle or sell any channels. Highlights: grouped channel browsing, search and favorites, parallel channel checks, switching between multiple sources of the same channel, Picture in Picture, subtitle tracks, playback speed, a built-in universal TV remote that discovers and controls Roku, Samsung, LG and DLNA TVs over the local network (and also finds Chromecast, AirPlay and Android TV devices), catch-up / replay where the source provides it, multi-quality HLS selection (auto/high/medium/low), dual audio (watch one feed's picture with another feed's sound), per-channel HTTP headers (User-Agent / Referer), Xtream Codes login, cached playlists with offline fallback and clear network error messages, DLNA casting to smart TVs, local video playback, and on-device storage with no ads or analytics SDKs. Apple TV and CarPlay versions are planned.
+
+## Pages
+- [Home](https://doubo.tv/en/): features, platforms, roadmap summary, FAQ
+- [Guide](https://doubo.tv/en/guide/): how to add and play M3U / M3U8 playlists
+- [Universal TV remote](https://doubo.tv/en/blog/universal-tv-remote-control/): how Doubo's built-in universal remote discovers and controls Roku, Samsung, LG and DLNA TVs, and finds Chromecast / AirPlay / Android TV devices
+- [Online M3U player](https://doubo.tv/en/web/): free web player with live previews of free channels; plays your own M3U links in the browser
+- [M3U analyzer & cleaner](https://doubo.tv/en/tools/m3u/): count channels and groups, remove duplicate links, sort and export a playlist, in the browser
+- Device guides: how to play M3U playlists on [Computer (browser)](https://doubo.tv/en/guide/computer/), [iPhone & iPad](https://doubo.tv/en/guide/iphone-ipad/), [Android phone](https://doubo.tv/en/guide/android-phone/), [Smart TV](https://doubo.tv/en/guide/smart-tv/), [Android TV / TV box](https://doubo.tv/en/guide/android-tv/), [Fire TV Stick](https://doubo.tv/en/guide/fire-tv/), [Apple TV](https://doubo.tv/en/guide/apple-tv/), [Chromecast / Google TV](https://doubo.tv/en/guide/chromecast/), [VLC](https://doubo.tv/en/guide/vlc/), [Kodi](https://doubo.tv/en/guide/kodi/)
+- [Cross-border e-commerce product research with TV shopping channels](https://doubo.tv/en/articles/tv-shopping-product-research/): free TV shopping channels by country and how to use them to see what sells in each market
+- [Free TV by country](https://doubo.tv/en/watch/): legal free ways to watch TV in 15 countries (official apps, free-to-air, free channels)
+- [Free TV channels by country: open dataset](https://doubo.tv/en/data/free-tv-channels/): how many free live channels each country has online and how many play in a browser, updated daily, CC BY 4.0, with CSV and JSON downloads
+- Channel pages: one page per free channel at https://doubo.tv/en/channels/<channel-id>/ with country, category, language, owner, launch year, official website and a live web player link; country pages at https://doubo.tv/en/playlists/<country-code>/ and category pages at https://doubo.tv/en/playlists/category/<category>/
+- [Free channel directory](https://doubo.tv/en/playlists/): free-to-air channels that broadcasters publish openly, as M3U playlists by country, category and language (source and policy: https://github.com/streamline-iptv/iptv-playlists)
+- [Roadmap](https://doubo.tv/en/roadmap/): shipped, in-progress, and planned features
+- [Support](https://doubo.tv/en/support/): FAQ and contact
+- [Privacy Policy](https://doubo.tv/en/privacy/)
+
+## Languages
+- [中文](https://doubo.tv/)
+- [English](https://doubo.tv/en/)
+- [Bahasa Melayu](https://doubo.tv/ms/)
+- [Bahasa Indonesia](https://doubo.tv/id/)
+- [Tiếng Việt](https://doubo.tv/vi/)
+- [ไทย](https://doubo.tv/th/)
+
+## FAQ
+- **Does Doubo provide TV channels?** No. Doubo is a player; it doesn't bundle or sell channel content. Add playlists you're authorized to use. Recommended lists in the app are third-party public links, and their availability and viewing rights are set by their providers.
+- **How do I get started?** Tap Add, paste an M3U / M3U8 playlist URL you’re authorized to use, or import a .m3u / .m3u8 file from Files. Channels are grouped automatically. See the Guide page for step-by-step instructions.
+- **Which formats are supported?** M3U and M3U8 playlists, with live streams such as HLS (.m3u8) that Apple’s native player supports. You can also open local video files directly.
+- **Do you collect my data?** The app collects no personal data. Playlists, favorites, and watch history stay on your device. This website uses Google Analytics to understand visits; see the privacy policy.
+- **What do I need to cast to a TV?** The TV must support DLNA rendering (DMR) and be on the same network. Automatic discovery on iPhone and iPad requires Apple's multicast networking entitlement, which is still pending; Mac isn't affected.
+- **Is there an Android version?** It’s on the way. Doubo for Android will support phones, tablets, and Android TV / TV boxes, and we’ll announce it here as soon as it’s available.
+- **Does it work on Apple TV?** An Apple TV version is planned. Today Doubo runs on iPhone, iPad, and Mac, and you can cast to your living-room TV.
+- **Can Doubo control my TV like a remote?** Yes. Doubo includes a universal TV remote for Roku, Samsung, LG and DLNA TVs on the same network, with power, volume, channel up/down, a number pad, a direction pad and text search. TVs are found automatically over your network. Apple TV can't be controlled by third-party apps.
+- **Does Doubo support catch-up or replay?** Yes, on channels whose playlist source provides catch-up parameters. You can go back and watch programmes that already aired.
+- **Can I choose the stream quality?** Yes. On multi-bitrate HLS channels you can pick Auto, High, Medium or Low to match your connection.
+- **Can I sign in with an Xtream Codes account?** Yes. Enter your Xtream host, username and password; Doubo loads the live channels and stores the password only in the device Keychain.
+- **What happens if a playlist can't be refreshed?** Doubo shows the channels it cached from the last successful load and tells you the network reason, instead of leaving a blank screen.

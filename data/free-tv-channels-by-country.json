@@ -1,0 +1,748 @@
+{
+ "name": "Free TV channels by country (Doubo Public Channel Directory)",
+ "license": "CC BY 4.0",
+ "attribution": "Doubo Public Channel Directory, https://doubo.tv/data/free-tv-channels/",
+ "as_of": "2026-10-17",
+ "channels_listed": 2912,
+ "channels_playable_in_browser": 1720,
+ "countries": [
+  {
+   "code": "US",
+   "name": "United States",
+   "channels_listed": 964,
+   "channels_playable_in_browser": 472
+  },
+  {
+   "code": "IN",
+   "name": "India",
+   "channels_listed": 276,
+   "channels_playable_in_browser": 263
+  },
+  {
+   "code": "DE",
+   "name": "Germany",
+   "channels_listed": 248,
+   "channels_playable_in_browser": 31
+  },
+  {
+   "code": "SE",
+   "name": "Sweden",
+   "channels_listed": 190,
+   "channels_playable_in_browser": 2
+  },
+  {
+   "code": "UK",
+   "name": "United Kingdom",
+   "channels_listed": 109,
+   "channels_playable_in_browser": 67
+  },
+  {
+   "code": "IT",
+   "name": "Italy",
+   "channels_listed": 94,
+   "channels_playable_in_browser": 74
+  },
+  {
+   "code": "ES",
+   "name": "Spain",
+   "channels_listed": 70,
+   "channels_playable_in_browser": 48
+  },
+  {
+   "code": "CA",
+   "name": "Canada",
+   "channels_listed": 54,
+   "channels_playable_in_browser": 48
+  },
+  {
+   "code": "NL",
+   "name": "Netherlands",
+   "channels_listed": 51,
+   "channels_playable_in_browser": 49
+  },
+  {
+   "code": "FR",
+   "name": "France",
+   "channels_listed": 50,
+   "channels_playable_in_browser": 41
+  },
+  {
+   "code": "MX",
+   "name": "Mexico",
+   "channels_listed": 48,
+   "channels_playable_in_browser": 40
+  },
+  {
+   "code": "KR",
+   "name": "South Korea",
+   "channels_listed": 41,
+   "channels_playable_in_browser": 34
+  },
+  {
+   "code": "BR",
+   "name": "Brazil",
+   "channels_listed": 39,
+   "channels_playable_in_browser": 22
+  },
+  {
+   "code": "CL",
+   "name": "Chile",
+   "channels_listed": 32,
+   "channels_playable_in_browser": 25
+  },
+  {
+   "code": "ID",
+   "name": "Indonesia",
+   "channels_listed": 29,
+   "channels_playable_in_browser": 12
+  },
+  {
+   "code": "PL",
+   "name": "Poland",
+   "channels_listed": 26,
+   "channels_playable_in_browser": 25
+  },
+  {
+   "code": "DO",
+   "name": "Dominican Republic",
+   "channels_listed": 25,
+   "channels_playable_in_browser": 22
+  },
+  {
+   "code": "RO",
+   "name": "Romania",
+   "channels_listed": 25,
+   "channels_playable_in_browser": 20
+  },
+  {
+   "code": "RU",
+   "name": "Russia",
+   "channels_listed": 25,
+   "channels_playable_in_browser": 15
+  },
+  {
+   "code": "AU",
+   "name": "Australia",
+   "channels_listed": 22,
+   "channels_playable_in_browser": 16
+  },
+  {
+   "code": "CN",
+   "name": "China",
+   "channels_listed": 22,
+   "channels_playable_in_browser": 16
+  },
+  {
+   "code": "TH",
+   "name": "Thailand",
+   "channels_listed": 22,
+   "channels_playable_in_browser": 20
+  },
+  {
+   "code": "CO",
+   "name": "Colombia",
+   "channels_listed": 21,
+   "channels_playable_in_browser": 15
+  },
+  {
+   "code": "IQ",
+   "name": "Iraq",
+   "channels_listed": 19,
+   "channels_playable_in_browser": 18
+  },
+  {
+   "code": "CR",
+   "name": "Costa Rica",
+   "channels_listed": 18,
+   "channels_playable_in_browser": 17
+  },
+  {
+   "code": "AR",
+   "name": "Argentina",
+   "channels_listed": 16,
+   "channels_playable_in_browser": 14
+  },
+  {
+   "code": "TR",
+   "name": "Türkiye",
+   "channels_listed": 16,
+   "channels_playable_in_browser": 15
+  },
+  {
+   "code": "HN",
+   "name": "Honduras",
+   "channels_listed": 12,
+   "channels_playable_in_browser": 12
+  },
+  {
+   "code": "PR",
+   "name": "Puerto Rico",
+   "channels_listed": 12,
+   "channels_playable_in_browser": 12
+  },
+  {
+   "code": "AE",
+   "name": "United Arab Emirates",
+   "channels_listed": 11,
+   "channels_playable_in_browser": 11
+  },
+  {
+   "code": "AT",
+   "name": "Austria",
+   "channels_listed": 10,
+   "channels_playable_in_browser": 9
+  },
+  {
+   "code": "BE",
+   "name": "Belgium",
+   "channels_listed": 10,
+   "channels_playable_in_browser": 9
+  },
+  {
+   "code": "IR",
+   "name": "Iran",
+   "channels_listed": 10,
+   "channels_playable_in_browser": 8
+  },
+  {
+   "code": "VN",
+   "name": "Vietnam",
+   "channels_listed": 10,
+   "channels_playable_in_browser": 7
+  },
+  {
+   "code": "MY",
+   "name": "Malaysia",
+   "channels_listed": 8,
+   "channels_playable_in_browser": 0
+  },
+  {
+   "code": "UA",
+   "name": "Ukraine",
+   "channels_listed": 8,
+   "channels_playable_in_browser": 7
+  },
+  {
+   "code": "VE",
+   "name": "Venezuela",
+   "channels_listed": 8,
+   "channels_playable_in_browser": 8
+  },
+  {
+   "code": "DK",
+   "name": "Denmark",
+   "channels_listed": 7,
+   "channels_playable_in_browser": 3
+  },
+  {
+   "code": "GR",
+   "name": "Greece",
+   "channels_listed": 7,
+   "channels_playable_in_browser": 5
+  },
+  {
+   "code": "HK",
+   "name": "Hong Kong SAR China",
+   "channels_listed": 7,
+   "channels_playable_in_browser": 3
+  },
+  {
+   "code": "IL",
+   "name": "Israel",
+   "channels_listed": 7,
+   "channels_playable_in_browser": 6
+  },
+  {
+   "code": "MD",
+   "name": "Moldova",
+   "channels_listed": 7,
+   "channels_playable_in_browser": 4
+  },
+  {
+   "code": "PT",
+   "name": "Portugal",
+   "channels_listed": 7,
+   "channels_playable_in_browser": 2
+  },
+  {
+   "code": "SA",
+   "name": "Saudi Arabia",
+   "channels_listed": 7,
+   "channels_playable_in_browser": 7
+  },
+  {
+   "code": "SG",
+   "name": "Singapore",
+   "channels_listed": 7,
+   "channels_playable_in_browser": 4
+  },
+  {
+   "code": "LT",
+   "name": "Lithuania",
+   "channels_listed": 6,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "LU",
+   "name": "Luxembourg",
+   "channels_listed": 6,
+   "channels_playable_in_browser": 6
+  },
+  {
+   "code": "NO",
+   "name": "Norway",
+   "channels_listed": 6,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "PE",
+   "name": "Peru",
+   "channels_listed": 6,
+   "channels_playable_in_browser": 5
+  },
+  {
+   "code": "PK",
+   "name": "Pakistan",
+   "channels_listed": 6,
+   "channels_playable_in_browser": 6
+  },
+  {
+   "code": "AL",
+   "name": "Albania",
+   "channels_listed": 5,
+   "channels_playable_in_browser": 3
+  },
+  {
+   "code": "BH",
+   "name": "Bahrain",
+   "channels_listed": 5,
+   "channels_playable_in_browser": 5
+  },
+  {
+   "code": "CH",
+   "name": "Switzerland",
+   "channels_listed": 5,
+   "channels_playable_in_browser": 5
+  },
+  {
+   "code": "EE",
+   "name": "Estonia",
+   "channels_listed": 5,
+   "channels_playable_in_browser": 4
+  },
+  {
+   "code": "FI",
+   "name": "Finland",
+   "channels_listed": 5,
+   "channels_playable_in_browser": 5
+  },
+  {
+   "code": "HU",
+   "name": "Hungary",
+   "channels_listed": 5,
+   "channels_playable_in_browser": 2
+  },
+  {
+   "code": "IE",
+   "name": "Ireland",
+   "channels_listed": 5,
+   "channels_playable_in_browser": 2
+  },
+  {
+   "code": "JP",
+   "name": "Japan",
+   "channels_listed": 5,
+   "channels_playable_in_browser": 4
+  },
+  {
+   "code": "NG",
+   "name": "Nigeria",
+   "channels_listed": 5,
+   "channels_playable_in_browser": 4
+  },
+  {
+   "code": "RW",
+   "name": "Rwanda",
+   "channels_listed": 5,
+   "channels_playable_in_browser": 4
+  },
+  {
+   "code": "SK",
+   "name": "Slovakia",
+   "channels_listed": 5,
+   "channels_playable_in_browser": 5
+  },
+  {
+   "code": "BA",
+   "name": "Bosnia & Herzegovina",
+   "channels_listed": 4,
+   "channels_playable_in_browser": 4
+  },
+  {
+   "code": "BO",
+   "name": "Bolivia",
+   "channels_listed": 4,
+   "channels_playable_in_browser": 2
+  },
+  {
+   "code": "CZ",
+   "name": "Czechia",
+   "channels_listed": 4,
+   "channels_playable_in_browser": 4
+  },
+  {
+   "code": "IS",
+   "name": "Iceland",
+   "channels_listed": 4,
+   "channels_playable_in_browser": 3
+  },
+  {
+   "code": "KH",
+   "name": "Cambodia",
+   "channels_listed": 4,
+   "channels_playable_in_browser": 3
+  },
+  {
+   "code": "MK",
+   "name": "North Macedonia",
+   "channels_listed": 4,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "MN",
+   "name": "Mongolia",
+   "channels_listed": 4,
+   "channels_playable_in_browser": 4
+  },
+  {
+   "code": "NZ",
+   "name": "New Zealand",
+   "channels_listed": 4,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "PH",
+   "name": "Philippines",
+   "channels_listed": 4,
+   "channels_playable_in_browser": 4
+  },
+  {
+   "code": "QA",
+   "name": "Qatar",
+   "channels_listed": 4,
+   "channels_playable_in_browser": 4
+  },
+  {
+   "code": "SV",
+   "name": "El Salvador",
+   "channels_listed": 4,
+   "channels_playable_in_browser": 4
+  },
+  {
+   "code": "TW",
+   "name": "Taiwan",
+   "channels_listed": 4,
+   "channels_playable_in_browser": 4
+  },
+  {
+   "code": "BG",
+   "name": "Bulgaria",
+   "channels_listed": 3,
+   "channels_playable_in_browser": 2
+  },
+  {
+   "code": "EC",
+   "name": "Ecuador",
+   "channels_listed": 3,
+   "channels_playable_in_browser": 2
+  },
+  {
+   "code": "GT",
+   "name": "Guatemala",
+   "channels_listed": 3,
+   "channels_playable_in_browser": 3
+  },
+  {
+   "code": "PY",
+   "name": "Paraguay",
+   "channels_listed": 3,
+   "channels_playable_in_browser": 2
+  },
+  {
+   "code": "BQ",
+   "name": "Caribbean Netherlands",
+   "channels_listed": 2,
+   "channels_playable_in_browser": 2
+  },
+  {
+   "code": "CM",
+   "name": "Cameroon",
+   "channels_listed": 2,
+   "channels_playable_in_browser": 2
+  },
+  {
+   "code": "CY",
+   "name": "Cyprus",
+   "channels_listed": 2,
+   "channels_playable_in_browser": 2
+  },
+  {
+   "code": "EG",
+   "name": "Egypt",
+   "channels_listed": 2,
+   "channels_playable_in_browser": 2
+  },
+  {
+   "code": "GH",
+   "name": "Ghana",
+   "channels_listed": 2,
+   "channels_playable_in_browser": 2
+  },
+  {
+   "code": "HT",
+   "name": "Haiti",
+   "channels_listed": 2,
+   "channels_playable_in_browser": 2
+  },
+  {
+   "code": "KW",
+   "name": "Kuwait",
+   "channels_listed": 2,
+   "channels_playable_in_browser": 2
+  },
+  {
+   "code": "KZ",
+   "name": "Kazakhstan",
+   "channels_listed": 2,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "LB",
+   "name": "Lebanon",
+   "channels_listed": 2,
+   "channels_playable_in_browser": 2
+  },
+  {
+   "code": "PS",
+   "name": "Palestinian Territories",
+   "channels_listed": 2,
+   "channels_playable_in_browser": 2
+  },
+  {
+   "code": "RS",
+   "name": "Serbia",
+   "channels_listed": 2,
+   "channels_playable_in_browser": 2
+  },
+  {
+   "code": "SD",
+   "name": "Sudan",
+   "channels_listed": 2,
+   "channels_playable_in_browser": 2
+  },
+  {
+   "code": "SY",
+   "name": "Syria",
+   "channels_listed": 2,
+   "channels_playable_in_browser": 2
+  },
+  {
+   "code": "TT",
+   "name": "Trinidad & Tobago",
+   "channels_listed": 2,
+   "channels_playable_in_browser": 2
+  },
+  {
+   "code": "AF",
+   "name": "Afghanistan",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "AG",
+   "name": "Antigua & Barbuda",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "AO",
+   "name": "Angola",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "AZ",
+   "name": "Azerbaijan",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 0
+  },
+  {
+   "code": "BF",
+   "name": "Burkina Faso",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "BJ",
+   "name": "Benin",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "BY",
+   "name": "Belarus",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 0
+  },
+  {
+   "code": "CW",
+   "name": "Curaçao",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "GE",
+   "name": "Georgia",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "GM",
+   "name": "Gambia",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "GP",
+   "name": "Guadeloupe",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 0
+  },
+  {
+   "code": "GQ",
+   "name": "Equatorial Guinea",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "HR",
+   "name": "Croatia",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "LC",
+   "name": "St. Lucia",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "LK",
+   "name": "Sri Lanka",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "LV",
+   "name": "Latvia",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "LY",
+   "name": "Libya",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "MA",
+   "name": "Morocco",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "MC",
+   "name": "Monaco",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "MM",
+   "name": "Myanmar (Burma)",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "MQ",
+   "name": "Martinique",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "MR",
+   "name": "Mauritania",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "MT",
+   "name": "Malta",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "NA",
+   "name": "Namibia",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "NI",
+   "name": "Nicaragua",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 0
+  },
+  {
+   "code": "OM",
+   "name": "Oman",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "TN",
+   "name": "Tunisia",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "UG",
+   "name": "Uganda",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 0
+  },
+  {
+   "code": "UY",
+   "name": "Uruguay",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "VG",
+   "name": "British Virgin Islands",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 1
+  },
+  {
+   "code": "XK",
+   "name": "Kosovo",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 0
+  },
+  {
+   "code": "ZA",
+   "name": "South Africa",
+   "channels_listed": 1,
+   "channels_playable_in_browser": 1
+  }
+ ]
+}

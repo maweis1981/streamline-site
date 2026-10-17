@@ -1,0 +1,124 @@
+country_code,country,channels_listed,channels_playable_in_browser,as_of
+US,United States,964,472,2026-10-17
+IN,India,276,263,2026-10-17
+DE,Germany,248,31,2026-10-17
+SE,Sweden,190,2,2026-10-17
+UK,United Kingdom,109,67,2026-10-17
+IT,Italy,94,74,2026-10-17
+ES,Spain,70,48,2026-10-17
+CA,Canada,54,48,2026-10-17
+NL,Netherlands,51,49,2026-10-17
+FR,France,50,41,2026-10-17
+MX,Mexico,48,40,2026-10-17
+KR,South Korea,41,34,2026-10-17
+BR,Brazil,39,22,2026-10-17
+CL,Chile,32,25,2026-10-17
+ID,Indonesia,29,12,2026-10-17
+PL,Poland,26,25,2026-10-17
+DO,Dominican Republic,25,22,2026-10-17
+RO,Romania,25,20,2026-10-17
+RU,Russia,25,15,2026-10-17
+AU,Australia,22,16,2026-10-17
+CN,China,22,16,2026-10-17
+TH,Thailand,22,20,2026-10-17
+CO,Colombia,21,15,2026-10-17
+IQ,Iraq,19,18,2026-10-17
+CR,Costa Rica,18,17,2026-10-17
+AR,Argentina,16,14,2026-10-17
+TR,Türkiye,16,15,2026-10-17
+HN,Honduras,12,12,2026-10-17
+PR,Puerto Rico,12,12,2026-10-17
+AE,United Arab Emirates,11,11,2026-10-17
+AT,Austria,10,9,2026-10-17
+BE,Belgium,10,9,2026-10-17
+IR,Iran,10,8,2026-10-17
+VN,Vietnam,10,7,2026-10-17
+MY,Malaysia,8,0,2026-10-17
+UA,Ukraine,8,7,2026-10-17
+VE,Venezuela,8,8,2026-10-17
+DK,Denmark,7,3,2026-10-17
+GR,Greece,7,5,2026-10-17
+HK,Hong Kong SAR China,7,3,2026-10-17
+IL,Israel,7,6,2026-10-17
+MD,Moldova,7,4,2026-10-17
+PT,Portugal,7,2,2026-10-17
+SA,Saudi Arabia,7,7,2026-10-17
+SG,Singapore,7,4,2026-10-17
+LT,Lithuania,6,1,2026-10-17
+LU,Luxembourg,6,6,2026-10-17
+NO,Norway,6,1,2026-10-17
+PE,Peru,6,5,2026-10-17
+PK,Pakistan,6,6,2026-10-17
+AL,Albania,5,3,2026-10-17
+BH,Bahrain,5,5,2026-10-17
+CH,Switzerland,5,5,2026-10-17
+EE,Estonia,5,4,2026-10-17
+FI,Finland,5,5,2026-10-17
+HU,Hungary,5,2,2026-10-17
+IE,Ireland,5,2,2026-10-17
+JP,Japan,5,4,2026-10-17
+NG,Nigeria,5,4,2026-10-17
+RW,Rwanda,5,4,2026-10-17
+SK,Slovakia,5,5,2026-10-17
+BA,Bosnia & Herzegovina,4,4,2026-10-17
+BO,Bolivia,4,2,2026-10-17
+CZ,Czechia,4,4,2026-10-17
+IS,Iceland,4,3,2026-10-17
+KH,Cambodia,4,3,2026-10-17
+MK,North Macedonia,4,1,2026-10-17
+MN,Mongolia,4,4,2026-10-17
+NZ,New Zealand,4,1,2026-10-17
+PH,Philippines,4,4,2026-10-17
+QA,Qatar,4,4,2026-10-17
+SV,El Salvador,4,4,2026-10-17
+TW,Taiwan,4,4,2026-10-17
+BG,Bulgaria,3,2,2026-10-17
+EC,Ecuador,3,2,2026-10-17
+GT,Guatemala,3,3,2026-10-17
+PY,Paraguay,3,2,2026-10-17
+BQ,Caribbean Netherlands,2,2,2026-10-17
+CM,Cameroon,2,2,2026-10-17
+CY,Cyprus,2,2,2026-10-17
+EG,Egypt,2,2,2026-10-17
+GH,Ghana,2,2,2026-10-17
+HT,Haiti,2,2,2026-10-17
+KW,Kuwait,2,2,2026-10-17
+KZ,Kazakhstan,2,1,2026-10-17
+LB,Lebanon,2,2,2026-10-17
+PS,Palestinian Territories,2,2,2026-10-17
+RS,Serbia,2,2,2026-10-17
+SD,Sudan,2,2,2026-10-17
+SY,Syria,2,2,2026-10-17
+TT,Trinidad & Tobago,2,2,2026-10-17
+AF,Afghanistan,1,1,2026-10-17
+AG,Antigua & Barbuda,1,1,2026-10-17
+AO,Angola,1,1,2026-10-17
+AZ,Azerbaijan,1,0,2026-10-17
+BF,Burkina Faso,1,1,2026-10-17
+BJ,Benin,1,1,2026-10-17
+BY,Belarus,1,0,2026-10-17
+CW,Curaçao,1,1,2026-10-17
+GE,Georgia,1,1,2026-10-17
+GM,Gambia,1,1,2026-10-17
+GP,Guadeloupe,1,0,2026-10-17
+GQ,Equatorial Guinea,1,1,2026-10-17
+HR,Croatia,1,1,2026-10-17
+LC,St. Lucia,1,1,2026-10-17
+LK,Sri Lanka,1,1,2026-10-17
+LV,Latvia,1,1,2026-10-17
+LY,Libya,1,1,2026-10-17
+MA,Morocco,1,1,2026-10-17
+MC,Monaco,1,1,2026-10-17
+MM,Myanmar (Burma),1,1,2026-10-17
+MQ,Martinique,1,1,2026-10-17
+MR,Mauritania,1,1,2026-10-17
+MT,Malta,1,1,2026-10-17
+NA,Namibia,1,1,2026-10-17
+NI,Nicaragua,1,0,2026-10-17
+OM,Oman,1,1,2026-10-17
+TN,Tunisia,1,1,2026-10-17
+UG,Uganda,1,0,2026-10-17
+UY,Uruguay,1,1,2026-10-17
+VG,British Virgin Islands,1,1,2026-10-17
+XK,Kosovo,1,0,2026-10-17
+ZA,South Africa,1,1,2026-10-17

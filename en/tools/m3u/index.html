@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.SL_ANALYTICS = { gtm: "GTM-MJDCLXML", ga: "" };
+  gtag('consent', 'default', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'granted',
+    functionality_storage: 'granted',
+    security_storage: 'granted',
+    wait_for_update: 500
+  });
+  // EEA, UK and Switzerland: analytics stay off until the visitor accepts.
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    region: ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IS','IE','IT','LV','LI','LT','LU','MT','NL','NO','PL','PT','RO','SK','SI','ES','SE','GB','CH']
+  });
+  try {
+    var choice = localStorage.getItem('sl-consent');
+    if (choice === 'granted' || choice === 'denied') {
+      gtag('consent', 'update', { analytics_storage: choice });
+    }
+  } catch (e) {}
+  dataLayer.push({ page_language: 'en', page_section: 'tools-m3u' });
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MJDCLXML');</script>
+<!-- End Google Tag Manager -->
+  <title>M3U Playlist Analyzer & Cleaner: Count, Deduplicate and Sort Online · Doubo</title>
+  <meta name="description" content="A free online tool for M3U / M3U8 playlists: count channels and groups, find duplicate links, remove duplicates, sort by group and export a clean playlist. Runs entirely in your browser; nothing is uploaded.">
+  <meta name="theme-color" content="#05070F">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://doubo.tv/en/tools/m3u/">
+  <link rel="alternate" hreflang="zh-CN" href="https://doubo.tv/tools/m3u/">
+  <link rel="alternate" hreflang="en" href="https://doubo.tv/en/tools/m3u/">
+  <link rel="alternate" hreflang="ms" href="https://doubo.tv/ms/tools/m3u/">
+  <link rel="alternate" hreflang="id" href="https://doubo.tv/id/tools/m3u/">
+  <link rel="alternate" hreflang="vi" href="https://doubo.tv/vi/tools/m3u/">
+  <link rel="alternate" hreflang="th" href="https://doubo.tv/th/tools/m3u/">
+  <link rel="alternate" hreflang="x-default" href="https://doubo.tv/tools/m3u/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Doubo">
+  <meta property="og:title" content="M3U Playlist Analyzer &amp; Cleaner: Count, Deduplicate and Sort Online · Doubo">
+  <meta property="og:description" content="A free online tool for M3U / M3U8 playlists: count channels and groups, find duplicate links, remove duplicates, sort by group and export a clean playlist. Runs entirely in your browser; nothing is uploaded.">
+  <meta property="og:url" content="https://doubo.tv/en/tools/m3u/">
+  <meta property="og:image" content="https://doubo.tv/assets/img/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Doubo — IPTV &amp; M3U Player with Universal TV Remote">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="apple-itunes-app" content="app-id=6821588266">
+  <link rel="icon" href="/assets/img/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/icon-256.png">
+  <link rel="stylesheet" href="/assets/css/main.css"><script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Doubo","item":"https://doubo.tv/en/"},{"@type":"ListItem","position":2,"name":"M3U Playlist Analyzer & Cleaner: Count, Deduplicate and Sort Online","item":"https://doubo.tv/en/tools/m3u/"}]},{"@type":"WebApplication","name":"M3U playlist analyzer & cleaner","url":"https://doubo.tv/en/tools/m3u/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"A free online tool for M3U / M3U8 playlists: count channels and groups, find duplicate links, remove duplicates, sort by group and export a clean playlist. Runs entirely in your browser; nothing is uploaded.","inLanguage":"en"}
+ ,{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does this tool check whether links play?","acceptedAnswer":{"@type":"Answer","text":"No. It only reads the playlist text to count and tidy it, and never opens any stream. To watch, use the Doubo web player or app."}},{"@type":"Question","name":"How large can the playlist be?","acceptedAnswer":{"@type":"Answer","text":"Playlists with tens of thousands of entries are processed in seconds, depending on your device."}},{"@type":"Question","name":"Is my playlist saved?","acceptedAnswer":{"@type":"Answer","text":"No. Everything is processed in your browser’s memory and cleared when you close the page."}}]}
+]}
+</script>
+
+  <script defer src="/assets/js/main.js"></script>
+</head>
+<body class="page-tools-m3u">
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJDCLXML"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="/en/" aria-label="Doubo">
+        <img src="/assets/img/logo.svg" alt="" width="32" height="32">
+        <span>Doubo</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg>
+</button>
+      <nav class="site-nav" id="site-nav">
+        <a href="/en/#features">Features</a>
+        <a href="/en/#platforms">Platforms</a>
+        <a href="/en/guide/">Guide</a>
+        <a href="/en/web/">Web player</a>
+        <a href="/en/playlists/">Channels</a>
+        <a href="/en/roadmap/">Roadmap</a>
+        <a href="/en/support/">Support</a>
+        <details class="lang-menu">
+  <summary data-track="language_menu_open"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18"/></svg>
+<span>English</span></summary>
+  <ul>
+    <li><a href="/tools/m3u/" hreflang="zh-CN" lang="zh-CN" data-track="language_switch" data-track-to="zh">中文</a></li>
+    <li><a href="/en/tools/m3u/" hreflang="en" lang="en" aria-current="true">English</a></li>
+    <li><a href="/ms/tools/m3u/" hreflang="ms" lang="ms" data-track="language_switch" data-track-to="ms">Bahasa Melayu</a></li>
+    <li><a href="/id/tools/m3u/" hreflang="id" lang="id" data-track="language_switch" data-track-to="id">Bahasa Indonesia</a></li>
+    <li><a href="/vi/tools/m3u/" hreflang="vi" lang="vi" data-track="language_switch" data-track-to="vi">Tiếng Việt</a></li>
+    <li><a href="/th/tools/m3u/" hreflang="th" lang="th" data-track="language_switch" data-track-to="th">ไทย</a></li>
+  </ul>
+</details>
+
+        <a class="btn btn-primary btn-sm nav-cta" href="/en/#download" data-track="cta_click" data-track-target="download_anchor" data-track-location="header">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <link rel="stylesheet" href="/assets/web/tool.css">
+<section class="page-hero">
+  <div class="container narrow">
+    <p class="eyebrow">M3U tools</p>
+    <h1>M3U playlist analyzer & cleaner</h1>
+    <p class="lead">Paste a link, import a file or paste the playlist. See what’s inside in seconds, then export a tidy copy.</p>
+  </div>
+</section>
+<section class="section section-tight">
+  <div class="container narrow">
+    <div id="doubo-tool" data-web-url="/en/web/"><noscript><p>A free online tool for M3U / M3U8 playlists: count channels and groups, find duplicate links, remove duplicates, sort by group and export a clean playlist. Runs entirely in your browser; nothing is uploaded.</p></noscript></div>
+  </div>
+</section>
+<script>window.DOUBO_WEB = { lang: "en", strings: {"nav":"M3U tools","page_title":"M3U Playlist Analyzer & Cleaner: Count, Deduplicate and Sort Online","page_desc":"A free online tool for M3U / M3U8 playlists: count channels and groups, find duplicate links, remove duplicates, sort by group and export a clean playlist. Runs entirely in your browser; nothing is uploaded.","title":"M3U playlist analyzer & cleaner","lead":"Paste a link, import a file or paste the playlist. See what’s inside in seconds, then export a tidy copy.","input_url":"Playlist link","input_file":"Or import a file","input_text":"Or paste the playlist","analyze":"Analyze","loading":"Loading…","need_input":"Enter a link, choose a file or paste a playlist.","url_blocked":"This link can’t be read directly by a web page. Download the file and import it instead.","no_channels":"No channels found. Check that this is an M3U playlist.","stat_entries":"Entries","stat_channels":"Channels","stat_groups":"Groups","stat_duplicates":"Duplicate links","stat_https":"HTTPS links","stat_logos":"With logo","stat_tvgid":"With tvg-id","stat_multi":"Multi-route channels","groups_title":"Groups","group_col":"Group","channels_col":"Channels","clean_title":"Clean up and export","opt_dedupe":"Remove duplicate links","opt_sort":"Sort by group and name","opt_https":"Keep HTTPS links only","opt_merge":"Merge routes of the same channel (keeps every route)","download":"Download cleaned M3U","open_web":"Open in the web player","privacy":"Everything runs in your browser. Your file is never uploaded.","seo_title":"What this tool does","seo_points":["Counts entries, channels and groups, and how many entries have a logo or a tvg-id.","Finds exact duplicate stream links and removes them in one click.","Sorts by group and channel name and exports a clean M3U file.","Keeps only HTTPS links, which play in more browsers and devices."],"faq":[{"q":"Does this tool check whether links play?","a":"No. It only reads the playlist text to count and tidy it, and never opens any stream. To watch, use the Doubo web player or app."},{"q":"How large can the playlist be?","a":"Playlists with tens of thousands of entries are processed in seconds, depending on your device."},{"q":"Is my playlist saved?","a":"No. Everything is processed in your browser’s memory and cleared when you close the page."}]} };</script>
+<script type="module" src="/assets/web/tool.js"></script>
+<section class="section section-alt">
+  <div class="container narrow tool-about">
+    <h2>What this tool does</h2>
+    <ul class="tool-points"><li>Counts entries, channels and groups, and how many entries have a logo or a tvg-id.</li><li>Finds exact duplicate stream links and removes them in one click.</li><li>Sorts by group and channel name and exports a clean M3U file.</li><li>Keeps only HTTPS links, which play in more browsers and devices.</li></ul>
+    <h2>Frequently asked questions</h2>
+    <div class="faq">
+      <details data-track-faq="tool-1"><summary>Does this tool check whether links play?</summary><p>No. It only reads the playlist text to count and tidy it, and never opens any stream. To watch, use the Doubo web player or app.</p></details>
+      <details data-track-faq="tool-2"><summary>How large can the playlist be?</summary><p>Playlists with tens of thousands of entries are processed in seconds, depending on your device.</p></details>
+      <details data-track-faq="tool-3"><summary>Is my playlist saved?</summary><p>No. Everything is processed in your browser’s memory and cleared when you close the page.</p></details>
+    </div>
+    <p class="web-links">
+      <a class="text-link" href="/en/web/">Online M3U Player: Play IPTV Playlists in Your Browser <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+</a>
+      <a class="text-link" href="/en/playlists/">Browse the channel directory <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+</a>
+    </p>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/en/">
+          <img src="/assets/img/logo.svg" alt="" width="28" height="28">
+          <span>Doubo</span>
+        </a>
+        <p>A native IPTV & M3U player for iPhone, iPad, and Mac. Android coming soon.</p>
+      </div>
+      <div>
+        <h2>Product</h2>
+        <a href="/en/#features">Features</a>
+        <a href="/en/web/">Web player</a>
+        <a href="/en/tools/m3u/">M3U tools</a>
+        <a href="/en/watch/">Free TV by country</a>
+        <a href="/en/data/free-tv-channels/">Data</a>
+        <a href="/en/roadmap/">Roadmap</a>
+        <a href="/en/#download">Download</a>
+      </div>
+      <div>
+        <h2>Resources</h2>
+        <a href="/en/guide/">Guide</a>
+        <a href="/en/playlists/">Channels</a>
+        <a href="/en/support/">Support</a>
+        <a href="/en/privacy/">Privacy Policy</a>
+        <a href="https://github.com/maweis1981/streamline-site/issues" data-track="cta_click" data-track-target="github_issues" data-track-location="footer">Feedback</a>
+        <button type="button" class="link-button" data-consent-open hidden>Cookie settings</button>
+      </div>
+    </div>
+    <div class="container footer-legal">
+      <p>Doubo does not provide any channel content. Only play content you're authorized to access. Apple, iPhone, iPad, Mac, Apple TV, AirPlay, and CarPlay are trademarks of Apple Inc.</p>
+      <p>© 2026 Doubo</p>
+    </div>
+  </footer>
+  <div class="consent" id="consent" role="dialog" aria-live="polite" aria-label="Cookie settings" hidden>
+  <p>We use Google Analytics to understand how this website is used. Choose whether to allow analytics cookies; you can change this anytime in the footer. <a href="/en/privacy/">Learn more</a></p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-ghost btn-sm" data-consent="denied">Decline</button>
+    <button type="button" class="btn btn-primary btn-sm" data-consent="granted">Accept</button>
+  </div>
+</div>
+</body>
+</html>

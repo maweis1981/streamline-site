@@ -1,0 +1,36 @@
+{
+  "name": "Doubo Web",
+  "short_name": "Doubo",
+  "description": "Doubo for the web is a free online M3U / M3U8 player. No download and no sign-up: paste a playlist link or import a file, then browse groups, search and watch live channels in any desktop or mobile browser.",
+  "lang": "en",
+  "start_url": "/en/web/?source=pwa",
+  "scope": "/en/web/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#05070F",
+  "theme_color": "#05070F",
+  "categories": [
+    "entertainment",
+    "video"
+  ],
+  "icons": [
+    {
+      "src": "/assets/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

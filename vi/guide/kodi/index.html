@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.SL_ANALYTICS = { gtm: "GTM-MJDCLXML", ga: "" };
+  gtag('consent', 'default', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'granted',
+    functionality_storage: 'granted',
+    security_storage: 'granted',
+    wait_for_update: 500
+  });
+  // EEA, UK and Switzerland: analytics stay off until the visitor accepts.
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    region: ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IS','IE','IT','LV','LI','LT','LU','MT','NL','NO','PL','PT','RO','SK','SI','ES','SE','GB','CH']
+  });
+  try {
+    var choice = localStorage.getItem('sl-consent');
+    if (choice === 'granted' || choice === 'denied') {
+      gtag('consent', 'update', { analytics_storage: choice });
+    }
+  } catch (e) {}
+  dataLayer.push({ page_language: 'vi', page_section: 'guide-kodi' });
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MJDCLXML');</script>
+<!-- End Google Tag Manager -->
+  <title>Cách thêm danh sách M3U vào Kodi bằng PVR IPTV Simple Client · Doubo</title>
+  <meta name="description" content="Cài đặt truyền hình trực tiếp trên Kodi từ danh sách M3U / M3U8 bằng add-on chính thức PVR IPTV Simple Client: cài đặt, nhập link và xem.">
+  <meta name="theme-color" content="#05070F">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://doubo.tv/vi/guide/kodi/">
+  <link rel="alternate" hreflang="zh-CN" href="https://doubo.tv/guide/kodi/">
+  <link rel="alternate" hreflang="en" href="https://doubo.tv/en/guide/kodi/">
+  <link rel="alternate" hreflang="ms" href="https://doubo.tv/ms/guide/kodi/">
+  <link rel="alternate" hreflang="id" href="https://doubo.tv/id/guide/kodi/">
+  <link rel="alternate" hreflang="vi" href="https://doubo.tv/vi/guide/kodi/">
+  <link rel="alternate" hreflang="th" href="https://doubo.tv/th/guide/kodi/">
+  <link rel="alternate" hreflang="x-default" href="https://doubo.tv/guide/kodi/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Doubo">
+  <meta property="og:title" content="Cách thêm danh sách M3U vào Kodi bằng PVR IPTV Simple Client · Doubo">
+  <meta property="og:description" content="Cài đặt truyền hình trực tiếp trên Kodi từ danh sách M3U / M3U8 bằng add-on chính thức PVR IPTV Simple Client: cài đặt, nhập link và xem.">
+  <meta property="og:url" content="https://doubo.tv/vi/guide/kodi/">
+  <meta property="og:image" content="https://doubo.tv/assets/img/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Doubo — Trình phát IPTV &amp; M3U kèm điều khiển TV đa năng">
+  <meta property="og:locale" content="vi_VN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="apple-itunes-app" content="app-id=6821588266">
+  <link rel="icon" href="/assets/img/logo.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/icon-256.png">
+  <link rel="stylesheet" href="/assets/css/main.css"><script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Doubo","item":"https://doubo.tv/vi/"},{"@type":"ListItem","position":2,"name":"Cách thêm danh sách M3U vào Kodi bằng PVR IPTV Simple Client","item":"https://doubo.tv/vi/guide/kodi/"}]},{"@type":"HowTo","name":"Cách thêm danh sách M3U vào Kodi bằng PVR IPTV Simple Client","description":"Cài đặt truyền hình trực tiếp trên Kodi từ danh sách M3U / M3U8 bằng add-on chính thức PVR IPTV Simple Client: cài đặt, nhập link và xem.","inLanguage":"vi","supply":[{"@type":"HowToSupply","name":"Kodi trên Windows, Mac, Linux, Android, Android TV hoặc Fire TV"},{"@type":"HowToSupply","name":"Một link danh sách M3U / M3U8"}],"step":[{"@type":"HowToStep","position":1,"name":"Mở trình duyệt add-on","text":"Trong Kodi, mở Settings (biểu tượng bánh răng) → Add-ons → Install from repository → PVR clients.","url":"https://doubo.tv/vi/guide/kodi/#step-1"},{"@type":"HowToStep","position":2,"name":"Cài PVR IPTV Simple Client","text":"Chọn PVR IPTV Simple Client rồi chọn Install. Trên một số hệ thống, add-on đã được cài sẵn và chỉ cần bật lên.","url":"https://doubo.tv/vi/guide/kodi/#step-2"},{"@type":"HowToStep","position":3,"name":"Nhập link danh sách","text":"Chọn Configure. Trong mục General, đặt Location thành Remote path (Internet address), sau đó dán link vào M3U play list URL và xác nhận bằng OK.","url":"https://doubo.tv/vi/guide/kodi/#step-3"},{"@type":"HowToStep","position":4,"name":"Bật add-on","text":"Chọn Enable nếu add-on chưa được bật. Kodi sẽ tải các kênh; nếu kênh không hiện ngay, hãy khởi động lại Kodi.","url":"https://doubo.tv/vi/guide/kodi/#step-4"},{"@type":"HowToStep","position":5,"name":"Xem","text":"Vào mục TV trên màn hình chính của Kodi. Các kênh được liệt kê theo nhóm và bạn có thể mở bất kỳ kênh nào.","url":"https://doubo.tv/vi/guide/kodi/#step-5"}]}
+ ,{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Tôi có cần add-on của bên thứ ba không?","acceptedAnswer":{"@type":"Answer","text":"Không. PVR IPTV Simple Client do đội ngũ Kodi duy trì và là tất cả những gì bạn cần cho danh sách M3U."}},{"@type":"Question","name":"Danh sách kênh trống. Tôi nên kiểm tra gì?","acceptedAnswer":{"@type":"Answer","text":"Hãy đảm bảo Location được đặt là Remote path, link đầy đủ và add-on đã được bật. Sau đó khởi động lại Kodi."}}]}
+]}
+</script>
+
+  <script defer src="/assets/js/main.js"></script>
+</head>
+<body class="page-guide-kodi">
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJDCLXML"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="/vi/" aria-label="Doubo">
+        <img src="/assets/img/logo.svg" alt="" width="32" height="32">
+        <span>Doubo</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg>
+</button>
+      <nav class="site-nav" id="site-nav">
+        <a href="/vi/#features">Tính năng</a>
+        <a href="/vi/#platforms">Nền tảng</a>
+        <a href="/vi/guide/">Hướng dẫn</a>
+        <a href="/vi/web/">Bản web</a>
+        <a href="/vi/playlists/">Kênh</a>
+        <a href="/vi/roadmap/">Lộ trình</a>
+        <a href="/vi/support/">Hỗ trợ</a>
+        <details class="lang-menu">
+  <summary data-track="language_menu_open"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18"/></svg>
+<span>Tiếng Việt</span></summary>
+  <ul>
+    <li><a href="/guide/kodi/" hreflang="zh-CN" lang="zh-CN" data-track="language_switch" data-track-to="zh">中文</a></li>
+    <li><a href="/en/guide/kodi/" hreflang="en" lang="en" data-track="language_switch" data-track-to="en">English</a></li>
+    <li><a href="/ms/guide/kodi/" hreflang="ms" lang="ms" data-track="language_switch" data-track-to="ms">Bahasa Melayu</a></li>
+    <li><a href="/id/guide/kodi/" hreflang="id" lang="id" data-track="language_switch" data-track-to="id">Bahasa Indonesia</a></li>
+    <li><a href="/vi/guide/kodi/" hreflang="vi" lang="vi" aria-current="true">Tiếng Việt</a></li>
+    <li><a href="/th/guide/kodi/" hreflang="th" lang="th" data-track="language_switch" data-track-to="th">ไทย</a></li>
+  </ul>
+</details>
+
+        <a class="btn btn-primary btn-sm nav-cta" href="/vi/#download" data-track="cta_click" data-track-target="download_anchor" data-track-location="header">Tải về</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+  <div class="container narrow">
+    <p class="eyebrow"><a href="/vi/guide/">Hướng dẫn thiết bị</a> · Kodi</p>
+    <h1>Cách thêm danh sách M3U vào Kodi bằng PVR IPTV Simple Client</h1>
+    <p class="lead">Kodi phát danh sách IPTV thông qua add-on chính thức PVR IPTV Simple Client. Sau khi cấu hình, các kênh sẽ xuất hiện trong mục TV của Kodi, kèm nhóm kênh và lịch phát sóng nếu danh sách của bạn có cung cấp.</p>
+  </div>
+</section>
+<section class="section section-tight">
+  <div class="container narrow">
+    <div class="card dg-need reveal">
+      <h2>Bạn cần chuẩn bị</h2>
+      <ul><li>Kodi trên Windows, Mac, Linux, Android, Android TV hoặc Fire TV</li><li>Một link danh sách M3U / M3U8</li></ul>
+    </div>
+
+    <h2 class="dg-head">Các bước</h2>
+    <ol class="guide-steps">
+      <li class="card guide-step reveal" style="--i:0" id="step-1">
+        <span class="guide-num" aria-hidden="true">01</span>
+        <div>
+          <h3>Mở trình duyệt add-on</h3>
+          <p>Trong Kodi, mở Settings (biểu tượng bánh răng) → Add-ons → Install from repository → PVR clients.</p>
+        </div>
+      </li>
+      <li class="card guide-step reveal" style="--i:1" id="step-2">
+        <span class="guide-num" aria-hidden="true">02</span>
+        <div>
+          <h3>Cài PVR IPTV Simple Client</h3>
+          <p>Chọn PVR IPTV Simple Client rồi chọn Install. Trên một số hệ thống, add-on đã được cài sẵn và chỉ cần bật lên.</p>
+        </div>
+      </li>
+      <li class="card guide-step reveal" style="--i:2" id="step-3">
+        <span class="guide-num" aria-hidden="true">03</span>
+        <div>
+          <h3>Nhập link danh sách</h3>
+          <p>Chọn Configure. Trong mục General, đặt Location thành Remote path (Internet address), sau đó dán link vào M3U play list URL và xác nhận bằng OK.</p>
+        </div>
+      </li>
+      <li class="card guide-step reveal" style="--i:3" id="step-4">
+        <span class="guide-num" aria-hidden="true">04</span>
+        <div>
+          <h3>Bật add-on</h3>
+          <p>Chọn Enable nếu add-on chưa được bật. Kodi sẽ tải các kênh; nếu kênh không hiện ngay, hãy khởi động lại Kodi.</p>
+        </div>
+      </li>
+      <li class="card guide-step reveal" style="--i:4" id="step-5">
+        <span class="guide-num" aria-hidden="true">05</span>
+        <div>
+          <h3>Xem</h3>
+          <p>Vào mục TV trên màn hình chính của Kodi. Các kênh được liệt kê theo nhóm và bạn có thể mở bất kỳ kênh nào.</p>
+        </div>
+      </li>
+    </ol>
+
+    <aside class="card gborder guide-tips reveal">
+      <h2>Mẹo</h2>
+      <ul><li>Các phiên bản Kodi gần đây cho phép thêm nhiều cấu hình của add-on, mỗi cấu hình cho một danh sách.</li><li>Nếu danh sách của bạn có link tới tệp EPG (XMLTV), hãy thêm nó trong phần cài đặt EPG của add-on để có lịch phát sóng.</li></ul>
+    </aside>
+
+    <div class="dg-cta">
+      <div class="card reveal">
+        <h2>Thử ngay trên trình duyệt</h2>
+        <p>Không cần cài đặt. Trình phát web của Doubo mở ngay các kênh truyền hình trực tiếp miễn phí, và phát được cả link M3U của riêng bạn.</p>
+        <a class="btn btn-primary btn-sm" href="/vi/web/" data-track="cta_click" data-track-target="web_player" data-track-location="device_guide"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="19" height="13" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+<span>Mở trình phát web</span></a>
+      </div>
+      <div class="card reveal">
+        <h2>Cần danh sách kênh?</h2>
+        <p>Danh mục kênh miễn phí của Doubo liệt kê các kênh được đài phát công khai, dưới dạng link M3U bạn có thể dán vào bất kỳ trình phát nào.</p>
+        <a class="btn btn-ghost btn-sm" href="/vi/playlists/" data-track="cta_click" data-track-target="directory" data-track-location="device_guide">Xem kênh miễn phí</a>
+      </div>
+    </div>
+
+    <h2 class="dg-head">Câu hỏi thường gặp</h2>
+    <div class="faq">
+      <details data-track-faq="kodi-1"><summary>Tôi có cần add-on của bên thứ ba không?</summary><p>Không. PVR IPTV Simple Client do đội ngũ Kodi duy trì và là tất cả những gì bạn cần cho danh sách M3U.</p></details>
+      <details data-track-faq="kodi-2"><summary>Danh sách kênh trống. Tôi nên kiểm tra gì?</summary><p>Hãy đảm bảo Location được đặt là Remote path, link đầy đủ và add-on đã được bật. Sau đó khởi động lại Kodi.</p></details>
+    </div>
+
+    <div class="guide-cta reveal">
+      <div class="cta-row">
+  <span class="btn btn-primary is-disabled" aria-disabled="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5a4.3 4.3 0 0 0-3.4-1.8c-1.4-.1-2.8.9-3.5.9s-1.8-.9-3-.8A4.5 4.5 0 0 0 4.7 9.7c-1.6 2.8-.4 6.9 1.1 9.1.8 1.1 1.7 2.3 2.9 2.3s1.6-.8 3-.8 1.8.8 3 .7 2-1.1 2.7-2.2a9.6 9.6 0 0 0 1.2-2.5 3.9 3.9 0 0 1-2.2-3.7Z" fill="currentColor" stroke="none"/><path d="M14.2 5.6A3.9 3.9 0 0 0 15.1 2.8a4 4 0 0 0-2.6 1.3 3.7 3.7 0 0 0-.9 2.7 3.3 3.3 0 0 0 2.6-1.2Z" fill="currentColor" stroke="none"/></svg>
+<span>Sắp có trên App Store</span></span>
+  <span class="btn btn-primary is-disabled" aria-disabled="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17v-4a7 7 0 0 1 14 0v4Z"/><path d="m7.5 7.5-1.6-2.6"/><path d="m16.5 7.5 1.6-2.6"/><circle cx="9.3" cy="12.6" r=".6" fill="currentColor" stroke="none"/><circle cx="14.7" cy="12.6" r=".6" fill="currentColor" stroke="none"/></svg>
+<span>Google Play — sắp ra mắt</span></span>
+  <a class="btn btn-ghost" href="/vi/roadmap/" data-track="cta_click" data-track-target="roadmap" data-track-location="device_guide"><span>Xem lộ trình</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+</a>
+</div>
+
+    </div>
+
+    <h2 class="dg-head">Thiết bị khác</h2>
+    <ul class="dg-devices">
+  <li><a class="card dg-device" href="/vi/guide/computer/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></svg>
+<span>Máy tính (trình duyệt)</span></a></li>
+  <li><a class="card dg-device" href="/vi/guide/iphone-ipad/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2" width="11" height="20" rx="2.5"/><path d="M11 18.5h2"/></svg>
+<span>iPhone & iPad</span></a></li>
+  <li><a class="card dg-device" href="/vi/guide/android-phone/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17v-4a7 7 0 0 1 14 0v4Z"/><path d="m7.5 7.5-1.6-2.6"/><path d="m16.5 7.5 1.6-2.6"/><circle cx="9.3" cy="12.6" r=".6" fill="currentColor" stroke="none"/><circle cx="14.7" cy="12.6" r=".6" fill="currentColor" stroke="none"/></svg>
+<span>Điện thoại Android</span></a></li>
+  <li><a class="card dg-device" href="/vi/guide/smart-tv/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="19" height="13" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+<span>Smart TV</span></a></li>
+  <li><a class="card dg-device" href="/vi/guide/android-tv/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17v-4a7 7 0 0 1 14 0v4Z"/><path d="m7.5 7.5-1.6-2.6"/><path d="m16.5 7.5 1.6-2.6"/><circle cx="9.3" cy="12.6" r=".6" fill="currentColor" stroke="none"/><circle cx="14.7" cy="12.6" r=".6" fill="currentColor" stroke="none"/></svg>
+<span>Android TV / TV box</span></a></li>
+  <li><a class="card dg-device" href="/vi/guide/fire-tv/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="19" height="13" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+<span>Fire TV Stick</span></a></li>
+  <li><a class="card dg-device" href="/vi/guide/apple-tv/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5a4.3 4.3 0 0 0-3.4-1.8c-1.4-.1-2.8.9-3.5.9s-1.8-.9-3-.8A4.5 4.5 0 0 0 4.7 9.7c-1.6 2.8-.4 6.9 1.1 9.1.8 1.1 1.7 2.3 2.9 2.3s1.6-.8 3-.8 1.8.8 3 .7 2-1.1 2.7-2.2a9.6 9.6 0 0 0 1.2-2.5 3.9 3.9 0 0 1-2.2-3.7Z" fill="currentColor" stroke="none"/><path d="M14.2 5.6A3.9 3.9 0 0 0 15.1 2.8a4 4 0 0 0-2.6 1.3 3.7 3.7 0 0 0-.9 2.7 3.3 3.3 0 0 0 2.6-1.2Z" fill="currentColor" stroke="none"/></svg>
+<span>Apple TV</span></a></li>
+  <li><a class="card dg-device" href="/vi/guide/chromecast/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6"/><path d="M3 12a8 8 0 0 1 8 8"/><path d="M3 16a4 4 0 0 1 4 4"/><path d="M3 20h.01"/></svg>
+<span>Chromecast / Google TV</span></a></li>
+  <li><a class="card dg-device" href="/vi/guide/vlc/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="19" height="15" rx="2.5"/><rect x="12" y="11" width="7" height="5" rx="1"/></svg>
+<span>VLC</span></a></li>
+</ul>
+
+  </div>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/vi/">
+          <img src="/assets/img/logo.svg" alt="" width="28" height="28">
+          <span>Doubo</span>
+        </a>
+        <p>Trình phát IPTV & M3U gốc cho iPhone, iPad và Mac. Android sắp ra mắt.</p>
+      </div>
+      <div>
+        <h2>Sản phẩm</h2>
+        <a href="/vi/#features">Tính năng</a>
+        <a href="/vi/web/">Bản web</a>
+        <a href="/vi/tools/m3u/">Công cụ M3U</a>
+        <a href="/vi/watch/">Xem TV miễn phí theo quốc gia</a>
+        <a href="/vi/data/free-tv-channels/">Dữ liệu</a>
+        <a href="/vi/roadmap/">Lộ trình</a>
+        <a href="/vi/#download">Tải về</a>
+      </div>
+      <div>
+        <h2>Tài nguyên</h2>
+        <a href="/vi/guide/">Hướng dẫn</a>
+        <a href="/vi/playlists/">Kênh</a>
+        <a href="/vi/support/">Hỗ trợ</a>
+        <a href="/vi/privacy/">Chính sách quyền riêng tư</a>
+        <a href="https://github.com/maweis1981/streamline-site/issues" data-track="cta_click" data-track-target="github_issues" data-track-location="footer">Góp ý</a>
+        <button type="button" class="link-button" data-consent-open hidden>Cài đặt cookie</button>
+      </div>
+    </div>
+    <div class="container footer-legal">
+      <p>Doubo không cung cấp bất kỳ nội dung kênh nào. Chỉ phát nội dung bạn được phép truy cập. Apple, iPhone, iPad, Mac, Apple TV, AirPlay và CarPlay là nhãn hiệu của Apple Inc.</p>
+      <p>© 2026 Doubo</p>
+    </div>
+  </footer>
+  <div class="consent" id="consent" role="dialog" aria-live="polite" aria-label="Cài đặt cookie" hidden>
+  <p>Chúng tôi dùng Google Analytics để hiểu cách trang web này được sử dụng. Bạn có thể chọn cho phép cookie phân tích hay không và thay đổi bất cứ lúc nào ở cuối trang. <a href="/vi/privacy/">Tìm hiểu thêm</a></p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-ghost btn-sm" data-consent="denied">Từ chối</button>
+    <button type="button" class="btn btn-primary btn-sm" data-consent="granted">Đồng ý</button>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "name": "Doubo Web",
+  "short_name": "Doubo",
+  "description": "Doubo versi web adalah pemutar M3U / M3U8 online yang gratis. Tanpa unduhan dan tanpa daftar: tempel tautan playlist atau impor file, lalu jelajahi grup, cari, dan tonton saluran live di browser komputer maupun ponsel.",
+  "lang": "id",
+  "start_url": "/id/web/?source=pwa",
+  "scope": "/id/web/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#05070F",
+  "theme_color": "#05070F",
+  "categories": [
+    "entertainment",
+    "video"
+  ],
+  "icons": [
+    {
+      "src": "/assets/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
