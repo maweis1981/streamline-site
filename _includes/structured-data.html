@@ -4,7 +4,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"WebSite","@id":{{ '/#website' | absolute_url | jsonify }},"url":{{ home_abs | jsonify }},"name":"Doubo","alternateName":["都播","Doubo IPTV Player"],"inLanguage":{{ t.html_lang | jsonify }}},
- {"@type":"SoftwareApplication","name":"Doubo","alternateName":"都播","applicationCategory":"MultimediaApplication","applicationSubCategory":"IPTV / M3U player","operatingSystem":"iOS 17, iPadOS 17, macOS 14","description":{{ t.meta.description | jsonify }},"url":{{ home_abs | jsonify }},"image":{{ '/assets/img/icon-256.png' | absolute_url | jsonify }},"inLanguage":{{ t.html_lang | jsonify }}},
+ {"@type":"SoftwareApplication","name":"Doubo","alternateName":"都播","applicationCategory":"MultimediaApplication","applicationSubCategory":"IPTV / M3U player","operatingSystem":"iOS 17, iPadOS 17, macOS 14","description":{{ t.meta.description | jsonify }},{% if t.meta.keywords %}"keywords":{{ t.meta.keywords | jsonify }},{% endif %}"url":{{ home_abs | jsonify }},"image":{{ '/assets/img/icon-256.png' | absolute_url | jsonify }},"inLanguage":{{ t.html_lang | jsonify }}},
  {"@type":"FAQPage","mainEntity":[{%- for item in t.faq.items -%}{"@type":"Question","name":{{ item.q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ item.a | jsonify }}}}{% unless forloop.last %},{% endunless %}{%- endfor -%}]}
 ]}
 </script>

@@ -1,0 +1,44 @@
+---
+layout: page
+lang: id
+ref: blog-remote
+path_key: blog/universal-tv-remote-control/
+title: 'Remote TV Universal di Doubo: Kendalikan TV Roku, Samsung, LG & DLNA'
+subtitle: 'Doubo kini menyertakan remote TV universal bawaan. Ia menemukan TV di jaringan Anda dan mengendalikannya — daya, volume, saluran, papan angka, papan arah, dan pencarian teks — tanpa perlu memasang apa pun.'
+description: 'Remote TV universal bawaan Doubo mengendalikan TV Roku, Samsung, LG, dan DLNA di jaringan Anda serta menemukan perangkat Chromecast, AirPlay, dan Android TV.'
+---
+<h2>Satu remote untuk TV di jaringan Anda</h2>
+<p>Remote hilang, atau lelah berganti tiga remote? Remote TV universal Doubo mengubah iPhone, iPad, atau Mac Anda menjadi remote untuk TV yang sudah ada di Wi-Fi Anda. Buka saluran, ketuk ikon remote di pemutar, dan Doubo menampilkan TV yang ditemukan. Pilih satu untuk mendapat daya, volume dan senyap, saluran naik/turun, papan angka, papan arah dengan OK, Kembali, Beranda, dan Menu, kontrol pemutaran, serta kolom teks yang mengetik langsung ke kotak pencarian TV.</p>
+
+<h2>TV yang bisa dikendalikan</h2>
+<ul>
+<li><strong>Roku dan Roku TV</strong> — lewat External Control Protocol (ECP) Roku. Tanpa pemasangan pasangan.</li>
+<li><strong>Smart TV Samsung (Tizen, 2016+)</strong> — lewat kanal remote WebSocket. TV menampilkan permintaan "Izinkan" pertama kali.</li>
+<li><strong>TV LG webOS</strong> — lewat protokol SSAP, dengan sekali pemasangan pasangan di TV.</li>
+<li><strong>Perender media DLNA</strong> — putar, jeda, henti, dan volume lewat UPnP.</li>
+</ul>
+<p>Doubo juga <strong>menemukan</strong> perangkat Chromecast / Google TV, AirPlay, dan Android TV di jaringan. Apple TV tidak bisa dikendalikan aplikasi pihak ketiga, jadi hanya ditampilkan sebagai referensi.</p>
+
+<h2>Cara kerja penemuan</h2>
+<p>Remote universal harus memahami protokol penemuan yang dipakai TV. Doubo menjalankan dua sekaligus:</p>
+<ul>
+<li><strong>SSDP / UPnP</strong> (protokol di balik DLNA) menemukan perender DLNA, Roku, dan banyak TV Samsung serta LG.</li>
+<li><strong>Bonjour / mDNS</strong> menemukan perangkat Chromecast, AirPlay, dan Android TV yang beriklan lewat mDNS.</li>
+</ul>
+<p>Semuanya berjalan di jaringan lokal Anda. Doubo mengirim perintah langsung ke TV; tanpa server perantara dan tanpa akun.</p>
+
+<h2>Cara memakainya</h2>
+<ol>
+<li>Pastikan TV dan perangkat Anda di Wi-Fi yang sama, dan fitur remote / DLNA TV aktif.</li>
+<li>Buka saluran mana pun di Doubo dan ketuk ikon remote.</li>
+<li>Pilih TV Anda dari daftar. Pertama kali, setujui permintaan pasangan di TV bila diminta.</li>
+<li>Gunakan tombol: volume, saluran, papan angka, papan arah, atau ketik di kolom pencarian.</li>
+</ol>
+
+<h2>Tanya jawab</h2>
+<div class="faq">
+<details><summary>Perlu memasang sesuatu di TV?</summary><p>Tidak. Doubo berbicara dengan layanan remote bawaan TV. Untuk DLNA, cukup aktifkan opsi perender / DLNA di TV.</p></details>
+<details><summary>Kenapa Apple TV tidak bisa dikendalikan?</summary><p>Apple tidak menyediakan API publik untuk kontrol pihak ketiga Apple TV. Doubo hanya menampilkannya sebagai referensi.</p></details>
+<details><summary>Daftar kosong. Apa yang harus diperiksa?</summary><p>Pastikan TV dan perangkat di jaringan yang sama, izinkan Doubo mengakses jaringan lokal saat iOS bertanya, dan pastikan TV tidak dalam mode tidur dalam.</p></details>
+<details><summary>Apakah gratis?</summary><p>Remote adalah bagian dari Doubo, pemutar tanpa saluran bawaan dan tanpa pengumpulan data pribadi.</p></details>
+</div>

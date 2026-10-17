@@ -4,8 +4,9 @@ brand: 都播
 slogan: 都播，什么都能播。
 lang_name: 中文
 meta:
-  title: 都播 Doubo — 跨平台 IPTV / M3U 播放器
-  description: 都播是一款原生 IPTV / M3U 播放器，现已支持 iPhone、iPad 与 Mac，Android 手机、平板与电视盒子版即将推出。导入你自己的播放列表，分组浏览、画中画观看、投屏到电视。不内置任何频道，不收集个人数据。
+  title: 都播 Doubo — IPTV / M3U 播放器 + 通用电视遥控器
+  description: 都播是一款原生 IPTV / M3U 播放器，支持 iPhone、iPad 与 Mac（Android 版即将推出）。导入你自己的播放列表，分组浏览、画中画观看、投屏到电视，并用内置的通用遥控器控制 Roku、三星、LG 与 DLNA 电视。支持回看、HLS 多码率、双音轨、按频道请求头与 Xtream Codes。不内置任何频道，不收集个人数据。
+  keywords: IPTV 播放器, M3U 播放器, 通用电视遥控器, 智能电视遥控 App, Roku 遥控器, 三星电视遥控器, LG 电视遥控器, DLNA 投屏, 电视回看, Xtream Codes 播放器, HLS 播放器, 免费 IPTV
 nav:
   web: 网页版
   directory: 频道目录
@@ -77,6 +78,21 @@ features:
   - icon: cast
     title: 投放到电视
     desc: 支持 DLNA 投屏到同一网络下的智能电视；也可以直接打开本地视频文件播放。
+  - icon: remote
+    title: 通用电视遥控器
+    desc: 在都播里直接控制电视。内置通用遥控器会自动发现同一网络下的 Roku、三星、LG 与 DLNA 电视，支持电源、音量、频道加减、数字键盘、方向键与 OK，以及文本搜索。
+  - icon: clock
+    title: 回看与重播
+    desc: 对于播放源提供回看参数的频道，可以回到过去，观看已经播出的节目。
+  - icon: gauge
+    title: 自选清晰度
+    desc: 在多码率 HLS 频道上，可选择自动、高、中、低，匹配你的网络并节省流量。
+  - icon: speaker
+    title: 双音轨（画声分离）
+    desc: 用一路信号的画面搭配另一路信号的声音——画面取自一个源、声音取自另一个源，并可手动校准同步。
+  - icon: key
+    title: Xtream Codes 登录
+    desc: 登录 Xtream Codes 账号即可加载其直播频道。密码只保存在设备的钥匙串中。
   - icon: lock
     title: 隐私优先
     desc: 播放列表、收藏与历史只保存在本机。App 不内置广告和统计 SDK，也不收集任何个人数据。
@@ -199,6 +215,16 @@ faq:
     a: Android 版正在路上，将支持 Android 手机、平板以及 Android TV / 电视盒子，上线后会第一时间在官网公布。
   - q: 支持 Apple TV 吗？
     a: Apple TV 版本已在规划中。目前支持 iPhone、iPad 和 Mac，你也可以通过投屏在客厅电视上观看。
+  - q: 都播能当电视遥控器用吗？
+    a: 可以。都播内置通用电视遥控器，支持同一网络下的 Roku、三星、LG 与 DLNA 电视，提供电源、音量、频道加减、数字键盘、方向键与文本搜索，并会自动发现电视。Apple TV 由于 Apple 不开放，第三方 App 无法控制。
+  - q: 都播支持回看 / 重播吗？
+    a: 支持。对于播放源提供回看参数的频道，可以回到过去观看已经播出的节目。
+  - q: 可以选择清晰度吗？
+    a: 可以。在多码率 HLS 频道上，可选择自动、高、中、低，匹配你的网络。
+  - q: 可以用 Xtream Codes 账号登录吗？
+    a: 可以。输入 Xtream 的服务器、用户名与密码，都播会加载其直播频道，密码只保存在设备的钥匙串中。
+  - q: 播放列表刷新不了会怎样？
+    a: 都播会显示上次成功加载时缓存的频道，并提示具体的网络原因，而不是留一个空白页面。
 support:
   title: 支持
   subtitle: 遇到问题或有建议？下面的方式可以帮到你。
@@ -239,6 +265,8 @@ guide:
     desc: 点击频道即可播放。支持画中画、字幕轨道、倍速播放和横屏全屏，切到其他 App 时也能继续看。
   - title: 投屏到电视
     desc: 在播放器上点击投屏图标，选择同一网络下支持 DLNA 的智能电视，在客厅大屏上观看。
+  - title: 使用通用电视遥控器
+    desc: 在播放器中打开遥控器，即可控制同一网络下的 Roku、三星、LG 或 DLNA 电视——电源、音量、频道、数字键盘、方向键与文本搜索。电视会自动被发现。
   - title: 管理多个播放列表
     desc: 最近 20 个播放列表会自动保存在本机，下次打开时自动恢复上次观看的列表，也可以随时切换。
   tips_title: 小贴士

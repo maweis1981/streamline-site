@@ -4,8 +4,9 @@ brand: Doubo
 slogan: Semua saluran, satu pemutar.
 lang_name: Bahasa Indonesia
 meta:
-  title: Doubo — Aplikasi Pemutar IPTV & M3U Lintas Platform
-  description: Doubo adalah pemutar IPTV & M3U native, kini tersedia untuk iPhone, iPad, dan Mac, dengan versi ponsel, tablet, dan TV box Android segera hadir. Impor playlist Anda sendiri, jelajahi per grup, tonton dengan Picture in Picture, dan kirim ke TV. Tanpa saluran bawaan, tanpa pengumpulan data pribadi.
+  title: Doubo — Pemutar IPTV & M3U dengan Remote TV Universal
+  description: Doubo adalah pemutar IPTV & M3U native untuk iPhone, iPad, dan Mac (Android segera hadir). Impor playlist Anda sendiri, jelajahi per grup, tonton dengan Picture in Picture, kirim ke TV, dan kendalikan TV dengan remote universal bawaan untuk Roku, Samsung, LG, dan DLNA. Mendukung catch-up, HLS multi-kualitas, audio ganda, header per saluran, dan Xtream Codes. Tanpa saluran bawaan, tanpa pengumpulan data pribadi.
+  keywords: pemutar IPTV, pemutar M3U, remote TV universal, aplikasi remote smart TV, remote Roku, remote TV Samsung, remote TV LG, kirim DLNA, TV catch-up, pemutar Xtream Codes, pemutar HLS, IPTV gratis
 nav:
   web: Versi web
   directory: Saluran
@@ -77,6 +78,21 @@ features:
   - icon: cast
     title: Kirim ke TV Anda
     desc: Kirim ke smart TV DLNA di jaringan yang sama, atau buka file video lokal untuk diputar langsung.
+  - icon: remote
+    title: Remote TV universal
+    desc: Kendalikan TV dari Doubo. Remote universal bawaan menemukan TV Roku, Samsung, LG, dan DLNA di jaringan Anda dan mengirim daya, volume, saluran naik/turun, papan angka, papan arah dengan OK, serta pencarian teks.
+  - icon: clock
+    title: Catch-up dan putar ulang
+    desc: Untuk saluran yang sumbernya menyediakan catch-up, kembali ke masa lalu dan tonton acara yang sudah tayang.
+  - icon: gauge
+    title: Pilih kualitas streaming
+    desc: Pada saluran HLS multi-bitrate, pilih Otomatis, Tinggi, Sedang, atau Rendah agar sesuai koneksi dan hemat data.
+  - icon: speaker
+    title: Audio ganda
+    desc: Tonton gambar dari satu sumber dengan suara dari sumber lain — pilih video dari satu sumber dan audio dari sumber lain, dengan sinkronisasi manual.
+  - icon: key
+    title: Login Xtream Codes
+    desc: Masuk ke akun Xtream Codes untuk memuat saluran live-nya. Kata sandi Anda hanya disimpan di Keychain perangkat.
   - icon: lock
     title: Privasi yang utama
     desc: Playlist, favorit, dan riwayat tetap di perangkat Anda. Aplikasi ini tidak memiliki SDK iklan atau analitik dan tidak mengumpulkan data pribadi apa pun.
@@ -199,6 +215,16 @@ faq:
     a: Sedang dalam perjalanan. Doubo untuk Android akan mendukung ponsel, tablet, dan Android TV / TV box, dan kami akan mengumumkannya di sini begitu tersedia.
   - q: Apakah bisa digunakan di Apple TV?
     a: Versi Apple TV sedang direncanakan. Saat ini Doubo berjalan di iPhone, iPad, dan Mac, dan Anda bisa mengirim siaran ke TV di ruang keluarga.
+  - q: Bisakah Doubo mengendalikan TV seperti remote?
+    a: Ya. Doubo menyertakan remote TV universal untuk TV Roku, Samsung, LG, dan DLNA di jaringan yang sama, dengan daya, volume, saluran naik/turun, papan angka, papan arah, dan pencarian teks. TV ditemukan otomatis. Apple TV tidak bisa dikendalikan aplikasi pihak ketiga.
+  - q: Apakah Doubo mendukung catch-up atau putar ulang?
+    a: Ya, untuk saluran yang sumber playlist-nya menyediakan parameter catch-up. Anda bisa kembali dan menonton acara yang sudah tayang.
+  - q: Bisakah saya memilih kualitas streaming?
+    a: Ya. Pada saluran HLS multi-bitrate Anda bisa memilih Otomatis, Tinggi, Sedang, atau Rendah.
+  - q: Bisakah saya login dengan akun Xtream Codes?
+    a: Ya. Masukkan host, nama pengguna, dan kata sandi Xtream; Doubo memuat saluran live dan menyimpan kata sandi hanya di Keychain perangkat.
+  - q: Apa yang terjadi jika playlist gagal dimuat ulang?
+    a: Doubo menampilkan saluran yang di-cache dari pemuatan sukses terakhir dan memberi tahu alasan jaringan, bukan layar kosong.
 support:
   title: Dukungan
   subtitle: Mengalami masalah atau punya ide? Begini cara menghubungi kami.
@@ -239,6 +265,8 @@ guide:
     desc: Ketuk saluran untuk memutar. Nikmati Picture in Picture, trek subtitle, kecepatan putar, dan layar penuh lanskap, serta tetap menonton saat memakai aplikasi lain.
   - title: Kirim ke TV Anda
     desc: Ketuk ikon transmisi di pemutar dan pilih smart TV DLNA di jaringan yang sama untuk menonton di layar besar.
+  - title: Gunakan remote TV universal
+    desc: Buka remote dari pemutar untuk mengendalikan TV Roku, Samsung, LG, atau DLNA di jaringan yang sama — daya, volume, saluran, papan angka, papan arah, dan pencarian teks. TV ditemukan otomatis.
   - title: Kelola beberapa playlist
     desc: 20 playlist terakhir disimpan di perangkat Anda. Doubo membuka kembali playlist yang terakhir ditonton, dan Anda bisa beralih kapan saja.
   tips_title: Tips

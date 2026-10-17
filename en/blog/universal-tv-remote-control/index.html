@@ -1,0 +1,44 @@
+---
+layout: page
+lang: en
+ref: blog-remote
+path_key: blog/universal-tv-remote-control/
+title: 'Universal TV Remote in Doubo: Control Roku, Samsung, LG and DLNA TVs'
+subtitle: 'Doubo now includes a built-in universal TV remote. It finds TVs on your network and controls them — power, volume, channels, a number pad, a direction pad and text search — with nothing extra to install.'
+description: "Doubo's built-in universal TV remote controls Roku, Samsung, LG and DLNA TVs on your network and discovers Chromecast, AirPlay and Android TV devices. Learn how it works and how to use it."
+---
+<h2>One remote for the TVs on your network</h2>
+<p>Lost the remote, or tired of juggling three of them? Doubo's universal TV remote turns your iPhone, iPad or Mac into a remote for the TVs already on your Wi-Fi. Open a channel, tap the remote icon in the player, and Doubo lists the TVs it finds. Pick one and you get power, volume up/down and mute, channel up/down, a number pad for direct channel entry, a direction pad with OK, Back, Home and Menu, playback controls, and a text field that types straight into the TV's search box.</p>
+
+<h2>Which TVs it controls</h2>
+<ul>
+<li><strong>Roku and Roku TVs</strong> — over Roku's External Control Protocol (ECP). No pairing needed.</li>
+<li><strong>Samsung smart TVs (Tizen, 2016+)</strong> — over the WebSocket remote channel. The TV shows an "Allow" prompt the first time; after that it just works.</li>
+<li><strong>LG webOS TVs</strong> — over the SSAP protocol, with a one-time pairing prompt on the TV.</li>
+<li><strong>DLNA media renderers</strong> — play, pause, stop and volume over UPnP.</li>
+</ul>
+<p>Doubo also <strong>discovers</strong> Chromecast / Google TV, AirPlay and Android TV devices on the network and lists them, so you can see everything in one place. Apple TV cannot be controlled by third-party apps, so it is shown for reference only.</p>
+
+<h2>How discovery works</h2>
+<p>A universal remote has to speak the same discovery languages that TVs use to announce themselves. Doubo runs two in parallel:</p>
+<ul>
+<li><strong>SSDP / UPnP</strong> (the multicast protocol behind DLNA) finds DLNA renderers, Roku, and many Samsung and LG sets.</li>
+<li><strong>Bonjour / mDNS</strong> finds Chromecast, AirPlay and Android TV devices, which advertise themselves over mDNS instead of SSDP.</li>
+</ul>
+<p>Everything runs on your local network. Doubo sends commands straight to the TV; nothing is routed through a server, and no account is required.</p>
+
+<h2>How to use it</h2>
+<ol>
+<li>Make sure your TV and your device are on the same Wi-Fi, and that the TV's remote / DLNA feature is on.</li>
+<li>Open any channel in Doubo and tap the remote icon in the player.</li>
+<li>Pick your TV from the list. The first time, approve the pairing prompt on the TV if it asks.</li>
+<li>Use the buttons: volume, channels, the number pad, the direction pad, or type into the search field.</li>
+</ol>
+
+<h2>FAQ</h2>
+<div class="faq">
+<details><summary>Do I need to install anything on the TV?</summary><p>No. Doubo talks to the TV's own built-in remote service. For DLNA you only need the TV's renderer / DLNA option enabled.</p></details>
+<details><summary>Why can't I control my Apple TV?</summary><p>Apple does not provide a public API for third-party remote control of Apple TV. Doubo lists it for reference but can't send it buttons. You can still cast to it from supported sources.</p></details>
+<details><summary>Nothing shows up in the list. What should I check?</summary><p>Confirm the TV and your device are on the same network, allow Doubo access to the local network when iOS asks, and make sure the TV isn't in a deep sleep mode that disables its remote service.</p></details>
+<details><summary>Is it free?</summary><p>The remote is part of Doubo. Doubo is a player you add your own playlists to; it doesn't bundle channels or collect personal data.</p></details>
+</div>

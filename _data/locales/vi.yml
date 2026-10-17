@@ -4,8 +4,9 @@ brand: Doubo
 slogan: Mọi kênh, một trình phát.
 lang_name: Tiếng Việt
 meta:
-  title: Doubo — Ứng dụng xem IPTV & trình phát M3U đa nền tảng
-  description: Doubo là trình phát IPTV & M3U gốc, hiện có trên iPhone, iPad và Mac; phiên bản cho điện thoại, máy tính bảng và TV box Android sắp ra mắt. Nhập danh sách phát của riêng bạn, duyệt theo nhóm, xem bằng Hình trong hình và truyền lên TV. Không kèm sẵn kênh, không thu thập dữ liệu cá nhân.
+  title: Doubo — Trình phát IPTV & M3U kèm điều khiển TV đa năng
+  description: Doubo là trình phát IPTV & M3U gốc cho iPhone, iPad và Mac (bản Android sắp ra mắt). Nhập danh sách phát của riêng bạn, duyệt theo nhóm, xem bằng Hình trong hình, truyền lên TV, và điều khiển TV bằng điều khiển đa năng tích hợp cho Roku, Samsung, LG và DLNA. Hỗ trợ xem lại (catch-up), HLS đa chất lượng, âm thanh kép, header theo kênh và Xtream Codes. Không kèm sẵn kênh, không thu thập dữ liệu cá nhân.
+  keywords: trình phát IPTV, trình phát M3U, điều khiển TV đa năng, ứng dụng điều khiển smart TV, điều khiển Roku, điều khiển TV Samsung, điều khiển TV LG, truyền DLNA, TV xem lại, trình phát Xtream Codes, trình phát HLS, IPTV miễn phí
 nav:
   web: Bản web
   directory: Kênh
@@ -77,6 +78,21 @@ features:
   - icon: cast
     title: Truyền lên TV
     desc: Truyền tới smart TV hỗ trợ DLNA trong cùng mạng, hoặc mở tệp video trên máy để phát trực tiếp.
+  - icon: remote
+    title: Điều khiển TV đa năng
+    desc: Điều khiển TV ngay trong Doubo. Điều khiển đa năng tích hợp tự tìm TV Roku, Samsung, LG và DLNA trong mạng của bạn và gửi nguồn, âm lượng, kênh lên/xuống, bàn phím số, phím điều hướng kèm OK, và tìm kiếm bằng văn bản.
+  - icon: clock
+    title: Xem lại và phát lại
+    desc: Với các kênh có nguồn cung cấp catch-up, bạn có thể quay ngược thời gian và xem lại chương trình đã phát.
+  - icon: gauge
+    title: Chọn chất lượng luồng
+    desc: Trên kênh HLS đa bitrate, chọn Tự động, Cao, Trung bình hoặc Thấp cho phù hợp đường truyền và tiết kiệm dữ liệu.
+  - icon: speaker
+    title: Âm thanh kép
+    desc: Xem hình của một luồng với tiếng của luồng khác — lấy video từ một nguồn và âm thanh từ nguồn khác, có căn chỉnh thủ công.
+  - icon: key
+    title: Đăng nhập Xtream Codes
+    desc: Đăng nhập tài khoản Xtream Codes để tải các kênh trực tiếp. Mật khẩu chỉ được lưu trong Keychain của thiết bị.
   - icon: lock
     title: Ưu tiên quyền riêng tư
     desc: Danh sách phát, mục yêu thích và lịch sử luôn nằm trên thiết bị. Ứng dụng không có SDK quảng cáo hay phân tích và không thu thập dữ liệu cá nhân.
@@ -199,6 +215,16 @@ faq:
     a: Sắp có. Doubo cho Android sẽ hỗ trợ điện thoại, máy tính bảng và Android TV / TV box, và chúng tôi sẽ thông báo tại đây ngay khi ra mắt.
   - q: Có dùng được trên Apple TV không?
     a: Phiên bản Apple TV đang được lên kế hoạch. Hiện Doubo chạy trên iPhone, iPad và Mac, và bạn có thể truyền lên TV phòng khách.
+  - q: Doubo có điều khiển TV như một chiếc remote không?
+    a: Có. Doubo tích hợp điều khiển TV đa năng cho TV Roku, Samsung, LG và DLNA trong cùng mạng, với nguồn, âm lượng, kênh lên/xuống, bàn phím số, phím điều hướng và tìm kiếm văn bản. TV được tìm thấy tự động. Apple TV không thể điều khiển bởi ứng dụng bên thứ ba.
+  - q: Doubo có hỗ trợ xem lại (catch-up) không?
+    a: Có, với các kênh mà nguồn danh sách phát cung cấp tham số catch-up. Bạn có thể quay lại và xem các chương trình đã phát.
+  - q: Tôi có thể chọn chất lượng luồng không?
+    a: Có. Trên kênh HLS đa bitrate bạn có thể chọn Tự động, Cao, Trung bình hoặc Thấp.
+  - q: Tôi có thể đăng nhập bằng tài khoản Xtream Codes không?
+    a: Có. Nhập host, tên người dùng và mật khẩu Xtream; Doubo tải các kênh trực tiếp và chỉ lưu mật khẩu trong Keychain của thiết bị.
+  - q: Nếu không làm mới được danh sách phát thì sao?
+    a: Doubo hiển thị các kênh đã lưu từ lần tải thành công gần nhất và cho biết lý do mạng, thay vì để màn hình trống.
 support:
   title: Hỗ trợ
   subtitle: Gặp sự cố hoặc có ý tưởng? Đây là cách liên hệ với chúng tôi.
@@ -239,6 +265,8 @@ guide:
     desc: Chạm vào kênh để phát. Dùng Hình trong hình, phụ đề, tốc độ phát và toàn màn hình khi xoay ngang, vẫn tiếp tục xem khi dùng ứng dụng khác.
   - title: Truyền lên TV
     desc: Chạm biểu tượng truyền trong trình phát và chọn smart TV hỗ trợ DLNA cùng mạng để xem trên màn hình lớn.
+  - title: Dùng điều khiển TV đa năng
+    desc: Mở điều khiển từ trình phát để điều khiển TV Roku, Samsung, LG hoặc DLNA trong cùng mạng — nguồn, âm lượng, kênh, bàn phím số, phím điều hướng và tìm kiếm bằng văn bản. TV được tìm thấy tự động.
   - title: Quản lý nhiều danh sách phát
     desc: 20 danh sách phát gần nhất được lưu trên thiết bị. Doubo tự mở lại danh sách bạn xem lần trước, và bạn có thể chuyển đổi bất cứ lúc nào.
   tips_title: Mẹo

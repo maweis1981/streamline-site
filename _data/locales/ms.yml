@@ -4,8 +4,9 @@ brand: Doubo
 slogan: Semua saluran, satu pemain.
 lang_name: Bahasa Melayu
 meta:
-  title: Doubo — Pemain IPTV & M3U Merentas Platform
-  description: Doubo ialah pemain IPTV & M3U asli, kini untuk iPhone, iPad dan Mac, dengan versi telefon, tablet dan kotak TV Android akan datang. Import senarai main anda sendiri, layari mengikut kumpulan, tonton dalam Gambar dalam Gambar dan hantar ke TV. Tiada saluran terbina, tiada data peribadi dikumpul.
+  title: Doubo — Pemain IPTV & M3U dengan Alat Kawalan TV Universal
+  description: Doubo ialah pemain IPTV & M3U asli untuk iPhone, iPad dan Mac (Android akan datang). Import senarai main anda sendiri, layari mengikut kumpulan, tonton dalam Gambar dalam Gambar, hantar ke TV, dan kawal TV dengan alat kawalan universal terbina untuk Roku, Samsung, LG dan DLNA. Menyokong catch-up, HLS pelbagai kualiti, audio berganda, pengepala setiap saluran dan Xtream Codes. Tiada saluran terbina, tiada data peribadi dikumpul.
+  keywords: pemain IPTV, pemain M3U, alat kawalan TV universal, aplikasi alat kawalan smart TV, alat kawalan Roku, alat kawalan TV Samsung, alat kawalan TV LG, hantar DLNA, TV catch-up, pemain Xtream Codes, pemain HLS, IPTV percuma
 nav:
   web: Versi web
   directory: Saluran
@@ -77,6 +78,21 @@ features:
   - icon: cast
     title: Hantar ke TV anda
     desc: Hantar ke TV pintar DLNA dalam rangkaian yang sama, atau buka fail video tempatan untuk dimainkan terus.
+  - icon: remote
+    title: Alat kawalan TV universal
+    desc: Kawal TV anda daripada Doubo. Alat kawalan universal terbina menemui TV Roku, Samsung, LG dan DLNA dalam rangkaian anda dan menghantar kuasa, kelantangan, saluran naik/turun, pad nombor, pad arah dengan OK, serta carian teks.
+  - icon: clock
+    title: Catch-up dan main semula
+    desc: Untuk saluran yang sumbernya menyediakan catch-up, kembali ke masa lalu dan tonton rancangan yang sudah disiarkan.
+  - icon: gauge
+    title: Pilih kualiti strim
+    desc: Pada saluran HLS pelbagai kadar bit, pilih Auto, Tinggi, Sederhana atau Rendah untuk padan dengan sambungan anda dan jimat data.
+  - icon: speaker
+    title: Audio berganda
+    desc: Tonton gambar satu suapan dengan bunyi suapan lain — pilih video daripada satu sumber dan audio daripada sumber lain, dengan penyegerakan manual.
+  - icon: key
+    title: Log masuk Xtream Codes
+    desc: Log masuk akaun Xtream Codes untuk memuatkan saluran langsungnya. Kata laluan anda disimpan hanya dalam Keychain peranti.
   - icon: lock
     title: Privasi diutamakan
     desc: Senarai main, kegemaran dan sejarah kekal pada peranti anda. Aplikasi ini tiada SDK iklan atau analitik dan tidak mengumpul sebarang data peribadi.
@@ -199,6 +215,16 @@ faq:
     a: Ia sedang dalam perjalanan. Doubo untuk Android akan menyokong telefon, tablet dan Android TV / kotak TV, dan kami akan mengumumkannya di sini sebaik sahaja tersedia.
   - q: Adakah ia berfungsi di Apple TV?
     a: Versi Apple TV sedang dirancang. Buat masa ini Doubo berfungsi di iPhone, iPad dan Mac, dan anda boleh menghantar ke TV di ruang tamu.
+  - q: Bolehkah Doubo mengawal TV saya seperti alat kawalan?
+    a: Ya. Doubo menyertakan alat kawalan TV universal untuk TV Roku, Samsung, LG dan DLNA dalam rangkaian yang sama, dengan kuasa, kelantangan, saluran naik/turun, pad nombor, pad arah dan carian teks. TV ditemui secara automatik. Apple TV tidak boleh dikawal oleh aplikasi pihak ketiga.
+  - q: Adakah Doubo menyokong catch-up atau main semula?
+    a: Ya, untuk saluran yang sumber senarai mainnya menyediakan parameter catch-up. Anda boleh kembali dan menonton rancangan yang sudah disiarkan.
+  - q: Bolehkah saya memilih kualiti strim?
+    a: Ya. Pada saluran HLS pelbagai kadar bit anda boleh pilih Auto, Tinggi, Sederhana atau Rendah.
+  - q: Bolehkah saya log masuk dengan akaun Xtream Codes?
+    a: Ya. Masukkan hos, nama pengguna dan kata laluan Xtream; Doubo memuatkan saluran langsung dan menyimpan kata laluan hanya dalam Keychain peranti.
+  - q: Apa jadi jika senarai main tidak dapat dimuat semula?
+    a: Doubo memaparkan saluran yang dicache daripada muatan berjaya terakhir dan memberitahu sebab rangkaian, bukannya meninggalkan skrin kosong.
 support:
   title: Sokongan
   subtitle: Menghadapi masalah atau ada idea? Begini cara menghubungi kami.
@@ -239,6 +265,8 @@ guide:
     desc: Ketik saluran untuk main. Nikmati Gambar dalam Gambar, trek sari kata, kelajuan main balik dan skrin penuh landskap, serta terus menonton semasa menggunakan aplikasi lain.
   - title: Hantar ke TV anda
     desc: Ketik ikon hantar dalam pemain dan pilih TV pintar DLNA dalam rangkaian yang sama untuk menonton di skrin besar.
+  - title: Guna alat kawalan TV universal
+    desc: Buka alat kawalan daripada pemain untuk mengawal TV Roku, Samsung, LG atau DLNA dalam rangkaian yang sama — kuasa, kelantangan, saluran, pad nombor, pad arah dan carian teks. TV ditemui secara automatik.
   - title: Urus beberapa senarai main
     desc: 20 senarai main terakhir disimpan pada peranti anda. Doubo membuka semula senarai yang terakhir ditonton, dan anda boleh menukarnya bila-bila masa.
   tips_title: Petua

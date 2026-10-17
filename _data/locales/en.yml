@@ -4,8 +4,9 @@ brand: Doubo
 slogan: Every channel, one player.
 lang_name: English
 meta:
-  title: Doubo — Cross-Platform IPTV & M3U Player
-  description: Doubo is a native IPTV & M3U player, available for iPhone, iPad, and Mac, with Android phones, tablets, and TV boxes coming soon. Import your own playlists, browse by group, watch in Picture in Picture, and cast to your TV. No bundled channels, no personal data collected.
+  title: Doubo — IPTV & M3U Player with Universal TV Remote
+  description: Doubo is a native IPTV & M3U player for iPhone, iPad, and Mac (Android coming soon). Import your own playlists, browse by group, watch in Picture in Picture, cast to your TV, and control the TV with the built-in universal remote for Roku, Samsung, LG and DLNA. Catch-up, multi-quality HLS, dual audio, per-channel headers and Xtream Codes supported. No bundled channels, no personal data collected.
+  keywords: IPTV player, M3U player, universal TV remote control, smart TV remote app, Roku remote, Samsung TV remote, LG TV remote, DLNA cast, catch-up TV, Xtream Codes player, HLS player, free IPTV
 nav:
   web: Web player
   directory: Channels
@@ -77,6 +78,21 @@ features:
   - icon: cast
     title: Cast to your TV
     desc: Cast to DLNA smart TVs on the same network, or open a local video file to play it directly.
+  - icon: remote
+    title: Universal TV remote
+    desc: Control your TV from Doubo. A built-in universal remote finds Roku, Samsung, LG and DLNA TVs on your network and sends power, volume, channel up/down, a number pad, a direction pad with OK, and text search.
+  - icon: clock
+    title: Catch-up and replay
+    desc: On channels whose source provides catch-up, go back in time and watch programmes that already aired.
+  - icon: gauge
+    title: Pick your stream quality
+    desc: On multi-bitrate HLS channels, choose Auto, High, Medium or Low to match your connection and save data.
+  - icon: speaker
+    title: Dual audio
+    desc: Watch one feed's picture with another's sound — pick the video from one source and the audio from another, with manual sync.
+  - icon: key
+    title: Xtream Codes login
+    desc: Sign in to an Xtream Codes account to load its live channels. Your password is stored only in the device Keychain.
   - icon: lock
     title: Privacy first
     desc: Playlists, favorites, and history stay on your device. The app has no ad or analytics SDKs and collects no personal data.
@@ -199,6 +215,16 @@ faq:
     a: It’s on the way. Doubo for Android will support phones, tablets, and Android TV / TV boxes, and we’ll announce it here as soon as it’s available.
   - q: Does it work on Apple TV?
     a: An Apple TV version is planned. Today Doubo runs on iPhone, iPad, and Mac, and you can cast to your living-room TV.
+  - q: Can Doubo control my TV like a remote?
+    a: Yes. Doubo includes a universal TV remote for Roku, Samsung, LG and DLNA TVs on the same network, with power, volume, channel up/down, a number pad, a direction pad and text search. TVs are found automatically over your network. Apple TV can't be controlled by third-party apps.
+  - q: Does Doubo support catch-up or replay?
+    a: Yes, on channels whose playlist source provides catch-up parameters. You can go back and watch programmes that already aired.
+  - q: Can I choose the stream quality?
+    a: Yes. On multi-bitrate HLS channels you can pick Auto, High, Medium or Low to match your connection.
+  - q: Can I sign in with an Xtream Codes account?
+    a: Yes. Enter your Xtream host, username and password; Doubo loads the live channels and stores the password only in the device Keychain.
+  - q: What happens if a playlist can't be refreshed?
+    a: Doubo shows the channels it cached from the last successful load and tells you the network reason, instead of leaving a blank screen.
 support:
   title: Support
   subtitle: Running into a problem or have an idea? Here's how to reach us.
@@ -239,6 +265,8 @@ guide:
     desc: Tap a channel to play. Enjoy Picture in Picture, subtitle tracks, playback speed, and landscape full screen, and keep watching while you use other apps.
   - title: Cast to your TV
     desc: Tap the cast icon in the player and choose a DLNA smart TV on the same network to watch on the big screen.
+  - title: Use the universal TV remote
+    desc: Open the remote from the player to control a Roku, Samsung, LG or DLNA TV on the same network — power, volume, channels, a number pad, a direction pad and text search. TVs are discovered automatically.
   - title: Manage multiple playlists
     desc: Your last 20 playlists are saved on your device. Doubo reopens the one you watched last, and you can switch anytime.
   tips_title: Tips

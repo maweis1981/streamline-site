@@ -1,0 +1,44 @@
+---
+layout: page
+lang: ms
+ref: blog-remote
+path_key: blog/universal-tv-remote-control/
+title: 'Alat Kawalan TV Universal dalam Doubo: Kawal TV Roku, Samsung, LG & DLNA'
+subtitle: 'Doubo kini menyertakan alat kawalan TV universal terbina. Ia menemui TV dalam rangkaian anda dan mengawalnya — kuasa, kelantangan, saluran, pad nombor, pad arah dan carian teks — tanpa perlu memasang apa-apa tambahan.'
+description: 'Alat kawalan TV universal terbina Doubo mengawal TV Roku, Samsung, LG dan DLNA dalam rangkaian anda serta menemui peranti Chromecast, AirPlay dan Android TV.'
+---
+<h2>Satu alat kawalan untuk TV dalam rangkaian anda</h2>
+<p>Hilang alat kawalan, atau penat menukar tiga alat kawalan? Alat kawalan TV universal Doubo menjadikan iPhone, iPad atau Mac anda sebagai alat kawalan untuk TV yang sudah berada pada Wi-Fi anda. Buka saluran, ketik ikon alat kawalan dalam pemain, dan Doubo menyenaraikan TV yang ditemuinya. Pilih satu untuk mendapat kuasa, kelantangan dan senyap, saluran naik/turun, pad nombor, pad arah dengan OK, Kembali, Utama dan Menu, kawalan main balik, serta medan teks yang menaip terus ke kotak carian TV.</p>
+
+<h2>TV yang boleh dikawal</h2>
+<ul>
+<li><strong>Roku dan Roku TV</strong> — melalui External Control Protocol (ECP) Roku. Tiada pasangan diperlukan.</li>
+<li><strong>TV pintar Samsung (Tizen, 2016+)</strong> — melalui saluran alat kawalan WebSocket. TV menunjukkan gesaan "Benarkan" kali pertama.</li>
+<li><strong>TV LG webOS</strong> — melalui protokol SSAP, dengan satu kali pasangan pada TV.</li>
+<li><strong>Penghasil media DLNA</strong> — main, jeda, henti dan kelantangan melalui UPnP.</li>
+</ul>
+<p>Doubo juga <strong>menemui</strong> peranti Chromecast / Google TV, AirPlay dan Android TV dalam rangkaian. Apple TV tidak boleh dikawal oleh aplikasi pihak ketiga, jadi ia dipaparkan sebagai rujukan sahaja.</p>
+
+<h2>Cara penemuan berfungsi</h2>
+<p>Alat kawalan universal mesti bertutur dalam bahasa penemuan yang digunakan TV. Doubo menjalankan dua secara serentak:</p>
+<ul>
+<li><strong>SSDP / UPnP</strong> (protokol di sebalik DLNA) menemui penghasil DLNA, Roku, dan banyak set Samsung dan LG.</li>
+<li><strong>Bonjour / mDNS</strong> menemui peranti Chromecast, AirPlay dan Android TV yang mengiklankan diri melalui mDNS.</li>
+</ul>
+<p>Semuanya berjalan dalam rangkaian tempatan anda. Doubo menghantar arahan terus ke TV; tiada pelayan di tengah dan tiada akaun diperlukan.</p>
+
+<h2>Cara menggunakannya</h2>
+<ol>
+<li>Pastikan TV dan peranti anda pada Wi-Fi yang sama, dan ciri alat kawalan / DLNA TV dihidupkan.</li>
+<li>Buka mana-mana saluran dalam Doubo dan ketik ikon alat kawalan.</li>
+<li>Pilih TV anda daripada senarai. Kali pertama, luluskan gesaan pasangan pada TV jika diminta.</li>
+<li>Gunakan butang: kelantangan, saluran, pad nombor, pad arah, atau taip ke medan carian.</li>
+</ol>
+
+<h2>Soalan lazim</h2>
+<div class="faq">
+<details><summary>Perlu pasang apa-apa pada TV?</summary><p>Tidak. Doubo bercakap dengan perkhidmatan alat kawalan terbina TV. Untuk DLNA, cuma hidupkan pilihan penghasil / DLNA pada TV.</p></details>
+<details><summary>Kenapa saya tidak boleh mengawal Apple TV?</summary><p>Apple tidak menyediakan API awam untuk kawalan pihak ketiga Apple TV. Doubo menyenaraikannya sebagai rujukan sahaja.</p></details>
+<details><summary>Tiada apa-apa dalam senarai. Apa yang perlu disemak?</summary><p>Sahkan TV dan peranti pada rangkaian yang sama, benarkan Doubo mengakses rangkaian tempatan apabila iOS bertanya, dan pastikan TV tidak dalam tidur dalam.</p></details>
+<details><summary>Adakah ia percuma?</summary><p>Alat kawalan ialah sebahagian daripada Doubo, pemain tanpa saluran terbina dan tanpa pengumpulan data peribadi.</p></details>
+</div>

@@ -1,0 +1,44 @@
+---
+layout: page
+lang: vi
+ref: blog-remote
+path_key: blog/universal-tv-remote-control/
+title: 'Điều khiển TV đa năng trong Doubo: Điều khiển TV Roku, Samsung, LG & DLNA'
+subtitle: 'Doubo nay tích hợp điều khiển TV đa năng. Nó tìm các TV trong mạng của bạn và điều khiển — nguồn, âm lượng, kênh, bàn phím số, phím điều hướng và tìm kiếm văn bản — mà không cần cài thêm gì.'
+description: 'Điều khiển TV đa năng tích hợp của Doubo điều khiển TV Roku, Samsung, LG và DLNA trong mạng của bạn, đồng thời tìm thiết bị Chromecast, AirPlay và Android TV.'
+---
+<h2>Một chiếc điều khiển cho mọi TV trong mạng</h2>
+<p>Mất điều khiển, hay mệt vì phải đổi ba cái remote? Điều khiển TV đa năng của Doubo biến iPhone, iPad hoặc Mac của bạn thành remote cho các TV đã có trên Wi-Fi. Mở một kênh, chạm biểu tượng điều khiển trong trình phát, Doubo sẽ liệt kê các TV tìm được. Chọn một chiếc để có nguồn, tăng/giảm âm lượng và tắt tiếng, kênh lên/xuống, bàn phím số để nhập số kênh trực tiếp, phím điều hướng kèm OK, Quay lại, Trang chủ và Menu, điều khiển phát, và ô văn bản gõ thẳng vào ô tìm kiếm của TV.</p>
+
+<h2>Những TV có thể điều khiển</h2>
+<ul>
+<li><strong>Roku và Roku TV</strong> — qua External Control Protocol (ECP) của Roku. Không cần ghép nối.</li>
+<li><strong>Smart TV Samsung (Tizen, 2016+)</strong> — qua kênh điều khiển WebSocket. TV hiện lời nhắc "Cho phép" lần đầu.</li>
+<li><strong>TV LG webOS</strong> — qua giao thức SSAP, với một lần ghép nối trên TV.</li>
+<li><strong>Thiết bị DLNA</strong> — phát, tạm dừng, dừng và âm lượng qua UPnP.</li>
+</ul>
+<p>Doubo cũng <strong>tìm thấy</strong> thiết bị Chromecast / Google TV, AirPlay và Android TV trong mạng. Apple TV không thể điều khiển bởi ứng dụng bên thứ ba nên chỉ hiển thị để tham khảo.</p>
+
+<h2>Cơ chế phát hiện hoạt động ra sao</h2>
+<p>Một chiếc remote đa năng phải "nói" được các giao thức phát hiện mà TV dùng. Doubo chạy song song hai giao thức:</p>
+<ul>
+<li><strong>SSDP / UPnP</strong> (giao thức phía sau DLNA) tìm thiết bị DLNA, Roku, và nhiều TV Samsung, LG.</li>
+<li><strong>Bonjour / mDNS</strong> tìm thiết bị Chromecast, AirPlay và Android TV vốn quảng bá qua mDNS.</li>
+</ul>
+<p>Mọi thứ chạy trong mạng nội bộ của bạn. Doubo gửi lệnh thẳng tới TV; không qua máy chủ trung gian và không cần tài khoản.</p>
+
+<h2>Cách dùng</h2>
+<ol>
+<li>Đảm bảo TV và thiết bị cùng Wi-Fi, và tính năng điều khiển / DLNA của TV đang bật.</li>
+<li>Mở một kênh bất kỳ trong Doubo và chạm biểu tượng điều khiển.</li>
+<li>Chọn TV của bạn từ danh sách. Lần đầu, duyệt lời nhắc ghép nối trên TV nếu có.</li>
+<li>Dùng các nút: âm lượng, kênh, bàn phím số, phím điều hướng, hoặc gõ vào ô tìm kiếm.</li>
+</ol>
+
+<h2>Câu hỏi thường gặp</h2>
+<div class="faq">
+<details><summary>Có cần cài gì trên TV không?</summary><p>Không. Doubo giao tiếp với dịch vụ điều khiển tích hợp của TV. Với DLNA, chỉ cần bật tùy chọn thiết bị / DLNA trên TV.</p></details>
+<details><summary>Vì sao không điều khiển được Apple TV?</summary><p>Apple không cung cấp API công khai cho điều khiển Apple TV bởi bên thứ ba. Doubo chỉ liệt kê để tham khảo.</p></details>
+<details><summary>Danh sách trống. Cần kiểm tra gì?</summary><p>Xác nhận TV và thiết bị cùng mạng, cho phép Doubo truy cập mạng nội bộ khi iOS hỏi, và đảm bảo TV không ở chế độ ngủ sâu.</p></details>
+<details><summary>Có miễn phí không?</summary><p>Điều khiển là một phần của Doubo, một trình phát không kèm sẵn kênh và không thu thập dữ liệu cá nhân.</p></details>
+</div>
